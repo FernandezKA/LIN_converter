@@ -24850,6 +24850,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@assert_failed",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "197",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "assert_failed",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:stm8s_gpio.h@1289@macro@__STM8S_GPIO_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -31128,7 +31142,7 @@
     "display": "void ITC_DeInit(void)",
     "location": {
       "column": "6",
-      "line": "80",
+      "line": "81",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "ITC_DeInit",
@@ -31142,7 +31156,7 @@
     "display": "uint8_t ITC_GetSoftIntStatus(void)",
     "location": {
       "column": "9",
-      "line": "97",
+      "line": "98",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "ITC_GetSoftIntStatus",
@@ -31156,7 +31170,7 @@
     "display": "ITC_PriorityLevel_TypeDef ITC_GetSoftwarePriority(ITC_Irq_TypeDef)",
     "location": {
       "column": "27",
-      "line": "107",
+      "line": "108",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "ITC_GetSoftwarePriority",
@@ -31164,13 +31178,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_itc.c@3588@F@ITC_GetSoftwarePriority@Value",
+    "ID": "c:stm8s_itc.c@3601@F@ITC_GetSoftwarePriority@Value",
     "What": "Variable",
     "defdec": "Def",
     "display": "Value",
     "location": {
       "column": "11",
-      "line": "109",
+      "line": "110",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "Value",
@@ -31178,13 +31192,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_itc.c@3610@F@ITC_GetSoftwarePriority@Mask",
+    "ID": "c:stm8s_itc.c@3623@F@ITC_GetSoftwarePriority@Mask",
     "What": "Variable",
     "defdec": "Def",
     "display": "Mask",
     "location": {
       "column": "11",
-      "line": "110",
+      "line": "111",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "Mask",
@@ -31198,7 +31212,7 @@
     "display": "void ITC_SetSoftwarePriority(ITC_Irq_TypeDef, ITC_PriorityLevel_TypeDef)",
     "location": {
       "column": "6",
-      "line": "220",
+      "line": "221",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "ITC_SetSoftwarePriority",
@@ -31206,13 +31220,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_itc.c@7531@F@ITC_SetSoftwarePriority@Mask",
+    "ID": "c:stm8s_itc.c@7544@F@ITC_SetSoftwarePriority@Mask",
     "What": "Variable",
     "defdec": "Def",
     "display": "Mask",
     "location": {
       "column": "11",
-      "line": "222",
+      "line": "223",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "Mask",
@@ -31220,13 +31234,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_itc.c@7552@F@ITC_SetSoftwarePriority@NewPriority",
+    "ID": "c:stm8s_itc.c@7565@F@ITC_SetSoftwarePriority@NewPriority",
     "What": "Variable",
     "defdec": "Def",
     "display": "NewPriority",
     "location": {
       "column": "11",
-      "line": "223",
+      "line": "224",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_itc.c"
     },
     "name": "NewPriority",
@@ -46050,230 +46064,6 @@
     "scope": null
   },
   {
-    "ID": "c:@MSK_TAB",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "MSK_TAB",
-    "location": {
-      "column": "10",
-      "line": "34",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "MSK_TAB",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Rx_phase",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Rx_phase",
-    "location": {
-      "column": "7",
-      "line": "44",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Rx_phase",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Tx_phase",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Tx_phase",
-    "location": {
-      "column": "7",
-      "line": "45",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Tx_phase",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Rx_bit",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Rx_bit",
-    "location": {
-      "column": "5",
-      "line": "57",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Rx_bit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Tx_bit",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Tx_bit",
-    "location": {
-      "column": "3",
-      "line": "58",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Tx_bit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Rx_samp",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Rx_samp",
-    "location": {
-      "column": "3",
-      "line": "59",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Rx_samp",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Rx_buff",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Rx_buff",
-    "location": {
-      "column": "3",
-      "line": "60",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Rx_buff",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Rx_data",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Rx_data",
-    "location": {
-      "column": "3",
-      "line": "61",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Rx_data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@Tx_data",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "Tx_data",
-    "location": {
-      "column": "3",
-      "line": "62",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "Tx_data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@UART_sts",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "UART_sts",
-    "location": {
-      "column": "3",
-      "line": "63",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "UART_sts",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@uart_init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void uart_init(void)",
-    "location": {
-      "column": "6",
-      "line": "81",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "uart_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@uart_send",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "u8 uart_send(u8)",
-    "location": {
-      "column": "4",
-      "line": "106",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "uart_send",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@uart_Tx_timing",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void uart_Tx_timing(void)",
-    "location": {
-      "column": "6",
-      "line": "126",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "uart_Tx_timing",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@uart_read",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "u8 uart_read(u8 *)",
-    "location": {
-      "column": "4",
-      "line": "182",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "uart_read",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:softuart.c@6120@F@uart_read@res",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "res",
-    "location": {
-      "column": "5",
-      "line": "183",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "res",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@uart_Rx_timing",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void uart_Rx_timing(void)",
-    "location": {
-      "column": "6",
-      "line": "204",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
-    },
-    "name": "uart_Rx_timing",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:stm8s_wwdg.c@1413@macro@BIT_MASK",
     "What": "MacroDef",
     "defdec": "Def",
@@ -47114,6 +46904,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@uart_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void uart_init(void)",
+    "location": {
+      "column": "6",
+      "line": "216",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
+    },
+    "name": "uart_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@uart_send",
     "What": "Function",
     "defdec": "Dec",
@@ -47124,6 +46928,34 @@
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_send",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_send",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "u8 uart_send(u8)",
+    "location": {
+      "column": "4",
+      "line": "217",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
+    },
+    "name": "uart_send",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_read",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "u8 uart_read(u8 *)",
+    "location": {
+      "column": "4",
+      "line": "218",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
+    },
+    "name": "uart_read",
     "origin": "user_include",
     "scope": null
   },
@@ -47156,6 +46988,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@uart_Tx_timing",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void uart_Tx_timing(void)",
+    "location": {
+      "column": "6",
+      "line": "219",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
+    },
+    "name": "uart_Tx_timing",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@uart_Rx_timing",
     "What": "Function",
     "defdec": "Dec",
@@ -47167,6 +47013,300 @@
     },
     "name": "uart_Rx_timing",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_Rx_timing",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void uart_Rx_timing(void)",
+    "location": {
+      "column": "6",
+      "line": "220",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
+    },
+    "name": "uart_Rx_timing",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@MSK_TAB",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "MSK_TAB",
+    "location": {
+      "column": "10",
+      "line": "34",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "MSK_TAB",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Rx_phase",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Rx_phase",
+    "location": {
+      "column": "7",
+      "line": "44",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Rx_phase",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Tx_phase",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Tx_phase",
+    "location": {
+      "column": "7",
+      "line": "45",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Tx_phase",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Rx_bit",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Rx_bit",
+    "location": {
+      "column": "5",
+      "line": "57",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Rx_bit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Tx_bit",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Tx_bit",
+    "location": {
+      "column": "3",
+      "line": "58",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Tx_bit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Rx_samp",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Rx_samp",
+    "location": {
+      "column": "3",
+      "line": "59",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Rx_samp",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Rx_buff",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Rx_buff",
+    "location": {
+      "column": "3",
+      "line": "60",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Rx_buff",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Rx_data",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Rx_data",
+    "location": {
+      "column": "3",
+      "line": "61",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Rx_data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@Tx_data",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Tx_data",
+    "location": {
+      "column": "3",
+      "line": "62",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "Tx_data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@UART_sts",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "UART_sts",
+    "location": {
+      "column": "3",
+      "line": "63",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "UART_sts",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void uart_init(void)",
+    "location": {
+      "column": "6",
+      "line": "81",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "uart_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_send",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "u8 uart_send(u8)",
+    "location": {
+      "column": "4",
+      "line": "106",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "uart_send",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_Tx_timing",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void uart_Tx_timing(void)",
+    "location": {
+      "column": "6",
+      "line": "126",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "uart_Tx_timing",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_read",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "u8 uart_read(u8 *)",
+    "location": {
+      "column": "4",
+      "line": "182",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "uart_read",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:softuart.c@6120@F@uart_read@res",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "res",
+    "location": {
+      "column": "5",
+      "line": "183",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "res",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@uart_Rx_timing",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void uart_Rx_timing(void)",
+    "location": {
+      "column": "6",
+      "line": "204",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
+    },
+    "name": "uart_Rx_timing",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemInit",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int SystemInit(void)",
+    "location": {
+      "column": "5",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SystemInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1097@F@main@u8TXb",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8TXb",
+    "location": {
+      "column": "17",
+      "line": "29",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8TXb",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "37",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -47279,34 +47419,6 @@
     },
     "name": "WWDG_SetWindowValue",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SystemInit",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int SystemInit(void)",
-    "location": {
-      "column": "5",
-      "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SystemInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void main(void)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
     "scope": null
   },
   {

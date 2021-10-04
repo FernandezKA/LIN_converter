@@ -64,7 +64,7 @@
 #define	UART_TestPIN	(GPIO_PIN_4)
 #endif
 
-#define	OCInit_TypeDef		TIM3_OCInit_TypeDef TIM3_OCInitStruct
+#define	OCInit_TypeDef		TIM2_OCInit_TypeDef TIM2_OCInitStruct
 
 /* uncomment the next line to switch the system clock from HSI (16 Mhz) to HSE (24 Mhz) */
 #define TO_HSE

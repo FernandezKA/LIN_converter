@@ -1,4 +1,5 @@
 #include "stm8s_conf.h"
+#include "softuart.h"
 /**
   *inc->stm8s_conf.h - раскоментировать строчки с нужными хедерами 
   *периферии и необходимыми обработчиками прерываний. Все закоментированные
@@ -16,12 +17,26 @@
 
 int SystemInit(void)
 {
+  uart_init();
+  uart_receive_enable;
+  enableInterrupts();	
     return 0;
 }
 
 void main(void)
 {
 	SystemInit();
-	while (1){};
+        uint8_t u8TXb = 0xAA;
+  for(;;){
+  uart_send(u8TXb);
+while(test_status(transmit_in_progress) != 0);// wait for its transmition complete
+}
 }
 
+#ifdef USE_FULL_ASSERT
+void assert_failed(u8 *file, u32 line)
+{
+  asm("nop");
+  return;
+}
+#endif
