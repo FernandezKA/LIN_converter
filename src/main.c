@@ -17,6 +17,9 @@
 
 int SystemInit(void)
 {
+  CLK->CKDIVR = 0x00;
+  GPIOD->DDR|=(1<<4);
+  GPIOD->CR1|=(1<<4);
   uart_init();
   uart_receive_enable;
   enableInterrupts();	
@@ -26,10 +29,11 @@ int SystemInit(void)
 void main(void)
 {
 	SystemInit();
-        uint8_t u8TXb = 0xAA;
+        uint8_t u8TXb = 0x64;
   for(;;){
   uart_send(u8TXb);
-while(test_status(transmit_in_progress) != 0);// wait for its transmition complete
+  for(uint16_t i = 0; i < 0xFFFF; ++i) {asm("nop");}
+  //while(test_status(transmit_in_progress) != 0);// wait for its transmition complete
 }
 }
 

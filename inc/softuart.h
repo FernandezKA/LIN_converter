@@ -34,7 +34,7 @@
 
 #define SWUART_TRANSMIT_USED
 #define SWUART_RECEIVE_USED
-//#define TEST_PIN_USED
+#define TEST_PIN_USED
 
 #define	DATA_LENGTH		8		// number of data bits in protocol
 #define	STOP_BITS		1		// number of stop bits in protocol
@@ -80,7 +80,7 @@
 // next macro initializes and enable TIM3 base and interrupt system, divider
 // register /1, auto reload register, enable interrupt on update, update on overflow
 #define init_UART_timing	{\
-	TIM2_TimeBaseInit(TIM2_PRESCALER_1, 208);\
+	TIM2_TimeBaseInit(TIM2_PRESCALER_1, 833);\
 	TIM2_ITConfig(TIM2_IT_UPDATE, ENABLE);\
 	TIM2_UpdateRequestConfig(TIM2_UPDATESOURCE_REGULAR);\
 	TIM2_Cmd(ENABLE);\
