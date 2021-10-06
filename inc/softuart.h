@@ -27,6 +27,7 @@
 
 // ---------------------------------------------------------
 // --------------- user macros definition ------------------
+    extern uint8_t u8RXB;
 // ---------------------------------------------------------
 //#ifndef _COSMIC_
 //#define _Bool   bit
@@ -34,7 +35,7 @@
 
 #define SWUART_TRANSMIT_USED
 #define SWUART_RECEIVE_USED
-#define TEST_PIN_USED
+//#define TEST_PIN_USED
 
 #define	DATA_LENGTH		8		// number of data bits in protocol
 #define	STOP_BITS		1		// number of stop bits in protocol
@@ -56,7 +57,7 @@
 
 #ifdef SWUART_RECEIVE_USED
 #define  UART_RxPORT	(GPIOD)
-#define	UART_RxPIN	(GPIO_PIN_0)
+#define	UART_RxPIN	(GPIO_PIN_3)
 #endif
 
 #ifdef TEST_PIN_USED
@@ -67,7 +68,7 @@
 #define	OCInit_TypeDef		TIM2_OCInit_TypeDef TIM2_OCInitStruct
 
 /* uncomment the next line to switch the system clock from HSI (16 Mhz) to HSE (24 Mhz) */
-#define TO_HSE
+//#define TO_HSE
 
 //	Here user must ensure calling service interrupt routine at exact intervals 
 //	of 1/2 bit of the dedicated baud rate (see also TO_HSE switch above)

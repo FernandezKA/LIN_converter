@@ -2347,5 +2347,8 @@
         <file>
             <name>$PROJ_DIR$\src\softuart.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\src\uart.c</name>
+        </file>
     </group>
 </project>

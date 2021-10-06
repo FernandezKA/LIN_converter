@@ -14,7 +14,7 @@
   *частоты внутренних и внешних генераторов(если не задать, то будут ипользованы
   *значения по умолчанию из stm8s.h).
   */
-
+uint8_t u8RXB;
 int SystemInit(void)
 {
   CLK->CKDIVR = 0x00;
@@ -23,18 +23,27 @@ int SystemInit(void)
   uart_init();
   uart_receive_enable;
   enableInterrupts();	
+  enable_cc_interrupt;
     return 0;
 }
-
+uint8_t buff, sts;
+uint8_t tx_byte;
 void main(void)
 {
-	SystemInit();
-        uint8_t u8TXb = 0x64;
+  SystemInit();
   for(;;){
-  uart_send(u8TXb);
-  for(uint16_t i = 0; i < 0xFFFF; ++i) {asm("nop");}
-  //while(test_status(transmit_in_progress) != 0);// wait for its transmition complete
-}
+    sts= uart_send(0x64U);
+    while(test_status(transmit_in_progress) == transmit_in_progress){//Wait while TXNE
+      asm("nop");
+    }
+    for(uint8_t i = 0; i < 0xFF; ++i) {asm("nop");}
+    while(test_status(receive_buffer_full) != receive_buffer_full) {};
+    asm("nop");
+   if(test_status(receive_buffer_full) == receive_buffer_full){
+      sts =uart_read(&buff);
+      uart_send(buff);
+    }
+  }
 }
 
 #ifdef USE_FULL_ASSERT

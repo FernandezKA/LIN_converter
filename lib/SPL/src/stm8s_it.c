@@ -150,7 +150,6 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
 {
 	GPIOD->ODR^=(1<<4);
         uart_Tx_timing();
-        //uart_Rx_timing();
 }
 #endif
 
@@ -158,7 +157,10 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
 //Timer2 Capture/Compare Interrupt routine.
 INTERRUPT_HANDLER(TIM2_CAP_COM_IRQHandler, 14)
 {
-	while (1){};
+  #ifdef SWUART_RECEIVE_USED
+    uart_Rx_timing();
+  #endif
+    return;
 }
 #endif
 #endif /* (STM8S903) || (STM8AF622x) */
