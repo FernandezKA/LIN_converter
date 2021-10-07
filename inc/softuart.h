@@ -35,7 +35,7 @@
 
 #define SWUART_TRANSMIT_USED
 #define SWUART_RECEIVE_USED
-//#define TEST_PIN_USED
+#define TEST_PIN_USED
 
 #define	DATA_LENGTH		8		// number of data bits in protocol
 #define	STOP_BITS		1		// number of stop bits in protocol

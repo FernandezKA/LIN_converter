@@ -227,7 +227,7 @@ void uart_Rx_timing(void) {
 				};
 			}
 			else {
-				switch(Rx_samp) {		// any other bit, results?
+				switch(Rx_samp) {	                                  // any other bit, results?
 					case 1:	set_status(receive_noise_error);
 								break;	// noise in middle samples, "0" received
 					case 2: 	set_status(receive_noise_error);
@@ -262,7 +262,7 @@ void uart_Rx_timing(void) {
 							set_status(receive_buffer_full);		 
 						}
 						else
-							set_status(receive_buffer_overflow); // data overflow!
+						set_status(receive_buffer_overflow); // data overflow!
 						disable_OC_system;		// init next byte receive
 						clr_status(receive_in_progress);
 						enable_IC_system;
