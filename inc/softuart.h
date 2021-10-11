@@ -91,7 +91,7 @@
 //filter (4 samples), IC2 mapped on TI2FP2, capture on faling edge
 #define	init_ic_setting	{\
 	TIM2->CCER1&= ~TIM2_CCER1_CC2E;\
-	TIM2->CCMR2= (((2<<4) & TIM2_CCMR_ICxF) | ((1<<0) & TIM2_CCMR_CCxS));\//????
+	TIM2->CCMR2= (((2<<4) & TIM2_CCMR_ICxF) | ((1<<0) & TIM2_CCMR_CCxS));\
 	TIM2->CCER1|= TIM2_CCER1_CC2P | TIM2_CCER1_CC2E;\
 }
 // output compare system initialization
@@ -189,19 +189,19 @@
 #define set_status(a)		(UART_sts |= a)
 #define clr_status(a)		(UART_sts &=~a)
 
-#define uart_receive_enable 	{ Rx_bit= Rx_phase= 0; disable_OC_system; clear_cc_flag;enable_IC_system; }
+#define uart_receive_enable 	{ Rx_bit= Rx_phase= FALSE; disable_OC_system; clear_cc_flag;enable_IC_system; }
 #define uart_receive_disable 	{ disable_IC_system; disable_OC_system; clr_status(receive_in_progress); }
 
 /* Exported variables --------------------------------------------------------*/
-extern _Bool Rx_phase;
-extern _Bool Tx_phase;
+extern bool Rx_phase;
+extern bool Tx_phase;
 #ifdef PARITY
-extern _Bool Rx_parity;
-extern _Bool Tx_parity;
+extern bool Rx_parity;
+extern bool Tx_parity;
 #else
 #ifdef BIT9
-extern _Bool Rx_bit9;
-extern _Bool Tx_bit9;
+extern bool Rx_bit9;
+extern bool Tx_bit9;
 #endif
 #endif
 extern u8 Rx_bit,

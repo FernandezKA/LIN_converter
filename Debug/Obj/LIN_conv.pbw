@@ -24850,6 +24850,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@assert_failed",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "197",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "assert_failed",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:stm8s_gpio.h@1289@macro@__STM8S_GPIO_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -33892,21 +33906,7 @@
     "scope": null
   },
   {
-    "ID": "c:@TIM2_TypeDef",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "TIM2_TypeDef",
-    "location": {
-      "column": "2",
-      "line": "95",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
-    },
-    "name": "TIM2_TypeDef",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:softuart.h@3981@macro@init_oc_setting",
+    "ID": "c:softuart.h@3975@macro@init_oc_setting",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_oc_setting",
@@ -33920,7 +33920,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4068@macro@clear_owerflow_flag",
+    "ID": "c:softuart.h@4062@macro@clear_owerflow_flag",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clear_owerflow_flag",
@@ -33934,7 +33934,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4128@macro@clear_cc_flag",
+    "ID": "c:softuart.h@4122@macro@clear_cc_flag",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clear_cc_flag",
@@ -33948,7 +33948,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4187@macro@enable_cc_interrupt",
+    "ID": "c:softuart.h@4181@macro@enable_cc_interrupt",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "enable_cc_interrupt",
@@ -33962,7 +33962,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4251@macro@disable_cc_interrupt",
+    "ID": "c:softuart.h@4245@macro@disable_cc_interrupt",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "disable_cc_interrupt",
@@ -33976,7 +33976,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4317@macro@enable_IC_system",
+    "ID": "c:softuart.h@4311@macro@enable_IC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "enable_IC_system",
@@ -33990,7 +33990,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4406@macro@disable_IC_system",
+    "ID": "c:softuart.h@4400@macro@disable_IC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "disable_IC_system",
@@ -34004,7 +34004,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4544@macro@enable_OC_system",
+    "ID": "c:softuart.h@4538@macro@enable_OC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "enable_OC_system",
@@ -34018,7 +34018,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4633@macro@disable_OC_system",
+    "ID": "c:softuart.h@4627@macro@disable_OC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "disable_OC_system",
@@ -34032,7 +34032,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5494@macro@Rx_test",
+    "ID": "c:softuart.h@5488@macro@Rx_test",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Rx_test",
@@ -34046,7 +34046,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5580@macro@set_Tx",
+    "ID": "c:softuart.h@5574@macro@set_Tx",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "set_Tx",
@@ -34060,7 +34060,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5630@macro@clr_Tx",
+    "ID": "c:softuart.h@5624@macro@clr_Tx",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clr_Tx",
@@ -34074,7 +34074,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5710@macro@set_Test_Pin",
+    "ID": "c:softuart.h@5704@macro@set_Test_Pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "set_Test_Pin",
@@ -34088,7 +34088,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5764@macro@clr_Test_Pin",
+    "ID": "c:softuart.h@5758@macro@clr_Test_Pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clr_Test_Pin",
@@ -34102,7 +34102,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5939@macro@init_UART_Tx_pin",
+    "ID": "c:softuart.h@5933@macro@init_UART_Tx_pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_Tx_pin",
@@ -34116,7 +34116,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6069@macro@init_UART_Rx_pin",
+    "ID": "c:softuart.h@6063@macro@init_UART_Rx_pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_Rx_pin",
@@ -34130,7 +34130,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6188@macro@init_UART_Test_pin",
+    "ID": "c:softuart.h@6182@macro@init_UART_Test_pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_Test_pin",
@@ -34144,7 +34144,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6396@macro@transmit_in_progress",
+    "ID": "c:softuart.h@6390@macro@transmit_in_progress",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "transmit_in_progress",
@@ -34158,7 +34158,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6433@macro@transmit_data_reg_empty",
+    "ID": "c:softuart.h@6427@macro@transmit_data_reg_empty",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "transmit_data_reg_empty",
@@ -34172,7 +34172,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6480@macro@receive_9th_data_bit",
+    "ID": "c:softuart.h@6474@macro@receive_9th_data_bit",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_9th_data_bit",
@@ -34186,7 +34186,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6517@macro@receive_in_progress",
+    "ID": "c:softuart.h@6511@macro@receive_in_progress",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_in_progress",
@@ -34200,7 +34200,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6553@macro@receive_buffer_overflow",
+    "ID": "c:softuart.h@6547@macro@receive_buffer_overflow",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_buffer_overflow",
@@ -34214,7 +34214,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6648@macro@receive_frame_error",
+    "ID": "c:softuart.h@6642@macro@receive_frame_error",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_frame_error",
@@ -34228,7 +34228,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6684@macro@receive_noise_error",
+    "ID": "c:softuart.h@6678@macro@receive_noise_error",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_noise_error",
@@ -34242,7 +34242,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6720@macro@receive_buffer_full",
+    "ID": "c:softuart.h@6714@macro@receive_buffer_full",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_buffer_full",
@@ -34256,7 +34256,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6781@macro@OVFL_ERROR",
+    "ID": "c:softuart.h@6775@macro@OVFL_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "OVFL_ERROR",
@@ -34270,7 +34270,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6803@macro@FRAME_ERROR",
+    "ID": "c:softuart.h@6797@macro@FRAME_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "FRAME_ERROR",
@@ -34284,7 +34284,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6826@macro@NOISE_ERROR",
+    "ID": "c:softuart.h@6820@macro@NOISE_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "NOISE_ERROR",
@@ -34298,7 +34298,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6849@macro@RX_BUFF_FULL",
+    "ID": "c:softuart.h@6843@macro@RX_BUFF_FULL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "RX_BUFF_FULL",
@@ -34312,7 +34312,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6968@macro@test_status",
+    "ID": "c:softuart.h@6962@macro@test_status",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "test_status",
@@ -34326,7 +34326,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7008@macro@set_status",
+    "ID": "c:softuart.h@7002@macro@set_status",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "set_status",
@@ -34340,7 +34340,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7048@macro@clr_status",
+    "ID": "c:softuart.h@7042@macro@clr_status",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clr_status",
@@ -34354,7 +34354,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7090@macro@uart_receive_enable",
+    "ID": "c:softuart.h@7084@macro@uart_receive_enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "uart_receive_enable",
@@ -34368,7 +34368,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7196@macro@uart_receive_disable",
+    "ID": "c:softuart.h@7194@macro@uart_receive_disable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "uart_receive_disable",
@@ -34387,7 +34387,7 @@
     "defdec": "Dec",
     "display": "Rx_phase",
     "location": {
-      "column": "14",
+      "column": "13",
       "line": "196",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
@@ -34401,7 +34401,7 @@
     "defdec": "Dec",
     "display": "Tx_phase",
     "location": {
-      "column": "14",
+      "column": "13",
       "line": "197",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
@@ -47380,90 +47380,6 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_wwdg.c@1413@macro@BIT_MASK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BIT_MASK",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
-    },
-    "name": "BIT_MASK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void WWDG_Init(uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "53",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
-    },
-    "name": "WWDG_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_SetCounter",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void WWDG_SetCounter(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "69",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
-    },
-    "name": "WWDG_SetCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_GetCounter",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t WWDG_GetCounter(void)",
-    "location": {
-      "column": "9",
-      "line": "86",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
-    },
-    "name": "WWDG_GetCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_SWReset",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void WWDG_SWReset(void)",
-    "location": {
-      "column": "6",
-      "line": "96",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
-    },
-    "name": "WWDG_SWReset",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_SetWindowValue",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void WWDG_SetWindowValue(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "108",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
-    },
-    "name": "WWDG_SetWindowValue",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@MSK_TAB",
     "What": "Variable",
     "defdec": "Def",
@@ -47497,7 +47413,7 @@
     "defdec": "Dec",
     "display": "Tx_phase",
     "location": {
-      "column": "7",
+      "column": "6",
       "line": "44",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -47638,7 +47554,7 @@
     "display": "void uart_Tx_timing(void)",
     "location": {
       "column": "6",
-      "line": "125",
+      "line": "126",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_Tx_timing",
@@ -47652,7 +47568,7 @@
     "display": "u8 uart_read(u8 *)",
     "location": {
       "column": "4",
-      "line": "183",
+      "line": "185",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_read",
@@ -47660,13 +47576,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.c@6104@F@uart_read@res",
+    "ID": "c:softuart.c@6207@F@uart_read@res",
     "What": "Variable",
     "defdec": "Def",
     "display": "res",
     "location": {
       "column": "5",
-      "line": "184",
+      "line": "186",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "res",
@@ -47680,7 +47596,7 @@
     "display": "void uart_Rx_timing(void)",
     "location": {
       "column": "7",
-      "line": "205",
+      "line": "207",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_Rx_timing",
@@ -47712,6 +47628,146 @@
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SystemInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "29",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1263@F@main@j",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "j",
+    "location": {
+      "column": "13",
+      "line": "33",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "j",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1318@F@main@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "18",
+      "line": "35",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_wwdg.c@1413@macro@BIT_MASK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "BIT_MASK",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
+    },
+    "name": "BIT_MASK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void WWDG_Init(uint8_t, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "53",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
+    },
+    "name": "WWDG_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_SetCounter",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void WWDG_SetCounter(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "69",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
+    },
+    "name": "WWDG_SetCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_GetCounter",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t WWDG_GetCounter(void)",
+    "location": {
+      "column": "9",
+      "line": "86",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
+    },
+    "name": "WWDG_GetCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_SWReset",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void WWDG_SWReset(void)",
+    "location": {
+      "column": "6",
+      "line": "96",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
+    },
+    "name": "WWDG_SWReset",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_SetWindowValue",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void WWDG_SetWindowValue(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "108",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_wwdg.c"
+    },
+    "name": "WWDG_SetWindowValue",
     "origin": "project_file",
     "scope": null
   },

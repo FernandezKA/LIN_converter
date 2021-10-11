@@ -40,17 +40,17 @@ const u8 MSK_TAB[9]= { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0 };
 
 /* Private variables ---------------------------------------------------------*/
 
-_Bool   Rx_phase;	// phase of received bit [0-1] (edge, middle)
-_Bool	Tx_phase;	// phase of transmited bit [0-1] (edge, middle)
+bool    Rx_phase;	// phase of received bit [0-1] (edge, middle)
+bool	Tx_phase;	// phase of transmited bit [0-1] (edge, middle)
 		
 #ifdef PARITY
-_Bool	Rx_parity;	// received parity [0-1]
-_Bool	Tx_parity;	// transmited parity [0-1]
+bool	Rx_parity;	// received parity [0-1]
+bool	Tx_parity;	// transmited parity [0-1]
 #endif
 
 #ifdef BIT9
-_Bool	Rx_bit9;		// received 9-th data bit [0-1]
-_Bool	Tx_bit9;		// transmited 9-th data bit [0-1]
+bool	Rx_bit9;		// received 9-th data bit [0-1]
+bool	Tx_bit9;		// transmited 9-th data bit [0-1]
 #endif
 
 	u8	Rx_bit,		// counter of received bits [0-11]
@@ -107,7 +107,8 @@ u8 uart_send(u8 b) {	//transmition/bufferring possible?
 		Tx_data= b;					//YES - initiate sending procedure
 		clr_status(transmit_data_reg_empty);
 		if(!test_status(transmit_in_progress)) {
-			Tx_phase= Tx_bit= 0;
+			Tx_phase = FALSE;
+                        Tx_bit = 0;
 			set_status(transmit_in_progress);
 		};
 		return(TRUE);
@@ -167,7 +168,8 @@ case DATA_LENGTH:		if(Tx_bit9) set_Tx;
 				++Tx_bit;				// next bit to transmit			
 		};
 	};
-	Tx_phase= ~Tx_phase;
+        ((Tx_phase == TRUE) ? (Tx_phase = FALSE) : (Tx_phase = TRUE));
+	//Tx_phase= ~Tx_phase;
 }
 #endif
 
@@ -277,16 +279,22 @@ u8 uart_read(u8 *b) {
 						++Rx_bit;			// init next data bit receive
 				}
 			}
-
-			Rx_phase=~Rx_phase; ///NOT WORKED HERE
+                        
+                        if(Rx_phase){
+                          Rx_phase = FALSE;
+                        }
+                        else{
+                          Rx_phase = TRUE;
+                        }
+			//Rx_phase=~Rx_phase; ///NOT WORKED HERE
 	}
 	else {								// receive is not in progres yet
 		disable_IC_system;			// IC interrupt - begin of start bit detected
 		enable_OC_system;				//	OC interrupt period as a conseqence of start bit falling edge
 		set_status(receive_in_progress);	// receive byte initialization
-		Rx_bit= 0; Rx_phase= 0;
+		Rx_bit= FALSE; Rx_phase= FALSE;
 #ifdef PARITY
-		Rx_parity= 0;
+		Rx_parity = 0;
 #else
 #ifdef BIT9
 		Rx_bit9= 0;
