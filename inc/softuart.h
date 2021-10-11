@@ -27,6 +27,7 @@
 
 // ---------------------------------------------------------
 // --------------- user macros definition ------------------
+//#define _Bool bool
     extern uint8_t u8RXB;
 // ---------------------------------------------------------
 //#ifndef _COSMIC_
@@ -60,9 +61,9 @@
 #define	UART_RxPIN	(GPIO_PIN_3)
 #endif
 
-#ifdef TEST_PIN_USED
-#define  UART_TestPORT	(GPIOD)
-#define	UART_TestPIN	(GPIO_PIN_4)
+#ifdef  TEST_PIN_USED
+#define UART_TestPORT	(GPIOD)
+#define	UART_TestPIN	(GPIO_PIN_5)
 #endif
 
 #define	OCInit_TypeDef		TIM2_OCInit_TypeDef TIM2_OCInitStruct
@@ -72,13 +73,13 @@
 
 //	Here user must ensure calling service interrupt routine at exact intervals 
 //	of 1/2 bit of the dedicated baud rate (see also TO_HSE switch above)
-// TIM3 overflow period must be set in dependance on fmaster clock selected:
+// TIM2 overflow period must be set in dependance on fmaster clock selected:
 //                                     fmaster= fcpu clock:   16 / 24 Mhz
-// 	for 9600Bd speed set overflow every 52.08us - Period=  833 / 1250
+//   for  9600Bd speed set overflow every 52.08us - Period=  833 / 1250
 //   for 19200Bd speed set overflow every 26,04us - Period=  417 / 625
 //   for 57600Bd speed set overflow every  8,68us - Period=  139*/ 208
 // *) for half duplex only!
-// next macro initializes and enable TIM3 base and interrupt system, divider
+// next macro initializes and enable TIM2 base and interrupt system, divider
 // register /1, auto reload register, enable interrupt on update, update on overflow
 #define init_UART_timing	{\
 	TIM2_TimeBaseInit(TIM2_PRESCALER_1, 833);\
@@ -86,12 +87,11 @@
 	TIM2_UpdateRequestConfig(TIM2_UPDATESOURCE_REGULAR);\
 	TIM2_Cmd(ENABLE);\
 }
-
 // input capture system initialization
 //filter (4 samples), IC2 mapped on TI2FP2, capture on faling edge
 #define	init_ic_setting	{\
 	TIM2->CCER1&= ~TIM2_CCER1_CC2E;\
-	TIM2->CCMR2= (((2<<4) & TIM2_CCMR_ICxF) | ((1<<0) & TIM2_CCMR_CCxS));\
+	TIM2->CCMR2= (((2<<4) & TIM2_CCMR_ICxF) | ((1<<0) & TIM2_CCMR_CCxS));\//????
 	TIM2->CCER1|= TIM2_CCER1_CC2P | TIM2_CCER1_CC2E;\
 }
 // output compare system initialization
@@ -102,7 +102,7 @@
 }
 
 #define	clear_owerflow_flag	{TIM2->SR1 &= ~TIM2_SR1_UIF; }
-#define	clear_cc_flag			{ TIM2->SR1 &= ~TIM2_SR1_CC2IF;	}
+#define	clear_cc_flag		{ TIM2->SR1 &= ~TIM2_SR1_CC2IF;	}
 #define  enable_cc_interrupt	{ TIM2->IER |=  TIM2_IER_CC2IE; }
 #define  disable_cc_interrupt	{ TIM2->IER &= ~TIM2_IER_CC2IE; }
 
@@ -143,15 +143,15 @@
 
 // bit manipulation definition
 #ifdef SWUART_RECEIVE_USED
-#define Rx_test	(UART_RxPORT->IDR & UART_RxPIN)
+#define Rx_test	(UART_RxPORT->IDR & GPIO_PIN_3)
 #endif
 #ifdef SWUART_TRANSMIT_USED
 #define set_Tx		(UART_TxPORT->ODR |= UART_TxPIN)
 #define clr_Tx		(UART_TxPORT->ODR &=~UART_TxPIN)
 #endif
 #ifdef TEST_PIN_USED
-#define set_Test_Pin		(UART_TestPORT->ODR |= UART_TestPIN)
-#define clr_Test_Pin		(UART_TestPORT->ODR &=~UART_TestPIN)
+#define set_Test_Pin		(UART_TestPORT->ODR |= (1<<4))
+#define clr_Test_Pin		(UART_TestPORT->ODR &=~(1<<4))
 #endif
 
 // initial definition of HW pins Tx as output push-pull, Rx as input floating
@@ -169,11 +169,10 @@
 /* Exported constants --------------------------------------------------------*/
 // status masks
 #define	transmit_in_progress			0x80
-#define	transmit_data_reg_empty		0x40
+#define	transmit_data_reg_empty		        0x40
 #define	receive_9th_data_bit			0x20
 #define	receive_in_progress			0x10
-
-#define	receive_buffer_overflow		0x08 // low nibble corresponds to error return value
+#define	receive_buffer_overflow		        0x08 // low nibble corresponds to error return value
 #define	receive_frame_error			0x04
 #define	receive_noise_error			0x02
 #define	receive_buffer_full			0x01

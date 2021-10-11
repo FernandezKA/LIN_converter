@@ -40,7 +40,7 @@ const u8 MSK_TAB[9]= { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0 };
 
 /* Private variables ---------------------------------------------------------*/
 
-_Bool Rx_phase;	// phase of received bit [0-1] (edge, middle)
+_Bool   Rx_phase;	// phase of received bit [0-1] (edge, middle)
 _Bool	Tx_phase;	// phase of transmited bit [0-1] (edge, middle)
 		
 #ifdef PARITY
@@ -127,20 +127,22 @@ void uart_Tx_timing(void) {
 	if(Tx_phase) {
 		if(test_status(transmit_in_progress)) {	// edge of current bit (no service for middle)
 			switch(Tx_bit) {			// begin of bit transmition
-				case 0:					clr_Tx;	//start bit transmition
+				case 0:	
+                                  clr_Tx;	//start bit transmition
 #ifdef PARITY
-											Tx_parity= 0;
+				Tx_parity= 0;
 #endif
-											break;
+				break;
 #ifdef PARITY
-				case DATA_LENGTH:		if(Tx_parity) set_Tx;
-											else          clr_Tx;
-											break;
+				case DATA_LENGTH:		
+                                  if(Tx_parity) set_Tx;
+				  else          clr_Tx;
+				  break;
 #else
 #ifdef BIT9
 case DATA_LENGTH:		if(Tx_bit9) set_Tx;
-											else        clr_Tx;
-											break;
+				else        clr_Tx;
+				break;
 #endif
 #endif
 				case DATA_LENGTH+1:	set_status(transmit_data_reg_empty);
@@ -200,81 +202,83 @@ u8 uart_read(u8 *b) {
   * None
   * @retval None
   */
-void uart_Rx_timing(void) {
-	clear_cc_flag;
-	if(test_status(receive_in_progress)) {
-		if(!Rx_phase) {		// receive is in progres now
-			Rx_samp= 0;				// middle of current bit, checking samples
-#ifdef TEST_PIN_USED
-			set_Test_Pin;
-#endif
-			if(Rx_test)	++Rx_samp; // sampling in the middle of current bit
-			if(Rx_test)	++Rx_samp;
-			if(Rx_test)	++Rx_samp;
-#ifdef TEST_PIN_USED
-			clr_Test_Pin;
-#endif
+	void uart_Rx_timing(void) {
+		clear_cc_flag;
+		if(test_status(receive_in_progress)) {
+			if(!Rx_phase) {		// receive is in progres now //Edge status is 1, if middle bit - skip (prescaler of frequency)
+				Rx_samp= 0;				// middle of current bit, checking samples
+	#ifdef TEST_PIN_USED
+				set_Test_Pin;
+	#endif
+				if(Rx_test)	++Rx_samp; // sampling in the middle of current bit
+				if(Rx_test)	++Rx_samp;
+				if(Rx_test)	++Rx_samp;
+	#ifdef TEST_PIN_USED
+				clr_Test_Pin;
+	#endif
 
-			if(Rx_bit==0) {
-				if(Rx_samp==0) {		// start bit!
-					Rx_bit= 1;			// correctly received, continue
-					Rx_buff= 0;
+				if(Rx_bit==0) {
+					if(Rx_samp==0) {		// start bit!
+						Rx_bit= 1;			// correctly received, continue
+						Rx_buff= 0;
+					}
+					else {					// noise in start bit, find next one
+						disable_OC_system;
+						enable_IC_system;
+						clr_status(receive_in_progress);
+					};
 				}
-				else {					// noise in start bit, find next one
-					disable_OC_system;
-					enable_IC_system;
-					clr_status(receive_in_progress);
-				};
-			}
-			else {
-				switch(Rx_samp) {	                                  // any other bit, results?
-					case 1:	set_status(receive_noise_error);
-								break;	// noise in middle samples, "0" received
-					case 2: 	set_status(receive_noise_error);
-											// noise in middle samples, "1" received
-#ifdef PARITY
-					case 3:	if(Rx_bit < DATA_LENGTH)  Rx_buff|= MSK_TAB[Rx_bit-1];
-								if(Rx_bit <= DATA_LENGTH) Rx_parity= ~Rx_parity;
-#else
-#ifdef BIT9
-					case 3:	if(Rx_bit < DATA_LENGTH)  Rx_buff|= MSK_TAB[Rx_bit-1];
-								if(Rx_bit == DATA_LENGTH) Rx_bit9= 1;
-#else
-					case 3:	if(Rx_bit <= DATA_LENGTH) Rx_buff|= MSK_TAB[Rx_bit-1];
-#endif
-#endif
-								break;	// "1" correctly received
-				};
-				if(Rx_bit > DATA_LENGTH) {
-#ifdef PARITY
-					if(Rx_samp != 3  || Rx_parity)	// stop bit(s) are received, results?
-#else
-					if(Rx_samp != 3)	// stop bit(s) are received, results?
-#endif
-						set_status(receive_frame_error);		// noise in stop bit or parity error
-					if(Rx_bit >= DATA_LENGTH + STOP_BITS) {
-						if(!test_status(receive_buffer_full)) { // end of receive
-							Rx_data= Rx_buff;								// new byte in buffer
-#ifdef BIT9
-							if(Rx_bit9) set_status(receive_9th_data_bit);
-							else			clr_status(receive_9th_data_bit);
-#endif
-							set_status(receive_buffer_full);		 
+				else {
+                                        asm("nop");
+					switch(Rx_samp) {		// any other bit, results?
+						case 1:	set_status(receive_noise_error);
+									break;	// noise in middle samples, "0" received
+						case 2: 	set_status(receive_noise_error);
+												// noise in middle samples, "1" received
+	#ifdef PARITY
+						case 3:	if(Rx_bit < DATA_LENGTH)  Rx_buff|= MSK_TAB[Rx_bit-1];
+									if(Rx_bit <= DATA_LENGTH) Rx_parity= ~Rx_parity;
+	#else
+	#ifdef BIT9
+						case 3:	if(Rx_bit < DATA_LENGTH)  Rx_buff|= MSK_TAB[Rx_bit-1];
+									if(Rx_bit == DATA_LENGTH) Rx_bit9= 1;
+	#else
+						case 3:	if(Rx_bit <= DATA_LENGTH) Rx_buff|= MSK_TAB[Rx_bit-1];
+	#endif
+	#endif
+									break;	// "1" correctly received
+					};
+					if(Rx_bit > DATA_LENGTH) {
+	#ifdef PARITY
+						if(Rx_samp != 3  || Rx_parity)	// stop bit(s) are received, results?
+	#else
+						if(Rx_samp != 3)	// stop bit(s) are received, results?
+	#endif
+							set_status(receive_frame_error);		// noise in stop bit or parity error
+						if(Rx_bit >= DATA_LENGTH + STOP_BITS) {
+							if(!test_status(receive_buffer_full)) { // end of receive
+								Rx_data= Rx_buff;								// new byte in buffer
+	#ifdef BIT9
+								if(Rx_bit9) set_status(receive_9th_data_bit);
+								else			clr_status(receive_9th_data_bit);
+	#endif
+								set_status(receive_buffer_full);		 
+							}
+							else
+								set_status(receive_buffer_overflow); // data overflow!
+							disable_OC_system;		// init next byte receive
+							clr_status(receive_in_progress);
+							enable_IC_system;
 						}
 						else
-						set_status(receive_buffer_overflow); // data overflow!
-						disable_OC_system;		// init next byte receive
-						clr_status(receive_in_progress);
-						enable_IC_system;
+							++Rx_bit;
 					}
 					else
-						++Rx_bit;
+						++Rx_bit;			// init next data bit receive
 				}
-				else
-					++Rx_bit;			// init next data bit receive
 			}
-		}
-		Rx_phase=~Rx_phase;
+
+			Rx_phase=~Rx_phase; ///NOT WORKED HERE
 	}
 	else {								// receive is not in progres yet
 		disable_IC_system;			// IC interrupt - begin of start bit detected

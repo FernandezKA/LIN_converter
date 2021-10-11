@@ -17,31 +17,25 @@
 uint8_t u8RXB;
 int SystemInit(void)
 {
-  CLK->CKDIVR = 0;
-  CLK->PCKENR1|= 1<<5;
-  GPIOD->DDR|=(1<<4);
-  GPIOD->CR1|=(1<<4);
+  CLK_SYSCLKConfig(CLK_PRESCALER_HSIDIV1);	// set the highest HSI speed
+  GPIOD->DDR|=(1<<5);
+  GPIOD->CR1|=(1<<5);
   uart_init();
   uart_receive_enable;
   enable_cc_interrupt;
   enableInterrupts();	
-    return 0;
+  return 0;
 }
-uint8_t buff, sts;
-uint8_t tx_byte;
 void main(void)
 {
   SystemInit();
   for(;;){
-    sts= uart_send(0x55U);
-    while(test_status(transmit_in_progress) == transmit_in_progress){//Wait while TXNE
-      asm("nop");
+    for(int j = 0; j < 0xFF; ++j){
+    uart_send(j);
+    for(uint16_t i = 0; i < 0xFFFF; ++i) {asm("nop");}
     }
-    for(uint8_t i = 0; i < 0xFF; ++i) {asm("nop");}
-    sts =uart_read(&buff);
-   if(test_status(receive_buffer_full) == receive_buffer_full){
-      sts =uart_read(&buff);
-      uart_send(buff);
+    if(test_status(receive_buffer_full) == receive_buffer_full){
+      uart_read(&u8RXB);
     }
   }
 }

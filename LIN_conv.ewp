@@ -117,7 +117,7 @@
                 </option>
                 <option>
                     <name>GenMathFunctionDescription</name>
-                    <state></state>
+                    <state>Default variants of cos, sin, tan, log, log10, pow, and exp.</state>
                 </option>
             </data>
         </settings>
@@ -151,7 +151,7 @@
                 <option>
                     <name>IccOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>IccOptLevelSlave</name>
@@ -491,7 +491,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>LIN_conv.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
