@@ -279,13 +279,13 @@ u8 uart_read(u8 *b) {
 						++Rx_bit;			// init next data bit receive
 				}
 			}
-                        
-                        if(Rx_phase){
+                        ((Rx_phase == TRUE) ? (Rx_phase = FALSE) : (Rx_phase = TRUE));
+                        /*if(Rx_phase){
                           Rx_phase = FALSE;
                         }
                         else{
                           Rx_phase = TRUE;
-                        }
+                        }*/
 			//Rx_phase=~Rx_phase; ///NOT WORKED HERE
 	}
 	else {								// receive is not in progres yet
