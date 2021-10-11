@@ -47680,7 +47680,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "44",
+      "line": "45",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",

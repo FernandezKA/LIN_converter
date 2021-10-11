@@ -36,6 +36,7 @@ void main(void)
     }
     if(test_status(receive_buffer_full) == receive_buffer_full){
       uart_read(&u8RXB);
+      uart_send(u8RXB);
     }
   }
 }
