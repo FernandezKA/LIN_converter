@@ -1,29 +1,19 @@
 #include "stm8s_conf.h"
 #include "softuart.h"
-/**
-  *inc->stm8s_conf.h - раскоментировать строчки с нужными хедерами 
-  *периферии и необходимыми обработчиками прерываний. Все закоментированные
-  *обработчики ведут на бесконечные циклы.
-  * 
-  *Project->Options->General Options - выбрать мк
-  *
-  *Project->Options->Debugger - выбрать отладчик
-  *
-  *Project->Options->C/C++ Compiler->Preprocessor->Defined symbols  - задать
-  *семейство процессора(перечислены в lib->SPL->inc->stm8s.h), а также задать
-  *частоты внутренних и внешних генераторов(если не задать, то будут ипользованы
-  *значения по умолчанию из stm8s.h).
-  */
+#include "LIN.h"
 uint8_t u8RXB;
 int SystemInit(void)
 {
   CLK_SYSCLKConfig(CLK_PRESCALER_HSIDIV1);	// set the highest HSI speed
+  //Soft UART
   GPIOD->DDR|=(1<<5);
   GPIOD->CR1|=(1<<5);
   uart_init();
   uart_receive_enable;
   enable_cc_interrupt;
   enableInterrupts();	
+  //LIN (HW UART)
+  vLIN_Init();
   return 0;
 }
 void main(void)

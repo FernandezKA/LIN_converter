@@ -2156,6 +2156,9 @@
     <group>
         <name>inc</name>
         <file>
+            <name>$PROJ_DIR$\inc\LIN.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\parser.h</name>
         </file>
         <file>
@@ -2338,6 +2341,9 @@
     </group>
     <group>
         <name>src</name>
+        <file>
+            <name>$PROJ_DIR$\src\LIN.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\src\main.c</name>
         </file>
