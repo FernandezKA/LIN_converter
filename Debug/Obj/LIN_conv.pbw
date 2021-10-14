@@ -47380,76 +47380,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@vLIN_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void vLIN_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
-    },
-    "name": "vLIN_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:LIN.c@192@F@vLIN_Init@u16BAUD",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u16BAUD",
-    "location": {
-      "column": "12",
-      "line": "7",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
-    },
-    "name": "u16BAUD",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:LIN.c@220@F@vLIN_Init@u16Prescale",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u16Prescale",
-    "location": {
-      "column": "12",
-      "line": "8",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
-    },
-    "name": "u16Prescale",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@vLIN_BAUD",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void vLIN_BAUD(uint16_t)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
-    },
-    "name": "vLIN_BAUD",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:LIN.c@599@F@vLIN_BAUD@u16Prescale",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u16Prescale",
-    "location": {
-      "column": "12",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
-    },
-    "name": "u16Prescale",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@MSK_TAB",
     "What": "Variable",
     "defdec": "Def",
@@ -47758,6 +47688,104 @@
     "scope": null
   },
   {
+    "ID": "c:@F@vLIN_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vLIN_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "vLIN_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LIN.c@192@F@vLIN_Init@u16BAUD",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u16BAUD",
+    "location": {
+      "column": "12",
+      "line": "7",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "u16BAUD",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LIN.c@220@F@vLIN_Init@u16Prescale",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u16Prescale",
+    "location": {
+      "column": "12",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "u16Prescale",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vLIN_BAUD",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vLIN_BAUD(uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "vLIN_BAUD",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LIN.c@599@F@vLIN_BAUD@u16Prescale",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u16Prescale",
+    "location": {
+      "column": "12",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "u16Prescale",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vLIN_Send",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vLIN_Send(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "vLIN_Send",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@vLIN_header",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void vLIN_header(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\LIN.c"
+    },
+    "name": "vLIN_header",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@u8RXB",
     "What": "Variable",
     "defdec": "Dec",
@@ -48034,6 +48062,20 @@
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\LIN.h"
     },
     "name": "vLIN_BAUD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LIN_Send",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LIN_Send(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\LIN.h"
+    },
+    "name": "LIN_Send",
     "origin": "user_include",
     "scope": null
   },

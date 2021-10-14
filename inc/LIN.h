@@ -5,4 +5,5 @@
 //Init functions
 void vLIN_Init(void);
 void vLIN_BAUD(uint16_t u16BAUD);
+void LIN_Send(uint8_t);
 #endif

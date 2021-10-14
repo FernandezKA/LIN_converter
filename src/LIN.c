@@ -17,3 +17,13 @@ void vLIN_BAUD(uint16_t u16BAUD){
   UART1->BRR1 = (u16Prescale << 4) >> 8;
   UART1->BRR2 = ((u16Prescale & 0xF000 ) >> 12 ) | (u16Prescale & 0x000F);
 }
+//This function send data from LIN
+void vLIN_Send(uint8_t u8Data){
+  
+}
+//LIN header tranmission
+void vLIN_header(void){
+UART1->CR2|=UART1_CR2_SBK;
+UART1->DR = 0x55U;
+while((UART1->SR & UART1_SR_TC) != UART1_SR_TC) asm("nop");
+}
