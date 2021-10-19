@@ -46,6 +46,7 @@ build stm8s_uart2.pbi : index stm8s_uart2.xcl
 build stm8s_uart3.pbi : index stm8s_uart3.xcl
 build stm8s_uart4.pbi : index stm8s_uart4.xcl
 build stm8s_wwdg.pbi : index stm8s_wwdg.xcl
+build hal.pbi : index hal.xcl
 build LIN_Driver.pbi : index LIN_Driver.xcl
 build main.pbi : index main.xcl
 build parser.pbi : index parser.xcl
@@ -55,8 +56,8 @@ build LIN_conv_part0.pbi : link stm8s_adc1.pbi stm8s_adc2.pbi stm8s_awu.pbi stm8
 build LIN_conv_part1.pbi : link stm8s_exti.pbi stm8s_flash.pbi stm8s_gpio.pbi stm8s_i2c.pbi stm8s_it.pbi stm8s_itc.pbi
 build LIN_conv_part2.pbi : link stm8s_iwdg.pbi stm8s_rst.pbi stm8s_spi.pbi stm8s_tim1.pbi stm8s_tim2.pbi stm8s_tim3.pbi
 build LIN_conv_part3.pbi : link stm8s_tim4.pbi stm8s_tim5.pbi stm8s_tim6.pbi stm8s_uart1.pbi stm8s_uart2.pbi stm8s_uart3.pbi
-build LIN_conv_part4.pbi : link stm8s_uart4.pbi stm8s_wwdg.pbi LIN_Driver.pbi main.pbi parser.pbi softuart.pbi
-build LIN_conv_part5.pbi : link uart.pbi
+build LIN_conv_part4.pbi : link stm8s_uart4.pbi stm8s_wwdg.pbi hal.pbi LIN_Driver.pbi main.pbi parser.pbi
+build LIN_conv_part5.pbi : link softuart.pbi uart.pbi
 build LIN_conv.pbd : link LIN_conv_part0.pbi LIN_conv_part1.pbi LIN_conv_part2.pbi LIN_conv_part3.pbi LIN_conv_part4.pbi LIN_conv_part5.pbi
 build LIN_conv.pbw : browsedata LIN_conv.pbd
 

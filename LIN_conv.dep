@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>2892539340</fileChecksum>
+    <fileChecksum>2573254070</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -220,6 +220,10 @@
             <name>$PROJ_DIR$\src\hal.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 20</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 17</file>
                 </tool>
@@ -248,6 +252,10 @@
             <name>$PROJ_DIR$\src\softuart.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 71</file>
                 </tool>
@@ -266,6 +274,10 @@
         <file>
             <name>$PROJ_DIR$\src\uart.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 93</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 79</file>
@@ -320,6 +332,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_tim4.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 132</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 86</file>
                 </tool>
@@ -356,6 +372,10 @@
             <name>$PROJ_DIR$\src\main.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 76</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 42</file>
                 </tool>
@@ -375,6 +395,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_wwdg.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 100</file>
                 </tool>
@@ -393,6 +417,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_uart1.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 105</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 145</file>
@@ -510,6 +538,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_adc1.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 69</file>
                 </tool>
@@ -528,6 +560,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_exti.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 64</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 137</file>
@@ -548,6 +584,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_gpio.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 59</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 72</file>
                 </tool>
@@ -566,6 +606,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_i2c.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 106</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 91</file>
@@ -603,6 +647,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_it.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 84</file>
                 </tool>
@@ -621,6 +669,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_itc.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 143</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 131</file>
@@ -641,6 +693,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_awu.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 111</file>
                 </tool>
@@ -659,6 +715,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_iwdg.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 37</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 74</file>
@@ -679,6 +739,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_rst.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 121</file>
                 </tool>
@@ -697,6 +761,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_spi.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 113</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 140</file>
@@ -717,6 +785,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_tim1.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 55</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 51</file>
                 </tool>
@@ -735,6 +807,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_clk.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 130</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 67</file>
@@ -755,6 +831,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_flash.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 109</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 75</file>
                 </tool>
@@ -773,6 +853,10 @@
         <file>
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_tim2.c</name>
             <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 98</file>
+                </tool>
                 <tool>
                     <name>__cstat</name>
                     <file> 102</file>
@@ -810,6 +894,10 @@
             <name>$PROJ_DIR$\lib\SPL\src\stm8s_beep.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 101</file>
                 </tool>
@@ -827,90 +915,6 @@
         </file>
         <forcedrebuild>
             <name>$PROJ_DIR$\src\LIN_Driver.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\softuart.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\uart.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_tim4.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\main.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_wwdg.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_uart1.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_adc1.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_exti.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_gpio.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_i2c.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_it.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_itc.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_awu.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_iwdg.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_rst.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_spi.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_tim1.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_clk.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_flash.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_tim2.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lib\SPL\src\stm8s_beep.c</name>
             <tool>ICCSTM8</tool>
         </forcedrebuild>
         <forcedrebuild>

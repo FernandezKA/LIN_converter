@@ -1,24 +1,24 @@
 #include "stm8s_conf.h"
 #include "softuart.h"
 uint8_t u8RXB;
-event mode;
-LRtype lrTypeSel;
+//event mode;
+//LRtype lrTypeSel;
 uint8_t u8TempVar = 0;
 uint16_t u16TempCrc16Value = 0;
 
 
-uint8_t *CRC16_u8Value=NULL;
-uint8_t *Tps_u8LedPosDeviceId=NULL;
+uint8_t *CRC16_u8Value;//=NULL;
+uint8_t *Tps_u8LedPosDeviceId;//=NULL;
 uint8_t Tps_u8LedMatrixI = 0;
 
 uint16_t u16AdcValue=0;
 uint16_t u16AdcValueStore=0;
-bool     bRelayTrigger = false;
-bool     bButtonControlTrigger = false;
+bool     bRelayTrigger = FALSE;
+bool     bButtonControlTrigger = FALSE;
 uint8_t u8UartMessage[5]={0xff};
 uint8_t u8UartIcounter = 0;
 uint8_t u8ParityData = 0;
-uartPackage upacMsg;
+//uartPackage upacMsg;
 
 int SystemInit(void)
 {

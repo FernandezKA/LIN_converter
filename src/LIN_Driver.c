@@ -19,7 +19,7 @@ u8Packet TPS data
 ************************/
 uint8_t *Lin_u8CalCrc16(uint8_t *u8Header,uint8_t *u8Packet,uint8_t u8NumberHeader,uint8_t u8NumberPacket)
 {
-  uint8_t u8CountNumber;
+  /*uint8_t u8CountNumber;
   uint16_t u16CrcValue = 0;
   u16CrcValue = CRC16_PRESET;
   for(u8CountNumber = 0;u8CountNumber<(u8NumberHeader+u8NumberPacket);u8CountNumber++)
@@ -47,7 +47,7 @@ uint8_t *Lin_u8CalCrc16(uint8_t *u8Header,uint8_t *u8Packet,uint8_t u8NumberHead
     }
   }
   u8StoreCrc[0] = (uint8_t)u16CrcValue;
-  u8StoreCrc[1] = (uint8_t)(u16CrcValue>>8);
+  u8StoreCrc[1] = (uint8_t)(u16CrcValue>>8);*/
   return u8StoreCrc;
 }
 
@@ -57,9 +57,8 @@ void Lin_vidSendBytes(uint8_t u8Bytes,uint8_t *pu8SendByes)
   //uint8_t u8TransmitData;
   for(u8CountBytes=0;u8CountBytes<u8Bytes;u8CountBytes++)
   {
-    while(UART1_GetFlagStatus(UART1_FLAG_TXE) == RESET)
-    {
-    }
+    //while(UART1_GetFlagStatus(UART1_FLAG_TXE) == RESET)
+    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE){asm("nop");}
     u8TransmitData = *(pu8SendByes+u8CountBytes);
     UART1_SendData8(u8TransmitData);
 
@@ -95,8 +94,8 @@ void Lin_vidDecodeMsg(uint8_t *pu8GetMsg)
   {
     if(*(pu8GetMsg+1)==Lin_parity(*(pu8GetMsg+1))) // PID is correct
     {
-      upacMsg.msgCmd = *(pu8GetMsg+2);
-      upacMsg.msgData = (uint16_t)*(pu8GetMsg+3)<<8 + *(pu8GetMsg+4);
+      //upacMsg.msgCmd = *(pu8GetMsg+2);
+      //upacMsg.msgData = (uint16_t)*(pu8GetMsg+3)<<8 + *(pu8GetMsg+4);
     }
   }
   
@@ -106,7 +105,7 @@ void Lin_vidDecodeMsg(uint8_t *pu8GetMsg)
 
 void Lin_RunMode()
 { 
-  Lin_vidDecodeMsg(u8UartMessage);
+  /*Lin_vidDecodeMsg(u8UartMessage);
   switch(upacMsg.msgCmd){
     case 0x00:          //LB mode
       break;
@@ -114,10 +113,9 @@ void Lin_RunMode()
       break;
     default:
       break;
-   
   
   }
-  //Lin_vidSendBytes(2,u8StoreCrc);
-  
+  Lin_vidSendBytes(2,u8StoreCrc);
+  */
 
 }
