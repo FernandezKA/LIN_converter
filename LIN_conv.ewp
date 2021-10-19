@@ -290,7 +290,7 @@
                 </option>
                 <option>
                     <name>IccLang</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IccCDialect</name>
@@ -1642,7 +1642,10 @@
     <group>
         <name>inc</name>
         <file>
-            <name>$PROJ_DIR$\inc\LIN.h</name>
+            <name>$PROJ_DIR$\inc\hal.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\inc\LIN_Driver.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\inc\parser.h</name>
@@ -1828,7 +1831,7 @@
     <group>
         <name>src</name>
         <file>
-            <name>$PROJ_DIR$\src\LIN.c</name>
+            <name>$PROJ_DIR$\src\LIN_Driver.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\main.c</name>
