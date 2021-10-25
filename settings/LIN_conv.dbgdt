@@ -768,7 +768,7 @@
                     <item>Rx_bit</item>
                     <item>Rx_samp</item>
                     <item>Rx_phase</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

@@ -1642,16 +1642,7 @@
     <group>
         <name>inc</name>
         <file>
-            <name>$PROJ_DIR$\inc\hal.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\inc\LIN_Driver.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\inc\parser.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\inc\softuart.h</name>
+            <name>$PROJ_DIR$\inc\lin.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\inc\stm8s_conf.h</name>
@@ -1831,22 +1822,7 @@
     <group>
         <name>src</name>
         <file>
-            <name>$PROJ_DIR$\src\hal.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\LIN_Driver.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\src\main.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\parser.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\softuart.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\uart.c</name>
         </file>
     </group>
 </project>
