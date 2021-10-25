@@ -2,6 +2,8 @@
 #define _lin_h_
 //User includes
 #include <stm8s.h>
+//User defines
+#define BAUDRATE 9600
 //User variable definitions for LIN protocol
 extern uint8_t u8CountBreak;
 extern uint8_t u8SyncValue;
@@ -18,5 +20,4 @@ enum {
     wait_data, 
     completed
 } eStateRecieve;
-
 #endif
