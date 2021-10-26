@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>4199264935</fileChecksum>
+    <fileChecksum>1186932913</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -23,7 +23,7 @@
             <file>$PROJ_DIR$\lib\SPL\inc\stm8s_can.h</file>
             <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_iwdg.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\LIN.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lin.o</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_adc1.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Exe\SPL_STM8S_template.out</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_adc1.xcl</file>
@@ -34,7 +34,7 @@
             <file>$PROJ_DIR$\Debug\Obj\stm8s_itc.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_wwdg.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_tim4.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\LIN.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\lin.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_uart3.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_tim2.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_itc.xcl</file>
@@ -80,7 +80,7 @@
             <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
             <file>$PROJ_DIR$\Debug\Obj\LIN_Driver.o</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_uart1.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\LIN.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\lin.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\hal.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\LIN_Driver.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_adc1.o</file>
@@ -209,10 +209,6 @@
             <name>$PROJ_DIR$\src\lin.c</name>
             <outputs>
                 <tool>
-                    <name>ICCSTM8</name>
-                    <file> 18</file>
-                </tool>
-                <tool>
                     <name>BICOMP</name>
                     <file> 29</file>
                 </tool>
@@ -224,7 +220,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 6 11 16 0 2 54</file>
+                    <file> 54 6 11 16 0 2</file>
                 </tool>
             </inputs>
         </file>
@@ -674,6 +670,10 @@
             <name>$PROJ_DIR$\src\main.c</name>
             <outputs>
                 <tool>
+                    <name>ICCSTM8</name>
+                    <file> 177</file>
+                </tool>
+                <tool>
                     <name>BICOMP</name>
                     <file> 144</file>
                 </tool>
@@ -912,6 +912,10 @@
                 </tool>
             </outputs>
         </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
     </configuration>
     <configuration>
         <name>Release</name>

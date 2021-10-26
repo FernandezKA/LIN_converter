@@ -13,8 +13,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-#include "stm32f1xx_hal.h"
-
+//#include "stm32f1xx_hal.h"
+#include "stm8s_conf.h"
 
 
 /* Declarations and definitions ----------------------------------------------*/
@@ -58,8 +58,8 @@ typedef enum {
 
 
 /* Functions -----------------------------------------------------------------*/
-
-extern void LIN_Init(UART_HandleTypeDef *uHandle, TIM_HandleTypeDef *tHandle, LIN_Mode mode,
+ //TODO: Edit function arguments for STM8
+extern void LIN_Init(void (*uHandle) (void), void (*tHandle) (void), LIN_Mode mode,
                      GPIO_TypeDef *rPort, uint32_t rPin, GPIO_TypeDef *tPort, uint32_t tPin);
 extern LIN_Error LIN_Transmit(uint32_t id, uint8_t *ptr, uint8_t len);
 extern LIN_Error LIN_Receive(uint32_t id, uint8_t *ptr, uint8_t len);

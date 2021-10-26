@@ -4,9 +4,9 @@
 -fbracket-depth=512
 -MD
 -MF
-C:\dev\MCU\STM8\LIN_Converter\Debug\Obj\LIN.pbi.dep
+C:\dev\MCU\STM8\LIN_Converter\Debug\Obj\lin.pbi.dep
 -o
-LIN.pbi
+lin.pbi
 -I
 C:\dev\MCU\STM8\LIN_Converter\src
 -I

@@ -3,26 +3,7 @@
 void main(void)
 {
   for(;;){
-    switch(eStateRecieve){
-    case wait_break:
-      
-      break;
-    case wait_sync:
-      
-      break;
-    case wait_id:
-      
-      break;
-    case wait_parity:
-      
-      break;
-    case wait_data:
-      
-      break;
-    case completed:
-      
-      break;
-    }
+  GPIOD->ODR^=(1<<5);
   }
 }
 

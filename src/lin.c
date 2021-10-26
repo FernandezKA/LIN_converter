@@ -12,8 +12,7 @@
 
 #include "lin.h"
 
-
-
+#define BAUDRATE 9600UL
 /* Declarations and definitions ----------------------------------------------*/
 
 static LIN_State curState = LIN_IDLE;
@@ -40,14 +39,18 @@ static uint8_t syncByte = LIN_SYNC_BYTE;
 static uint8_t isInit = 0;
 static uint8_t *dataPtr;
 
-static UART_HandleTypeDef *uartHandle;
-static TIM_HandleTypeDef *timerHandle;
+//Pointer to the IRQ handlers
+static void (*uartHandle) (void);
+static void (*TimHandle) (void);
+//static UART_HandleTypeDef *uartHandle;
+//static TIM_HandleTypeDef *timerHandle;
 
 static GPIO_TypeDef *rxPort;
 static GPIO_TypeDef *txPort;
 
-static uint32_t rxPin;
-static uint32_t txPin;
+
+static uint8_t rxPin;
+static uint8_t txPin;
 
 
 
@@ -68,7 +71,7 @@ __weak void LIN_RxCpltCallback()
 /*----------------------------------------------------------------------------*/
 uint8_t LIN_ReadRxPortState()
 {
-  uint8_t res = HAL_GPIO_ReadPin(rxPort, rxPin);
+  uint8_t res = (rxPort -> ODR)&rxPin;//GPIO_ReadInputPin(rxPort, rxPin);
   return res;
 }
 
@@ -77,41 +80,45 @@ uint8_t LIN_ReadRxPortState()
 /*----------------------------------------------------------------------------*/
 void LIN_WriteTxPortState(uint8_t state)
 {  
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  //GPIO_InitTypeDef GPIO_InitStruct = {0};
   
   if (state == 0)
   {
-    HAL_GPIO_DeInit(txPort, txPin);
-    
+    //Enable GPIO, reset state, disable UART
+    UART1->CR2&=~UART1_CR2_TEN | UART1_CR2_REN;
+    //Pp, fast mode
+    txPort->DDR|=(1<<txPin);
+    txPort->CR1|=(1<txPin);
+    txPort->CR2|=(1<<txPin);
+    /*HAL_GPIO_DeInit(txPort, txPin);
     GPIO_InitStruct.Pin = txPin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(txPort, &GPIO_InitStruct);
+    HAL_GPIO_WritePin(txPort, txPin, GPIO_PIN_RESET);*/
     
-    HAL_GPIO_WritePin(txPort, txPin, GPIO_PIN_RESET);
   }
   else
   {
-    HAL_GPIO_WritePin(txPort, txPin, GPIO_PIN_SET);
-    
+    //Enable UART
+    /*HAL_GPIO_WritePin(txPort, txPin, GPIO_PIN_SET);
     HAL_GPIO_DeInit(txPort, txPin);
-    
     GPIO_InitStruct.Pin = txPin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(txPort, &GPIO_InitStruct);
+    HAL_GPIO_Init(txPort, &GPIO_InitStruct);*/
   }
 }
 
 
 
 /*----------------------------------------------------------------------------*/
-void LIN_Init(UART_HandleTypeDef *uHandle, TIM_HandleTypeDef *tHandle, LIN_Mode mode,
+void LIN_Init(void (*uHandle) (void), void (*tHandle) (void), LIN_Mode mode,
               GPIO_TypeDef *rPort, uint32_t rPin, GPIO_TypeDef *tPort, uint32_t tPin)
 {  
-  uartHandle = uHandle;
-  timerHandle = tHandle;
+  uartHandle = uHandle;//Pointer to the function
+  TimHandle = tHandle;
   rxPort = rPort;
   rxPin = rPin;
   txPort = tPort;
@@ -119,9 +126,10 @@ void LIN_Init(UART_HandleTypeDef *uHandle, TIM_HandleTypeDef *tHandle, LIN_Mode 
   
   curMode = mode;
   curState = LIN_IDLE;
-  curBaudrate = uartHandle->Init.BaudRate;
+  curBaudrate = BAUDRATE;//uartHandle->Init.BaudRate;
   
-  HAL_TIM_Base_Start_IT(timerHandle);
+  //HAL_TIM_Base_Start_IT(timerHandle);
+  //TODO: Enable Tim4 IRQ
   
   breakCntLimit = (1000000 * LIN_BREAK_SIZE_BITS / curBaudrate) / LIN_TIMER_PERIOD_US;
   breakCntUpperLimit = breakCntLimit + breakCntLimit * LIN_BREAK_DEVIATION_PERCENT / 100;
