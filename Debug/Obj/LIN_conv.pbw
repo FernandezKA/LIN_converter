@@ -45488,13 +45488,153 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@412@macro@BAUDRATE",
+    "ID": "c:stm8s_wwdg.h@1291@macro@__STM8S_WWDG_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM8S_WWDG_H",
+    "location": {
+      "column": "9",
+      "line": "30",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "__STM8S_WWDG_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_wwdg.h@1730@macro@IS_WWDG_WINDOWLIMITVALUE_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_WWDG_WINDOWLIMITVALUE_OK",
+    "location": {
+      "column": "9",
+      "line": "49",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "IS_WWDG_WINDOWLIMITVALUE_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_wwdg.h@1943@macro@IS_WWDG_COUNTERVALUE_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_WWDG_COUNTERVALUE_OK",
+    "location": {
+      "column": "9",
+      "line": "55",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "IS_WWDG_COUNTERVALUE_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_Init#c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void WWDG_Init(uint8_t, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "69",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "WWDG_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_SetCounter#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void WWDG_SetCounter(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "70",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "WWDG_SetCounter",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_GetCounter#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t WWDG_GetCounter(void)",
+    "location": {
+      "column": "9",
+      "line": "71",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "WWDG_GetCounter",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_SWReset#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void WWDG_SWReset(void)",
+    "location": {
+      "column": "6",
+      "line": "72",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "WWDG_SWReset",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WWDG_SetWindowValue#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void WWDG_SetWindowValue(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "73",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+    },
+    "name": "WWDG_SetWindowValue",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "3",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed#*c#l#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:lin.c@431@macro@BAUDRATE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "BAUDRATE",
     "location": {
       "column": "9",
-      "line": "15",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "BAUDRATE",
@@ -45508,7 +45648,7 @@
     "display": "curState",
     "location": {
       "column": "18",
-      "line": "18",
+      "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "curState",
@@ -45522,7 +45662,7 @@
     "display": "curMode",
     "location": {
       "column": "17",
-      "line": "19",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "curMode",
@@ -45536,7 +45676,7 @@
     "display": "curBaudrate",
     "location": {
       "column": "17",
-      "line": "21",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "curBaudrate",
@@ -45550,7 +45690,7 @@
     "display": "breakCnt",
     "location": {
       "column": "17",
-      "line": "23",
+      "line": "24",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "breakCnt",
@@ -45564,7 +45704,7 @@
     "display": "breakCntLimit",
     "location": {
       "column": "17",
-      "line": "24",
+      "line": "25",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "breakCntLimit",
@@ -45578,7 +45718,7 @@
     "display": "breakCntUpperLimit",
     "location": {
       "column": "17",
-      "line": "25",
+      "line": "26",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "breakCntUpperLimit",
@@ -45592,7 +45732,7 @@
     "display": "breakCntLowerLimit",
     "location": {
       "column": "17",
-      "line": "26",
+      "line": "27",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "breakCntLowerLimit",
@@ -45606,7 +45746,7 @@
     "display": "rxTimeoutCntLimit",
     "location": {
       "column": "17",
-      "line": "28",
+      "line": "29",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxTimeoutCntLimit",
@@ -45620,7 +45760,7 @@
     "display": "rxTimeoutCnt",
     "location": {
       "column": "17",
-      "line": "29",
+      "line": "30",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxTimeoutCnt",
@@ -45634,7 +45774,7 @@
     "display": "txDataNum",
     "location": {
       "column": "16",
-      "line": "31",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "txDataNum",
@@ -45648,7 +45788,7 @@
     "display": "rxDataNum",
     "location": {
       "column": "16",
-      "line": "32",
+      "line": "33",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxDataNum",
@@ -45662,7 +45802,7 @@
     "display": "txId",
     "location": {
       "column": "16",
-      "line": "34",
+      "line": "35",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "txId",
@@ -45676,7 +45816,7 @@
     "display": "txCheckSum",
     "location": {
       "column": "16",
-      "line": "35",
+      "line": "36",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "txCheckSum",
@@ -45690,7 +45830,7 @@
     "display": "rxByte",
     "location": {
       "column": "16",
-      "line": "36",
+      "line": "37",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxByte",
@@ -45704,7 +45844,7 @@
     "display": "syncByte",
     "location": {
       "column": "16",
-      "line": "37",
+      "line": "38",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "syncByte",
@@ -45718,7 +45858,7 @@
     "display": "isInit",
     "location": {
       "column": "16",
-      "line": "39",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "isInit",
@@ -45732,7 +45872,7 @@
     "display": "dataPtr",
     "location": {
       "column": "17",
-      "line": "40",
+      "line": "41",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "dataPtr",
@@ -45746,7 +45886,7 @@
     "display": "uartHandle",
     "location": {
       "column": "15",
-      "line": "43",
+      "line": "44",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "uartHandle",
@@ -45760,7 +45900,7 @@
     "display": "TimHandle",
     "location": {
       "column": "15",
-      "line": "44",
+      "line": "45",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "TimHandle",
@@ -45774,7 +45914,7 @@
     "display": "rxPort",
     "location": {
       "column": "22",
-      "line": "48",
+      "line": "49",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxPort",
@@ -45788,7 +45928,7 @@
     "display": "txPort",
     "location": {
       "column": "22",
-      "line": "49",
+      "line": "50",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "txPort",
@@ -45802,7 +45942,7 @@
     "display": "rxPin",
     "location": {
       "column": "16",
-      "line": "52",
+      "line": "53",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxPin",
@@ -45816,7 +45956,7 @@
     "display": "txPin",
     "location": {
       "column": "16",
-      "line": "53",
+      "line": "54",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "txPin",
@@ -45830,7 +45970,7 @@
     "display": "void LIN_SlaveIdRxCallback(uint8_t)",
     "location": {
       "column": "13",
-      "line": "58",
+      "line": "59",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_SlaveIdRxCallback",
@@ -45844,7 +45984,7 @@
     "display": "void LIN_RxCpltCallback(void)",
     "location": {
       "column": "13",
-      "line": "65",
+      "line": "66",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_RxCpltCallback",
@@ -45858,7 +45998,7 @@
     "display": "uint8_t LIN_ReadRxPortState(void)",
     "location": {
       "column": "9",
-      "line": "72",
+      "line": "73",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_ReadRxPortState",
@@ -45866,13 +46006,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1834@F@LIN_ReadRxPortState#@res",
+    "ID": "c:lin.c@1853@F@LIN_ReadRxPortState#@res",
     "What": "Variable",
     "defdec": "Def",
     "display": "res",
     "location": {
       "column": "11",
-      "line": "74",
+      "line": "75",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "res",
@@ -45886,7 +46026,7 @@
     "display": "void LIN_WriteTxPortState(uint8_t)",
     "location": {
       "column": "6",
-      "line": "81",
+      "line": "82",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_WriteTxPortState",
@@ -45900,7 +46040,7 @@
     "display": "void LIN_Init(void (*)(), void (*)(), LIN_Mode, GPIO_TypeDef *, uint32_t, GPIO_TypeDef *, uint32_t)",
     "location": {
       "column": "6",
-      "line": "117",
+      "line": "118",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_Init",
@@ -45914,7 +46054,7 @@
     "display": "LIN_Error LIN_Transmit(uint32_t, uint8_t *, uint8_t)",
     "location": {
       "column": "11",
-      "line": "144",
+      "line": "145",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_Transmit",
@@ -45922,13 +46062,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@4008@F@LIN_Transmit#l#*c#c#@res",
+    "ID": "c:lin.c@4027@F@LIN_Transmit#l#*c#c#@res",
     "What": "Variable",
     "defdec": "Def",
     "display": "res",
     "location": {
       "column": "13",
-      "line": "146",
+      "line": "147",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "res",
@@ -45942,7 +46082,7 @@
     "display": "LIN_Error LIN_Receive(uint32_t, uint8_t *, uint8_t)",
     "location": {
       "column": "11",
-      "line": "184",
+      "line": "185",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_Receive",
@@ -45950,13 +46090,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@4806@F@LIN_Receive#l#*c#c#@res",
+    "ID": "c:lin.c@4809@F@LIN_Receive#l#*c#c#@res",
     "What": "Variable",
     "defdec": "Def",
     "display": "res",
     "location": {
       "column": "13",
-      "line": "186",
+      "line": "187",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "res",
@@ -45970,7 +46110,7 @@
     "display": "void LIN_Reset(void)",
     "location": {
       "column": "6",
-      "line": "224",
+      "line": "225",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_Reset",
@@ -45984,7 +46124,7 @@
     "display": "LIN_State LIN_GetState(void)",
     "location": {
       "column": "11",
-      "line": "232",
+      "line": "233",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_GetState",
@@ -45998,7 +46138,7 @@
     "display": "uint8_t LIN_CalcCheckSum(uint8_t *, uint8_t)",
     "location": {
       "column": "9",
-      "line": "240",
+      "line": "241",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_CalcCheckSum",
@@ -46006,13 +46146,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@5866@F@LIN_CalcCheckSum#*c#c#@sum",
+    "ID": "c:lin.c@5853@F@LIN_CalcCheckSum#*c#c#@sum",
     "What": "Variable",
     "defdec": "Def",
     "display": "sum",
     "location": {
       "column": "12",
-      "line": "242",
+      "line": "243",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "sum",
@@ -46020,13 +46160,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@5896@F@LIN_CalcCheckSum#*c#c#@i",
+    "ID": "c:lin.c@5883@F@LIN_CalcCheckSum#*c#c#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "16",
-      "line": "244",
+      "line": "245",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -46040,7 +46180,7 @@
     "display": "uint8_t LIN_GetDataLength(uint8_t)",
     "location": {
       "column": "9",
-      "line": "262",
+      "line": "263",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_GetDataLength",
@@ -46048,13 +46188,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@6198@F@LIN_GetDataLength#c#@len",
+    "ID": "c:lin.c@6185@F@LIN_GetDataLength#c#@len",
     "What": "Variable",
     "defdec": "Def",
     "display": "len",
     "location": {
       "column": "11",
-      "line": "264",
+      "line": "265",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "len",
@@ -46068,7 +46208,7 @@
     "display": "void LIN_TimerProcess(void)",
     "location": {
       "column": "6",
-      "line": "291",
+      "line": "292",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_TimerProcess",
@@ -46076,13 +46216,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@6561@F@LIN_TimerProcess#@rxPortState",
+    "ID": "c:lin.c@6548@F@LIN_TimerProcess#@rxPortState",
     "What": "Variable",
     "defdec": "Def",
     "display": "rxPortState",
     "location": {
       "column": "11",
-      "line": "293",
+      "line": "294",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "rxPortState",
@@ -46090,13 +46230,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@7589@F@LIN_TimerProcess#@temp",
+    "ID": "c:lin.c@7617@F@LIN_TimerProcess#@temp",
     "What": "Variable",
     "defdec": "Def",
     "display": "temp",
     "location": {
       "column": "22",
-      "line": "340",
+      "line": "342",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "temp",
@@ -46110,7 +46250,7 @@
     "display": "void LIN_UartProcess(void)",
     "location": {
       "column": "6",
-      "line": "371",
+      "line": "373",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "LIN_UartProcess",
@@ -46118,13 +46258,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@8271@F@LIN_UartProcess#@checkSum",
+    "ID": "c:lin.c@8254@F@LIN_UartProcess#@checkSum",
     "What": "Variable",
     "defdec": "Def",
     "display": "checkSum",
     "location": {
       "column": "11",
-      "line": "374",
+      "line": "376",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "checkSum",
@@ -46138,7 +46278,7 @@
     "display": "void HAL_TIM_PeriodElapsedCallback(int *)",
     "location": {
       "column": "6",
-      "line": "455",
+      "line": "457",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "HAL_TIM_PeriodElapsedCallback",
@@ -46152,7 +46292,7 @@
     "display": "void HAL_UART_TxCpltCallback(int *)",
     "location": {
       "column": "6",
-      "line": "466",
+      "line": "468",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "HAL_UART_TxCpltCallback",
@@ -46166,7 +46306,7 @@
     "display": "void HAL_UART_RxCpltCallback(int *)",
     "location": {
       "column": "6",
-      "line": "477",
+      "line": "479",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "HAL_UART_RxCpltCallback",
@@ -46726,142 +46866,198 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_wwdg.h@1291@macro@__STM8S_WWDG_H",
+    "ID": "c:uart.h@26@macro@_uart_h_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__STM8S_WWDG_H",
+    "display": "_uart_h_",
     "location": {
       "column": "9",
-      "line": "30",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
-    "name": "__STM8S_WWDG_H",
+    "name": "_uart_h_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_wwdg.h@1730@macro@IS_WWDG_WINDOWLIMITVALUE_OK",
-    "What": "MacroDef",
+    "ID": "c:@F@UART_Receive_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UART_Receive_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Receive_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Receive_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UART_Receive_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Receive_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Transmit_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UART_Transmit_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Transmit_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Transmit_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UART_Transmit_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Transmit_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_AbortReceive#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_AbortReceive(void)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_AbortReceive",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_AbortReceive#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_AbortReceive(void)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_AbortReceive",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pRxBuf",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pRxBuf",
+    "location": {
+      "column": "17",
+      "line": "11",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "pRxBuf",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@pTxBuf",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pTxBuf",
+    "location": {
+      "column": "25",
+      "line": "11",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "pTxBuf",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxCnt",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxCnt",
+    "location": {
+      "column": "17",
+      "line": "12",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxCnt",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxCnt",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxCnt",
+    "location": {
+      "column": "26",
+      "line": "12",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxCnt",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Receive_IT#*c#c#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "IS_WWDG_WINDOWLIMITVALUE_OK",
-    "location": {
-      "column": "9",
-      "line": "49",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "IS_WWDG_WINDOWLIMITVALUE_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_wwdg.h@1943@macro@IS_WWDG_COUNTERVALUE_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_WWDG_COUNTERVALUE_OK",
-    "location": {
-      "column": "9",
-      "line": "55",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "IS_WWDG_COUNTERVALUE_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_Init#c#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void WWDG_Init(uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "69",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "WWDG_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_SetCounter#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void WWDG_SetCounter(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "70",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "WWDG_SetCounter",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_GetCounter#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t WWDG_GetCounter(void)",
-    "location": {
-      "column": "9",
-      "line": "71",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "WWDG_GetCounter",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_SWReset#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void WWDG_SWReset(void)",
-    "location": {
-      "column": "6",
-      "line": "72",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "WWDG_SWReset",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WWDG_SetWindowValue#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void WWDG_SetWindowValue(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "73",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_wwdg.h"
-    },
-    "name": "WWDG_SetWindowValue",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void main(void)",
+    "display": "bool UART_Receive_IT(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
       "line": "3",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
-    "name": "main",
+    "name": "UART_Receive_IT",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@assert_failed#*c#l#",
+    "ID": "c:@F@UART_Transmit_IT#*c#c#",
     "What": "Function",
     "defdec": "Def",
-    "display": "void assert_failed(u8 *, u32)",
+    "display": "bool UART_Transmit_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
+    },
+    "name": "UART_Transmit_IT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_AbortReceive#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART_AbortReceive(void)",
     "location": {
       "column": "6",
       "line": "11",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
-    "name": "assert_failed",
+    "name": "UART_AbortReceive",
     "origin": "project_file",
     "scope": null
   }

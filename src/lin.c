@@ -11,6 +11,7 @@
 /* Includes ------------------------------------------------------------------*/
 
 #include "lin.h"
+#include "uart.h"
 
 #define BAUDRATE 9600UL
 /* Declarations and definitions ----------------------------------------------*/
@@ -162,7 +163,7 @@ LIN_Error LIN_Transmit(uint32_t id, uint8_t *ptr, uint8_t len)
       else
       {
         curState = LIN_SENDING_DATA;
-        HAL_UART_Transmit_IT(uartHandle, dataPtr, txDataNum);
+        UART_Transmit_IT(dataPtr, txDataNum);
       }
     }      
     else
@@ -202,7 +203,7 @@ LIN_Error LIN_Receive(uint32_t id, uint8_t *ptr, uint8_t len)
       else
       {
         curState = LIN_RECEIVING_DATA;
-        HAL_UART_Receive_IT(uartHandle, dataPtr, rxDataNum);
+        UART_Receive_IT(dataPtr, rxDataNum);
       }
     }
     else
@@ -314,7 +315,7 @@ void LIN_TimerProcess()
           breakCnt = 0;
           LIN_WriteTxPortState(1);
           curState = LIN_SENDING_SYNC;
-          HAL_UART_Transmit_IT(uartHandle, &syncByte, 1);
+          UART_Transmit_IT(&syncByte, 1);
         }
         else
         {          
@@ -337,8 +338,9 @@ void LIN_TimerProcess()
           if ((breakCnt <= breakCntUpperLimit) && (breakCnt >= breakCntLowerLimit))
           {
             curState = LIN_RECEIVING_SYNC;
-            uint16_t temp = uartHandle->Instance->DR;
-            HAL_UART_Receive_IT(uartHandle, &rxByte, 1);
+            //uint16_t temp = uartHandle->Instance->DR;
+            uint16_t temp = UART1->DR;
+            UART_Receive_IT(&rxByte, 1);
           }
           
           breakCnt = 0;
@@ -353,7 +355,7 @@ void LIN_TimerProcess()
       
       if (rxTimeoutCnt >= rxTimeoutCntLimit)
       {
-        HAL_UART_AbortReceive(uartHandle);
+        UART_AbortReceive();
         curState = LIN_IDLE;
       }
       
@@ -377,7 +379,7 @@ void LIN_UartProcess()
   {
     case LIN_SENDING_SYNC:
       curState = LIN_SENDING_ID;
-      HAL_UART_Transmit_IT(uartHandle, &txId, 1);
+      UART_Transmit_IT(&txId, 1);
       break;
       
     case LIN_SENDING_ID:
@@ -385,14 +387,14 @@ void LIN_UartProcess()
       {
         curState = LIN_SENDING_DATA;
         txCheckSum = LIN_CalcCheckSum(dataPtr, txDataNum);
-        HAL_UART_Transmit_IT(uartHandle, dataPtr, txDataNum);
+        UART_Transmit_IT(dataPtr, txDataNum);
       }
       else
       {
         if (rxDataNum > 0)
         {
           curState = LIN_RECEIVING_DATA;
-          HAL_UART_Receive_IT(uartHandle, dataPtr, rxDataNum);
+          UART_Receive_IT(dataPtr, rxDataNum);
         }
         else
         {
@@ -405,7 +407,7 @@ void LIN_UartProcess()
       if (rxByte == LIN_SYNC_BYTE)
       {
         curState = LIN_RECEIVING_ID;
-        HAL_UART_Receive_IT(uartHandle, &rxByte, 1);
+        UART_Receive_IT(&rxByte, 1);
       }
       else
       {
@@ -419,7 +421,7 @@ void LIN_UartProcess()
       
     case LIN_RECEIVING_DATA:
       curState = LIN_RECEIVING_CHECKSUM;
-      HAL_UART_Receive_IT(uartHandle, &rxByte, 1);
+      UART_Receive_IT(&rxByte, 1);
       break;
       
     case LIN_RECEIVING_CHECKSUM:
@@ -435,7 +437,7 @@ void LIN_UartProcess()
     case LIN_SENDING_DATA:
       curState = LIN_SENDING_CHECKSUM;
       txCheckSum = LIN_CalcCheckSum(dataPtr, txDataNum);
-      HAL_UART_Transmit_IT(uartHandle, &txCheckSum, 1);
+      UART_Transmit_IT(&txCheckSum, 1);
       break;
       
     case LIN_SENDING_CHECKSUM:
