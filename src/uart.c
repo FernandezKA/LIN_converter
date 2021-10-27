@@ -20,8 +20,12 @@ bool UART_Receive_IT(uint8_t* u8Buf, uint8_t u8Size){
 bool UART_Transmit_IT(uint8_t* u8Buf, uint8_t u8Size){
   u8TxCnt = 0x00;
   u8TxSize = u8Size;
-  UART1->CR2|=UART1_CR2_TCIEN;//Enable IRQ
-  UART1->DR = u8Buf[u8TxCnt++];//Send first byte, next -> from IRQ
+  pTxBuf = (uint8_t*) malloc(u8Size);
+  for(uint8_t j = 0; j < u8TxSize; j++){
+    pTxBuf[j] = u8Buf[j];
+  }
+  UART1->CR2|=UART1_CR2_TCIEN;//Enable IRQ for complete send
+  //UART1->DR = u8Buf[u8TxCnt++];//Send first byte, next -> from IRQ
   UART_IRQ = UART_TX_IRQ;//Set IRQ handler -> TX
   return true;
 }
@@ -31,8 +35,8 @@ void UART_AbortReceive(void){
 }
 //TX IRQ handler
 void UART_TX_IRQ(void){
-  if(u8TxCnt <= u8TxSize){
-    UART1->DR = pTxBuf[u8TxCnt++];
+  if(u8TxCnt < u8TxSize){
+    UART1->DR = u8Data[u8TxCnt++];
   }
   else{
     u8TxCnt = 0x00;
@@ -53,5 +57,5 @@ INTERRUPT_HANDLER(UART1_TX_IRQHandler, 17)
 //UART1 RX Interrupt routine.
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
-	UART_IRQ();
+	UART_RX_IRQ();
 }

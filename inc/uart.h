@@ -13,6 +13,7 @@ void UART_RX_IRQ(void);
 void UART_TX_IRQ(void);
 //Pointer to functions
 extern void (*UART_IRQ) (void);//UART IRQ Handlers
+extern uint8_t u8Data[5];
 //Variables
 extern uint8_t *pRxBuf, *pTxBuf;
 extern uint8_t  u8RxCnt, u8TxCnt;
