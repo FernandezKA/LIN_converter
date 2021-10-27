@@ -41,8 +41,8 @@ static uint8_t isInit = 0;
 static uint8_t *dataPtr;
 
 //Pointer to the IRQ handlers
-static void (*uartHandle) (void);
-static void (*TimHandle) (void);
+void (*uartHandle) (void);
+void (*TimHandle) (void);
 //static UART_HandleTypeDef *uartHandle;
 //static TIM_HandleTypeDef *timerHandle;
 
@@ -454,32 +454,35 @@ void LIN_UartProcess()
 
 
 /*----------------------------------------------------------------------------*/
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+void HAL_TIM_PeriodElapsedCallback(void)
 {
-  if (htim->Instance == timerHandle->Instance)
+ /* if (htim->Instance == timerHandle->Instance)
   {
     LIN_TimerProcess();
   }
+*/
+  LIN_TimerProcess();
 }
 
 
 
 /*----------------------------------------------------------------------------*/
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+void HAL_UART_TxCpltCallback(void)
 {
-  if (huart->Instance == uartHandle->Instance)
+  /*if (huart->Instance == uartHandle->Instance)
   {
     LIN_UartProcess();
-  }
+  }*/
+  LIN_UartProcess();
 }
 
 
 
 /*----------------------------------------------------------------------------*/
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+void HAL_UART_RxCpltCallback(void)
 {
-  if (huart->Instance == uartHandle->Instance)
-  {
+  //if (huart->Instance == uartHandle->Instance)
+  //{
     LIN_UartProcess();
-  }
+  //}
 }
