@@ -52518,27 +52518,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@738@F@UART_Transmit_IT#*c#c#@j",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "j",
-    "location": {
-      "column": "15",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
-    },
-    "name": "j",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@UART_AbortReceive#",
     "What": "Function",
     "defdec": "Def",
     "display": "void UART_AbortReceive(void)",
     "location": {
       "column": "6",
-      "line": "33",
+      "line": "29",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_AbortReceive",
@@ -52552,7 +52538,7 @@
     "display": "void UART_TX_IRQ(void)",
     "location": {
       "column": "6",
-      "line": "37",
+      "line": "33",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_TX_IRQ",
@@ -52566,7 +52552,7 @@
     "display": "void UART_RX_IRQ(void)",
     "location": {
       "column": "6",
-      "line": "48",
+      "line": "44",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_RX_IRQ",
@@ -52580,7 +52566,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "52",
+      "line": "48",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -52594,7 +52580,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "58",
+      "line": "54",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",

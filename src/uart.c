@@ -20,12 +20,8 @@ bool UART_Receive_IT(uint8_t* u8Buf, uint8_t u8Size){
 bool UART_Transmit_IT(uint8_t* u8Buf, uint8_t u8Size){
   u8TxCnt = 0x00;
   u8TxSize = u8Size;
-  pTxBuf = (uint8_t*) malloc(u8Size);
-  for(uint8_t j = 0; j < u8TxSize; j++){
-    pTxBuf[j] = u8Buf[j];
-  }
-  UART1->CR2|=UART1_CR2_TCIEN;//Enable IRQ for complete send
-  //UART1->DR = u8Buf[u8TxCnt++];//Send first byte, next -> from IRQ
+  UART1->CR2|=UART1_CR2_TIEN;//Enable IRQ for complete send
+  //UART1->DR = u8Data[u8TxCnt++];//Send first byte, next -> from IRQ
   UART_IRQ = UART_TX_IRQ;//Set IRQ handler -> TX
   return true;
 }
@@ -41,7 +37,7 @@ void UART_TX_IRQ(void){
   else{
     u8TxCnt = 0x00;
     u8TxSize = 0x00;
-    UART1->CR2&=~UART1_CR2_TCIEN;
+    UART1->CR2&=~UART1_CR2_TIEN;
   }
 }
 //RX IRQ handler
