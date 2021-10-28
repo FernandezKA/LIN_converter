@@ -1,14 +1,20 @@
 #include "stm8s_conf.h"
 #include "lin.h"
 #include "uart.h"
-uint8_t u8Data[5] = {0x55, 0xFF, 0x64, 0xFF, 0x55};  
 void main(void)
 {
-  UART_Init();
+  for(uint8_t i = 0; i < TxBufSize; ++i){
+    u8TxData[i] = i;
+  }
+  UART_Init();  
   asm("rim");
   for(;;){
     for(uint16_t i = 0x00; i < 0xFFFF; ++i){asm("nop");}
-    UART_Transmit_IT(u8Data, 5);
+    UART_Receive_IT(u8RxData, 5);
+    while(!bReceived){
+      asm("nop");
+    }
+    UART_Transmit_IT(u8TxData, 5);
   }
 }
 
