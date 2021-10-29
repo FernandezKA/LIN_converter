@@ -3,18 +3,16 @@
 #include "uart.h"
 void main(void)
 {
-  for(uint8_t i = 0; i < TxBufSize; ++i){
-    u8TxData[i] = i;
-  }
+  CLK->CKDIVR = 0x00;
   UART_Init();  
   asm("rim");
   for(;;){
-    for(uint16_t i = 0x00; i < 0xFFFF; ++i){asm("nop");}
     UART_Receive_IT(u8RxData, 5);
     while(!bReceived){
       asm("nop");
     }
-    UART_Transmit_IT(u8TxData, 5);
+    asm("nop");
+    //UART_Transmit_IT(u8TxData, 5);
   }
 }
 

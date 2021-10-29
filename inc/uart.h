@@ -3,9 +3,11 @@
 //Includes 
 #include <stm8s.h>
 #include <stdlib.h>
+#include <stdbool.h>
 //Defines
 #define TxBufSize 5U
 #define RxBufSize 5U
+#define bool _Bool
 //Users functions
 void UART_Init(void);
 bool UART_Receive_IT(uint8_t* u8Buf, uint8_t u8Size);

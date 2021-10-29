@@ -775,7 +775,7 @@
                     <item>u8Data</item>
                     <item>bReceived</item>
                     <item>u8RxData</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
