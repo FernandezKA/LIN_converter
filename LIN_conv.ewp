@@ -290,7 +290,7 @@
                 </option>
                 <option>
                     <name>IccLang</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IccCDialect</name>
@@ -1642,10 +1642,19 @@
     <group>
         <name>inc</name>
         <file>
+            <name>$PROJ_DIR$\inc\init.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\lin.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\inc\softuart.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\stm8s_conf.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\inc\uart.h</name>
         </file>
     </group>
     <group>
@@ -1822,10 +1831,16 @@
     <group>
         <name>src</name>
         <file>
+            <name>$PROJ_DIR$\src\init.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\src\lin.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\main.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\softuart.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\uart.c</name>
