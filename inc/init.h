@@ -2,6 +2,7 @@
 #define _init_h_
 //User includes
 #include "stm8s_conf.h"
+#include "softuart.h"
 //User defines
 #define F_CPU 16000000UL
 #define BAUD_SW 19200

@@ -189,7 +189,7 @@
 #define set_status(a)		(UART_sts |= a)
 #define clr_status(a)		(UART_sts &=~a)
 
-#define uart_receive_enable 	{ Rx_bit= Rx_phase= FALSE; disable_OC_system; clear_cc_flag;enable_IC_system; }
+#define uart_receive_enable 	{ Rx_bit= Rx_phase= false; disable_OC_system; clear_cc_flag;enable_IC_system; }
 #define uart_receive_disable 	{ disable_IC_system; disable_OC_system; clr_status(receive_in_progress); }
 
 /* Exported variables --------------------------------------------------------*/
