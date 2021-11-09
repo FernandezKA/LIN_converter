@@ -25,6 +25,7 @@ void Tim1_Config(void){
 }
 //This function configured GPIO
 void GPIO_Config(void){
-    GPIOD->CR1|=(1<<4);
-    GPIOD->CR2|=(1<<4); 
+    GPIOD->DDR&=~(1<<6);
+    GPIOD->CR1|=(1<<6);//Input with pull-up
+    GPIOD->CR2|=(1<<6);//Enable external interrupt
 }
