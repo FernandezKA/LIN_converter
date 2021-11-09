@@ -4,6 +4,8 @@
 #include <stm8s.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "stm8s_conf.h"
+#include "lin.h"
 //Defines
 #define TxBufSize 5U
 #define RxBufSize 5U
