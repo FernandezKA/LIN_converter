@@ -15,3 +15,16 @@ void UART_SW_Config(void){
 void UART_HW_Config(void){
   
 }
+//This function configured Tim1 for stop detection
+void Tim1_Config(void){
+  TIM1->PSCRH = 0x00;
+  TIM1->PSCRL = 0x10;
+  TIM1->ARRH = 0xFF;
+  TIM1->ARRL = 0xFF;
+  TIM1->CR1|=TIM1_CR1_CEN;
+}
+//This function configured GPIO
+void GPIO_Config(void){
+    GPIOD->CR1|=(1<<4);
+    GPIOD->CR2|=(1<<4); 
+}

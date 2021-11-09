@@ -15,5 +15,6 @@ void UART_SW_Config(void);
 void UART_HW_Config(void);
 void Tim1_Config(void);
 void Tim4_Config(void);
+void GPIO_Config(void);
 //User variables
 #endif
