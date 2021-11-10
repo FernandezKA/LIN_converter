@@ -56,7 +56,8 @@ void UART_RX_IRQ(void){
     break;
 
     case wait_synch:
-      if(UART1->DR == 0x55U){
+      uint8_t u8Temp = UART1->DR;
+      if(u8Temp == 0x55U){
         currentHeader = wait_pid;
       }
       else{

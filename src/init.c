@@ -13,7 +13,10 @@ void UART_SW_Config(void){
 }
 //This function configurate hardware UART
 void UART_HW_Config(void){
-  
+  CLK->PCKENR1 |= CLK_PCKENR1_UART1; //ENABLE CLOCKING
+  UART1->BRR1 = 0x68;
+  UART1->BRR2 = 0x02;
+  UART1->CR2 |= UART1_CR2_REN | UART1_CR2_TEN;
 }
 //This function configured Tim1 for stop detection
 void Tim1_Config(void){

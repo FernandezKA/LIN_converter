@@ -25,6 +25,7 @@ void main(void)
       break;
 
     case wait_synch:
+      UART_HW_Config();
       SetSynchMode();
       break;
 
@@ -51,6 +52,7 @@ static void SysInit(void)
   Clk_Config();
   Tim1_Config();
   GPIO_Config();
+  EXTI->CR1|=EXTI_CR1_PDIS;
   //UART_HW_Config();
   //UART_SW_Config();
   asm("rim");
@@ -67,4 +69,5 @@ static inline void SetSynchMode(void){
   UART1->CR2|=UART1_CR2_REN;
   //Todo: enable IRQ and wait a new byte
   UART1->CR2|=UART1_CR2_RIEN;
+  asm("rim");
 }
