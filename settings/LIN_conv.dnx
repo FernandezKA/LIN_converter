@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>303698998</Checksum>
+        <Checksum>1989514191</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -88,9 +88,10 @@
     </DataSample>
     <Breakpoints>
         <Bp0>_ "STD_CODE" "{$PROJ_DIR$\lib\SPL\src\stm8s_it.c}.2.1" 0 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.63.9" 1 0 0 0 "" 0 ""</Bp1>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.66.9" 1 0 0 0 "" 0 ""</Bp1>
         <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.52.3" 1 0 0 0 "" 0 ""</Bp2>
-        <Count>3</Count>
+        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.64.9" 1 0 0 0 "" 0 ""</Bp3>
+        <Count>4</Count>
     </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>

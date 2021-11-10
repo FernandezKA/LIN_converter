@@ -16,8 +16,13 @@ void main(void)
   GPIOC->DDR|=(1<<7);
   GPIOC->CR1|=(1<<7);
   GPIOC->CR2|=(1<<7);
+  currentHeader = wait_synch;
   for (;;)
   {
+for(;;){
+  for(uint16_t i = 0; i < 0xFFFF; ++i){asm("nop");}
+  UART1->DR = 0x55U;
+}
     switch (currentHeader)
     {
     case wait_break:
@@ -53,7 +58,7 @@ static void SysInit(void)
   Tim1_Config();
   GPIO_Config();
   EXTI->CR1|=EXTI_CR1_PDIS;
-  //UART_HW_Config();
+  UART_HW_Config();
   //UART_SW_Config();
   asm("rim");
 }
