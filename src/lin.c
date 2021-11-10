@@ -45,7 +45,8 @@ void GetNextState(LIN_HEADER* current){
 //External Interrupt PORTD Interrupt routine.
 INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
 {
-  if((GPIOD->IDR & (1<<4)) == (1<<4)){//Rising edge
+  GPIOC->ODR^=(1<<7);
+  if((GPIOD->IDR & (1<<6)) == (1<<6)){//Rising edge
     asm("nop");
   }
   else{//Falling edge

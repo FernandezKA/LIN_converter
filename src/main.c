@@ -13,6 +13,9 @@ static inline void SetSynchMode(void);
 void main(void)
 {
   SysInit();
+  GPIOC->DDR|=(1<<7);
+  GPIOC->CR1|=(1<<7);
+  GPIOC->CR2|=(1<<7);
   for (;;)
   {
     switch (currentHeader)
@@ -55,8 +58,9 @@ static void SysInit(void)
 //This function disable UART, and begin wait a break
 static inline void SetExtIRQ(void){
   UART1->CR2&=~UART1_CR2_REN;
-  GPIOD->CR1|=(1<<6);
-  GPIOD->CR2|=(1<<6);
+  UART_PORT->CR1|=UART_RX;
+  UART_PORT->CR2|=UART_RX;
+  EXTI->CR1|=EXTI_CR1_PDIS;//Enable IRQ for all of change edge
 }
 //This function enable wait IRQ mode for synch packet
 static inline void SetSynchMode(void){
