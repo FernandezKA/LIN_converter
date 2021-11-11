@@ -2,7 +2,7 @@
 
 #include "lin.h"
 #include "uart.h"
-
+#include "init.h"
 //User function declaration
 
 //User variables
@@ -52,6 +52,7 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
     u16TempTime |= TIM1->CNTRL;
     if(u16TempTime > 1200 && u16TempTime < 1450){
       currentHeader = wait_synch;
+      SetSynchMode();
     }
   }
   else{//Falling edge

@@ -18,4 +18,6 @@ uart.pbi: C:\dev\MCU\STM8\LIN_Converter\src\uart.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdbool.h \
   C:\dev\MCU\STM8\LIN_Converter\inc/stm8s_conf.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc/lin.h
+  C:\dev\MCU\STM8\LIN_Converter\inc/lin.h \
+  C:\dev\MCU\STM8\LIN_Converter\inc\init.h \
+  C:\dev\MCU\STM8\LIN_Converter\inc/softuart.h

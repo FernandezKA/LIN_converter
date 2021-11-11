@@ -1,4 +1,5 @@
 #include "uart.h"
+#include "init.h"
 //Variables
 uint8_t  u8RxCnt, u8TxCnt;
 uint8_t  u8RxSize, u8TxSize;
@@ -50,26 +51,33 @@ void UART_TX_IRQ(void){
 //RX IRQ handler
 void UART_RX_IRQ(void){
   UART1->SR&=~UART1_SR_RXNE;
-      uint8_t u8Temp = UART1->DR;
+  uint8_t u8SynchField;
+  uint8_t u8PIDField;
   switch(currentHeader){
     case wait_break:
       UART1->CR2&=~UART1_CR2_REN;//It's mistake IRQ, disable UART
     break;
 
     case wait_synch:
-      if(u8Temp == 0x55U){
+      u8SynchField = UART1->DR;
+      if(u8SynchField == 0x55U){
         currentHeader = wait_pid;
       }
       else{
-        UART1->CR2|=UART1_CR2_TEN;
-        UART1->DR = 0x55U;
         currentHeader = wait_break;
-        UART1->CR2&=~UART1_CR2_REN;
+        SetExtIRQ();
       }
     break;
 
     case wait_pid:
-      asm("nop");//Successfull recognize of packet, __NOP instruction for debug
+      u8PIDField = UART1->DR;
+      if(((u8PIDField & 0x01)) == ((u8PIDField & 0x02) >> 1)){//Check for parity
+        //TODO: received completed
+        u8PIDField >>=2; //Clear pid at frame
+      }
+      else{
+        asm("nop");//For debug
+      }
     break;
 
     default:

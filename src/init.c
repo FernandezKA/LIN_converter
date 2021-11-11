@@ -43,5 +43,5 @@ void SetExtIRQ(void){
 void SetSynchMode(void){
   UART_PORT->CR2&=~UART_RX;//Dis IRQ
   UART1->CR2|=UART1_CR2_REN;
-  UART1->CR2|=UART1_CR2_RIEN;
+  UART1->CR2|=UART1_CR2_RIEN;//Enable IRQ for receive synch packet
 }       
