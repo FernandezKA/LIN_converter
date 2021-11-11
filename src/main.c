@@ -8,40 +8,32 @@
 #include "stm8s_gpio.h"
 //Function declaration
 static void SysInit(void);
-static inline void SetExtIRQ(void);
-static inline void SetSynchMode(void);
 void main(void)
 {
   SysInit();
-  GPIOC->DDR|=(1<<7);
-  GPIOC->CR1|=(1<<7);
-  GPIOC->CR2|=(1<<7);
-  currentHeader = wait_synch;
+  SetExtIRQ();//Enable break waiting
+  currentHeader = wait_break;
   for (;;)
   {
-for(;;){
-  for(uint16_t i = 0; i < 0xFFFF; ++i){asm("nop");}
-  UART1->DR = 0x55U;
-}
-    switch (currentHeader)
-    {
-    case wait_break:
-      SetExtIRQ();
-      break;
-
-    case wait_synch:
-      UART_HW_Config();
-      SetSynchMode();
-      break;
-
-    case wait_pid:
-
-      break;
-
-    default:
-
-      break;
-    }
+//    switch (currentHeader)
+//    {
+//    case wait_break:
+//      SetExtIRQ();
+//      break;
+//
+//    case wait_synch:
+//      UART_HW_Config();
+//      SetSynchMode();
+//      break;
+//
+//    case wait_pid:
+//
+//      break;
+//
+//    default:
+//
+//      break;
+//    }
   }
 }
 
@@ -57,22 +49,7 @@ static void SysInit(void)
   Clk_Config();
   Tim1_Config();
   GPIO_Config();
-  EXTI->CR1|=EXTI_CR1_PDIS;
   UART_HW_Config();
-  //UART_SW_Config();
-  asm("rim");
-}
-//This function disable UART, and begin wait a break
-static inline void SetExtIRQ(void){
-  UART1->CR2&=~UART1_CR2_REN;
-  UART_PORT->CR1|=UART_RX;
-  UART_PORT->CR2|=UART_RX;
-  EXTI->CR1|=EXTI_CR1_PDIS;//Enable IRQ for all of change edge
-}
-//This function enable wait IRQ mode for synch packet
-static inline void SetSynchMode(void){
-  UART1->CR2|=UART1_CR2_REN;
-  //Todo: enable IRQ and wait a new byte
-  UART1->CR2|=UART1_CR2_RIEN;
+  UART_SW_Config();
   asm("rim");
 }

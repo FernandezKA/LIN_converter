@@ -16,5 +16,7 @@ void UART_HW_Config(void);
 void Tim1_Config(void);
 void Tim4_Config(void);
 void GPIO_Config(void);
+void SetSynchMode(void);
+void SetExtIRQ(void);
 //User variables
 #endif
