@@ -45,7 +45,7 @@ void GetNextState(LIN_HEADER* current){
 //External Interrupt PORTD Interrupt routine.
 INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
 {
-  GPIOC->ODR^=(1<<7);
+  GPIOB->ODR^=(1<<5);
   if((GPIOD->IDR & (1<<6)) == (1<<6)){//Rising edge
     uint16_t u16TempTime = 0x0000;
     u16TempTime = (TIM1->CNTRH)<<8;

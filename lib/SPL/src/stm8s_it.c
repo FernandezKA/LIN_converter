@@ -147,7 +147,9 @@ INTERRUPT_HANDLER(TIM5_CAP_COM_IRQHandler, 14)
 //Timer2 Update/Overflow/Break Interrupt routine.
 INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
 {
-  return;
+ #ifdef SWUART_RECEIVE_USED
+    uart_Tx_timing();
+  #endif
 }
 #endif
 

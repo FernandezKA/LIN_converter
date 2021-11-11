@@ -11,29 +11,11 @@ static void SysInit(void);
 void main(void)
 {
   SysInit();
-  SetExtIRQ();//Enable break waiting
+  //SetExtIRQ();//Enable break waiting
   currentHeader = wait_break;
   for (;;)
   {
-//    switch (currentHeader)
-//    {
-//    case wait_break:
-//      SetExtIRQ();
-//      break;
-//
-//    case wait_synch:
-//      UART_HW_Config();
-//      SetSynchMode();
-//      break;
-//
-//    case wait_pid:
-//
-//      break;
-//
-//    default:
-//
-//      break;
-//    }
+    asm("nop");
   }
 }
 
@@ -50,6 +32,7 @@ static void SysInit(void)
   Tim1_Config();
   GPIO_Config();
   UART_HW_Config();
-  UART_SW_Config();
+  //UART_SW_Config();
+  SetExtIRQ();
   asm("rim");
 }

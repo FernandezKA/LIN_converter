@@ -50,12 +50,13 @@ void UART_TX_IRQ(void){
 }
 //RX IRQ handler
 void UART_RX_IRQ(void){
-  UART1->SR&=~UART1_SR_RXNE;
-  uint8_t u8SynchField;
+  //UART1->SR&=~UART1_SR_RXNE;
+  volatile uint8_t u8SynchField;
   uint8_t u8PIDField;
   switch(currentHeader){
     case wait_break:
-      UART1->CR2&=~UART1_CR2_REN;//It's mistake IRQ, disable UART
+      //UART1->CR2&=~UART1_CR2_REN;//It's mistake IRQ, disable UART
+      UART1->CR2&=~UART1_CR2_RIEN;
     break;
 
     case wait_synch:
@@ -76,7 +77,7 @@ void UART_RX_IRQ(void){
     break;
 
     default:
-
+    SetExtIRQ();
     break;
   }
 }

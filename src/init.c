@@ -22,7 +22,7 @@ void UART_HW_Config(void){
 void Tim1_Config(void){
   TIM1->PSCRH = 0x00;
   TIM1->PSCRL = 0x10;
-  TIM1->ARRH = 0xFF;
+  TIM1->ARRH = 0x0F;
   TIM1->ARRL = 0xFF;
   TIM1->CR1|=TIM1_CR1_CEN;
 }
@@ -31,6 +31,7 @@ void GPIO_Config(void){
     GPIOD->DDR&=~(1<<6);
     GPIOD->CR1|=(1<<6);//Input with pull-up
     GPIOD->CR2|=(1<<6);//Enable external interrupt
+    GPIOB->DDR|=(1<<5);
 }
 //This function disable UART, and begin wait a break
 void SetExtIRQ(void){
@@ -44,4 +45,5 @@ void SetSynchMode(void){
   UART_PORT->CR2&=~UART_RX;//Dis IRQ
   UART1->CR2|=UART1_CR2_REN;
   UART1->CR2|=UART1_CR2_RIEN;//Enable IRQ for receive synch packet
+  asm("rim");
 }       
