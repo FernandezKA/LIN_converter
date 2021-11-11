@@ -37056,7 +37056,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "89",
+      "line": "84",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -37070,7 +37070,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "95",
+      "line": "90",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",

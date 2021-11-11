@@ -71,13 +71,8 @@ void UART_RX_IRQ(void){
 
     case wait_pid:
       u8PIDField = UART1->DR;
-      if(((u8PIDField & 0x01)) == ((u8PIDField & 0x02) >> 1)){//Check for parity
-        //TODO: received completed
-        u8PIDField >>=2; //Clear pid at frame
-      }
-      else{
+      //Without parity check!!
         asm("nop");//For debug
-      }
     break;
 
     default:
