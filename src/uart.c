@@ -1,5 +1,18 @@
 #include "uart.h"
 #include "init.h"
+enum DataSize{
+  bytes_2, 
+  bytes_4, 
+  bytes_8
+};
+struct LIN_Packet{
+  uint8_t PID;
+  enum DataSize size;
+};
+//Function declaration
+inline static void UART_RX_IRQ(void);
+inline static void UART_TX_IRQ(void);
+inline static void SetSizeData(enum DataSize iDataSize, struct LIN_Packet packet);
 //Variables
 uint8_t  u8RxCnt, u8TxCnt;
 uint8_t  u8RxSize, u8TxSize;
@@ -37,7 +50,7 @@ void UART_AbortReceive(void){
   asm("nop");
 }
 //TX IRQ handler
-void UART_TX_IRQ(void){
+inline static void UART_TX_IRQ(void){
   if(u8TxCnt < u8TxSize){
     UART1->DR = u8TxData[u8TxCnt++];
   }
@@ -49,20 +62,23 @@ void UART_TX_IRQ(void){
   }
 }
 //RX IRQ handler
-void UART_RX_IRQ(void){
-  //UART1->SR&=~UART1_SR_RXNE;
+inline static void UART_RX_IRQ(void){
   volatile uint8_t u8SynchField;
-  uint8_t u8PIDField;
+  volatile uint8_t u8PIDField;
+  static volatile uint8_t UART_DR= UART1->DR; 
+  UART1->DR = UART_DR;
+  UART1->CR2&=~UART1_CR2_REN;
   switch(currentHeader){
     case wait_break:
-      //UART1->CR2&=~UART1_CR2_REN;//It's mistake IRQ, disable UART
       UART1->CR2&=~UART1_CR2_RIEN;
+      return;
     break;
 
     case wait_synch:
-      u8SynchField = UART1->DR;
+      u8SynchField = UART_DR;
       if(u8SynchField == 0x55U){
         currentHeader = wait_pid;
+        return;
       }
       else{
         currentHeader = wait_break;
@@ -71,7 +87,18 @@ void UART_RX_IRQ(void){
     break;
 
     case wait_pid:
-      u8PIDField = UART1->DR;
+      u8PIDField = UART_DR;
+      u8PIDField = GetPID(u8PIDField);
+      if(u8PIDField < 0x20){//2 bytes of data
+        asm("nop");
+        
+      }
+      else if(u8PIDField < 0x30){//4 butes of data
+        asm("nop");
+      }
+      else{//8 bytes of data
+        asm("nop");
+      }
       //Without parity check!!
         asm("nop");//For debug
     break;
@@ -91,4 +118,20 @@ INTERRUPT_HANDLER(UART1_TX_IRQHandler, 17)
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
 	UART_RX_IRQ();
+}
+
+void SetSizeData(enum DataSize iDataSize, struct LIN_Packet* packet){
+  switch(iDataSize){
+  case bytes_2:
+    packet ->size = iDataSize;
+    break;
+    
+  case bytes_4: 
+    
+    break;
+    
+  case bytes_8:
+    
+    break;
+  }
 }

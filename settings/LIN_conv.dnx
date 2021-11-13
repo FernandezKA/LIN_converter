@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>1049184450</Checksum>
+        <Checksum>3754341847</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -88,12 +88,20 @@
     </DataSample>
     <Breakpoints>
         <Bp0>_ "STD_CODE" "{$PROJ_DIR$\lib\SPL\src\stm8s_it.c}.2.1" 0 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.37.3" 1 0 0 0 "" 0 ""</Bp1>
-        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.37.3" 1 0 0 0 "" 0 ""</Bp2>
-        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.31.3" 1 0 0 0 "" 0 ""</Bp3>
-        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\lin.c}.47.1" 0 0 0 0 "" 0 ""</Bp4>
-        <Bp5>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.65.9" 1 0 0 0 "" 0 ""</Bp5>
-        <Count>6</Count>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\lin.c}.47.1" 0 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.79.9" 1 0 0 0 "" 0 ""</Bp2>
+        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.79.9" 1 0 0 0 "" 0 ""</Bp3>
+        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.90.7" 1 0 0 0 "" 0 ""</Bp4>
+        <Bp5>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.79.9" 1 0 0 0 "" 0 ""</Bp5>
+        <Bp6>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.106.5" 1 0 0 0 "" 0 ""</Bp6>
+        <Bp7>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.113.2" 1 0 0 0 "" 0 ""</Bp7>
+        <Bp8>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.91.7" 1 0 0 0 "" 0 ""</Bp8>
+        <Bp9>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.68.27" 1 0 0 0 "" 0 ""</Bp9>
+        <Bp10>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.34.3" 1 0 0 0 "" 0 ""</Bp10>
+        <Bp11>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.33.3" 1 0 0 0 "" 0 ""</Bp11>
+        <Bp12>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.80.9" 1 0 0 0 "" 0 ""</Bp12>
+        <Bp13>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.86.5" 1 0 0 0 "" 0 ""</Bp13>
+        <Count>14</Count>
     </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>

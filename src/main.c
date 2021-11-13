@@ -13,11 +13,13 @@ void main(void)
   SysInit();
   //SetExtIRQ();//Enable break waiting
   currentHeader = wait_break;
+  UART1->CR2|=UART1_CR2_TEN;
   for (;;)
   {
     asm("nop");
   }
 }
+
 
 #ifdef USE_FULL_ASSERT
 void assert_failed(u8 *file, u32 line)

@@ -15,8 +15,6 @@ void UART_Init(void);
 bool UART_Receive_IT(uint8_t* u8Buf, uint8_t u8Size);
 bool UART_Transmit_IT(uint8_t* u8Buf, uint8_t u8Size);
 void UART_AbortReceive(void);
-void UART_RX_IRQ(void);
-void UART_TX_IRQ(void);
 //Users variasbles for bufers
 extern uint8_t u8TxData[TxBufSize];
 extern uint8_t u8RxData[RxBufSize];

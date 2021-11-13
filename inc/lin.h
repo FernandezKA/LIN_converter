@@ -12,7 +12,7 @@ enum LIN_HEADER{
 //User function definition
 bool BreakDetection(void);
 bool GetSynch(uint8_t data);
-uint8_t GetPID(void);
+uint8_t GetPID(uint8_t u8PIDReceive);
 void GetNextState(LIN_HEADER* current);
 //User variables
 extern LIN_HEADER currentHeader;

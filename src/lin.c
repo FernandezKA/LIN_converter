@@ -17,28 +17,12 @@ bool GetSynch(uint8_t data){
   return false;
 }
 //This function receive PID frame
-uint8_t GetPID(void){
-  return 0xFF;
-}
-//This function switch FSM states
-void GetNextState(LIN_HEADER* current){
-  switch(*current){
-  case wait_break:
-    //At falling edge IRQ -> start cnt -> at rising edge write result, check for valid
-    //If valid - switch FSM state, else set zero value into the counter
-    //PD6 - UART1_RX
-
-    break;
-  case wait_synch:
-    //Receive data, if it is equal 0x55 -> switch FSM state, else set state at wait_break
-    break;
-  case wait_pid:
-    //set other frame type, wait IRQ
-    break;
-  default:
-    //Set first FSM state
-    break;
-  }
+uint8_t GetPID(uint8_t u8PIDReceive){
+  uint8_t u8PID = u8PIDReceive & 0xC0;
+  //TODO: Add parity check
+  //bool P0 = 
+  //bool P1 = 
+  return u8PID;
 }
 
 #ifdef EXTI_PORTD_IRQ 

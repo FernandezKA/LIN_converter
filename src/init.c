@@ -36,6 +36,7 @@ void GPIO_Config(void){
 //This function disable UART, and begin wait a break
 void SetExtIRQ(void){
   UART1->CR2&=~UART1_CR2_REN;
+  UART1->CR2&=~UART1_CR2_RIEN;
   UART_PORT->CR1|=UART_RX;
   UART_PORT->CR2|=UART_RX;
   EXTI->CR1|=EXTI_CR1_PDIS;//Enable IRQ for all of change edge
@@ -47,3 +48,4 @@ void SetSynchMode(void){
   UART1->CR2|=UART1_CR2_RIEN;//Enable IRQ for receive synch packet
   asm("rim");
 }       
+
