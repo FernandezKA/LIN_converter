@@ -44,7 +44,7 @@ void SetExtIRQ(void){
 //This function enable wait IRQ mode for synch packet
 void SetSynchMode(void){
   UART_PORT->CR2&=~UART_RX;//Dis IRQ
-  UART1->CR2|=UART1_CR2_REN;
+  UART1->CR2|=UART1_CR2_REN | UART1_CR2_TEN;
   UART1->CR2|=UART1_CR2_RIEN;//Enable IRQ for receive synch packet
   asm("rim");
 }       

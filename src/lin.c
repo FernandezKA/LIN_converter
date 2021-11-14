@@ -8,6 +8,7 @@
 //User variables
 uint16_t u16BreakLength;
 LIN_HEADER currentHeader;
+enum LIN_Size Lin_size = bytes_2;
 //This function detect break from measured pulse structure
 bool BreakDetection(void){
   return false;
@@ -37,6 +38,7 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
     if(u16TempTime > 1200 && u16TempTime < 1450){
       currentHeader = wait_synch;
       SetSynchMode();
+      UART1->DR = 0x00U;
     }
   }
   else{//Falling edge

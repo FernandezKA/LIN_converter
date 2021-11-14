@@ -13,10 +13,30 @@ void main(void)
   SysInit();
   //SetExtIRQ();//Enable break waiting
   currentHeader = wait_break;
-  UART1->CR2|=UART1_CR2_TEN;
+  //Clk_Config();
+  //UART_HW_Config();
+  //UART1->CR2|=UART1_CR2_TEN | UART1_CR2_REN | UART1_CR2_RIEN;
+  asm("rim");
   for (;;)
   {
     asm("nop");
+    switch(currentHeader){
+    case wait_break:
+      asm("nop");
+      break;
+      
+    case wait_synch:
+      
+      break;
+      
+    case wait_pid:
+      
+      break;
+      
+    default:
+      
+      break;
+    }
   }
 }
 

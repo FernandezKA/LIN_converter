@@ -7,8 +7,8 @@
 #include "stm8s_conf.h"
 #include "lin.h"
 //Defines
-#define TxBufSize 5U
-#define RxBufSize 5U
+#define TxBufSize 8U
+#define RxBufSize 8U
 #define bool _Bool
 //Users functions
 void UART_Init(void);

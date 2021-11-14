@@ -7,8 +7,15 @@
 enum LIN_HEADER{
   wait_break, 
   wait_synch, 
-  wait_pid
+  wait_pid, 
+  wait_data
 };
+enum LIN_Size{
+  bytes_2 = 2, 
+  bytes_4 = 4, 
+  bytes_8 = 8
+};
+extern enum LIN_Size Lin_size;
 //User function definition
 bool BreakDetection(void);
 bool GetSynch(uint8_t data);

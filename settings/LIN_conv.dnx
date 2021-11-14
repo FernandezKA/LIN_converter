@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>3754341847</Checksum>
+        <Checksum>2133595975</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -77,9 +77,10 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <watch_formats>
-        <Fmt0>{W}1:UART_sts	1	0</Fmt0>
-        <Fmt1>{W}1:u16Prescale	4	0</Fmt1>
-        <Fmt2>{W}1:u16TempTime	3	0</Fmt2>
+        <Fmt0>{W}1:Lin_size	3	0</Fmt0>
+        <Fmt1>{W}1:UART_sts	1	0</Fmt1>
+        <Fmt2>{W}1:u16Prescale	4	0</Fmt2>
+        <Fmt3>{W}1:u16TempTime	3	0</Fmt3>
     </watch_formats>
     <DataSample>
         <LogEnabled>0</LogEnabled>
@@ -88,20 +89,14 @@
     </DataSample>
     <Breakpoints>
         <Bp0>_ "STD_CODE" "{$PROJ_DIR$\lib\SPL\src\stm8s_it.c}.2.1" 0 0 0 0 "" 0 ""</Bp0>
-        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\lin.c}.47.1" 0 0 0 0 "" 0 ""</Bp1>
-        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.79.9" 1 0 0 0 "" 0 ""</Bp2>
-        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.79.9" 1 0 0 0 "" 0 ""</Bp3>
-        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.90.7" 1 0 0 0 "" 0 ""</Bp4>
-        <Bp5>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.79.9" 1 0 0 0 "" 0 ""</Bp5>
-        <Bp6>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.106.5" 1 0 0 0 "" 0 ""</Bp6>
-        <Bp7>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.113.2" 1 0 0 0 "" 0 ""</Bp7>
-        <Bp8>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.91.7" 1 0 0 0 "" 0 ""</Bp8>
-        <Bp9>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.68.27" 1 0 0 0 "" 0 ""</Bp9>
-        <Bp10>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.34.3" 1 0 0 0 "" 0 ""</Bp10>
-        <Bp11>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.33.3" 1 0 0 0 "" 0 ""</Bp11>
-        <Bp12>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.80.9" 1 0 0 0 "" 0 ""</Bp12>
-        <Bp13>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.86.5" 1 0 0 0 "" 0 ""</Bp13>
-        <Count>14</Count>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\lin.c}.49.1" 0 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.132.2" 1 0 0 0 "" 0 ""</Bp2>
+        <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.132.2" 1 0 0 0 "" 0 ""</Bp3>
+        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.132.2" 1 0 0 0 "" 0 ""</Bp4>
+        <Bp5>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.132.2" 1 0 0 0 "" 0 ""</Bp5>
+        <Bp6>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.132.2" 1 0 0 0 "" 0 ""</Bp6>
+        <Bp7>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.132.2" 1 0 0 0 "" 0 ""</Bp7>
+        <Count>8</Count>
     </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>

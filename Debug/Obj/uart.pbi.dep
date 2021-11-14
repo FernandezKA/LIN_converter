@@ -20,4 +20,5 @@ uart.pbi: C:\dev\MCU\STM8\LIN_Converter\src\uart.c \
   C:\dev\MCU\STM8\LIN_Converter\inc/stm8s_conf.h \
   C:\dev\MCU\STM8\LIN_Converter\inc/lin.h \
   C:\dev\MCU\STM8\LIN_Converter\inc\init.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc/softuart.h
+  C:\dev\MCU\STM8\LIN_Converter\inc/softuart.h \
+  C:\dev\MCU\STM8\LIN_Converter\inc\lin.h

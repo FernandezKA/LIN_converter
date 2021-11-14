@@ -1,18 +1,15 @@
 #include "uart.h"
 #include "init.h"
-enum DataSize{
-  bytes_2, 
-  bytes_4, 
-  bytes_8
-};
-struct LIN_Packet{
-  uint8_t PID;
-  enum DataSize size;
-};
+#include "lin.h"
 //Function declaration
-inline static void UART_RX_IRQ(void);
+inline static void UART_RX_IRQ(uint8_t UART_DR);
 inline static void UART_TX_IRQ(void);
-inline static void SetSizeData(enum DataSize iDataSize, struct LIN_Packet packet);
+static uint8_t u8DataReceived = 0;
+static inline void UART_Send(uint8_t data){
+  while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+  UART1->DR = data;
+}
+//inline static void SetSizeData(enum DataSize iDataSize, struct LIN_Packet packet);
 //Variables
 uint8_t  u8RxCnt, u8TxCnt;
 uint8_t  u8RxSize, u8TxSize;
@@ -62,12 +59,13 @@ inline static void UART_TX_IRQ(void){
   }
 }
 //RX IRQ handler
-inline static void UART_RX_IRQ(void){
+inline static void UART_RX_IRQ(uint8_t UART_DR){
   volatile uint8_t u8SynchField;
   volatile uint8_t u8PIDField;
-  static volatile uint8_t UART_DR= UART1->DR; 
-  UART1->DR = UART_DR;
-  UART1->CR2&=~UART1_CR2_REN;
+  // UART1->DR = UART_DR;
+  //static volatile uint8_t UART_DR= UART1->DR; 
+  //UART1->DR = UART_DR;
+  //UART1->CR2&=~UART1_CR2_RIEN;
   switch(currentHeader){
     case wait_break:
       UART1->CR2&=~UART1_CR2_RIEN;
@@ -78,29 +76,49 @@ inline static void UART_RX_IRQ(void){
       u8SynchField = UART_DR;
       if(u8SynchField == 0x55U){
         currentHeader = wait_pid;
+        //UART_Send(0x01);
+        UART_Send(u8SynchField);
         return;
       }
       else{
         currentHeader = wait_break;
+        UART_Send(0x64);
+        //UART1->DR = 0x64;
         SetExtIRQ();
       }
     break;
 
     case wait_pid:
       u8PIDField = UART_DR;
-      u8PIDField = GetPID(u8PIDField);
+      //UART1->DR = 0x02;
+      UART_Send(u8PIDField);
+      //u8PIDField = GetPID(u8PIDField);
       if(u8PIDField < 0x20){//2 bytes of data
-        asm("nop");
-        
+        Lin_size = bytes_2;
       }
       else if(u8PIDField < 0x30){//4 butes of data
-        asm("nop");
+        Lin_size = bytes_4;
       }
       else{//8 bytes of data
-        asm("nop");
+        Lin_size = bytes_8;
       }
+      currentHeader = wait_data;
       //Without parity check!!
         asm("nop");//For debug
+    break;
+    
+  case wait_data:
+    //UART1->DR = 0x03;
+    UART_Send(UART_DR);
+    if(u8DataReceived < (uint8_t) Lin_size){
+      u8RxData[++u8DataReceived] = UART_DR;
+    }
+    else{
+    u8DataReceived = 0x00;
+    currentHeader = wait_break;
+    SetExtIRQ();
+    asm("nop");
+    }
     break;
 
     default:
@@ -117,21 +135,8 @@ INTERRUPT_HANDLER(UART1_TX_IRQHandler, 17)
 //UART1 RX Interrupt routine.
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
-	UART_RX_IRQ();
+  uint8_t u8Data = UART1->DR;
+  //UART1->DR = u8Data;
+  UART_RX_IRQ(u8Data);
 }
 
-void SetSizeData(enum DataSize iDataSize, struct LIN_Packet* packet){
-  switch(iDataSize){
-  case bytes_2:
-    packet ->size = iDataSize;
-    break;
-    
-  case bytes_4: 
-    
-    break;
-    
-  case bytes_8:
-    
-    break;
-  }
-}
