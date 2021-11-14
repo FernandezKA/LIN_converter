@@ -4,7 +4,6 @@
 //Function declaration
 inline static void UART_RX_IRQ(uint8_t UART_DR);
 inline static void UART_TX_IRQ(void);
-static uint8_t u8DataReceived = 0;
 static inline void UART_Send(uint8_t data){
   while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
   UART1->DR = data;
@@ -102,25 +101,12 @@ inline static void UART_RX_IRQ(uint8_t UART_DR){
       else{//8 bytes of data
         Lin_size = bytes_8;
       }
-      currentHeader = wait_data;
+      currentHeader = wait_break;
+      SetExtIRQ();
       //Without parity check!!
         asm("nop");//For debug
     break;
     
-  case wait_data:
-    //UART1->DR = 0x03;
-    UART_Send(UART_DR);
-    if(u8DataReceived < (uint8_t) Lin_size){
-      u8RxData[++u8DataReceived] = UART_DR;
-    }
-    else{
-    u8DataReceived = 0x00;
-    currentHeader = wait_break;
-    SetExtIRQ();
-    asm("nop");
-    }
-    break;
-
     default:
     SetExtIRQ();
     break;

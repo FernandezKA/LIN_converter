@@ -36898,27 +36898,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@u8DataReceived",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8DataReceived",
-    "location": {
-      "column": "16",
-      "line": "7",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
-    },
-    "name": "u8DataReceived",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:uart.c@F@UART_Send#c#",
     "What": "Function",
     "defdec": "Def",
     "display": "void UART_Send(uint8_t)",
     "location": {
       "column": "20",
-      "line": "8",
+      "line": "7",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Send",
@@ -36932,7 +36918,7 @@
     "display": "u8RxCnt",
     "location": {
       "column": "10",
-      "line": "14",
+      "line": "13",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8RxCnt",
@@ -36946,7 +36932,7 @@
     "display": "u8TxCnt",
     "location": {
       "column": "19",
-      "line": "14",
+      "line": "13",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8TxCnt",
@@ -36960,7 +36946,7 @@
     "display": "u8RxSize",
     "location": {
       "column": "10",
-      "line": "15",
+      "line": "14",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8RxSize",
@@ -36974,7 +36960,7 @@
     "display": "u8TxSize",
     "location": {
       "column": "20",
-      "line": "15",
+      "line": "14",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8TxSize",
@@ -36988,7 +36974,7 @@
     "display": "u8RxData",
     "location": {
       "column": "9",
-      "line": "17",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8RxData",
@@ -37002,7 +36988,7 @@
     "display": "u8TxData",
     "location": {
       "column": "9",
-      "line": "18",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8TxData",
@@ -37016,7 +37002,7 @@
     "display": "bTransmitted",
     "location": {
       "column": "6",
-      "line": "19",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "bTransmitted",
@@ -37030,7 +37016,7 @@
     "display": "bReceived",
     "location": {
       "column": "6",
-      "line": "20",
+      "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "bReceived",
@@ -37044,7 +37030,7 @@
     "display": "void UART_Init(void)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Init",
@@ -37058,7 +37044,7 @@
     "display": "_Bool UART_Receive_IT(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "29",
+      "line": "28",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Receive_IT",
@@ -37072,7 +37058,7 @@
     "display": "_Bool UART_Transmit_IT(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "38",
+      "line": "37",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Transmit_IT",
@@ -37086,7 +37072,7 @@
     "display": "void UART_AbortReceive(void)",
     "location": {
       "column": "6",
-      "line": "46",
+      "line": "45",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_AbortReceive",
@@ -37100,7 +37086,7 @@
     "display": "void UART_TX_IRQ(void)",
     "location": {
       "column": "20",
-      "line": "50",
+      "line": "49",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_TX_IRQ",
@@ -37114,7 +37100,7 @@
     "display": "void UART_RX_IRQ(uint8_t)",
     "location": {
       "column": "20",
-      "line": "62",
+      "line": "61",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_RX_IRQ",
@@ -37122,13 +37108,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1725@F@UART_RX_IRQ#c#@u8SynchField",
+    "ID": "c:uart.c@1689@F@UART_RX_IRQ#c#@u8SynchField",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8SynchField",
     "location": {
       "column": "20",
-      "line": "63",
+      "line": "62",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8SynchField",
@@ -37136,13 +37122,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1759@F@UART_RX_IRQ#c#@u8PIDField",
+    "ID": "c:uart.c@1723@F@UART_RX_IRQ#c#@u8PIDField",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8PIDField",
     "location": {
       "column": "20",
-      "line": "64",
+      "line": "63",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8PIDField",
@@ -37156,7 +37142,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "130",
+      "line": "116",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -37170,7 +37156,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "136",
+      "line": "122",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",
@@ -37178,13 +37164,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@3433@F@UART1_RX_IRQHandler#@u8Data",
+    "ID": "c:uart.c@3123@F@UART1_RX_IRQHandler#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "11",
-      "line": "138",
+      "line": "124",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8Data",
