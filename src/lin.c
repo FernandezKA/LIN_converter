@@ -8,6 +8,7 @@
 //User variables
 uint16_t u16BreakLength;
 LIN_HEADER currentHeader;
+struct LIN_Packet header;
 enum LIN_Size Lin_size = bytes_2;
 //This function detect break from measured pulse structure
 bool BreakDetection(void){

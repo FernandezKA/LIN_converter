@@ -75,22 +75,27 @@ inline static void UART_RX_IRQ(uint8_t UART_DR){
       u8SynchField = UART_DR;
       if(u8SynchField == 0x55U){
         currentHeader = wait_pid;
-        //UART_Send(0x01);
+        header.synch = UART_DR;
+#ifdef DEBUG
         UART_Send(u8SynchField);
+#endif
         return;
       }
       else{
         currentHeader = wait_break;
+#ifdef DEBUG
         UART_Send(0x64);
-        //UART1->DR = 0x64;
+#endif
         SetExtIRQ();
       }
     break;
 
     case wait_pid:
       u8PIDField = UART_DR;
-      //UART1->DR = 0x02;
+      header.pid = UART_DR;
+#ifdef DEBUG
       UART_Send(u8PIDField);
+#endif
       //u8PIDField = GetPID(u8PIDField);
       if(u8PIDField < 0x20){//2 bytes of data
         Lin_size = bytes_2;
@@ -101,6 +106,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR){
       else{//8 bytes of data
         Lin_size = bytes_8;
       }
+      header.size = Lin_size;
       currentHeader = wait_break;
       SetExtIRQ();
       //Without parity check!!

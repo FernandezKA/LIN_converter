@@ -20,23 +20,6 @@ void main(void)
   for (;;)
   {
     asm("nop");
-    switch(currentHeader){
-    case wait_break:
-      asm("nop");
-      break;
-      
-    case wait_synch:
-      
-      break;
-      
-    case wait_pid:
-      
-      break;
-      
-    default:
-      
-      break;
-    }
   }
 }
 

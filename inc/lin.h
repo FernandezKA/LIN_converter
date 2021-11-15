@@ -7,14 +7,19 @@
 enum LIN_HEADER{
   wait_break, 
   wait_synch, 
-  wait_pid, 
-  wait_data
+  wait_pid
 };
 enum LIN_Size{
   bytes_2 = 2, 
   bytes_4 = 4, 
   bytes_8 = 8
 };
+struct LIN_Packet{
+  uint8_t synch;
+  uint8_t pid;
+  enum LIN_Size size;
+};
+extern struct LIN_Packet header;
 extern enum LIN_Size Lin_size;
 //User function definition
 bool BreakDetection(void);
