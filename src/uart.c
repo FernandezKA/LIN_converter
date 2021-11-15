@@ -8,15 +8,14 @@ static inline void UART_Send(uint8_t data){
   while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
   UART1->DR = data;
 }
-//inline static void SetSizeData(enum DataSize iDataSize, struct LIN_Packet packet);
 //Variables
 uint8_t  u8RxCnt, u8TxCnt;
 uint8_t  u8RxSize, u8TxSize;
-
 uint8_t u8RxData[RxBufSize];
 uint8_t u8TxData[TxBufSize];
 bool bTransmitted = false;
-bool bReceived = false;
+//bool bReceived = false;
+
 //UART initializations
 void UART_Init(void){
   CLK->PCKENR1 |= CLK_PCKENR1_UART1; //ENABLE CLOCKING
@@ -107,10 +106,28 @@ inline static void UART_RX_IRQ(uint8_t UART_DR){
         Lin_size = bytes_8;
       }
       header.size = Lin_size;
-      currentHeader = wait_break;
-      SetExtIRQ();
+      currentHeader = wait_data;
+      countReceived = 0x00U;
+      response.CRC = 0xFFU;
+      //SetExtIRQ(); // This work only for debug
       //Without parity check!!
-        asm("nop");//For debug
+    break;
+    
+  case wait_data:
+    if(countReceived < header.size){
+      response.CRC^=UART_DR;
+      response.data[countReceived++] = UART_DR;
+    }
+    else if(countReceived == header.size){
+      if(response.CRC == UART_DR){//Packed received witout mistakes
+        currentHeader = wait_break;
+        SetExtIRQ(); 
+      }
+      else{//CRC received ant matched is not equal
+        currentHeader = wait_break;
+        SetExtIRQ(); 
+      }
+    }
     break;
     
     default:

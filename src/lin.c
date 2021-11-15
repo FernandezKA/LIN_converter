@@ -8,16 +8,10 @@
 //User variables
 uint16_t u16BreakLength;
 LIN_HEADER currentHeader;
-struct LIN_Packet header;
+struct LIN_Header header;
+struct LIN_Response response;
 enum LIN_Size Lin_size = bytes_2;
-//This function detect break from measured pulse structure
-bool BreakDetection(void){
-  return false;
-}
-//This function recognize sync field into the frame
-bool GetSynch(uint8_t data){
-  return false;
-}
+uint8_t countReceived = 0x00;
 //This function receive PID frame
 uint8_t GetPID(uint8_t u8PIDReceive){
   uint8_t u8PID = u8PIDReceive & 0xC0;
@@ -26,12 +20,11 @@ uint8_t GetPID(uint8_t u8PIDReceive){
   //bool P1 = 
   return u8PID;
 }
-
+//This is IRQ handler for detecting break on the LIN mode
 #ifdef EXTI_PORTD_IRQ 
 //External Interrupt PORTD Interrupt routine.
 INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
 {
-  GPIOB->ODR^=(1<<5);
   if((GPIOD->IDR & (1<<6)) == (1<<6)){//Rising edge
     uint16_t u16TempTime = 0x0000;
     u16TempTime = (TIM1->CNTRH)<<8;

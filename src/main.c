@@ -11,11 +11,7 @@ static void SysInit(void);
 void main(void)
 {
   SysInit();
-  //SetExtIRQ();//Enable break waiting
   currentHeader = wait_break;
-  //Clk_Config();
-  //UART_HW_Config();
-  //UART1->CR2|=UART1_CR2_TEN | UART1_CR2_REN | UART1_CR2_RIEN;
   asm("rim");
   for (;;)
   {
