@@ -1,4 +1,5 @@
 #include "stm8s_conf.h"
+#include "stm8s_itc.h"
 //User includes
 #include "init.h"
 #include "lin.h"
@@ -16,6 +17,7 @@ void main(void)
   for (;;)
   {
     asm("nop");
+    //uart_send(response.CRC);
   }
 }
 
@@ -30,10 +32,12 @@ void assert_failed(u8 *file, u32 line)
 static void SysInit(void)
 {
   Clk_Config();
+  UART_SW_Config();
+  UART_HW_Config();
   Tim1_Config();
   GPIO_Config();
-  UART_HW_Config();
-  //UART_SW_Config();
   SetExtIRQ();
+  ITC_SetSoftwarePriority(ITC_IRQ_PORTD, ITC_PRIORITYLEVEL_1);
+  ITC_SetSoftwarePriority(ITC_IRQ_TIM2_OVF, ITC_PRIORITYLEVEL_2);
   asm("rim");
 }

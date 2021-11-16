@@ -95,11 +95,10 @@ inline static void UART_RX_IRQ(uint8_t UART_DR){
 #ifdef DEBUG
       UART_Send(u8PIDField);
 #endif
-      //u8PIDField = GetPID(u8PIDField);
       if(u8PIDField < 0x20){//2 bytes of data
         Lin_size = bytes_2;
       }
-      else if(u8PIDField < 0x30){//4 butes of data
+      else if(u8PIDField < 0x30){//4 bytes of data
         Lin_size = bytes_4;
       }
       else{//8 bytes of data

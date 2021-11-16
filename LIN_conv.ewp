@@ -1642,6 +1642,9 @@
     <group>
         <name>inc</name>
         <file>
+            <name>$PROJ_DIR$\inc\communication.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\init.h</name>
         </file>
         <file>
@@ -1809,9 +1812,6 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\src\stm8s_itc.c</name>
-                    <excluded>
-                        <configuration>Debug</configuration>
-                    </excluded>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\src\stm8s_iwdg.c</name>
@@ -1899,6 +1899,9 @@
     </group>
     <group>
         <name>src</name>
+        <file>
+            <name>$PROJ_DIR$\src\communication.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\src\init.c</name>
         </file>

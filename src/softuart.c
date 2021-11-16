@@ -187,7 +187,7 @@ case DATA_LENGTH:		if(Tx_bit9) set_Tx;
   */
 u8 uart_read(u8 *b) {
 	u8 res;
-	if(test_status(receive_buffer_full))	{
+	if(test_status(receive_buffer_full))	{ 
 		*b= Rx_data;
 #ifdef BIT9
 		res= UART_sts & 0x2F;

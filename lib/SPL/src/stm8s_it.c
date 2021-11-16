@@ -1,5 +1,6 @@
 #include "stm8s_conf.h"
 #include "stm8s_it.h"
+#include "softuart.h"
 #ifndef TRAP_IRQ
 //TRAP Interrupt routine
 INTERRUPT_HANDLER_TRAP(TRAP_IRQHandler)
@@ -147,7 +148,8 @@ INTERRUPT_HANDLER(TIM5_CAP_COM_IRQHandler, 14)
 //Timer2 Update/Overflow/Break Interrupt routine.
 INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
 {
- #ifdef SWUART_RECEIVE_USED
+  TIM2->SR1&=~TIM2_SR1_UIF;
+ #ifdef SWUART_TRANSMIT_USED
     uart_Tx_timing();
   #endif
 }
