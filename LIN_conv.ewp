@@ -1645,6 +1645,9 @@
             <name>$PROJ_DIR$\inc\communication.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\inc\fifo.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\init.h</name>
         </file>
         <file>
@@ -1901,6 +1904,9 @@
         <name>src</name>
         <file>
             <name>$PROJ_DIR$\src\communication.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\fifo.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\init.c</name>

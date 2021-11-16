@@ -2,6 +2,7 @@
 #define _lin_h_
 //User includes
 #include "stm8s_conf.h"
+#include "fifo.h"
 //User defines
 //FSM for frame header
 enum LIN_HEADER{
@@ -28,6 +29,7 @@ extern struct LIN_Header header;
 extern struct LIN_Response response;
 extern enum LIN_Size Lin_size;
 extern uint8_t countReceived;
+extern FIFO sw_transmit;
 //User function definition
 bool BreakDetection(void);
 bool GetSynch(uint8_t data);

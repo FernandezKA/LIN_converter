@@ -1,6 +1,7 @@
 #include "uart.h"
 #include "init.h"
 #include "lin.h"
+#include "communication.h"
 //Function declaration
 inline static void UART_RX_IRQ(uint8_t UART_DR);
 inline static void UART_TX_IRQ(void);
@@ -120,6 +121,9 @@ inline static void UART_RX_IRQ(uint8_t UART_DR){
     else if(countReceived == header.size){
       if(response.CRC == UART_DR){//Packed received witout mistakes
         currentHeader = wait_break;
+        asm("sim");
+        Reflect_LIN(header, response);
+        asm("rim");
         SetExtIRQ(); 
       }
       else{//CRC received ant matched is not equal

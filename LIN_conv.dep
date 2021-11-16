@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>3907930775</fileChecksum>
+    <fileChecksum>1612109049</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -198,6 +198,11 @@
             <file>$PROJ_DIR$\Debug\Obj\stm8s_exti.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8s_tim3.__cstat.et</file>
+            <file>$PROJ_DIR$\src\fifo.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\fifo.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\fifo.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fifo.o</file>
+            <file>$PROJ_DIR$\inc\fifo.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -454,7 +459,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 152 50 169 181 75 51 147 79 93 144 114 65 177</file>
+                    <file> 152 50 196 169 181 75 51 147 79 93 144 114 65 177</file>
                 </tool>
             </inputs>
         </file>
@@ -517,7 +522,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 2 4 0 10 110 34 19 24 9</file>
+                    <file> 2 4 0 10 110 34 19 24 197 9</file>
                 </tool>
             </inputs>
         </file>
@@ -649,7 +654,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 4 0 10 110 34 19 24 1 115 120 90 45 116 129 101 72 53 73 8 9</file>
+                    <file> 4 0 10 110 34 19 24 197 1 115 120 90 45 116 129 101 72 53 73 8 9</file>
                 </tool>
             </inputs>
         </file>
@@ -672,7 +677,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 1 10 0 34 19 24 110 115 120 90 45 116 129 101 72 53 73 4 8 9</file>
+                    <file> 1 10 0 34 19 24 110 115 120 90 45 116 129 101 72 53 73 4 197 8 9 2</file>
                 </tool>
             </inputs>
         </file>
@@ -907,7 +912,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 0 10 110 34 19 24 14 8 9 4 1 115 120 90 45 116 129 101 72 53 73 38</file>
+                    <file> 0 10 110 34 19 24 14 8 9 4 197 1 115 120 90 45 116 129 101 72 53 73 38</file>
                 </tool>
             </inputs>
         </file>
@@ -971,6 +976,29 @@
                 <tool>
                     <name>ICCSTM8</name>
                     <file> 43 10 0 34 19 110</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\fifo.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 196</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 195</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 194</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 197 0 10 110 34 19 24</file>
                 </tool>
             </inputs>
         </file>

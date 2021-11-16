@@ -25,15 +25,16 @@ build stm8s_it.pbi : index stm8s_it.xcl
 build stm8s_itc.pbi : index stm8s_itc.xcl
 build stm8s_tim2.pbi : index stm8s_tim2.xcl
 build communication.pbi : index communication.xcl
+build fifo.pbi : index fifo.xcl
 build init.pbi : index init.xcl
 build lin.pbi : index lin.xcl
 build main.pbi : index main.xcl
 build softuart.pbi : index softuart.xcl
 build uart.pbi : index uart.xcl
 build LIN_conv_part0.pbi : link stm8s_gpio.pbi stm8s_it.pbi stm8s_itc.pbi
-build LIN_conv_part1.pbi : link stm8s_tim2.pbi communication.pbi init.pbi
-build LIN_conv_part2.pbi : link lin.pbi main.pbi softuart.pbi
-build LIN_conv_part3.pbi : link uart.pbi
+build LIN_conv_part1.pbi : link stm8s_tim2.pbi communication.pbi fifo.pbi
+build LIN_conv_part2.pbi : link init.pbi lin.pbi main.pbi
+build LIN_conv_part3.pbi : link softuart.pbi uart.pbi
 build LIN_conv.pbd : link LIN_conv_part0.pbi LIN_conv_part1.pbi LIN_conv_part2.pbi LIN_conv_part3.pbi
 build LIN_conv.pbw : browsedata LIN_conv.pbd
 
