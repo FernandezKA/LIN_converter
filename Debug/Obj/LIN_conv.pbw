@@ -37874,13 +37874,229 @@
     "scope": null
   },
   {
+    "ID": "c:@E@FSM_REC",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "FSM_REC",
+    "fields": [
+      {
+        "ID": "c:@E@FSM_REC@w_mode",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_mode",
+        "location": {
+          "column": "3",
+          "line": "17",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_mode",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_pid",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_pid",
+        "location": {
+          "column": "3",
+          "line": "18",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_pid",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_data",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_data",
+        "location": {
+          "column": "3",
+          "line": "19",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_data",
+        "origin": "project_file",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "FSM_REC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@fsm_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "fsm_receive",
+    "location": {
+      "column": "16",
+      "line": "21",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "fsm_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@E@LIN_MODE",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "LIN_MODE",
+    "fields": [
+      {
+        "ID": "c:@E@LIN_MODE@MASTER",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "MASTER",
+        "location": {
+          "column": "3",
+          "line": "23",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "MASTER",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@LIN_MODE@SLAVE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "SLAVE",
+        "location": {
+          "column": "3",
+          "line": "24",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "SLAVE",
+        "origin": "project_file",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "LIN_MODE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@LIN_SEND",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "LIN_SEND",
+    "location": {
+      "column": "8",
+      "line": "26",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "members": [
+      {
+        "ID": "c:@S@LIN_SEND@FI@PID",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "PID",
+        "location": {
+          "column": "11",
+          "line": "27",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "PID",
+        "origin": "project_file",
+        "scope": "LIN_SEND"
+      },
+      {
+        "ID": "c:@S@LIN_SEND@FI@SIZE",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "SIZE",
+        "location": {
+          "column": "17",
+          "line": "28",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "SIZE",
+        "origin": "project_file",
+        "scope": "LIN_SEND"
+      },
+      {
+        "ID": "c:@S@LIN_SEND@FI@Data",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "Data",
+        "location": {
+          "column": "11",
+          "line": "29",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "Data",
+        "origin": "project_file",
+        "scope": "LIN_SEND"
+      },
+      {
+        "ID": "c:@S@LIN_SEND@FI@CRC",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "CRC",
+        "location": {
+          "column": "11",
+          "line": "30",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "CRC",
+        "origin": "project_file",
+        "scope": "LIN_SEND"
+      },
+      {
+        "ID": "c:@S@LIN_SEND@FI@Mode",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "Mode",
+        "location": {
+          "column": "12",
+          "line": "31",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "Mode",
+        "origin": "project_file",
+        "scope": "LIN_SEND"
+      }
+    ],
+    "name": "LIN_SEND",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@LIN_Send",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "LIN_Send",
+    "location": {
+      "column": "17",
+      "line": "33",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "LIN_Send",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main#",
     "What": "Function",
     "defdec": "Def",
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "34",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "main",
@@ -37888,16 +38104,44 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@568@F@main#@u8Data",
+    "ID": "c:main.c@718@F@main#@CountDataLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "CountDataLIN",
+    "location": {
+      "column": "18",
+      "line": "40",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "CountDataLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@903@F@main#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "15",
-      "line": "25",
+      "line": "45",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "u8Data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1097@F@main#@data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "data",
+    "location": {
+      "column": "24",
+      "line": "52",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "data",
     "origin": "project_file",
     "scope": null
   },
@@ -37908,7 +38152,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "42",
+      "line": "107",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -37922,7 +38166,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "48",
+      "line": "113",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",

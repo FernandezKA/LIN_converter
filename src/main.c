@@ -12,20 +12,85 @@
 static void SysInit(void);
 FIFO sw_transmit;
 static FIFO sw_receive;
+
+enum FSM_REC{
+  w_mode, 
+  w_pid, 
+  w_data
+};
+static FSM_REC fsm_receive = w_mode;
+enum LIN_MODE{
+  MASTER,
+  SLAVE
+};
+struct LIN_SEND{
+  uint8_t PID;
+  enum LIN_Size SIZE;
+  uint8_t Data[8U];
+  uint8_t CRC;
+  LIN_MODE Mode;
+};
+struct LIN_SEND LIN_Send;
 void main(void)
 {
   SysInit();
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
+  static uint8_t CountDataLIN = 0x00;
   asm("rim");
   for (;;)
   {
-    if(test_status(receive_buffer_full) == receive_buffer_full){//FIFO buffer for RS232
+    if(test_status(receive_buffer_full) == receive_buffer_full){//FIFO buffer for RS232, load data from UART
       uint8_t u8Data;
       uart_read(&u8Data);
       Push(&sw_receive, u8Data);
-      uart_send(Pull(&sw_receive));
+    }
+    if(!sw_receive.isEmpty){//Parse data from RS232
+      switch(fsm_receive){
+      case w_mode:
+        static uint8_t data = Pull(&sw_receive);
+        if(data == 0x00){//Slave mode
+          LIN_Send.Mode = SLAVE;
+          fsm_receive = w_pid;
+        }
+        else if(data == 0x55){//Master mode
+          LIN_Send.Mode = MASTER;
+          fsm_receive = w_pid;
+        }
+        else{//Mistake
+          fsm_receive = w_mode;
+        }
+        break;
+        
+      case w_pid:
+          LIN_Send.PID = Pull(&sw_receive);
+          if(LIN_Send.PID < 0x1FU){
+            LIN_Send.SIZE = bytes_2;
+          }
+          else if(LIN_Send.PID < 0x2FU){
+            LIN_Send.SIZE = bytes_4;
+          }
+          else if(LIN_Send.PID < 0x3FU){
+            LIN_Send.SIZE = bytes_8;
+          }
+          fsm_receive = w_data;
+        break;
+        
+      case w_data:
+        if(CountDataLIN < LIN_Send.SIZE){
+          LIN_Send.Data[CountDataLIN++] = Pull(&sw_receive);
+        }
+        else{
+          CountDataLIN = 0x00U;
+          fsm_receive = w_mode;
+        }
+        break;
+        
+      default:
+        
+        break;
+      }
     }
     if (!sw_transmit.isEmpty)//Lin packet recognized, reflect from RS232
     {
