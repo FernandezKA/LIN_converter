@@ -20965,7 +20965,7 @@
     "defdec": "Dec",
     "display": "u8RXB",
     "location": {
-      "column": "20",
+      "column": "16",
       "line": "31",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
@@ -20974,7 +20974,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@1487@macro@SWUART_TRANSMIT_USED",
+    "ID": "c:softuart.h@1483@macro@SWUART_TRANSMIT_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SWUART_TRANSMIT_USED",
@@ -20988,7 +20988,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@1517@macro@SWUART_RECEIVE_USED",
+    "ID": "c:softuart.h@1513@macro@SWUART_RECEIVE_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SWUART_RECEIVE_USED",
@@ -21002,7 +21002,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@1546@macro@TEST_PIN_USED",
+    "ID": "c:softuart.h@1542@macro@TEST_PIN_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TEST_PIN_USED",
@@ -21016,7 +21016,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@1571@macro@DATA_LENGTH",
+    "ID": "c:softuart.h@1567@macro@DATA_LENGTH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DATA_LENGTH",
@@ -21030,7 +21030,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@1631@macro@STOP_BITS",
+    "ID": "c:softuart.h@1625@macro@STOP_BITS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "STOP_BITS",
@@ -21044,12 +21044,12 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2210@macro@UART_TxPORT",
+    "ID": "c:softuart.h@2202@macro@UART_TxPORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_TxPORT",
     "location": {
-      "column": "10",
+      "column": "9",
       "line": "55",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
@@ -21058,7 +21058,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2239@macro@UART_TxPIN",
+    "ID": "c:softuart.h@2231@macro@UART_TxPIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_TxPIN",
@@ -21072,12 +21072,12 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2311@macro@UART_RxPORT",
+    "ID": "c:softuart.h@2302@macro@UART_RxPORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_RxPORT",
     "location": {
-      "column": "10",
+      "column": "9",
       "line": "60",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
@@ -21086,7 +21086,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2340@macro@UART_RxPIN",
+    "ID": "c:softuart.h@2331@macro@UART_RxPIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_RxPIN",
@@ -21100,7 +21100,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2406@macro@UART_TestPORT",
+    "ID": "c:softuart.h@2396@macro@UART_TestPORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_TestPORT",
@@ -21114,7 +21114,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2437@macro@UART_TestPIN",
+    "ID": "c:softuart.h@2427@macro@UART_TestPIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_TestPIN",
@@ -21128,7 +21128,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@2482@macro@OCInit_TypeDef",
+    "ID": "c:softuart.h@2472@macro@OCInit_TypeDef",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "OCInit_TypeDef",
@@ -21142,7 +21142,7 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@3375@macro@init_UART_timing",
+    "ID": "c:softuart.h@3363@macro@init_UART_timing",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_timing",
@@ -21156,13 +21156,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@3679@macro@init_ic_setting",
+    "ID": "c:softuart.h@3836@macro@init_ic_setting",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_ic_setting",
     "location": {
       "column": "9",
-      "line": "92",
+      "line": "93",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "init_ic_setting",
@@ -21170,13 +21170,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@3975@macro@init_oc_setting",
+    "ID": "c:softuart.h@4355@macro@init_oc_setting",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_oc_setting",
     "location": {
-      "column": "10",
-      "line": "99",
+      "column": "9",
+      "line": "101",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "init_oc_setting",
@@ -21184,13 +21184,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4062@macro@clear_owerflow_flag",
+    "ID": "c:softuart.h@4522@macro@clear_owerflow_flag",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clear_owerflow_flag",
     "location": {
       "column": "9",
-      "line": "104",
+      "line": "107",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "clear_owerflow_flag",
@@ -21198,13 +21198,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4122@macro@clear_cc_flag",
+    "ID": "c:softuart.h@4632@macro@clear_cc_flag",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clear_cc_flag",
     "location": {
       "column": "9",
-      "line": "105",
+      "line": "111",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "clear_cc_flag",
@@ -21212,13 +21212,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4181@macro@enable_cc_interrupt",
+    "ID": "c:softuart.h@4748@macro@enable_cc_interrupt",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "enable_cc_interrupt",
     "location": {
-      "column": "10",
-      "line": "106",
+      "column": "9",
+      "line": "115",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "enable_cc_interrupt",
@@ -21226,13 +21226,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4245@macro@disable_cc_interrupt",
+    "ID": "c:softuart.h@4861@macro@disable_cc_interrupt",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "disable_cc_interrupt",
     "location": {
-      "column": "10",
-      "line": "107",
+      "column": "9",
+      "line": "119",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "disable_cc_interrupt",
@@ -21240,13 +21240,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4311@macro@enable_IC_system",
+    "ID": "c:softuart.h@4979@macro@enable_IC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "enable_IC_system",
     "location": {
       "column": "9",
-      "line": "109",
+      "line": "124",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "enable_IC_system",
@@ -21254,13 +21254,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4400@macro@disable_IC_system",
+    "ID": "c:softuart.h@5096@macro@disable_IC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "disable_IC_system",
     "location": {
       "column": "9",
-      "line": "110",
+      "line": "129",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "disable_IC_system",
@@ -21268,13 +21268,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4538@macro@enable_OC_system",
+    "ID": "c:softuart.h@5334@macro@enable_OC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "enable_OC_system",
     "location": {
       "column": "9",
-      "line": "116",
+      "line": "136",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "enable_OC_system",
@@ -21282,13 +21282,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@4627@macro@disable_OC_system",
+    "ID": "c:softuart.h@5451@macro@disable_OC_system",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "disable_OC_system",
     "location": {
       "column": "9",
-      "line": "117",
+      "line": "141",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "disable_OC_system",
@@ -21296,13 +21296,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5488@macro@Rx_test",
+    "ID": "c:softuart.h@6372@macro@Rx_test",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Rx_test",
     "location": {
       "column": "9",
-      "line": "146",
+      "line": "176",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_test",
@@ -21310,13 +21310,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5574@macro@set_Tx",
+    "ID": "c:softuart.h@6458@macro@set_Tx",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "set_Tx",
     "location": {
       "column": "9",
-      "line": "149",
+      "line": "179",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "set_Tx",
@@ -21324,13 +21324,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5624@macro@clr_Tx",
+    "ID": "c:softuart.h@6507@macro@clr_Tx",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clr_Tx",
     "location": {
       "column": "9",
-      "line": "150",
+      "line": "180",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "clr_Tx",
@@ -21338,13 +21338,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5704@macro@set_Test_Pin",
+    "ID": "c:softuart.h@6587@macro@set_Test_Pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "set_Test_Pin",
     "location": {
       "column": "9",
-      "line": "153",
+      "line": "183",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "set_Test_Pin",
@@ -21352,13 +21352,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5758@macro@clr_Test_Pin",
+    "ID": "c:softuart.h@6642@macro@clr_Test_Pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clr_Test_Pin",
     "location": {
       "column": "9",
-      "line": "154",
+      "line": "184",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "clr_Test_Pin",
@@ -21366,13 +21366,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@5933@macro@init_UART_Tx_pin",
+    "ID": "c:softuart.h@6818@macro@init_UART_Tx_pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_Tx_pin",
     "location": {
       "column": "9",
-      "line": "160",
+      "line": "190",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "init_UART_Tx_pin",
@@ -21380,13 +21380,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6063@macro@init_UART_Rx_pin",
+    "ID": "c:softuart.h@7072@macro@init_UART_Rx_pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_Rx_pin",
     "location": {
       "column": "9",
-      "line": "163",
+      "line": "196",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "init_UART_Rx_pin",
@@ -21394,13 +21394,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6182@macro@init_UART_Test_pin",
+    "ID": "c:softuart.h@7305@macro@init_UART_Test_pin",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "init_UART_Test_pin",
     "location": {
       "column": "9",
-      "line": "166",
+      "line": "202",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "init_UART_Test_pin",
@@ -21408,13 +21408,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6390@macro@transmit_in_progress",
+    "ID": "c:softuart.h@7641@macro@transmit_in_progress",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "transmit_in_progress",
     "location": {
       "column": "9",
-      "line": "171",
+      "line": "210",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "transmit_in_progress",
@@ -21422,13 +21422,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6427@macro@transmit_data_reg_empty",
+    "ID": "c:softuart.h@7676@macro@transmit_data_reg_empty",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "transmit_data_reg_empty",
     "location": {
       "column": "9",
-      "line": "172",
+      "line": "211",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "transmit_data_reg_empty",
@@ -21436,13 +21436,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6474@macro@receive_9th_data_bit",
+    "ID": "c:softuart.h@7714@macro@receive_9th_data_bit",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_9th_data_bit",
     "location": {
       "column": "9",
-      "line": "173",
+      "line": "212",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "receive_9th_data_bit",
@@ -21450,13 +21450,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6511@macro@receive_in_progress",
+    "ID": "c:softuart.h@7749@macro@receive_in_progress",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_in_progress",
     "location": {
       "column": "9",
-      "line": "174",
+      "line": "213",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "receive_in_progress",
@@ -21464,13 +21464,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6547@macro@receive_buffer_overflow",
+    "ID": "c:softuart.h@7783@macro@receive_buffer_overflow",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_buffer_overflow",
     "location": {
       "column": "9",
-      "line": "175",
+      "line": "214",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "receive_buffer_overflow",
@@ -21478,13 +21478,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6642@macro@receive_frame_error",
+    "ID": "c:softuart.h@7869@macro@receive_frame_error",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_frame_error",
     "location": {
       "column": "9",
-      "line": "176",
+      "line": "215",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "receive_frame_error",
@@ -21492,13 +21492,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6678@macro@receive_noise_error",
+    "ID": "c:softuart.h@7903@macro@receive_noise_error",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_noise_error",
     "location": {
       "column": "9",
-      "line": "177",
+      "line": "216",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "receive_noise_error",
@@ -21506,13 +21506,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6714@macro@receive_buffer_full",
+    "ID": "c:softuart.h@7937@macro@receive_buffer_full",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "receive_buffer_full",
     "location": {
       "column": "9",
-      "line": "178",
+      "line": "217",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "receive_buffer_full",
@@ -21520,13 +21520,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6775@macro@OVFL_ERROR",
+    "ID": "c:softuart.h@7996@macro@OVFL_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "OVFL_ERROR",
     "location": {
       "column": "9",
-      "line": "181",
+      "line": "220",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "OVFL_ERROR",
@@ -21534,13 +21534,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6797@macro@FRAME_ERROR",
+    "ID": "c:softuart.h@8018@macro@FRAME_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "FRAME_ERROR",
     "location": {
       "column": "9",
-      "line": "182",
+      "line": "221",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "FRAME_ERROR",
@@ -21548,13 +21548,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6820@macro@NOISE_ERROR",
+    "ID": "c:softuart.h@8041@macro@NOISE_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "NOISE_ERROR",
     "location": {
       "column": "9",
-      "line": "183",
+      "line": "222",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "NOISE_ERROR",
@@ -21562,13 +21562,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6843@macro@RX_BUFF_FULL",
+    "ID": "c:softuart.h@8064@macro@RX_BUFF_FULL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "RX_BUFF_FULL",
     "location": {
       "column": "9",
-      "line": "184",
+      "line": "223",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "RX_BUFF_FULL",
@@ -21576,13 +21576,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@6962@macro@test_status",
+    "ID": "c:softuart.h@8173@macro@test_status",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "test_status",
     "location": {
       "column": "9",
-      "line": "188",
+      "line": "226",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "test_status",
@@ -21590,13 +21590,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7002@macro@set_status",
+    "ID": "c:softuart.h@8212@macro@set_status",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "set_status",
     "location": {
       "column": "9",
-      "line": "189",
+      "line": "227",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "set_status",
@@ -21604,13 +21604,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7042@macro@clr_status",
+    "ID": "c:softuart.h@8251@macro@clr_status",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "clr_status",
     "location": {
       "column": "9",
-      "line": "190",
+      "line": "228",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "clr_status",
@@ -21618,13 +21618,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7084@macro@uart_receive_enable",
+    "ID": "c:softuart.h@8293@macro@uart_receive_enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "uart_receive_enable",
     "location": {
       "column": "9",
-      "line": "192",
+      "line": "230",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_receive_enable",
@@ -21632,13 +21632,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.h@7194@macro@uart_receive_disable",
+    "ID": "c:softuart.h@8502@macro@uart_receive_disable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "uart_receive_disable",
     "location": {
       "column": "9",
-      "line": "193",
+      "line": "237",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_receive_disable",
@@ -21652,7 +21652,7 @@
     "display": "Rx_phase",
     "location": {
       "column": "13",
-      "line": "196",
+      "line": "245",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_phase",
@@ -21666,7 +21666,7 @@
     "display": "Rx_phase",
     "location": {
       "column": "13",
-      "line": "196",
+      "line": "245",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_phase",
@@ -21680,7 +21680,7 @@
     "display": "Tx_phase",
     "location": {
       "column": "13",
-      "line": "197",
+      "line": "246",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Tx_phase",
@@ -21694,7 +21694,7 @@
     "display": "Tx_phase",
     "location": {
       "column": "13",
-      "line": "197",
+      "line": "246",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Tx_phase",
@@ -21708,7 +21708,7 @@
     "display": "Rx_bit",
     "location": {
       "column": "11",
-      "line": "207",
+      "line": "256",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_bit",
@@ -21722,7 +21722,7 @@
     "display": "Rx_bit",
     "location": {
       "column": "11",
-      "line": "207",
+      "line": "256",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_bit",
@@ -21736,7 +21736,7 @@
     "display": "Rx_samp",
     "location": {
       "column": "5",
-      "line": "208",
+      "line": "257",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_samp",
@@ -21750,7 +21750,7 @@
     "display": "Rx_samp",
     "location": {
       "column": "5",
-      "line": "208",
+      "line": "257",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_samp",
@@ -21764,7 +21764,7 @@
     "display": "Tx_bit",
     "location": {
       "column": "5",
-      "line": "209",
+      "line": "258",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Tx_bit",
@@ -21778,7 +21778,7 @@
     "display": "Tx_bit",
     "location": {
       "column": "5",
-      "line": "209",
+      "line": "258",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Tx_bit",
@@ -21792,7 +21792,7 @@
     "display": "Rx_buff",
     "location": {
       "column": "5",
-      "line": "210",
+      "line": "259",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_buff",
@@ -21806,7 +21806,7 @@
     "display": "Rx_buff",
     "location": {
       "column": "5",
-      "line": "210",
+      "line": "259",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_buff",
@@ -21820,7 +21820,7 @@
     "display": "Rx_data",
     "location": {
       "column": "5",
-      "line": "211",
+      "line": "260",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_data",
@@ -21834,7 +21834,7 @@
     "display": "Rx_data",
     "location": {
       "column": "5",
-      "line": "211",
+      "line": "260",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Rx_data",
@@ -21848,7 +21848,7 @@
     "display": "Tx_data",
     "location": {
       "column": "5",
-      "line": "212",
+      "line": "261",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Tx_data",
@@ -21862,7 +21862,7 @@
     "display": "Tx_data",
     "location": {
       "column": "5",
-      "line": "212",
+      "line": "261",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "Tx_data",
@@ -21876,7 +21876,7 @@
     "display": "UART_sts",
     "location": {
       "column": "5",
-      "line": "213",
+      "line": "262",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "UART_sts",
@@ -21890,7 +21890,7 @@
     "display": "UART_sts",
     "location": {
       "column": "5",
-      "line": "213",
+      "line": "262",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "UART_sts",
@@ -21904,7 +21904,7 @@
     "display": "void uart_init(void)",
     "location": {
       "column": "6",
-      "line": "216",
+      "line": "265",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_init",
@@ -21918,7 +21918,7 @@
     "display": "void uart_init(void)",
     "location": {
       "column": "6",
-      "line": "216",
+      "line": "265",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_init",
@@ -21932,7 +21932,7 @@
     "display": "u8 uart_send(u8)",
     "location": {
       "column": "4",
-      "line": "217",
+      "line": "266",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_send",
@@ -21946,7 +21946,7 @@
     "display": "u8 uart_send(u8)",
     "location": {
       "column": "4",
-      "line": "217",
+      "line": "266",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_send",
@@ -21960,7 +21960,7 @@
     "display": "u8 uart_read(u8 *)",
     "location": {
       "column": "4",
-      "line": "218",
+      "line": "267",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_read",
@@ -21974,7 +21974,7 @@
     "display": "u8 uart_read(u8 *)",
     "location": {
       "column": "4",
-      "line": "218",
+      "line": "267",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_read",
@@ -21988,7 +21988,7 @@
     "display": "void uart_Tx_timing(void)",
     "location": {
       "column": "6",
-      "line": "219",
+      "line": "268",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_Tx_timing",
@@ -22002,7 +22002,7 @@
     "display": "void uart_Tx_timing(void)",
     "location": {
       "column": "6",
-      "line": "219",
+      "line": "268",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_Tx_timing",
@@ -22016,7 +22016,7 @@
     "display": "void uart_Rx_timing(void)",
     "location": {
       "column": "6",
-      "line": "220",
+      "line": "269",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_Rx_timing",
@@ -22030,7 +22030,7 @@
     "display": "void uart_Rx_timing(void)",
     "location": {
       "column": "6",
-      "line": "220",
+      "line": "269",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\softuart.h"
     },
     "name": "uart_Rx_timing",
@@ -27226,7 +27226,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1255@macro@__STM8S_CONF_H",
+    "ID": "c:stm8s_conf.h@1254@macro@__STM8S_CONF_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "__STM8S_CONF_H",
@@ -27240,7 +27240,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1399@macro@EXTI_PORTD_IRQ",
+    "ID": "c:stm8s_conf.h@1398@macro@EXTI_PORTD_IRQ",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "EXTI_PORTD_IRQ",
@@ -27254,7 +27254,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1423@macro@DEBUG",
+    "ID": "c:stm8s_conf.h@1422@macro@DEBUG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DEBUG",
@@ -27268,7 +27268,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1465@macro@UART_PORT",
+    "ID": "c:stm8s_conf.h@1464@macro@UART_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PORT",
@@ -27282,7 +27282,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1490@macro@UART_TX",
+    "ID": "c:stm8s_conf.h@1489@macro@UART_TX",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_TX",
@@ -27296,7 +27296,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1514@macro@UART_RX",
+    "ID": "c:stm8s_conf.h@1515@macro@UART_RX",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_RX",
@@ -27310,7 +27310,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1538@macro@SWUART_TRANSMIT_USED",
+    "ID": "c:stm8s_conf.h@1541@macro@SWUART_TRANSMIT_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SWUART_TRANSMIT_USED",
@@ -27324,7 +27324,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1568@macro@SWUART_RECEIVE_USED",
+    "ID": "c:stm8s_conf.h@1571@macro@SWUART_RECEIVE_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SWUART_RECEIVE_USED",
@@ -27338,13 +27338,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@6134@macro@UART1_TX_IRQ",
+    "ID": "c:stm8s_conf.h@6106@macro@UART1_TX_IRQ",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART1_TX_IRQ",
     "location": {
       "column": "9",
-      "line": "151",
+      "line": "149",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
     },
     "name": "UART1_TX_IRQ",
@@ -27352,13 +27352,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@6184@macro@UART1_RX_IRQ",
+    "ID": "c:stm8s_conf.h@6143@macro@UART1_RX_IRQ",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART1_RX_IRQ",
     "location": {
       "column": "9",
-      "line": "152",
+      "line": "150",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
     },
     "name": "UART1_RX_IRQ",
@@ -27366,13 +27366,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@8068@macro@USE_FULL_ASSERT",
+    "ID": "c:stm8s_conf.h@8022@macro@USE_FULL_ASSERT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "USE_FULL_ASSERT",
     "location": {
       "column": "9",
-      "line": "189",
+      "line": "187",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
     },
     "name": "USE_FULL_ASSERT",
@@ -27380,13 +27380,13 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@8541@macro@assert_param",
+    "ID": "c:stm8s_conf.h@8490@macro@assert_param",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "assert_param",
     "location": {
       "column": "9",
-      "line": "202",
+      "line": "200",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
     },
     "name": "assert_param",
@@ -27400,7 +27400,7 @@
     "display": "void assert_failed(uint8_t *, uint32_t)",
     "location": {
       "column": "6",
-      "line": "204",
+      "line": "202",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
     },
     "name": "assert_failed",
@@ -27414,7 +27414,7 @@
     "display": "void assert_failed(uint8_t *, uint32_t)",
     "location": {
       "column": "6",
-      "line": "204",
+      "line": "202",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
     },
     "name": "assert_failed",
@@ -31050,13 +31050,13 @@
     "scope": null
   },
   {
-    "ID": "c:communication.c@205@F@Reflect_LIN#$@S@LIN_Header#$@S@LIN_Response#@i",
+    "ID": "c:communication.c@211@F@Reflect_LIN#$@S@LIN_Header#$@S@LIN_Response#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
-      "column": "10",
-      "line": "7",
+      "column": "12",
+      "line": "8",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\communication.c"
     },
     "name": "i",
@@ -31090,7 +31090,7 @@
         "display": "wait_break",
         "location": {
           "column": "3",
-          "line": "9",
+          "line": "10",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "wait_break",
@@ -31104,7 +31104,7 @@
         "display": "wait_synch",
         "location": {
           "column": "3",
-          "line": "10",
+          "line": "11",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "wait_synch",
@@ -31118,7 +31118,7 @@
         "display": "wait_pid",
         "location": {
           "column": "3",
-          "line": "11",
+          "line": "12",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "wait_pid",
@@ -31132,7 +31132,7 @@
         "display": "wait_data",
         "location": {
           "column": "3",
-          "line": "12",
+          "line": "13",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "wait_data",
@@ -31162,7 +31162,7 @@
         "display": "bytes_2",
         "location": {
           "column": "3",
-          "line": "15",
+          "line": "17",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "bytes_2",
@@ -31176,7 +31176,7 @@
         "display": "bytes_4",
         "location": {
           "column": "3",
-          "line": "16",
+          "line": "18",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "bytes_4",
@@ -31190,7 +31190,7 @@
         "display": "bytes_8",
         "location": {
           "column": "3",
-          "line": "17",
+          "line": "19",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "bytes_8",
@@ -31200,7 +31200,7 @@
     ],
     "location": {
       "column": "6",
-      "line": "14",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "LIN_Size",
@@ -31214,7 +31214,7 @@
     "display": "LIN_Header",
     "location": {
       "column": "8",
-      "line": "19",
+      "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "members": [
@@ -31225,7 +31225,7 @@
         "display": "synch",
         "location": {
           "column": "11",
-          "line": "20",
+          "line": "23",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "synch",
@@ -31239,7 +31239,7 @@
         "display": "pid",
         "location": {
           "column": "11",
-          "line": "21",
+          "line": "24",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "pid",
@@ -31253,7 +31253,7 @@
         "display": "size",
         "location": {
           "column": "17",
-          "line": "22",
+          "line": "25",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "size",
@@ -31272,7 +31272,7 @@
     "display": "LIN_Response",
     "location": {
       "column": "8",
-      "line": "24",
+      "line": "27",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "members": [
@@ -31283,7 +31283,7 @@
         "display": "data",
         "location": {
           "column": "11",
-          "line": "25",
+          "line": "29",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "data",
@@ -31297,7 +31297,7 @@
         "display": "CRC",
         "location": {
           "column": "11",
-          "line": "26",
+          "line": "30",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
         },
         "name": "CRC",
@@ -31316,7 +31316,7 @@
     "display": "header",
     "location": {
       "column": "26",
-      "line": "28",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "header",
@@ -31330,7 +31330,7 @@
     "display": "header",
     "location": {
       "column": "26",
-      "line": "28",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "header",
@@ -31344,7 +31344,7 @@
     "display": "response",
     "location": {
       "column": "28",
-      "line": "29",
+      "line": "33",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "response",
@@ -31358,7 +31358,7 @@
     "display": "response",
     "location": {
       "column": "28",
-      "line": "29",
+      "line": "33",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "response",
@@ -31372,7 +31372,7 @@
     "display": "Lin_size",
     "location": {
       "column": "22",
-      "line": "30",
+      "line": "34",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "Lin_size",
@@ -31386,7 +31386,7 @@
     "display": "Lin_size",
     "location": {
       "column": "22",
-      "line": "30",
+      "line": "34",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "Lin_size",
@@ -31400,7 +31400,7 @@
     "display": "countReceived",
     "location": {
       "column": "16",
-      "line": "31",
+      "line": "35",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "countReceived",
@@ -31414,7 +31414,7 @@
     "display": "countReceived",
     "location": {
       "column": "16",
-      "line": "31",
+      "line": "35",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "countReceived",
@@ -31428,7 +31428,7 @@
     "display": "sw_transmit",
     "location": {
       "column": "13",
-      "line": "32",
+      "line": "36",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "sw_transmit",
@@ -31442,7 +31442,7 @@
     "display": "sw_transmit",
     "location": {
       "column": "13",
-      "line": "32",
+      "line": "36",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "sw_transmit",
@@ -31456,7 +31456,7 @@
     "display": "bool BreakDetection(void)",
     "location": {
       "column": "6",
-      "line": "34",
+      "line": "38",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "BreakDetection",
@@ -31470,7 +31470,7 @@
     "display": "bool GetSynch(uint8_t)",
     "location": {
       "column": "6",
-      "line": "35",
+      "line": "39",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "GetSynch",
@@ -31484,7 +31484,7 @@
     "display": "uint8_t GetPID(uint8_t)",
     "location": {
       "column": "9",
-      "line": "36",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "GetPID",
@@ -31498,7 +31498,7 @@
     "display": "uint8_t GetPID(uint8_t)",
     "location": {
       "column": "9",
-      "line": "36",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "GetPID",
@@ -31512,7 +31512,7 @@
     "display": "void GetNextState(LIN_HEADER *)",
     "location": {
       "column": "6",
-      "line": "37",
+      "line": "41",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "GetNextState",
@@ -31526,7 +31526,7 @@
     "display": "currentHeader",
     "location": {
       "column": "19",
-      "line": "39",
+      "line": "43",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "currentHeader",
@@ -31540,7 +31540,7 @@
     "display": "currentHeader",
     "location": {
       "column": "19",
-      "line": "39",
+      "line": "43",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "currentHeader",
@@ -31554,7 +31554,7 @@
     "display": "u16BreakLength",
     "location": {
       "column": "17",
-      "line": "40",
+      "line": "44",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "u16BreakLength",
@@ -31568,7 +31568,7 @@
     "display": "u16BreakLength",
     "location": {
       "column": "17",
-      "line": "40",
+      "line": "44",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\lin.h"
     },
     "name": "u16BreakLength",
@@ -31774,13 +31774,13 @@
     "scope": null
   },
   {
-    "ID": "c:fifo.c@181@F@Pull#*$@S@FIFO_STR#@u8Data",
+    "ID": "c:fifo.c@182@F@Pull#*$@S@FIFO_STR#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "11",
-      "line": "8",
+      "line": "9",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\fifo.c"
     },
     "name": "u8Data",
@@ -31794,7 +31794,7 @@
     "display": "void Push(FIFO *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\fifo.c"
     },
     "name": "Push",
@@ -33130,7 +33130,7 @@
     "display": "void UART_SW_Config(void)",
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "9",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "UART_SW_Config",
@@ -33144,7 +33144,7 @@
     "display": "void UART_HW_Config(void)",
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "UART_HW_Config",
@@ -33158,7 +33158,7 @@
     "display": "void Tim1_Config(void)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "25",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "Tim1_Config",
@@ -33172,7 +33172,7 @@
     "display": "void GPIO_Config(void)",
     "location": {
       "column": "6",
-      "line": "30",
+      "line": "34",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "GPIO_Config",
@@ -33186,7 +33186,7 @@
     "display": "void SetExtIRQ(void)",
     "location": {
       "column": "6",
-      "line": "37",
+      "line": "42",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "SetExtIRQ",
@@ -33200,7 +33200,7 @@
     "display": "void SetSynchMode(void)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "51",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "SetSynchMode",
@@ -36628,13 +36628,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@442@F@GetPID#c#@u8PID",
+    "ID": "c:lin.c@444@F@GetPID#c#@u8PID",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8PID",
     "location": {
       "column": "11",
-      "line": "17",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "u8PID",
@@ -36648,7 +36648,7 @@
     "display": "void EXTI_PORTD_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "26",
+      "line": "27",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "EXTI_PORTD_IRQHandler",
@@ -36656,13 +36656,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@818@F@EXTI_PORTD_IRQHandler#@u16TempTime",
+    "ID": "c:lin.c@831@F@EXTI_PORTD_IRQHandler#@u16TempTime",
     "What": "Variable",
     "defdec": "Def",
     "display": "u16TempTime",
     "location": {
       "column": "14",
-      "line": "30",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "u16TempTime",
@@ -37076,7 +37076,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.h@174@macro@TxBufSize",
+    "ID": "c:uart.h@173@macro@TxBufSize",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TxBufSize",
@@ -37090,7 +37090,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.h@196@macro@RxBufSize",
+    "ID": "c:uart.h@195@macro@RxBufSize",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "RxBufSize",
@@ -37104,7 +37104,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.h@218@macro@bool",
+    "ID": "c:uart.h@217@macro@bool",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "bool",
@@ -37291,7 +37291,7 @@
     "defdec": "Dec",
     "display": "u8RxCnt",
     "location": {
-      "column": "17",
+      "column": "16",
       "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37305,7 +37305,7 @@
     "defdec": "Dec",
     "display": "u8RxCnt",
     "location": {
-      "column": "17",
+      "column": "16",
       "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37319,7 +37319,7 @@
     "defdec": "Dec",
     "display": "u8TxCnt",
     "location": {
-      "column": "26",
+      "column": "25",
       "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37333,7 +37333,7 @@
     "defdec": "Dec",
     "display": "u8TxCnt",
     "location": {
-      "column": "26",
+      "column": "25",
       "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37347,7 +37347,7 @@
     "defdec": "Dec",
     "display": "u8RxSize",
     "location": {
-      "column": "17",
+      "column": "16",
       "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37361,7 +37361,7 @@
     "defdec": "Dec",
     "display": "u8RxSize",
     "location": {
-      "column": "17",
+      "column": "16",
       "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37375,7 +37375,7 @@
     "defdec": "Dec",
     "display": "u8TxSize",
     "location": {
-      "column": "27",
+      "column": "26",
       "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37389,7 +37389,7 @@
     "defdec": "Dec",
     "display": "u8TxSize",
     "location": {
-      "column": "27",
+      "column": "26",
       "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
     },
@@ -37880,7 +37880,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "33",
+      "line": "34",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -37894,7 +37894,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "39",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -37921,7 +37921,7 @@
     "defdec": "Def",
     "display": "Rx_phase",
     "location": {
-      "column": "9",
+      "column": "6",
       "line": "45",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -37949,7 +37949,7 @@
     "defdec": "Def",
     "display": "Rx_bit",
     "location": {
-      "column": "5",
+      "column": "4",
       "line": "58",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -37963,7 +37963,7 @@
     "defdec": "Def",
     "display": "Tx_bit",
     "location": {
-      "column": "3",
+      "column": "2",
       "line": "59",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -37977,7 +37977,7 @@
     "defdec": "Def",
     "display": "Rx_samp",
     "location": {
-      "column": "3",
+      "column": "2",
       "line": "60",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -37991,7 +37991,7 @@
     "defdec": "Def",
     "display": "Rx_buff",
     "location": {
-      "column": "3",
+      "column": "2",
       "line": "61",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -38005,7 +38005,7 @@
     "defdec": "Def",
     "display": "Rx_data",
     "location": {
-      "column": "3",
+      "column": "2",
       "line": "62",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -38019,7 +38019,7 @@
     "defdec": "Def",
     "display": "Tx_data",
     "location": {
-      "column": "3",
+      "column": "2",
       "line": "63",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -38033,7 +38033,7 @@
     "defdec": "Def",
     "display": "UART_sts",
     "location": {
-      "column": "3",
+      "column": "2",
       "line": "64",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
@@ -38062,7 +38062,7 @@
     "display": "u8 uart_send(u8)",
     "location": {
       "column": "4",
-      "line": "107",
+      "line": "108",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_send",
@@ -38076,7 +38076,7 @@
     "display": "void uart_Tx_timing(void)",
     "location": {
       "column": "6",
-      "line": "128",
+      "line": "132",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_Tx_timing",
@@ -38090,7 +38090,7 @@
     "display": "u8 uart_read(u8 *)",
     "location": {
       "column": "4",
-      "line": "188",
+      "line": "214",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_read",
@@ -38098,13 +38098,13 @@
     "scope": null
   },
   {
-    "ID": "c:softuart.c@6292@F@uart_read#*c#@res",
+    "ID": "c:softuart.c@6234@F@uart_read#*c#@res",
     "What": "Variable",
     "defdec": "Def",
     "display": "res",
     "location": {
       "column": "5",
-      "line": "189",
+      "line": "216",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "res",
@@ -38117,8 +38117,8 @@
     "defdec": "Def",
     "display": "void uart_Rx_timing(void)",
     "location": {
-      "column": "7",
-      "line": "210",
+      "column": "6",
+      "line": "238",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\softuart.c"
     },
     "name": "uart_Rx_timing",
@@ -38173,8 +38173,8 @@
     "defdec": "Def",
     "display": "u8RxCnt",
     "location": {
-      "column": "10",
-      "line": "13",
+      "column": "9",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8RxCnt",
@@ -38187,8 +38187,8 @@
     "defdec": "Def",
     "display": "u8TxCnt",
     "location": {
-      "column": "19",
-      "line": "13",
+      "column": "18",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8TxCnt",
@@ -38201,8 +38201,8 @@
     "defdec": "Def",
     "display": "u8RxSize",
     "location": {
-      "column": "10",
-      "line": "14",
+      "column": "9",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8RxSize",
@@ -38215,8 +38215,8 @@
     "defdec": "Def",
     "display": "u8TxSize",
     "location": {
-      "column": "20",
-      "line": "14",
+      "column": "19",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8TxSize",
@@ -38230,7 +38230,7 @@
     "display": "u8RxData",
     "location": {
       "column": "9",
-      "line": "15",
+      "line": "19",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8RxData",
@@ -38244,7 +38244,7 @@
     "display": "u8TxData",
     "location": {
       "column": "9",
-      "line": "16",
+      "line": "20",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8TxData",
@@ -38258,7 +38258,7 @@
     "display": "bTransmitted",
     "location": {
       "column": "6",
-      "line": "17",
+      "line": "21",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "bTransmitted",
@@ -38272,7 +38272,7 @@
     "display": "void UART_Init(void)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "25",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Init",
@@ -38286,7 +38286,7 @@
     "display": "_Bool UART_Receive_IT(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "28",
+      "line": "33",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Receive_IT",
@@ -38300,7 +38300,7 @@
     "display": "_Bool UART_Transmit_IT(uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "37",
+      "line": "43",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_Transmit_IT",
@@ -38314,7 +38314,7 @@
     "display": "void UART_AbortReceive(void)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "52",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_AbortReceive",
@@ -38328,7 +38328,7 @@
     "display": "void UART_TX_IRQ(void)",
     "location": {
       "column": "20",
-      "line": "49",
+      "line": "57",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_TX_IRQ",
@@ -38342,7 +38342,7 @@
     "display": "void UART_RX_IRQ(uint8_t)",
     "location": {
       "column": "20",
-      "line": "61",
+      "line": "72",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART_RX_IRQ",
@@ -38350,13 +38350,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1633@F@UART_RX_IRQ#c#@u8SynchField",
+    "ID": "c:uart.c@1677@F@UART_RX_IRQ#c#@u8SynchField",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8SynchField",
     "location": {
       "column": "20",
-      "line": "62",
+      "line": "74",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8SynchField",
@@ -38364,13 +38364,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1667@F@UART_RX_IRQ#c#@u8PIDField",
+    "ID": "c:uart.c@1711@F@UART_RX_IRQ#c#@u8PIDField",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8PIDField",
     "location": {
       "column": "20",
-      "line": "63",
+      "line": "75",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8PIDField",
@@ -38384,7 +38384,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "142",
+      "line": "164",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -38398,7 +38398,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "148",
+      "line": "170",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",
@@ -38406,13 +38406,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@3709@F@UART1_RX_IRQHandler#@u8Data",
+    "ID": "c:uart.c@3749@F@UART1_RX_IRQHandler#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "11",
-      "line": "150",
+      "line": "172",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8Data",

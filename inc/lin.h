@@ -5,23 +5,27 @@
 #include "fifo.h"
 //User defines
 //FSM for frame header
-enum LIN_HEADER{
-  wait_break, 
-  wait_synch, 
-  wait_pid, 
+enum LIN_HEADER
+{
+  wait_break,
+  wait_synch,
+  wait_pid,
   wait_data
 };
-enum LIN_Size{
-  bytes_2 = 2, 
-  bytes_4 = 4, 
+enum LIN_Size
+{
+  bytes_2 = 2,
+  bytes_4 = 4,
   bytes_8 = 8
 };
-struct LIN_Header{
+struct LIN_Header
+{
   uint8_t synch;
   uint8_t pid;
   enum LIN_Size size;
 };
-struct LIN_Response{
+struct LIN_Response
+{
   uint8_t data[8U];
   uint8_t CRC;
 };
@@ -34,7 +38,7 @@ extern FIFO sw_transmit;
 bool BreakDetection(void);
 bool GetSynch(uint8_t data);
 uint8_t GetPID(uint8_t u8PIDReceive);
-void GetNextState(LIN_HEADER* current);
+void GetNextState(LIN_HEADER *current);
 //User variables
 extern LIN_HEADER currentHeader;
 extern uint16_t u16BreakLength;

@@ -7,5 +7,5 @@
 //User variables
 
 //User functions
-void Reflect_LIN(LIN_Header header, LIN_Response response); 
+void Reflect_LIN(LIN_Header header, LIN_Response response);
 #endif

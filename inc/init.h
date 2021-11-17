@@ -8,7 +8,7 @@
 #define BAUD_SW 19200
 #define BAUD_HW 9600
 #define LED_PORT GPIOB
-#define LED_PIN  (1<<5)
+#define LED_PIN (1 << 5)
 //User function definitions
 void Clk_Config(void);
 void UART_SW_Config(void);

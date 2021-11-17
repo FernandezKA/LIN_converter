@@ -19,15 +19,16 @@ void main(void)
   asm("rim");
   for (;;)
   {
-    if(!sw_transmit.isEmpty){
-      while(!sw_transmit.isEmpty){
+    if (!sw_transmit.isEmpty)
+    {
+      if(test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
+      {
         uart_send(Pull(&sw_transmit));
       }
     }
     asm("nop");
   }
 }
-
 
 #ifdef USE_FULL_ASSERT
 void assert_failed(u8 *file, u32 line)
