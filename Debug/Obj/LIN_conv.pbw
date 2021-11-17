@@ -37860,16 +37860,44 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@sw_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_receive",
+    "location": {
+      "column": "13",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main#",
     "What": "Function",
     "defdec": "Def",
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "14",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@568@F@main#@u8Data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8Data",
+    "location": {
+      "column": "15",
+      "line": "25",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8Data",
     "origin": "project_file",
     "scope": null
   },
@@ -37880,7 +37908,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "34",
+      "line": "42",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -37894,7 +37922,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "40",
+      "line": "48",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",

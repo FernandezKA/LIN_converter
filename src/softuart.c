@@ -196,8 +196,8 @@ void uart_Tx_timing(void)
 				++Tx_bit; // next bit to transmit
 		};
 	};
-	Tx_phase = (bool)~Tx_phase;
-	//((Tx_phase == TRUE) ? (Tx_phase = FALSE) : (Tx_phase = TRUE));
+	//Tx_phase = (bool)~Tx_phase;
+	((Tx_phase == true) ? (Tx_phase = false) : (Tx_phase = true));
 	//Tx_phase= ~Tx_phase;
 }
 #endif
@@ -336,8 +336,8 @@ void uart_Rx_timing(void)
 					++Rx_bit; // init next data bit receive
 			}
 		}
-		Rx_phase = (bool)~Rx_phase;
-		//((Rx_phase == TRUE) ? (Rx_phase = FALSE) : (Rx_phase = TRUE));
+		//Rx_phase = (bool)~Rx_phase;
+		((Rx_phase == true) ? (Rx_phase = false) : (Rx_phase = true));
 		/*if(Rx_phase){
                           Rx_phase = FALSE;
                         }

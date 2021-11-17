@@ -11,15 +11,23 @@
 //Function declaration
 static void SysInit(void);
 FIFO sw_transmit;
+static FIFO sw_receive;
 void main(void)
 {
   SysInit();
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
+  sw_receive.isEmpty = true;
   asm("rim");
   for (;;)
   {
-    if (!sw_transmit.isEmpty)
+    if(test_status(receive_buffer_full) == receive_buffer_full){//FIFO buffer for RS232
+      uint8_t u8Data;
+      uart_read(&u8Data);
+      Push(&sw_receive, u8Data);
+      uart_send(Pull(&sw_receive));
+    }
+    if (!sw_transmit.isEmpty)//Lin packet recognized, reflect from RS232
     {
       if(test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
       {
