@@ -4,6 +4,7 @@
 #include "stm8s_conf.h"
 #include "fifo.h"
 //User defines
+
 //FSM for frame header
 enum LIN_HEADER
 {

@@ -4,7 +4,6 @@
 #include "uart.h"
 #include "init.h"
 //User function declaration
-
 //User variables
 uint16_t u16BreakLength;
 LIN_HEADER currentHeader;
@@ -26,22 +25,22 @@ uint8_t GetPID(uint8_t u8PIDReceive)
 //External Interrupt PORTD Interrupt routine.
 INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
 {
-  if ((GPIOD->IDR & (1 << 6)) == (1 << 6))
-  { //Rising edge
-    uint16_t u16TempTime = 0x0000;
-    u16TempTime = (TIM1->CNTRH) << 8;
-    u16TempTime |= TIM1->CNTRL;
-    if (u16TempTime > 1200 && u16TempTime < 1450)
-    {
-      currentHeader = wait_synch;
-      SetSynchMode();
-      UART1->DR = 0x00U;
+    if ((GPIOD->IDR & (1 << 6)) == (1 << 6))
+    { //Rising edge
+      uint16_t u16TempTime = 0x0000;
+      u16TempTime = (TIM1->CNTRH) << 8;
+      u16TempTime |= TIM1->CNTRL;
+      if (u16TempTime > 1200 && u16TempTime < 1450)
+      {
+        currentHeader = wait_synch;
+        SetSynchMode();
+        UART1->DR = 0x00U;
+      }
     }
-  }
-  else
-  { //Falling edge
-    TIM1->CNTRH = 0x00;
-    TIM1->CNTRL = 0x00;
-  }
+    else
+    { //Falling edge
+      TIM1->CNTRH = 0x00;
+      TIM1->CNTRL = 0x00;
+    }
 }
 #endif
