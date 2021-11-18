@@ -82,8 +82,22 @@ void main(void)
           LIN_Send.Data[CountDataLIN++] = Pull(&sw_receive);
         }
         else{
+          
+          //Receive CRC and send packet
           CountDataLIN = 0x00U;
+          LIN_Send.CRC = Pull(&sw_receive);
+          //TODO: Add send packet as slave and master
+          if(LIN_Send.Mode == SLAVE){
+              asm("nop");
+          }
+          else if(LIN_Send.Mode == MASTER){
+            asm("nop");
+          }
+          else{
+            asm("nop");
+          }
           fsm_receive = w_mode;
+          
         }
         break;
         

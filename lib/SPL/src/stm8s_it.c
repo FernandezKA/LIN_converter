@@ -159,9 +159,6 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
 //Timer2 Capture/Compare Interrupt routine.
 INTERRUPT_HANDLER(TIM2_CAP_COM_IRQHandler, 14)
 {
-  //TIM2->SR1 &= ~TIM2_SR1_CC1IF;
-  //TIM2->SR1 &= ~TIM2_SR1_CC3IF;
-  //clear_cc_flag;
   #ifdef SWUART_RECEIVE_USED
     uart_Rx_timing();
   #endif

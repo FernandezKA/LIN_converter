@@ -26,7 +26,6 @@ uint8_t GetPID(uint8_t u8PIDReceive)
 //External Interrupt PORTD Interrupt routine.
 INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
 {
-  GPIOB->ODR ^= (1 << 5);
   if ((GPIOD->IDR & (1 << 6)) == (1 << 6))
   { //Rising edge
     uint16_t u16TempTime = 0x0000;
