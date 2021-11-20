@@ -65,6 +65,6 @@ bool BreakDetection(void);
 bool GetSynch(uint8_t data);
 uint8_t GetPID(uint8_t u8PIDReceive);
 void GetNextState(LIN_HEADER *current);
-void send_response(struct LIN_Response* response, struct LIN_Header* header);
+void send_response(struct LIN_SEND* lin, bool isMaster);
 
 #endif

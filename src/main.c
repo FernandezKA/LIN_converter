@@ -80,21 +80,9 @@ void main(void)
           //TODO: Add send packet as slave and master
           if(LIN_Send.Mode == SLAVE){
             SendLIN = true;
-              asm("nop");
           }
           else if(LIN_Send.Mode == MASTER){
-            UART1->CR2&=~UART1_CR2_TEN;
-            GPIOD->DDR|=(1<<5);
-            GPIOD->CR1|=(1<<5);
-            GPIOD->ODR&=~(1<<5);
-            asm("sim");
-            for(uint16_t i = 0; i < 0xFFFF; ++i){asm("nop");}
-            GPIOD->DDR&=~(1<<5);
-            UART1->CR2|=UART1_CR2_TEN;
-            asm("rim");
-          }
-          else{
-            asm("nop");
+            send_response(&LIN_Send, true);
           }
           fsm_receive = w_mode;
         }

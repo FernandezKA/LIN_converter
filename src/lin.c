@@ -38,14 +38,33 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
     }
 }
 //This function send LIN response
-void send_response(struct LIN_Response* response, struct LIN_Header* header){
-  
-  for(uint8_t i = 0; i < header->size; ++i){//Send data 
+void send_response(struct LIN_SEND* lin, bool isMaster){
+  if(isMaster){
+    //UART1->CR2&=~UART1_CR2_TEN;
+    //GPIOD->DDR|=(1<<5);
+    //GPIOD->CR1|=(1<<5);
+    //GPIOD->ODR&=~(1<<5);
+    //for(uint16_t i = 0; i < 0xFFF; ++i) {asm("nop");}
+    //UART1->CR2|=UART1_CR2_TEN;
+    UART1->CR4|=UART1_CR4_LBDL;
+    UART1->CR2|=UART1_CR2_SBK;
     while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
-    UART1->DR = response->data[i];
+    UART1->DR = 0x55;
+    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+    UART1->DR = lin->PID;
+    for(uint8_t i = 0; i < lin ->SIZE; ++i){
+      while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+      UART1->DR = lin->Data[i];
+    }
+  }
+  else{
+  for(uint8_t i = 0; i < lin->SIZE; ++i){//Send data 
+    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+    UART1->DR = lin->Data[i];
   }
   while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
-  UART1->DR = response->CRC;
+  UART1->DR = lin->CRC;
+  }
 }
 
 //User variables

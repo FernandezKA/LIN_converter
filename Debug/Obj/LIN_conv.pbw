@@ -31692,10 +31692,10 @@
     "scope": null
   },
   {
-    "ID": "c:@F@send_response#*$@S@LIN_Response#*$@S@LIN_Header#",
+    "ID": "c:@F@send_response#*$@S@LIN_SEND#b#",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void send_response(struct LIN_Response *, struct LIN_Header *)",
+    "display": "void send_response(struct LIN_SEND *, bool)",
     "location": {
       "column": "6",
       "line": "68",
@@ -31706,10 +31706,10 @@
     "scope": null
   },
   {
-    "ID": "c:@F@send_response#*$@S@LIN_Response#*$@S@LIN_Header#",
+    "ID": "c:@F@send_response#*$@S@LIN_SEND#b#",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void send_response(struct LIN_Response *, struct LIN_Header *)",
+    "display": "void send_response(struct LIN_SEND *, bool)",
     "location": {
       "column": "6",
       "line": "68",
@@ -36044,10 +36044,10 @@
     "scope": null
   },
   {
-    "ID": "c:@F@send_response#*$@S@LIN_Response#*$@S@LIN_Header#",
+    "ID": "c:@F@send_response#*$@S@LIN_SEND#b#",
     "What": "Function",
     "defdec": "Def",
-    "display": "void send_response(struct LIN_Response *, struct LIN_Header *)",
+    "display": "void send_response(struct LIN_SEND *, _Bool)",
     "location": {
       "column": "6",
       "line": "41",
@@ -36058,13 +36058,27 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1111@F@send_response#*$@S@LIN_Response#*$@S@LIN_Header#@i",
+    "ID": "c:lin.c@1566@F@send_response#*$@S@LIN_SEND#b#@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "17",
+      "line": "55",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:lin.c@1735@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "43",
+      "line": "61",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36078,7 +36092,7 @@
     "display": "u16BreakLength",
     "location": {
       "column": "10",
-      "line": "52",
+      "line": "71",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "u16BreakLength",
@@ -36092,7 +36106,7 @@
     "display": "currentHeader",
     "location": {
       "column": "12",
-      "line": "53",
+      "line": "72",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "currentHeader",
@@ -36106,7 +36120,7 @@
     "display": "header",
     "location": {
       "column": "19",
-      "line": "54",
+      "line": "73",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "header",
@@ -36120,7 +36134,7 @@
     "display": "response",
     "location": {
       "column": "21",
-      "line": "55",
+      "line": "74",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "response",
@@ -36134,7 +36148,7 @@
     "display": "Lin_size",
     "location": {
       "column": "15",
-      "line": "56",
+      "line": "75",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "Lin_size",
@@ -36148,11 +36162,713 @@
     "display": "countReceived",
     "location": {
       "column": "9",
-      "line": "57",
+      "line": "76",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "countReceived",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@26@macro@_uart_h_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_uart_h_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "_uart_h_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@173@macro@TxBufSize",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TxBufSize",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "TxBufSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@195@macro@RxBufSize",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RxBufSize",
+    "location": {
+      "column": "9",
+      "line": "11",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "RxBufSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@217@macro@bool",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "bool",
+    "location": {
+      "column": "9",
+      "line": "12",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "bool",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Init#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Init#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Receive_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "_Bool UART_Receive_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Receive_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Receive_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "_Bool UART_Receive_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Receive_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Transmit_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "_Bool UART_Transmit_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Transmit_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_Transmit_IT#*c#c#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "_Bool UART_Transmit_IT(uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_Transmit_IT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_AbortReceive#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_AbortReceive(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_AbortReceive",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_AbortReceive#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_AbortReceive(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "UART_AbortReceive",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxData",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxData",
+    "location": {
+      "column": "16",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxData",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxData",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxData",
+    "location": {
+      "column": "16",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxData",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxData",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxData",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxData",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxData",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxData",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxData",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxCnt",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxCnt",
+    "location": {
+      "column": "16",
+      "line": "22",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxCnt",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxCnt",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxCnt",
+    "location": {
+      "column": "16",
+      "line": "22",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxCnt",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxCnt",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxCnt",
+    "location": {
+      "column": "25",
+      "line": "22",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxCnt",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxCnt",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxCnt",
+    "location": {
+      "column": "25",
+      "line": "22",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxCnt",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxSize",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxSize",
+    "location": {
+      "column": "16",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8RxSize",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8RxSize",
+    "location": {
+      "column": "16",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8RxSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxSize",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxSize",
+    "location": {
+      "column": "26",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@u8TxSize",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "u8TxSize",
+    "location": {
+      "column": "26",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "u8TxSize",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@bTransmitted",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "bTransmitted",
+    "location": {
+      "column": "13",
+      "line": "24",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "bTransmitted",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@bTransmitted",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "bTransmitted",
+    "location": {
+      "column": "13",
+      "line": "24",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "bTransmitted",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@bReceived",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "bReceived",
+    "location": {
+      "column": "27",
+      "line": "24",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+    },
+    "name": "bReceived",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@F@SysInit#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SysInit(void)",
+    "location": {
+      "column": "13",
+      "line": "12",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SysInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@sw_transmit",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_transmit",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_transmit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@sw_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_receive",
+    "location": {
+      "column": "13",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SendLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SendLIN",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SendLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@E@FSM_REC",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "FSM_REC",
+    "fields": [
+      {
+        "ID": "c:@E@FSM_REC@w_mode",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_mode",
+        "location": {
+          "column": "3",
+          "line": "17",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_mode",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_pid",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_pid",
+        "location": {
+          "column": "3",
+          "line": "18",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_pid",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_data",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_data",
+        "location": {
+          "column": "3",
+          "line": "19",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_data",
+        "origin": "project_file",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "FSM_REC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@fsm_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "fsm_receive",
+    "location": {
+      "column": "16",
+      "line": "21",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "fsm_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@LIN_Send",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "LIN_Send",
+    "location": {
+      "column": "17",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "LIN_Send",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@587@F@main#@CountDataLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "CountDataLIN",
+    "location": {
+      "column": "18",
+      "line": "31",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "CountDataLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@772@F@main#@u8Data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8Data",
+    "location": {
+      "column": "15",
+      "line": "36",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8Data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@966@F@main#@data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "data",
+    "location": {
+      "column": "24",
+      "line": "43",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed#*c#l#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "108",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@F@SysInit#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SysInit(void)",
+    "location": {
+      "column": "13",
+      "line": "114",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SysInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@333@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZET",
+    "location": {
+      "column": "11",
+      "line": "18",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZET",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "19",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "25",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -36912,411 +37628,101 @@
     "scope": null
   },
   {
-    "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
+    "ID": "c:DLib_Product.h@161@macro@_DLIB_PRODUCT_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_DLIB_THREADS_H",
+    "display": "_DLIB_PRODUCT_H",
     "location": {
       "column": "9",
-      "line": "17",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+      "line": "7",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "_DLIB_THREADS_H",
+    "name": "_DLIB_PRODUCT_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:DLib_Threads.h@5237@macro@_DLIB_COMPILER_TLS",
+    "ID": "c:DLib_Product.h@314@macro@_DLIB_SMALL_TARGET",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_DLIB_COMPILER_TLS",
+    "display": "_DLIB_SMALL_TARGET",
     "location": {
       "column": "9",
-      "line": "117",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_COMPILER_TLS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5267@macro@_DLIB_TLS_QUAL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_TLS_QUAL",
-    "location": {
-      "column": "9",
-      "line": "118",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_TLS_QUAL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5366@macro@_DLIB_MULTI_THREAD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_MULTI_THREAD",
-    "location": {
-      "column": "11",
-      "line": "124",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_MULTI_THREAD",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5398@macro@_DLIB_GLOBAL_VARIABLES",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_GLOBAL_VARIABLES",
-    "location": {
-      "column": "11",
-      "line": "125",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_GLOBAL_VARIABLES",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5434@macro@_DLIB_FILE_OP_LOCKS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_FILE_OP_LOCKS",
-    "location": {
-      "column": "11",
-      "line": "126",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_FILE_OP_LOCKS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@T@__iar_Rmtx",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "void *",
-    "location": {
-      "column": "17",
-      "line": "298",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "__iar_Rmtx",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12644@macro@_MULTI_THREAD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_MULTI_THREAD",
-    "location": {
-      "column": "9",
-      "line": "351",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_MULTI_THREAD",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12686@macro@_GLOBAL_LOCALE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_GLOBAL_LOCALE",
-    "location": {
-      "column": "9",
-      "line": "352",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_GLOBAL_LOCALE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12733@macro@_FILE_OP_LOCKS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_FILE_OP_LOCKS",
-    "location": {
-      "column": "9",
-      "line": "353",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_FILE_OP_LOCKS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12779@macro@_COMPILER_TLS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_COMPILER_TLS",
-    "location": {
-      "column": "9",
-      "line": "355",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_COMPILER_TLS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12821@macro@_TLS_QUAL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_TLS_QUAL",
-    "location": {
-      "column": "9",
-      "line": "356",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_TLS_QUAL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@F@SysInit#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SysInit(void)",
-    "location": {
-      "column": "13",
-      "line": "12",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SysInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@sw_transmit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sw_transmit",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "sw_transmit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@sw_receive",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sw_receive",
-    "location": {
-      "column": "13",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "sw_receive",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SendLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SendLIN",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SendLIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@E@FSM_REC",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "FSM_REC",
-    "fields": [
-      {
-        "ID": "c:@E@FSM_REC@w_mode",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_mode",
-        "location": {
-          "column": "3",
-          "line": "17",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_mode",
-        "origin": "project_file",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@FSM_REC@w_pid",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_pid",
-        "location": {
-          "column": "3",
-          "line": "18",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_pid",
-        "origin": "project_file",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@FSM_REC@w_data",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_data",
-        "location": {
-          "column": "3",
-          "line": "19",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_data",
-        "origin": "project_file",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "6",
       "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "FSM_REC",
-    "origin": "project_file",
+    "name": "_DLIB_SMALL_TARGET",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:main.c@fsm_receive",
-    "What": "Variable",
+    "ID": "c:DLib_Product.h@427@macro@_DLIB_STM8ABI_DIFUNC_CONTAINS_OFFSETS",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "fsm_receive",
+    "display": "_DLIB_STM8ABI_DIFUNC_CONTAINS_OFFSETS",
     "location": {
-      "column": "16",
+      "column": "9",
       "line": "21",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "fsm_receive",
-    "origin": "project_file",
+    "name": "_DLIB_STM8ABI_DIFUNC_CONTAINS_OFFSETS",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:@LIN_Send",
-    "What": "Variable",
+    "ID": "c:DLib_Product.h@539@macro@_FLOATING_LESS_INLINES",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "LIN_Send",
+    "display": "_FLOATING_LESS_INLINES",
     "location": {
-      "column": "17",
-      "line": "23",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "column": "9",
+      "line": "26",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "LIN_Send",
-    "origin": "project_file",
+    "name": "_FLOATING_LESS_INLINES",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:@F@main#",
-    "What": "Function",
+    "ID": "c:DLib_Product.h@633@macro@_DLIB_SMALL_FP_HELPERS",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "void main(void)",
+    "display": "_DLIB_SMALL_FP_HELPERS",
     "location": {
-      "column": "6",
-      "line": "25",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@587@F@main#@CountDataLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "CountDataLIN",
-    "location": {
-      "column": "18",
+      "column": "9",
       "line": "31",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "CountDataLIN",
-    "origin": "project_file",
+    "name": "_DLIB_SMALL_FP_HELPERS",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:main.c@772@F@main#@u8Data",
-    "What": "Variable",
+    "ID": "c:DLib_Product.h@711@macro@__WEAK",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "u8Data",
+    "display": "__WEAK",
     "location": {
-      "column": "15",
+      "column": "9",
       "line": "36",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "u8Data",
-    "origin": "project_file",
+    "name": "__WEAK",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:main.c@966@F@main#@data",
-    "What": "Variable",
+    "ID": "c:DLib_Product.h@838@macro@_TLS_CONST_DEFINITION",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "data",
+    "display": "_TLS_CONST_DEFINITION",
     "location": {
-      "column": "24",
-      "line": "43",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+      "column": "9",
+      "line": "45",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
     },
-    "name": "data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@2410@F@main#@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "26",
-      "line": "91",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@assert_failed#*c#l#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void assert_failed(u8 *, u32)",
-    "location": {
-      "column": "6",
-      "line": "120",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "assert_failed",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@F@SysInit#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SysInit(void)",
-    "location": {
-      "column": "13",
-      "line": "126",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SysInit",
-    "origin": "project_file",
+    "name": "_TLS_CONST_DEFINITION",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -37614,576 +38020,170 @@
     "scope": null
   },
   {
-    "ID": "c:uart.h@26@macro@_uart_h_",
+    "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_uart_h_",
+    "display": "_DLIB_THREADS_H",
     "location": {
       "column": "9",
-      "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "_uart_h_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@173@macro@TxBufSize",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TxBufSize",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "TxBufSize",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@195@macro@RxBufSize",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "RxBufSize",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "RxBufSize",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@217@macro@bool",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "bool",
-    "location": {
-      "column": "9",
-      "line": "12",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "bool",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_Init#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_Init#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_Receive_IT#*c#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UART_Receive_IT(uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_Receive_IT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_Receive_IT#*c#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UART_Receive_IT(uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_Receive_IT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_Transmit_IT#*c#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UART_Transmit_IT(uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_Transmit_IT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_Transmit_IT#*c#c#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UART_Transmit_IT(uint8_t *, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_Transmit_IT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_AbortReceive#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_AbortReceive(void)",
-    "location": {
-      "column": "6",
       "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "UART_AbortReceive",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_AbortReceive#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_AbortReceive(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "UART_AbortReceive",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8TxData",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8TxData",
-    "location": {
-      "column": "16",
-      "line": "19",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8TxData",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8TxData",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8TxData",
-    "location": {
-      "column": "16",
-      "line": "19",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8TxData",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8RxData",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8RxData",
-    "location": {
-      "column": "16",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8RxData",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8RxData",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8RxData",
-    "location": {
-      "column": "16",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8RxData",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8RxCnt",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8RxCnt",
-    "location": {
-      "column": "16",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8RxCnt",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8RxCnt",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8RxCnt",
-    "location": {
-      "column": "16",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8RxCnt",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8TxCnt",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8TxCnt",
-    "location": {
-      "column": "25",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8TxCnt",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8TxCnt",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8TxCnt",
-    "location": {
-      "column": "25",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8TxCnt",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8RxSize",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8RxSize",
-    "location": {
-      "column": "16",
-      "line": "23",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8RxSize",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8RxSize",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8RxSize",
-    "location": {
-      "column": "16",
-      "line": "23",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8RxSize",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8TxSize",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8TxSize",
-    "location": {
-      "column": "26",
-      "line": "23",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8TxSize",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@u8TxSize",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "u8TxSize",
-    "location": {
-      "column": "26",
-      "line": "23",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "u8TxSize",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@bTransmitted",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "bTransmitted",
-    "location": {
-      "column": "13",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "bTransmitted",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@bTransmitted",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "bTransmitted",
-    "location": {
-      "column": "13",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "bTransmitted",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@bReceived",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "bReceived",
-    "location": {
-      "column": "27",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\uart.h"
-    },
-    "name": "bReceived",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product.h@161@macro@_DLIB_PRODUCT_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_PRODUCT_H",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
-    },
-    "name": "_DLIB_PRODUCT_H",
+    "name": "_DLIB_THREADS_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:DLib_Product.h@314@macro@_DLIB_SMALL_TARGET",
+    "ID": "c:DLib_Threads.h@5237@macro@_DLIB_COMPILER_TLS",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_DLIB_SMALL_TARGET",
+    "display": "_DLIB_COMPILER_TLS",
     "location": {
       "column": "9",
-      "line": "16",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
+      "line": "117",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "_DLIB_SMALL_TARGET",
+    "name": "_DLIB_COMPILER_TLS",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:DLib_Product.h@427@macro@_DLIB_STM8ABI_DIFUNC_CONTAINS_OFFSETS",
+    "ID": "c:DLib_Threads.h@5267@macro@_DLIB_TLS_QUAL",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_DLIB_STM8ABI_DIFUNC_CONTAINS_OFFSETS",
+    "display": "_DLIB_TLS_QUAL",
     "location": {
       "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
+      "line": "118",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "_DLIB_STM8ABI_DIFUNC_CONTAINS_OFFSETS",
+    "name": "_DLIB_TLS_QUAL",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:DLib_Product.h@539@macro@_FLOATING_LESS_INLINES",
+    "ID": "c:DLib_Threads.h@5366@macro@_DLIB_MULTI_THREAD",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_FLOATING_LESS_INLINES",
-    "location": {
-      "column": "9",
-      "line": "26",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
-    },
-    "name": "_FLOATING_LESS_INLINES",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product.h@633@macro@_DLIB_SMALL_FP_HELPERS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_SMALL_FP_HELPERS",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
-    },
-    "name": "_DLIB_SMALL_FP_HELPERS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product.h@711@macro@__WEAK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__WEAK",
-    "location": {
-      "column": "9",
-      "line": "36",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
-    },
-    "name": "__WEAK",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Product.h@838@macro@_TLS_CONST_DEFINITION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_TLS_CONST_DEFINITION",
-    "location": {
-      "column": "9",
-      "line": "45",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Product.h"
-    },
-    "name": "_TLS_CONST_DEFINITION",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@333@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
+    "display": "_DLIB_MULTI_THREAD",
     "location": {
       "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "line": "124",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "_SIZE_T",
+    "name": "_DLIB_MULTI_THREAD",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "ID": "c:DLib_Threads.h@5398@macro@_DLIB_GLOBAL_VARIABLES",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_SIZET",
+    "display": "_DLIB_GLOBAL_VARIABLES",
     "location": {
       "column": "11",
-      "line": "18",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "line": "125",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "_SIZET",
+    "name": "_DLIB_GLOBAL_VARIABLES",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
+    "ID": "c:DLib_Threads.h@5434@macro@_DLIB_FILE_OP_LOCKS",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
+    "display": "_DLIB_FILE_OP_LOCKS",
     "location": {
       "column": "11",
-      "line": "19",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "line": "126",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "_STD_USING_SIZE_T",
+    "name": "_DLIB_FILE_OP_LOCKS",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@size_t",
+    "ID": "c:DLib_Threads.h@T@__iar_Rmtx",
     "What": "Typedef",
     "defdec": "Def",
-    "display": "_Sizet",
+    "display": "void *",
     "location": {
-      "column": "16",
-      "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "17",
+      "line": "298",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "size_t",
+    "name": "__iar_Rmtx",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
+    "ID": "c:DLib_Threads.h@12644@macro@_MULTI_THREAD",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
+    "display": "_MULTI_THREAD",
     "location": {
       "column": "9",
-      "line": "23",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "line": "351",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "__DATA_PTR_MEM_HELPER1__",
+    "name": "_MULTI_THREAD",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
+    "ID": "c:DLib_Threads.h@12686@macro@_GLOBAL_LOCALE",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "unsigned int",
+    "display": "_GLOBAL_LOCALE",
     "location": {
-      "column": "1",
-      "line": "25",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "9",
+      "line": "352",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
     },
-    "name": "__data_size_t",
+    "name": "_GLOBAL_LOCALE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12733@macro@_FILE_OP_LOCKS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_FILE_OP_LOCKS",
+    "location": {
+      "column": "9",
+      "line": "353",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_FILE_OP_LOCKS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12779@macro@_COMPILER_TLS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_COMPILER_TLS",
+    "location": {
+      "column": "9",
+      "line": "355",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_COMPILER_TLS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12821@macro@_TLS_QUAL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_TLS_QUAL",
+    "location": {
+      "column": "9",
+      "line": "356",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_TLS_QUAL",
     "origin": "system_include",
     "scope": null
   },
@@ -38272,20 +38272,6 @@
     "scope": null
   },
   {
-    "ID": "c:dlstm8smn.h@140@macro@_DLIB_CONFIG_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_CONFIG_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\lib\\dlstm8smn.h"
-    },
-    "name": "_DLIB_CONFIG_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:stdbool.h@173@macro@_STDBOOL",
     "What": "MacroDef",
     "defdec": "Def",
@@ -38310,6 +38296,20 @@
       "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\stdbool.h"
     },
     "name": "__bool_true_false_are_defined",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:dlstm8smn.h@140@macro@_DLIB_CONFIG_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_CONFIG_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\lib\\dlstm8smn.h"
+    },
+    "name": "_DLIB_CONFIG_H",
     "origin": "system_include",
     "scope": null
   },
@@ -38796,7 +38796,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "174",
+      "line": "171",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -38810,7 +38810,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "180",
+      "line": "177",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",
@@ -38818,13 +38818,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@4043@F@UART1_RX_IRQHandler#@u8Data",
+    "ID": "c:uart.c@3983@F@UART1_RX_IRQHandler#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "11",
-      "line": "182",
+      "line": "179",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\uart.c"
     },
     "name": "u8Data",
