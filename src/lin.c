@@ -56,6 +56,8 @@ void send_response(struct LIN_SEND* lin, bool isMaster){
       while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
       UART1->DR = lin->Data[i];
     }
+    UART1->CR3&=~UART1_CR3_LINEN;
+    UART1->CR2&=~UART1_CR2_SBK;
   }
   else{
   for(uint8_t i = 0; i < lin->SIZE; ++i){//Send data 
