@@ -124,6 +124,16 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       Lin_size = bytes_8;
     }
     header.size = Lin_size;
+    if(SendLIN){//If we send packet from RS232 -> LIN into the slave mode
+      if(LIN_Send.PID == header.pid){
+        //TODO send frame response
+        send_response(&response, &header);
+        SendLIN = false;
+      }
+    }
+    else{//Reflect all of data into RS232
+      
+    }
     currentHeader = wait_data;
     countReceived = 0x00U;
     response.CRC = 0xFFU;
@@ -170,6 +180,5 @@ INTERRUPT_HANDLER(UART1_TX_IRQHandler, 17)
 INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
 {
   uint8_t u8Data = UART1->DR;
-  //UART1->DR = u8Data;
   UART_RX_IRQ(u8Data);
 }

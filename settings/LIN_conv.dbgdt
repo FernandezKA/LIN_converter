@@ -772,7 +772,7 @@
                     <item>CountDataLIN</item>
                     <item>fsm_receive</item>
                     <item>data</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

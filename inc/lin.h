@@ -3,8 +3,32 @@
 //User includes
 #include "stm8s_conf.h"
 #include "fifo.h"
-//User defines
 
+//Enum definitions
+enum LIN_MODE{
+  MASTER,
+  SLAVE
+};
+
+enum LIN_Size
+{
+  bytes_2 = 2,
+  bytes_4 = 4,
+  bytes_8 = 8
+};
+
+
+//Structure definition
+struct LIN_SEND{
+  uint8_t PID;
+  enum LIN_Size SIZE;
+  uint8_t Data[8U];
+  uint8_t CRC;
+  LIN_MODE Mode;
+};
+//Structure declaration
+extern bool SendLIN;
+extern struct LIN_SEND LIN_Send;
 //FSM for frame header
 enum LIN_HEADER
 {
@@ -13,34 +37,34 @@ enum LIN_HEADER
   wait_pid,
   wait_data
 };
-enum LIN_Size
-{
-  bytes_2 = 2,
-  bytes_4 = 4,
-  bytes_8 = 8
-};
+
 struct LIN_Header
 {
   uint8_t synch;
   uint8_t pid;
   enum LIN_Size size;
 };
+
 struct LIN_Response
 {
   uint8_t data[8U];
   uint8_t CRC;
 };
+
+//Variable declarations
 extern struct LIN_Header header;
 extern struct LIN_Response response;
 extern enum LIN_Size Lin_size;
 extern uint8_t countReceived;
 extern FIFO sw_transmit;
+extern LIN_HEADER currentHeader;
+extern uint16_t u16BreakLength;
+
 //User function definition
 bool BreakDetection(void);
 bool GetSynch(uint8_t data);
 uint8_t GetPID(uint8_t u8PIDReceive);
 void GetNextState(LIN_HEADER *current);
-//User variables
-extern LIN_HEADER currentHeader;
-extern uint16_t u16BreakLength;
+void send_response(struct LIN_Response* response, struct LIN_Header* header);
+
 #endif

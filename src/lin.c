@@ -4,13 +4,6 @@
 #include "uart.h"
 #include "init.h"
 //User function declaration
-//User variables
-uint16_t u16BreakLength;
-LIN_HEADER currentHeader;
-struct LIN_Header header;
-struct LIN_Response response;
-enum LIN_Size Lin_size = bytes_2;
-uint8_t countReceived = 0x00;
 //This function receive PID frame
 uint8_t GetPID(uint8_t u8PIDReceive)
 {
@@ -20,6 +13,7 @@ uint8_t GetPID(uint8_t u8PIDReceive)
   //bool P1 =
   return u8PID;
 }
+
 //This is IRQ handler for detecting break on the LIN mode
 #ifdef EXTI_PORTD_IRQ
 //External Interrupt PORTD Interrupt routine.
@@ -43,4 +37,23 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
       TIM1->CNTRL = 0x00;
     }
 }
+//This function send LIN response
+void send_response(struct LIN_Response* response, struct LIN_Header* header){
+  
+  for(uint8_t i = 0; i < header->size; ++i){//Send data 
+    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+    UART1->DR = response->data[i];
+  }
+  while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+  UART1->DR = response->CRC;
+}
+
+//User variables
+uint16_t u16BreakLength;
+LIN_HEADER currentHeader;
+struct LIN_Header header;
+struct LIN_Response response;
+enum LIN_Size Lin_size = bytes_2;
+uint8_t countReceived = 0x00;
+
 #endif

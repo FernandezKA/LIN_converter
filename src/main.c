@@ -12,25 +12,16 @@
 static void SysInit(void);
 FIFO sw_transmit;
 static FIFO sw_receive;
-
+bool SendLIN = false;
 enum FSM_REC{
   w_mode, 
   w_pid, 
   w_data
 };
 static FSM_REC fsm_receive = w_mode;
-enum LIN_MODE{
-  MASTER,
-  SLAVE
-};
-struct LIN_SEND{
-  uint8_t PID;
-  enum LIN_Size SIZE;
-  uint8_t Data[8U];
-  uint8_t CRC;
-  LIN_MODE Mode;
-};
+
 struct LIN_SEND LIN_Send;
+
 void main(void)
 {
   SysInit();
@@ -88,6 +79,7 @@ void main(void)
           LIN_Send.CRC = Pull(&sw_receive);
           //TODO: Add send packet as slave and master
           if(LIN_Send.Mode == SLAVE){
+            SendLIN = true;
               asm("nop");
           }
           else if(LIN_Send.Mode == MASTER){
@@ -96,7 +88,7 @@ void main(void)
             GPIOD->CR1|=(1<<5);
             GPIOD->ODR&=~(1<<5);
             asm("sim");
-            for(uint16_t i = 0; i < 0xFFF; ++i){asm("nop");}
+            for(uint16_t i = 0; i < 0xFFFF; ++i){asm("nop");}
             GPIOD->DDR&=~(1<<5);
             UART1->CR2|=UART1_CR2_TEN;
             asm("rim");
