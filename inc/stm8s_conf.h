@@ -33,7 +33,7 @@
 #include "stm8s.h"
 //User defines
 #define EXTI_PORTD_IRQ
-#define DEBUG //DISABLE AFTER TESTING!!!
+//#define DEBUG //DISABLE AFTER TESTING!!!
 #define UART_PORT GPIOD
 #define UART_TX (1 << 5)
 #define UART_RX (1 << 6)

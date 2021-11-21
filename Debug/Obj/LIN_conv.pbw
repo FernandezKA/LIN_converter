@@ -27254,21 +27254,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1422@macro@DEBUG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "DEBUG",
-    "location": {
-      "column": "9",
-      "line": "36",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
-    },
-    "name": "DEBUG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_conf.h@1464@macro@UART_PORT",
+    "ID": "c:stm8s_conf.h@1466@macro@UART_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_PORT",
@@ -27282,7 +27268,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1489@macro@UART_TX",
+    "ID": "c:stm8s_conf.h@1491@macro@UART_TX",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_TX",
@@ -27296,7 +27282,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1515@macro@UART_RX",
+    "ID": "c:stm8s_conf.h@1517@macro@UART_RX",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART_RX",
@@ -27310,7 +27296,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1541@macro@SWUART_TRANSMIT_USED",
+    "ID": "c:stm8s_conf.h@1543@macro@SWUART_TRANSMIT_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SWUART_TRANSMIT_USED",
@@ -27324,7 +27310,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1571@macro@SWUART_RECEIVE_USED",
+    "ID": "c:stm8s_conf.h@1573@macro@SWUART_RECEIVE_USED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "SWUART_RECEIVE_USED",
@@ -27338,7 +27324,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@6106@macro@UART1_TX_IRQ",
+    "ID": "c:stm8s_conf.h@6108@macro@UART1_TX_IRQ",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART1_TX_IRQ",
@@ -27352,7 +27338,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@6143@macro@UART1_RX_IRQ",
+    "ID": "c:stm8s_conf.h@6145@macro@UART1_RX_IRQ",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "UART1_RX_IRQ",
@@ -27366,7 +27352,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@8022@macro@USE_FULL_ASSERT",
+    "ID": "c:stm8s_conf.h@8024@macro@USE_FULL_ASSERT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "USE_FULL_ASSERT",
@@ -27380,7 +27366,7 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@8490@macro@assert_param",
+    "ID": "c:stm8s_conf.h@8492@macro@assert_param",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "assert_param",
@@ -36148,7 +36134,7 @@
     "display": "void send_response(struct LIN_SEND *, _Bool)",
     "location": {
       "column": "6",
-      "line": "41",
+      "line": "43",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "send_response",
@@ -36156,13 +36142,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1567@F@send_response#*$@S@LIN_SEND#b#@i",
+    "ID": "c:lin.c@1381@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "55",
+      "line": "51",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36170,13 +36156,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1804@F@send_response#*$@S@LIN_SEND#b#@i",
+    "ID": "c:lin.c@1618@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "63",
+      "line": "59",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36190,7 +36176,7 @@
     "display": "u16BreakLength",
     "location": {
       "column": "10",
-      "line": "73",
+      "line": "69",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "u16BreakLength",
@@ -36204,7 +36190,7 @@
     "display": "currentHeader",
     "location": {
       "column": "12",
-      "line": "74",
+      "line": "70",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "currentHeader",
@@ -36218,7 +36204,7 @@
     "display": "header",
     "location": {
       "column": "19",
-      "line": "75",
+      "line": "71",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "header",
@@ -36232,7 +36218,7 @@
     "display": "response",
     "location": {
       "column": "21",
-      "line": "76",
+      "line": "72",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "response",
@@ -36246,7 +36232,7 @@
     "display": "Lin_size",
     "location": {
       "column": "15",
-      "line": "77",
+      "line": "73",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "Lin_size",
@@ -36260,305 +36246,11 @@
     "display": "countReceived",
     "location": {
       "column": "9",
-      "line": "78",
+      "line": "74",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "countReceived",
     "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@26@macro@_init_h_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_init_h_",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "_init_h_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@125@macro@F_CPU",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "F_CPU",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "F_CPU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@151@macro@BAUD_SW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BAUD_SW",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "BAUD_SW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@174@macro@BAUD_HW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BAUD_HW",
-    "location": {
-      "column": "9",
-      "line": "9",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "BAUD_HW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@196@macro@LED_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_PORT",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "LED_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@220@macro@LED_PIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_PIN",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "LED_PIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Clk_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Clk_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Clk_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Clk_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Clk_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Clk_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_SW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_SW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_SW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_SW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_SW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_SW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_HW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_HW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_HW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_HW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_HW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_HW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Tim1_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Tim1_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Tim1_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Tim1_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Tim1_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Tim1_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Tim4_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Tim4_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Tim4_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "GPIO_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "GPIO_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetSynchMode#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetSynchMode(void)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetSynchMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetSynchMode#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetSynchMode(void)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetSynchMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetExtIRQ#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetExtIRQ(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetExtIRQ",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetExtIRQ#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetExtIRQ(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetExtIRQ",
-    "origin": "user_include",
     "scope": null
   },
   {
@@ -37144,7 +36836,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "108",
+      "line": "110",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -37158,7 +36850,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "114",
+      "line": "116",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -38020,6 +37712,300 @@
     "scope": null
   },
   {
+    "ID": "c:init.h@26@macro@_init_h_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_init_h_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "_init_h_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:init.h@125@macro@F_CPU",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "F_CPU",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "F_CPU",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:init.h@151@macro@BAUD_SW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "BAUD_SW",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "BAUD_SW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:init.h@174@macro@BAUD_HW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "BAUD_HW",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "BAUD_HW",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:init.h@196@macro@LED_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_PORT",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "LED_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:init.h@220@macro@LED_PIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_PIN",
+    "location": {
+      "column": "9",
+      "line": "11",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "LED_PIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Clk_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Clk_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Clk_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Clk_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Clk_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Clk_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_SW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_SW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_SW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_SW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_SW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_SW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_HW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_HW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_HW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_HW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_HW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_HW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim1_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim1_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim1_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim1_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim1_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim1_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim4_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim4_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim4_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "GPIO_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "GPIO_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetSynchMode#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetSynchMode(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetSynchMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetSynchMode#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetSynchMode(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetSynchMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetExtIRQ#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetExtIRQ(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetExtIRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetExtIRQ#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetExtIRQ(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetExtIRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -38818,7 +38804,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@3983@F@UART1_RX_IRQHandler#@u8Data",
+    "ID": "c:uart.c@3984@F@UART1_RX_IRQHandler#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",

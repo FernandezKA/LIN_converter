@@ -28,7 +28,9 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
       {
         currentHeader = wait_synch;
         SetSynchMode();
+#ifdef DEBUG
         UART1->DR = 0x00U;
+#endif
       }
     }
     else
@@ -40,12 +42,6 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
 //This function send LIN response
 void send_response(struct LIN_SEND* lin, bool isMaster){
   if(isMaster){
-    //UART1->CR2&=~UART1_CR2_TEN;
-    //GPIOD->DDR|=(1<<5);
-    //GPIOD->CR1|=(1<<5);
-    //GPIOD->ODR&=~(1<<5);
-    //for(uint16_t i = 0; i < 0xFFF; ++i) {asm("nop");}
-    //UART1->CR2|=UART1_CR2_TEN;
     UART1->CR3|=UART1_CR3_LINEN;
     UART1->CR2|=UART1_CR2_SBK;
     while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}

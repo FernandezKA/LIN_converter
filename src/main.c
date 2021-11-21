@@ -80,6 +80,8 @@ void main(void)
           //TODO: Add send packet as slave and master
           if(LIN_Send.Mode == SLAVE){
             SendLIN = true;
+            //send_response(&LIN_Send, false);
+            while(SendLIN){asm("nop");}//Wait while not handled request
           }
           else if(LIN_Send.Mode == MASTER){
             send_response(&LIN_Send, true);

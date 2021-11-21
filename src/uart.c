@@ -149,7 +149,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       if (response.CRC == UART_DR)
       { //Packed received witout mistakes
         currentHeader = wait_break;
-        asm("sim");
+        asm("sim"); 
         Reflect_LIN(header, response);
         asm("rim");
         SetExtIRQ();
