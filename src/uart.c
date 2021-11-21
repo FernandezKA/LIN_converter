@@ -73,14 +73,10 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
 {
   volatile uint8_t u8SynchField;
   volatile uint8_t u8PIDField;
-  // UART1->DR = UART_DR;
-  //static volatile uint8_t UART_DR= UART1->DR;
-  //UART1->DR = UART_DR;
-  //UART1->CR2&=~UART1_CR2_RIEN;
   switch (currentHeader)
   {
-  case wait_break:
-    UART1->CR2 &= ~UART1_CR2_RIEN;
+  case wait_break: //It's mistake cases
+    //UART1->CR2 &= ~UART1_CR2_RIEN;
     return;
     break;
 
@@ -106,16 +102,16 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
     break;
 
   case wait_pid:
-    u8PIDField = UART_DR;
+    //u8PIDField = UART_DR;
     header.pid = UART_DR;
 #ifdef DEBUG
     UART_Send(u8PIDField);
 #endif
-    if (u8PIDField < 0x20)
+    if (header.pid < 0x20)
     { //2 bytes of data
       Lin_size = bytes_2;
     }
-    else if (u8PIDField < 0x30)
+    else if (header.pid < 0x30)
     { //4 bytes of data
       Lin_size = bytes_4;
     }
@@ -124,17 +120,23 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       Lin_size = bytes_8;
     }
     header.size = Lin_size;
-    if(SendLIN){//If we send packet from RS232 -> LIN into the slave mode
-      if(LIN_Send.PID == header.pid){
-        //TODO send frame response
+    if (SendLIN)
+    { //If we send packet from RS232 -> LIN into the slave mode
+      if (LIN_Send.PID == header.pid)
+      {
         send_response(&LIN_Send, false);
+        currentHeader = wait_break;
+        SetExtIRQ();//Current packege is ended, wait new data package
         SendLIN = false;
+      }
+      else
+      {
+        asm("nop"); //Other PID received
       }
     }
     currentHeader = wait_data;
     countReceived = 0x00U;
     response.CRC = 0xFFU;
-    //SetExtIRQ(); // This work only for debug
     //Without parity check!!
     break;
 
@@ -149,7 +151,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       if (response.CRC == UART_DR)
       { //Packed received witout mistakes
         currentHeader = wait_break;
-        asm("sim"); 
+        asm("sim");
         Reflect_LIN(header, response);
         asm("rim");
         SetExtIRQ();

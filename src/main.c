@@ -10,19 +10,23 @@
 #include "stm8s_gpio.h"
 //Function declaration
 static void SysInit(void);
+//User variables
 FIFO sw_transmit;
 static FIFO sw_receive;
 bool SendLIN = false;
-enum FSM_REC{
-  w_mode, 
-  w_pid, 
+enum FSM_REC
+{
+  w_mode,
+  w_pid,
   w_data
 };
 static FSM_REC fsm_receive = w_mode;
-
 struct LIN_SEND LIN_Send;
+s
 
-void main(void)
+    //Main function
+    void
+    main(void)
 {
   SysInit();
   currentHeader = wait_break;
@@ -32,77 +36,87 @@ void main(void)
   asm("rim");
   for (;;)
   {
-    if(test_status(receive_buffer_full) == receive_buffer_full){//FIFO buffer for RS232, load data from UART
+    if (test_status(receive_buffer_full) == receive_buffer_full)
+    { //FIFO buffer for RS232, load data from UART
       uint8_t u8Data;
       uart_read(&u8Data);
       Push(&sw_receive, u8Data);
     }
-    if(!sw_receive.isEmpty){//Parse data from RS232
-      switch(fsm_receive){
+    /***********************************************************/
+    if (!sw_receive.isEmpty)
+    { //Parse data from RS232 to LIN
+      switch (fsm_receive)
+      {
       case w_mode:
         static uint8_t data = Pull(&sw_receive);
-        if(data == 0x00){//Slave mode
+        if (data == 0x00)
+        { //Slave mode
           LIN_Send.Mode = SLAVE;
           fsm_receive = w_pid;
         }
-        else if(data == 0x55){//Master mode
+        else if (data == 0x55)
+        { //Master mode
           LIN_Send.Mode = MASTER;
           fsm_receive = w_pid;
         }
-        else{//Mistake
+        else
+        { //Mistake
           fsm_receive = w_mode;
         }
         break;
-        
+
       case w_pid:
-          LIN_Send.PID = Pull(&sw_receive);
-          if(LIN_Send.PID < 0x1FU){
-            LIN_Send.SIZE = bytes_2;
-          }
-          else if(LIN_Send.PID < 0x2FU){
-            LIN_Send.SIZE = bytes_4;
-          }
-          else if(LIN_Send.PID < 0x3FU){
-            LIN_Send.SIZE = bytes_8;
-          }
-          fsm_receive = w_data;
+        LIN_Send.PID = Pull(&sw_receive);
+        if (LIN_Send.PID < 0x1FU)
+        {
+          LIN_Send.SIZE = bytes_2;
+        }
+        else if (LIN_Send.PID < 0x2FU)
+        {
+          LIN_Send.SIZE = bytes_4;
+        }
+        else if (LIN_Send.PID < 0x3FU)
+        {
+          LIN_Send.SIZE = bytes_8;
+        }
+        fsm_receive = w_data;
         break;
-        
+
       case w_data:
-        if(CountDataLIN < LIN_Send.SIZE){
+        if (CountDataLIN < LIN_Send.SIZE)
+        {
           LIN_Send.Data[CountDataLIN++] = Pull(&sw_receive);
         }
-        else{
-          
+        else
+        {
           //Receive CRC and send packet
           CountDataLIN = 0x00U;
           LIN_Send.CRC = Pull(&sw_receive);
-          //TODO: Add send packet as slave and master
-          if(LIN_Send.Mode == SLAVE){
+          if (LIN_Send.Mode == SLAVE)
+          {
             SendLIN = true;
-            //send_response(&LIN_Send, false);
-            while(SendLIN){asm("nop");}//Wait while not handled request
+            while (SendLIN)
+            {
+              asm("nop");
+            } //Wait while not handled request
           }
-          else if(LIN_Send.Mode == MASTER){
+          else if (LIN_Send.Mode == MASTER)
+          {
             send_response(&LIN_Send, true);
           }
           fsm_receive = w_mode;
         }
         break;
-        
-      default:
-        
-        break;
       }
     }
-    if (!sw_transmit.isEmpty)//Lin packet recognized, reflect from RS232
+    /***********************************************************/
+    if (!sw_transmit.isEmpty) //Lin packet recognized, reflect from RS232
     {
-      if(test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
+      if (test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
       {
         uart_send(Pull(&sw_transmit));
       }
     }
-    asm("nop");
   }
 }
 
