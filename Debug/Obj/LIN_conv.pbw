@@ -36044,13 +36044,27 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1381@F@send_response#*$@S@LIN_SEND#b#@i",
+    "ID": "c:lin.c@1377@F@send_response#*$@S@LIN_SEND#b#@u8CRC",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8CRC",
+    "location": {
+      "column": "13",
+      "line": "51",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
+    },
+    "name": "u8CRC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:lin.c@1408@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "51",
+      "line": "52",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36058,13 +36072,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1644@F@send_response#*$@S@LIN_SEND#b#@i",
+    "ID": "c:lin.c@1794@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "60",
+      "line": "64",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36078,7 +36092,7 @@
     "display": "u16BreakLength",
     "location": {
       "column": "10",
-      "line": "70",
+      "line": "74",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "u16BreakLength",
@@ -36092,7 +36106,7 @@
     "display": "currentHeader",
     "location": {
       "column": "12",
-      "line": "71",
+      "line": "75",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "currentHeader",
@@ -36106,7 +36120,7 @@
     "display": "header",
     "location": {
       "column": "19",
-      "line": "72",
+      "line": "76",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "header",
@@ -36120,7 +36134,7 @@
     "display": "response",
     "location": {
       "column": "21",
-      "line": "73",
+      "line": "77",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "response",
@@ -36134,7 +36148,7 @@
     "display": "Lin_size",
     "location": {
       "column": "15",
-      "line": "74",
+      "line": "78",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "Lin_size",
@@ -36148,7 +36162,7 @@
     "display": "countReceived",
     "location": {
       "column": "9",
-      "line": "75",
+      "line": "79",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "countReceived",

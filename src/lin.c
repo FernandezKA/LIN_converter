@@ -48,10 +48,14 @@ void send_response(struct LIN_SEND* lin, bool isMaster){
     UART1->DR = 0x55;
     while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
     UART1->DR = lin->PID;
+    uint8_t u8CRC = 0xFF;
     for(uint8_t i = 0; i < lin ->SIZE; ++i){
       while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
       UART1->DR = lin->Data[i];
+      u8CRC ^= lin->Data[i];
     }
+    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+    UART1->DR = u8CRC;
     //TODO Add CRC field
     UART1->CR3&=~UART1_CR3_LINEN;
     UART1->CR2&=~UART1_CR2_SBK;
