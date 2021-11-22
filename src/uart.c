@@ -125,8 +125,6 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       if (LIN_Send.PID == header.pid)
       {
         send_response(&LIN_Send, false);
-        currentHeader = wait_break;
-        SetExtIRQ();//Current packege is ended, wait new data package
         SendLIN = false;
       }
       else

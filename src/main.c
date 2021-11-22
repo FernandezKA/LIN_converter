@@ -22,11 +22,9 @@ enum FSM_REC
 };
 static FSM_REC fsm_receive = w_mode;
 struct LIN_SEND LIN_Send;
-s
 
-    //Main function
-    void
-    main(void)
+//Main function
+void main(void)
 {
   SysInit();
   currentHeader = wait_break;
@@ -79,6 +77,15 @@ s
         {
           LIN_Send.SIZE = bytes_8;
         }
+        else
+        {
+          fsm_receive = w_mode;
+          while (!sw_receive.isEmpty)
+          { //Clear all of data, because it's mistake
+            Pull(&sw_receive);
+          }
+          break;
+        }
         fsm_receive = w_data;
         break;
 
@@ -87,11 +94,12 @@ s
         {
           LIN_Send.Data[CountDataLIN++] = Pull(&sw_receive);
         }
-        else
+        else if (CountDataLIN == LIN_Send.SIZE) //It's CRC field
         {
           //Receive CRC and send packet
           CountDataLIN = 0x00U;
           LIN_Send.CRC = Pull(&sw_receive);
+          fsm_receive = w_mode;
           if (LIN_Send.Mode == SLAVE)
           {
             SendLIN = true;
@@ -104,7 +112,10 @@ s
           {
             send_response(&LIN_Send, true);
           }
-          fsm_receive = w_mode;
+          while (!sw_receive.isEmpty)
+          { //Clear all of data, because it's mistake
+            Pull(&sw_receive);
+          }
         }
         break;
       }
