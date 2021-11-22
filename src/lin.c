@@ -70,6 +70,7 @@ void send_response(struct LIN_SEND* lin, bool isMaster){
   }
 }
 
+
 //User variables
 uint16_t u16BreakLength;
 LIN_HEADER currentHeader;

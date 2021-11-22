@@ -7,7 +7,8 @@
 //Enum definitions
 enum LIN_MODE{
   MASTER,
-  SLAVE
+  SLAVE, 
+  UNDEF
 };
 
 enum LIN_Size
@@ -66,5 +67,5 @@ bool GetSynch(uint8_t data);
 uint8_t GetPID(uint8_t u8PIDReceive);
 void GetNextState(LIN_HEADER *current);
 void send_response(struct LIN_SEND* lin, bool isMaster);
-
+void ResetState(void);
 #endif

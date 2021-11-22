@@ -126,6 +126,8 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       {
         send_response(&LIN_Send, false);
         SendLIN = false;
+        ResetState();
+        break;
       }
       else
       {

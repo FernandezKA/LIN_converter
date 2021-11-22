@@ -46,7 +46,8 @@ void main(void)
       switch (fsm_receive)
       {
       case w_mode:
-        static uint8_t data = Pull(&sw_receive);
+        static uint8_t data = 0xFF;
+        data = Pull(&sw_receive);
         if (data == 0x00)
         { //Slave mode
           LIN_Send.Mode = SLAVE;
@@ -60,6 +61,7 @@ void main(void)
         else
         { //Mistake
           fsm_receive = w_mode;
+          ResetState();
         }
         break;
 
@@ -80,10 +82,11 @@ void main(void)
         else
         {
           fsm_receive = w_mode;
-          while (!sw_receive.isEmpty)
+          ResetState();
+/*           while (!sw_receive.isEmpty)
           { //Clear all of data, because it's mistake
             Pull(&sw_receive);
-          }
+          } */
           break;
         }
         fsm_receive = w_data;
@@ -107,14 +110,17 @@ void main(void)
             {
               asm("nop");
             } //Wait while not handled request
+            ResetState();
           }
           else if (LIN_Send.Mode == MASTER)
           {
             send_response(&LIN_Send, true);
+            ResetState();
           }
           while (!sw_receive.isEmpty)
           { //Clear all of data, because it's mistake
-            Pull(&sw_receive);
+            //Pull(&sw_receive);
+            ResetState();
           }
         }
         break;
@@ -147,4 +153,16 @@ static void SysInit(void)
   GPIO_Config();
   SetExtIRQ();
   asm("rim");
+}
+//This function reset configuration
+void ResetState(void){
+  //Clear ring buffer
+  while(!sw_receive.isEmpty){
+    Pull(&sw_receive);
+  }
+  fsm_receive = w_mode;
+  LIN_Send.CRC = 0xFF;
+  LIN_Send.PID = 0x00;
+  LIN_Send.SIZE = bytes_2;
+  LIN_Send.Mode = UNDEF;
 }
