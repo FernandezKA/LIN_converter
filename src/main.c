@@ -52,13 +52,16 @@ void main(void)
         if (data == 0x00)
         { //Slave mode
           LIN_Send.Mode = SLAVE;
+          LIN_Send.CRC = 0xFF;
           fsm_receive = w_pid;
         }
         else if (data == 0x55)
         { //Master mode
           LIN_Send.Mode = MASTER;
           fsm_receive = w_pid;
+          LIN_Send.CRC = 0xFF;
         }
+        
         else if (data == 0xFF){
           if(BAUD_LIN == 9600){
             BAUD_LIN = 19200;
@@ -77,6 +80,7 @@ void main(void)
 
       case w_pid:
         LIN_Send.PID = Pull(&sw_receive);
+        LIN_Send.CRC^=LIN_Send.PID;
         if (LIN_Send.PID < 0x1FU)
         {
           LIN_Send.SIZE = bytes_2;
@@ -106,12 +110,13 @@ void main(void)
         if (CountDataLIN < LIN_Send.SIZE)
         {
           LIN_Send.Data[CountDataLIN++] = Pull(&sw_receive);
+          LIN_Send.CRC^= LIN_Send.Data[CountDataLIN];
         }
         else if (CountDataLIN == LIN_Send.SIZE) //It's CRC field
         {
           //Receive CRC and send packet
           CountDataLIN = 0x00U;
-          LIN_Send.CRC = Pull(&sw_receive);
+          uint8_t u8CRCReceived = Pull(&sw_receive);
           fsm_receive = w_mode;
           if (LIN_Send.Mode == SLAVE)
           {

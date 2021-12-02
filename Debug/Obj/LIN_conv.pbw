@@ -34206,6 +34206,274 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@F@SysInit#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SysInit(void)",
+    "location": {
+      "column": "13",
+      "line": "12",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SysInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@BAUD_LIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "BAUD_LIN",
+    "location": {
+      "column": "10",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "BAUD_LIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@sw_transmit",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_transmit",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_transmit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@sw_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_receive",
+    "location": {
+      "column": "13",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SendLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SendLIN",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SendLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@E@FSM_REC",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "FSM_REC",
+    "fields": [
+      {
+        "ID": "c:@E@FSM_REC@w_mode",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_mode",
+        "location": {
+          "column": "3",
+          "line": "20",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_mode",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_pid",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_pid",
+        "location": {
+          "column": "3",
+          "line": "21",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_pid",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_data",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_data",
+        "location": {
+          "column": "3",
+          "line": "22",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_data",
+        "origin": "project_file",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "FSM_REC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@fsm_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "fsm_receive",
+    "location": {
+      "column": "16",
+      "line": "24",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "fsm_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@LIN_Send",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "LIN_Send",
+    "location": {
+      "column": "17",
+      "line": "25",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "LIN_Send",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "28",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@648@F@main#@CountDataLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "CountDataLIN",
+    "location": {
+      "column": "18",
+      "line": "34",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "CountDataLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@841@F@main#@u8Data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8Data",
+    "location": {
+      "column": "15",
+      "line": "40",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8Data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1126@F@main#@data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "data",
+    "location": {
+      "column": "24",
+      "line": "50",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@2909@F@main#@u8CRCReceived",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8CRCReceived",
+    "location": {
+      "column": "19",
+      "line": "119",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8CRCReceived",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed#*c#l#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "156",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@F@SysInit#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SysInit(void)",
+    "location": {
+      "column": "13",
+      "line": "162",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SysInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@ResetState#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void ResetState(void)",
+    "location": {
+      "column": "6",
+      "line": "173",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "ResetState",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:ycheck.h@533@macro@__INTRINSIC",
     "What": "MacroDef",
     "defdec": "Def",
@@ -36870,27 +37138,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@1659@F@send_response#*$@S@LIN_SEND#b#@u8CRC",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8CRC",
-    "location": {
-      "column": "13",
-      "line": "63",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
-    },
-    "name": "u8CRC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:lin.c@1690@F@send_response#*$@S@LIN_SEND#b#@i",
+    "ID": "c:lin.c@1663@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "64",
+      "line": "63",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36898,13 +37152,13 @@
     "scope": null
   },
   {
-    "ID": "c:lin.c@2076@F@send_response#*$@S@LIN_SEND#b#@i",
+    "ID": "c:lin.c@2023@F@send_response#*$@S@LIN_SEND#b#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "76",
+      "line": "74",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "i",
@@ -36918,7 +37172,7 @@
     "display": "u16BreakLength",
     "location": {
       "column": "10",
-      "line": "87",
+      "line": "85",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "u16BreakLength",
@@ -36932,7 +37186,7 @@
     "display": "currentHeader",
     "location": {
       "column": "12",
-      "line": "88",
+      "line": "86",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "currentHeader",
@@ -36946,7 +37200,7 @@
     "display": "header",
     "location": {
       "column": "19",
-      "line": "89",
+      "line": "87",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "header",
@@ -36960,7 +37214,7 @@
     "display": "response",
     "location": {
       "column": "21",
-      "line": "90",
+      "line": "88",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "response",
@@ -36974,7 +37228,7 @@
     "display": "Lin_size",
     "location": {
       "column": "15",
-      "line": "91",
+      "line": "89",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "Lin_size",
@@ -36988,7 +37242,7 @@
     "display": "countReceived",
     "location": {
       "column": "9",
-      "line": "92",
+      "line": "90",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\lin.c"
     },
     "name": "countReceived",
@@ -37315,6 +37569,104 @@
     },
     "name": "BAUD_LIN",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@333@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZET",
+    "location": {
+      "column": "11",
+      "line": "18",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZET",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "19",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "25",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
     "scope": null
   },
   {
@@ -37696,344 +38048,6 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@F@SysInit#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SysInit(void)",
-    "location": {
-      "column": "13",
-      "line": "12",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SysInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@BAUD_LIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "BAUD_LIN",
-    "location": {
-      "column": "10",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "BAUD_LIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@sw_transmit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sw_transmit",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "sw_transmit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@sw_receive",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sw_receive",
-    "location": {
-      "column": "13",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "sw_receive",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SendLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SendLIN",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SendLIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@E@FSM_REC",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "FSM_REC",
-    "fields": [
-      {
-        "ID": "c:@E@FSM_REC@w_mode",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_mode",
-        "location": {
-          "column": "3",
-          "line": "20",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_mode",
-        "origin": "project_file",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@FSM_REC@w_pid",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_pid",
-        "location": {
-          "column": "3",
-          "line": "21",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_pid",
-        "origin": "project_file",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@FSM_REC@w_data",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_data",
-        "location": {
-          "column": "3",
-          "line": "22",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_data",
-        "origin": "project_file",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "FSM_REC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@fsm_receive",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "fsm_receive",
-    "location": {
-      "column": "16",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "fsm_receive",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@LIN_Send",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "LIN_Send",
-    "location": {
-      "column": "17",
-      "line": "25",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "LIN_Send",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void main(void)",
-    "location": {
-      "column": "6",
-      "line": "28",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@648@F@main#@CountDataLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "CountDataLIN",
-    "location": {
-      "column": "18",
-      "line": "34",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "CountDataLIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@841@F@main#@u8Data",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8Data",
-    "location": {
-      "column": "15",
-      "line": "40",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "u8Data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1126@F@main#@data",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "data",
-    "location": {
-      "column": "24",
-      "line": "50",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@assert_failed#*c#l#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void assert_failed(u8 *, u32)",
-    "location": {
-      "column": "6",
-      "line": "151",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "assert_failed",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@F@SysInit#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SysInit(void)",
-    "location": {
-      "column": "13",
-      "line": "157",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SysInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@ResetState#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void ResetState(void)",
-    "location": {
-      "column": "6",
-      "line": "168",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "ResetState",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@130@macro@_XENCODING_LIMITS_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_XENCODING_LIMITS_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_XENCODING_LIMITS_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@329@macro@_EncodingSb_LenMax",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_EncodingSb_LenMax",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_EncodingSb_LenMax",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@461@macro@_EncodingUtf8_LenMax",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_EncodingUtf8_LenMax",
-    "location": {
-      "column": "11",
-      "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_EncodingUtf8_LenMax",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@1097@macro@_ENCODING_WITH_USED",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_ENCODING_WITH_USED",
-    "location": {
-      "column": "13",
-      "line": "47",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_WITH_USED",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@1161@macro@_ENCODING_LEN_MAX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_ENCODING_LEN_MAX",
-    "location": {
-      "column": "11",
-      "line": "51",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_LEN_MAX",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@1218@macro@_ENCODING_CUR_MAX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_ENCODING_CUR_MAX",
-    "location": {
-      "column": "11",
-      "line": "52",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_CUR_MAX",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -38300,114 +38314,86 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "ID": "c:xencoding_limits.h@130@macro@_XENCODING_LIMITS_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_YSIZET_H",
+    "display": "_XENCODING_LIMITS_H",
     "location": {
       "column": "9",
       "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "_YSIZET_H",
+    "name": "_XENCODING_LIMITS_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@333@macro@_SIZE_T",
+    "ID": "c:xencoding_limits.h@329@macro@_EncodingSb_LenMax",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_SIZE_T",
+    "display": "_EncodingSb_LenMax",
     "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "9",
+      "line": "15",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "_SIZE_T",
+    "name": "_EncodingSb_LenMax",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "ID": "c:xencoding_limits.h@461@macro@_EncodingUtf8_LenMax",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_SIZET",
+    "display": "_EncodingUtf8_LenMax",
     "location": {
       "column": "11",
-      "line": "18",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZET",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "19",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "16",
       "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "size_t",
+    "name": "_EncodingUtf8_LenMax",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
+    "ID": "c:xencoding_limits.h@1097@macro@_ENCODING_WITH_USED",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
+    "display": "_ENCODING_WITH_USED",
     "location": {
-      "column": "9",
-      "line": "23",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "13",
+      "line": "47",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "__DATA_PTR_MEM_HELPER1__",
+    "name": "_ENCODING_WITH_USED",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "25",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:dlstm8smn.h@140@macro@_DLIB_CONFIG_H",
+    "ID": "c:xencoding_limits.h@1161@macro@_ENCODING_LEN_MAX",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_DLIB_CONFIG_H",
+    "display": "_ENCODING_LEN_MAX",
     "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\lib\\dlstm8smn.h"
+      "column": "11",
+      "line": "51",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "_DLIB_CONFIG_H",
+    "name": "_ENCODING_LEN_MAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1218@macro@_ENCODING_CUR_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_CUR_MAX",
+    "location": {
+      "column": "11",
+      "line": "52",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_CUR_MAX",
     "origin": "system_include",
     "scope": null
   },
@@ -38436,6 +38422,20 @@
       "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\stdbool.h"
     },
     "name": "__bool_true_false_are_defined",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:dlstm8smn.h@140@macro@_DLIB_CONFIG_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_CONFIG_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\lib\\dlstm8smn.h"
+    },
+    "name": "_DLIB_CONFIG_H",
     "origin": "system_include",
     "scope": null
   },
