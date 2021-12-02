@@ -7,10 +7,8 @@
 //This function receive PID frame
 uint8_t GetPID(uint8_t u8PIDReceive)
 {
-  uint8_t u8PID = u8PIDReceive & 0xC0;
+  uint8_t u8PID = u8PIDReceive & 0x3F;
   //TODO: Add parity check
-  //bool P0 =
-  //bool P1 =
   return u8PID;
 }
 

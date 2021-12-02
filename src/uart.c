@@ -103,7 +103,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
 
   case wait_pid:
     //u8PIDField = UART_DR;
-    header.pid = UART_DR;
+    header.pid = GetPID(UART_DR);
 #ifdef DEBUG
     UART_Send(u8PIDField);
 #endif
@@ -122,7 +122,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
     header.size = Lin_size;
     if (SendLIN)
     { //If we send packet from RS232 -> LIN into the slave mode
-      if (LIN_Send.PID == header.pid)
+      if (GetPID(LIN_Send.PID) == GetPID(header.pid))
       {
         send_response(&LIN_Send, false);
         SendLIN = false;
