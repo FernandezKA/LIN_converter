@@ -11,6 +11,7 @@
 //Function declaration
 static void SysInit(void);
 //User variables
+uint16_t BAUD_LIN = 9600;
 FIFO sw_transmit;
 static FIFO sw_receive;
 bool SendLIN = false;
