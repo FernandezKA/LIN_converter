@@ -21,4 +21,5 @@ void SetExtIRQ(void);
 void GetIndicate(void);
 //User variables
 extern uint16_t BAUD_LIN;
+void CRC8(uint8_t *CRC, uint8_t data, bool isEnd);
 #endif

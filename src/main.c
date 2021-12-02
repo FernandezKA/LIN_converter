@@ -83,7 +83,7 @@ void main(void)
       case w_pid:
         LIN_Send.PID = Pull(&sw_receive)& 0x3F;
         P0 = ((LIN_Send.PID & (1<<0)) ^ (LIN_Send.PID & (1<<1) >> 1) ^ (LIN_Send.PID & (1<<2) >> 2) ^ (LIN_Send.PID & (1<<4) >> 4)) << 7;
-        P1 = ((((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1<<3) >> 3) ^ (LIN_Send.PID & (1<<4) >> 4) ^ (LIN_Send.PID & (1<<5) >> 5))<<6);
+        P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1<<3) >> 3) ^ (LIN_Send.PID & (1<<4) >> 4) ^ (LIN_Send.PID & (1<<5) >> 5))<<6);
         parity = P0 | P1;
         //LIN_Send.PID |= P0;
         LIN_Send.CRC = 0xFF;
@@ -118,7 +118,8 @@ void main(void)
         if (CountDataLIN < LIN_Send.SIZE - 1)
         {
           uint8_t u8DataReaded = Pull(&sw_receive);
-          LIN_Send.CRC^= u8DataReaded;
+          CRC8(&LIN_Send.CRC, u8DataReaded, false); 
+          //LIN_Send.CRC^= u8DataReaded;
           LIN_Send.Data[CountDataLIN++] = u8DataReaded;
          
         }
@@ -126,7 +127,8 @@ void main(void)
         {
           //Receive CRC and send packet
           LIN_Send.Data[CountDataLIN] = Pull(&sw_receive);
-          LIN_Send.CRC^= LIN_Send.Data[CountDataLIN];
+          CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true); 
+          //LIN_Send.CRC^= LIN_Send.Data[CountDataLIN];
           CountDataLIN = 0x00U;
           //uint8_t u8CRCReceived = Pull(&sw_receive);
           fsm_receive = w_mode;
