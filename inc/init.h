@@ -18,6 +18,7 @@ void Tim4_Config(void);
 void GPIO_Config(void);
 void SetSynchMode(void);
 void SetExtIRQ(void);
+void GetIndicate(void);
 //User variables
 extern uint16_t BAUD_LIN;
 #endif

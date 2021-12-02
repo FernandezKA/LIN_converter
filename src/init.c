@@ -1,5 +1,6 @@
 #include "init.h"
 // User function declarations
+static uint16_t CounterIndicate = 0x00;
 // This function configurate clocking
 void Clk_Config(void)
 {
@@ -39,6 +40,13 @@ void Tim1_Config(void)
   TIM1->ARRL = 0xFF;
   TIM1->CR1 |= TIM1_CR1_CEN;
 }
+//This function configurate Tim4 for indicate activity
+void Tim4_Config(void){
+  TIM4->PSCR = 7;//2^7 PRESCALER
+  TIM4->ARR = 100; //OVF EVERY 810 uS (~ 1 mS)
+  TIM4->IER|=TIM4_IER_UIE;
+  TIM4->CR1|=TIM4_CR1_CEN;
+}
 // This function configured GPIO
 void GPIO_Config(void)
 {
@@ -63,4 +71,24 @@ void SetSynchMode(void)
   UART1->CR2 |= UART1_CR2_REN | UART1_CR2_TEN;
   UART1->CR2 |= UART1_CR2_RIEN; // Enable IRQ for receive synch packet
   asm("rim");
+}
+//This function for indicate of activity
+void GetIndicate(void){
+  ++CounterIndicate;
+  if(BAUD_LIN == 9600){
+    if(CounterIndicate%400 == 0){
+      LED_PORT ->ODR^=(LED_PIN);
+    }
+    if(CounterIndicate == 60000){
+      CounterIndicate = 0;
+    }
+  }
+  else{
+    if(CounterIndicate%200 == 0){
+      LED_PORT ->ODR^=(LED_PIN);
+    }
+    if(CounterIndicate == 60000){
+      CounterIndicate = 0;
+    }
+  }
 }

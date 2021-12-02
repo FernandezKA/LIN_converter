@@ -80,6 +80,7 @@ void main(void)
       case w_pid:
         LIN_Send.PID = Pull(&sw_receive);
         LIN_Send.CRC = 0xFF;
+        //LIN_Send.CRC^=LIN_Send.PID;
         if (LIN_Send.PID < 0x1FU)
         {
           LIN_Send.SIZE = bytes_2;
@@ -168,6 +169,7 @@ static void SysInit(void)
   UART_SW_Config();
   UART_HW_Config();
   Tim1_Config();
+  Tim4_Config();
   GPIO_Config();
   SetExtIRQ();
   asm("rim");

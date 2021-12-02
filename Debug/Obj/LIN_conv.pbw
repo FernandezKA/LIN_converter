@@ -20806,143 +20806,1677 @@
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_DeInit#*$@S@GPIO_struct#",
-    "What": "Function",
+    "ID": "c:stm8s_clk.h@1288@macro@__STM8S_CLK_H",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "void GPIO_DeInit(GPIO_TypeDef *)",
+    "display": "__STM8S_CLK_H",
     "location": {
-      "column": "6",
+      "column": "9",
+      "line": "31",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "__STM8S_CLK_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@CLK_SwitchMode_TypeDef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_SwitchMode_TypeDef@CLK_SWITCHMODE_MANUAL",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SWITCHMODE_MANUAL",
+        "location": {
+          "column": "3",
+          "line": "46",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SWITCHMODE_MANUAL",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_SwitchMode_TypeDef@CLK_SWITCHMODE_AUTO",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SWITCHMODE_AUTO",
+        "location": {
+          "column": "3",
+          "line": "47",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SWITCHMODE_AUTO",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "45",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@CLK_CurrentClockState_TypeDef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_CurrentClockState_TypeDef@CLK_CURRENTCLOCKSTATE_DISABLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_CURRENTCLOCKSTATE_DISABLE",
+        "location": {
+          "column": "3",
+          "line": "54",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_CURRENTCLOCKSTATE_DISABLE",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_CurrentClockState_TypeDef@CLK_CURRENTCLOCKSTATE_ENABLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_CURRENTCLOCKSTATE_ENABLE",
+        "location": {
+          "column": "3",
+          "line": "55",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_CURRENTCLOCKSTATE_ENABLE",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
       "line": "53",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_DeInit",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_Init#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#$@EA@GPIO_Mode_TypeDef#",
-    "What": "Function",
+    "ID": "c:@EA@CLK_CSSConfig_TypeDef",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "void GPIO_Init(GPIO_TypeDef *, GPIO_Pin_TypeDef, GPIO_Mode_TypeDef)",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_CSSConfig_TypeDef@CLK_CSSCONFIG_ENABLEWITHIT",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_CSSCONFIG_ENABLEWITHIT",
+        "location": {
+          "column": "3",
+          "line": "62",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_CSSCONFIG_ENABLEWITHIT",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_CSSConfig_TypeDef@CLK_CSSCONFIG_ENABLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_CSSCONFIG_ENABLE",
+        "location": {
+          "column": "3",
+          "line": "63",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_CSSCONFIG_ENABLE",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_CSSConfig_TypeDef@CLK_CSSCONFIG_DISABLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_CSSCONFIG_DISABLE",
+        "location": {
+          "column": "3",
+          "line": "64",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_CSSCONFIG_DISABLE",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
-      "column": "6",
-      "line": "71",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "column": "9",
+      "line": "61",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_Init",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_Write#*$@S@GPIO_struct#c#",
-    "What": "Function",
+    "ID": "c:@EA@CLK_Source_TypeDef",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "void GPIO_Write(GPIO_TypeDef *, uint8_t)",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_Source_TypeDef@CLK_SOURCE_HSI",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SOURCE_HSI",
+        "location": {
+          "column": "3",
+          "line": "71",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SOURCE_HSI",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Source_TypeDef@CLK_SOURCE_LSI",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SOURCE_LSI",
+        "location": {
+          "column": "3",
+          "line": "72",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SOURCE_LSI",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Source_TypeDef@CLK_SOURCE_HSE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SOURCE_HSE",
+        "location": {
+          "column": "3",
+          "line": "73",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SOURCE_HSE",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
-      "column": "6",
-      "line": "141",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "column": "9",
+      "line": "70",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_Write",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_WriteHigh#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
-    "What": "Function",
+    "ID": "c:@EA@CLK_HSITrimValue_TypeDef",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "void GPIO_WriteHigh(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_0",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_0",
+        "location": {
+          "column": "3",
+          "line": "80",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_0",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_1",
+        "location": {
+          "column": "3",
+          "line": "81",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_2",
+        "location": {
+          "column": "3",
+          "line": "82",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_3",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_3",
+        "location": {
+          "column": "3",
+          "line": "83",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_3",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_4",
+        "location": {
+          "column": "3",
+          "line": "84",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_5",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_5",
+        "location": {
+          "column": "3",
+          "line": "85",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_5",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_6",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_6",
+        "location": {
+          "column": "3",
+          "line": "86",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_6",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_7",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_HSITRIMVALUE_7",
+        "location": {
+          "column": "3",
+          "line": "87",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_HSITRIMVALUE_7",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
-      "column": "6",
-      "line": "154",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "column": "9",
+      "line": "79",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_WriteHigh",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_WriteLow#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
-    "What": "Function",
+    "ID": "c:@EA@CLK_Output_TypeDef",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "void GPIO_WriteLow(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_HSI",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_HSI",
+        "location": {
+          "column": "3",
+          "line": "94",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_HSI",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_LSI",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_LSI",
+        "location": {
+          "column": "3",
+          "line": "95",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_LSI",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_HSE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_HSE",
+        "location": {
+          "column": "3",
+          "line": "96",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_HSE",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPU",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPU",
+        "location": {
+          "column": "3",
+          "line": "97",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPU",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPUDIV2",
+        "location": {
+          "column": "3",
+          "line": "98",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPUDIV2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPUDIV4",
+        "location": {
+          "column": "3",
+          "line": "99",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPUDIV4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV8",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPUDIV8",
+        "location": {
+          "column": "3",
+          "line": "100",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPUDIV8",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV16",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPUDIV16",
+        "location": {
+          "column": "3",
+          "line": "101",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPUDIV16",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV32",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPUDIV32",
+        "location": {
+          "column": "3",
+          "line": "102",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPUDIV32",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV64",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_CPUDIV64",
+        "location": {
+          "column": "3",
+          "line": "103",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_CPUDIV64",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_HSIRC",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_HSIRC",
+        "location": {
+          "column": "3",
+          "line": "104",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_HSIRC",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_MASTER",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_MASTER",
+        "location": {
+          "column": "3",
+          "line": "105",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_MASTER",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_OTHERS",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_OUTPUT_OTHERS",
+        "location": {
+          "column": "3",
+          "line": "106",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_OUTPUT_OTHERS",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
-      "column": "6",
-      "line": "167",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "column": "9",
+      "line": "93",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_WriteLow",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_WriteReverse#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
-    "What": "Function",
+    "ID": "c:@EA@CLK_Peripheral_TypeDef",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "void GPIO_WriteReverse(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_I2C",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_I2C",
+        "location": {
+          "column": "3",
+          "line": "119",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_I2C",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_SPI",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_SPI",
+        "location": {
+          "column": "3",
+          "line": "120",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_SPI",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_UART1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_UART1",
+        "location": {
+          "column": "3",
+          "line": "124",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_UART1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_UART2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_UART2",
+        "location": {
+          "column": "3",
+          "line": "126",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_UART2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_UART3",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_UART3",
+        "location": {
+          "column": "3",
+          "line": "127",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_UART3",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER6",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_TIMER6",
+        "location": {
+          "column": "3",
+          "line": "128",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_TIMER6",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_TIMER4",
+        "location": {
+          "column": "3",
+          "line": "129",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_TIMER4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER5",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_TIMER5",
+        "location": {
+          "column": "3",
+          "line": "130",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_TIMER5",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_TIMER2",
+        "location": {
+          "column": "3",
+          "line": "131",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_TIMER2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER3",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_TIMER3",
+        "location": {
+          "column": "3",
+          "line": "132",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_TIMER3",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_TIMER1",
+        "location": {
+          "column": "3",
+          "line": "133",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_TIMER1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_AWU",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_AWU",
+        "location": {
+          "column": "3",
+          "line": "134",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_AWU",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_ADC",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_ADC",
+        "location": {
+          "column": "3",
+          "line": "135",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_ADC",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_CAN",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PERIPHERAL_CAN",
+        "location": {
+          "column": "3",
+          "line": "136",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PERIPHERAL_CAN",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
-      "column": "6",
+      "column": "9",
+      "line": "118",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@CLK_Flag_TypeDef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_LSIRDY",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_LSIRDY",
+        "location": {
+          "column": "3",
+          "line": "152",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_LSIRDY",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_HSIRDY",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_HSIRDY",
+        "location": {
+          "column": "3",
+          "line": "153",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_HSIRDY",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_HSERDY",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_HSERDY",
+        "location": {
+          "column": "3",
+          "line": "154",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_HSERDY",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_SWIF",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_SWIF",
+        "location": {
+          "column": "3",
+          "line": "155",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_SWIF",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_SWBSY",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_SWBSY",
+        "location": {
+          "column": "3",
+          "line": "156",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_SWBSY",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_CSSD",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_CSSD",
+        "location": {
+          "column": "3",
+          "line": "157",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_CSSD",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_AUX",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_AUX",
+        "location": {
+          "column": "3",
+          "line": "158",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_AUX",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_CCOBSY",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_CCOBSY",
+        "location": {
+          "column": "3",
+          "line": "159",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_CCOBSY",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_CCORDY",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_FLAG_CCORDY",
+        "location": {
+          "column": "3",
+          "line": "160",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_FLAG_CCORDY",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "151",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@CLK_IT_TypeDef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_IT_TypeDef@CLK_IT_CSSD",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_IT_CSSD",
+        "location": {
+          "column": "3",
+          "line": "167",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_IT_CSSD",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_IT_TypeDef@CLK_IT_SWIF",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_IT_SWIF",
+        "location": {
+          "column": "3",
+          "line": "168",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_IT_SWIF",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "166",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@CLK_Prescaler_TypeDef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_HSIDIV1",
+        "location": {
+          "column": "3",
+          "line": "181",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_HSIDIV1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_HSIDIV2",
+        "location": {
+          "column": "3",
+          "line": "182",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_HSIDIV2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_HSIDIV4",
+        "location": {
+          "column": "3",
+          "line": "183",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_HSIDIV4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV8",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_HSIDIV8",
+        "location": {
+          "column": "3",
+          "line": "184",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_HSIDIV8",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV1",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV1",
+        "location": {
+          "column": "3",
+          "line": "185",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV1",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV2",
+        "location": {
+          "column": "3",
+          "line": "186",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV4",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV4",
+        "location": {
+          "column": "3",
+          "line": "187",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV4",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV8",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV8",
+        "location": {
+          "column": "3",
+          "line": "188",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV8",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV16",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV16",
+        "location": {
+          "column": "3",
+          "line": "189",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV16",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV32",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV32",
+        "location": {
+          "column": "3",
+          "line": "190",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV32",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV64",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV64",
+        "location": {
+          "column": "3",
+          "line": "191",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV64",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV128",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_PRESCALER_CPUDIV128",
+        "location": {
+          "column": "3",
+          "line": "192",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_PRESCALER_CPUDIV128",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
       "line": "180",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_WriteReverse",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_ReadOutputData#*$@S@GPIO_struct#",
-    "What": "Function",
+    "ID": "c:@EA@CLK_SWIMDivider_TypeDef",
+    "What": "Enum",
     "defdec": "Def",
-    "display": "uint8_t GPIO_ReadOutputData(GPIO_TypeDef *)",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@CLK_SWIMDivider_TypeDef@CLK_SWIMDIVIDER_2",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SWIMDIVIDER_2",
+        "location": {
+          "column": "3",
+          "line": "199",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SWIMDIVIDER_2",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@CLK_SWIMDivider_TypeDef@CLK_SWIMDIVIDER_OTHER",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "CLK_SWIMDIVIDER_OTHER",
+        "location": {
+          "column": "3",
+          "line": "200",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+        },
+        "name": "CLK_SWIMDIVIDER_OTHER",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
     "location": {
       "column": "9",
-      "line": "191",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "line": "198",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_ReadOutputData",
-    "origin": "project_file",
+    "name": "",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_ReadInputData#*$@S@GPIO_struct#",
-    "What": "Function",
+    "ID": "c:stm8s_clk.h@9098@macro@CLK_TIMEOUT",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "uint8_t GPIO_ReadInputData(GPIO_TypeDef *)",
+    "display": "CLK_TIMEOUT",
     "location": {
       "column": "9",
-      "line": "202",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "line": "212",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_ReadInputData",
-    "origin": "project_file",
+    "name": "CLK_TIMEOUT",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_ReadInputPin#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
-    "What": "Function",
+    "ID": "c:stm8s_clk.h@9564@macro@IS_CLK_SWITCHMODE_OK",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "BitStatus GPIO_ReadInputPin(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
+    "display": "IS_CLK_SWITCHMODE_OK",
     "location": {
-      "column": "11",
-      "line": "213",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "column": "9",
+      "line": "229",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_ReadInputPin",
-    "origin": "project_file",
+    "name": "IS_CLK_SWITCHMODE_OK",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIO_ExternalPullUpConfig#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#$@EA@FunctionalState#",
-    "What": "Function",
+    "ID": "c:stm8s_clk.h@9775@macro@IS_CLK_CURRENTCLOCKSTATE_OK",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "void GPIO_ExternalPullUpConfig(GPIO_TypeDef *, GPIO_Pin_TypeDef, FunctionalState)",
+    "display": "IS_CLK_CURRENTCLOCKSTATE_OK",
+    "location": {
+      "column": "9",
+      "line": "234",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_CURRENTCLOCKSTATE_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@10057@macro@IS_CLK_CSSCONFIG_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_CSSCONFIG_OK",
+    "location": {
+      "column": "9",
+      "line": "240",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_CSSCONFIG_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@10412@macro@IS_CLK_SOURCE_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_SOURCE_OK",
+    "location": {
+      "column": "9",
+      "line": "247",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_SOURCE_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@10727@macro@IS_CLK_HSITRIMVALUE_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_HSITRIMVALUE_OK",
+    "location": {
+      "column": "9",
+      "line": "254",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_HSITRIMVALUE_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@11234@macro@IS_CLK_OUTPUT_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_OUTPUT_OK",
+    "location": {
+      "column": "9",
+      "line": "266",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_OUTPUT_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@12263@macro@IS_CLK_PERIPHERAL_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_PERIPHERAL_OK",
+    "location": {
+      "column": "9",
+      "line": "283",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_PERIPHERAL_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@13072@macro@IS_CLK_FLAG_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_FLAG_OK",
+    "location": {
+      "column": "9",
+      "line": "301",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_FLAG_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@13744@macro@IS_CLK_IT_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_IT_OK",
+    "location": {
+      "column": "9",
+      "line": "314",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_IT_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@13934@macro@IS_CLK_HSIPRESCALER_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_HSIPRESCALER_OK",
+    "location": {
+      "column": "9",
+      "line": "319",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_HSIPRESCALER_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@14280@macro@IS_CLK_PRESCALER_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_PRESCALER_OK",
+    "location": {
+      "column": "9",
+      "line": "327",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_PRESCALER_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_clk.h@15405@macro@IS_CLK_SWIMDIVIDER_OK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_CLK_SWIMDIVIDER_OK",
+    "location": {
+      "column": "9",
+      "line": "343",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "IS_CLK_SWIMDIVIDER_OK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_DeInit#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_DeInit(void)",
     "location": {
       "column": "6",
-      "line": "225",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
+      "line": "352",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
     },
-    "name": "GPIO_ExternalPullUpConfig",
-    "origin": "project_file",
+    "name": "CLK_DeInit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_HSECmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_HSECmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "353",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_HSECmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_HSICmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_HSICmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "354",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_HSICmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_LSICmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_LSICmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "355",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_LSICmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_CCOCmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_CCOCmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "356",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_CCOCmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_ClockSwitchCmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_ClockSwitchCmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "357",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_ClockSwitchCmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_FastHaltWakeUpCmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_FastHaltWakeUpCmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "358",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_FastHaltWakeUpCmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_SlowActiveHaltWakeUpCmd#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_SlowActiveHaltWakeUpCmd(FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "359",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_SlowActiveHaltWakeUpCmd",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_PeripheralClockConfig#$@EA@CLK_Peripheral_TypeDef#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_PeripheralClockConfig(CLK_Peripheral_TypeDef, FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "360",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_PeripheralClockConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_ClockSwitchConfig#$@EA@CLK_SwitchMode_TypeDef#$@EA@CLK_Source_TypeDef#$@EA@FunctionalState#$@EA@CLK_CurrentClockState_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "ErrorStatus CLK_ClockSwitchConfig(CLK_SwitchMode_TypeDef, CLK_Source_TypeDef, FunctionalState, CLK_CurrentClockState_TypeDef)",
+    "location": {
+      "column": "13",
+      "line": "361",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_ClockSwitchConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_HSIPrescalerConfig#$@EA@CLK_Prescaler_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_HSIPrescalerConfig(CLK_Prescaler_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "362",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_HSIPrescalerConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_CCOConfig#$@EA@CLK_Output_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_CCOConfig(CLK_Output_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "363",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_CCOConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_ITConfig#$@EA@CLK_IT_TypeDef#$@EA@FunctionalState#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_ITConfig(CLK_IT_TypeDef, FunctionalState)",
+    "location": {
+      "column": "6",
+      "line": "364",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_ITConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_SYSCLKConfig#$@EA@CLK_Prescaler_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_SYSCLKConfig(CLK_Prescaler_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "365",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_SYSCLKConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_SWIMConfig#$@EA@CLK_SWIMDivider_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_SWIMConfig(CLK_SWIMDivider_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "366",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_SWIMConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_ClockSecuritySystemEnable#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_ClockSecuritySystemEnable(void)",
+    "location": {
+      "column": "6",
+      "line": "367",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_ClockSecuritySystemEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_SYSCLKEmergencyClear#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_SYSCLKEmergencyClear(void)",
+    "location": {
+      "column": "6",
+      "line": "368",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_SYSCLKEmergencyClear",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_AdjustHSICalibrationValue#$@EA@CLK_HSITrimValue_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_AdjustHSICalibrationValue(CLK_HSITrimValue_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "369",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_AdjustHSICalibrationValue",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_GetClockFreq#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t CLK_GetClockFreq(void)",
+    "location": {
+      "column": "10",
+      "line": "370",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_GetClockFreq",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_GetSYSCLKSource#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "CLK_Source_TypeDef CLK_GetSYSCLKSource(void)",
+    "location": {
+      "column": "20",
+      "line": "371",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_GetSYSCLKSource",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_GetFlagStatus#$@EA@CLK_Flag_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "FlagStatus CLK_GetFlagStatus(CLK_Flag_TypeDef)",
+    "location": {
+      "column": "12",
+      "line": "372",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_GetFlagStatus",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_GetITStatus#$@EA@CLK_IT_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "ITStatus CLK_GetITStatus(CLK_IT_TypeDef)",
+    "location": {
+      "column": "10",
+      "line": "373",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_GetITStatus",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@CLK_ClearITPendingBit#$@EA@CLK_IT_TypeDef#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void CLK_ClearITPendingBit(CLK_IT_TypeDef)",
+    "location": {
+      "column": "6",
+      "line": "374",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+    },
+    "name": "CLK_ClearITPendingBit",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -24824,1677 +26358,143 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_clk.h@1288@macro@__STM8S_CLK_H",
-    "What": "MacroDef",
+    "ID": "c:@F@GPIO_DeInit#*$@S@GPIO_struct#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "__STM8S_CLK_H",
+    "display": "void GPIO_DeInit(GPIO_TypeDef *)",
     "location": {
-      "column": "9",
-      "line": "31",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "__STM8S_CLK_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@CLK_SwitchMode_TypeDef",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_SwitchMode_TypeDef@CLK_SWITCHMODE_MANUAL",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SWITCHMODE_MANUAL",
-        "location": {
-          "column": "3",
-          "line": "46",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SWITCHMODE_MANUAL",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_SwitchMode_TypeDef@CLK_SWITCHMODE_AUTO",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SWITCHMODE_AUTO",
-        "location": {
-          "column": "3",
-          "line": "47",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SWITCHMODE_AUTO",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "45",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@CLK_CurrentClockState_TypeDef",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_CurrentClockState_TypeDef@CLK_CURRENTCLOCKSTATE_DISABLE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_CURRENTCLOCKSTATE_DISABLE",
-        "location": {
-          "column": "3",
-          "line": "54",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_CURRENTCLOCKSTATE_DISABLE",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_CurrentClockState_TypeDef@CLK_CURRENTCLOCKSTATE_ENABLE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_CURRENTCLOCKSTATE_ENABLE",
-        "location": {
-          "column": "3",
-          "line": "55",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_CURRENTCLOCKSTATE_ENABLE",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
+      "column": "6",
       "line": "53",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_DeInit",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@EA@CLK_CSSConfig_TypeDef",
-    "What": "Enum",
+    "ID": "c:@F@GPIO_Init#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#$@EA@GPIO_Mode_TypeDef#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_CSSConfig_TypeDef@CLK_CSSCONFIG_ENABLEWITHIT",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_CSSCONFIG_ENABLEWITHIT",
-        "location": {
-          "column": "3",
-          "line": "62",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_CSSCONFIG_ENABLEWITHIT",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_CSSConfig_TypeDef@CLK_CSSCONFIG_ENABLE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_CSSCONFIG_ENABLE",
-        "location": {
-          "column": "3",
-          "line": "63",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_CSSCONFIG_ENABLE",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_CSSConfig_TypeDef@CLK_CSSCONFIG_DISABLE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_CSSCONFIG_DISABLE",
-        "location": {
-          "column": "3",
-          "line": "64",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_CSSCONFIG_DISABLE",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "display": "void GPIO_Init(GPIO_TypeDef *, GPIO_Pin_TypeDef, GPIO_Mode_TypeDef)",
     "location": {
-      "column": "9",
-      "line": "61",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "column": "6",
+      "line": "71",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_Init",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@EA@CLK_Source_TypeDef",
-    "What": "Enum",
+    "ID": "c:@F@GPIO_Write#*$@S@GPIO_struct#c#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_Source_TypeDef@CLK_SOURCE_HSI",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SOURCE_HSI",
-        "location": {
-          "column": "3",
-          "line": "71",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SOURCE_HSI",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Source_TypeDef@CLK_SOURCE_LSI",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SOURCE_LSI",
-        "location": {
-          "column": "3",
-          "line": "72",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SOURCE_LSI",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Source_TypeDef@CLK_SOURCE_HSE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SOURCE_HSE",
-        "location": {
-          "column": "3",
-          "line": "73",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SOURCE_HSE",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "display": "void GPIO_Write(GPIO_TypeDef *, uint8_t)",
     "location": {
-      "column": "9",
-      "line": "70",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "column": "6",
+      "line": "141",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_Write",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@EA@CLK_HSITrimValue_TypeDef",
-    "What": "Enum",
+    "ID": "c:@F@GPIO_WriteHigh#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_0",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_0",
-        "location": {
-          "column": "3",
-          "line": "80",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_0",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_1",
-        "location": {
-          "column": "3",
-          "line": "81",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_2",
-        "location": {
-          "column": "3",
-          "line": "82",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_3",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_3",
-        "location": {
-          "column": "3",
-          "line": "83",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_3",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_4",
-        "location": {
-          "column": "3",
-          "line": "84",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_5",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_5",
-        "location": {
-          "column": "3",
-          "line": "85",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_5",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_6",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_6",
-        "location": {
-          "column": "3",
-          "line": "86",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_6",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_HSITrimValue_TypeDef@CLK_HSITRIMVALUE_7",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_HSITRIMVALUE_7",
-        "location": {
-          "column": "3",
-          "line": "87",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_HSITRIMVALUE_7",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "display": "void GPIO_WriteHigh(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
     "location": {
-      "column": "9",
-      "line": "79",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "column": "6",
+      "line": "154",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_WriteHigh",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@EA@CLK_Output_TypeDef",
-    "What": "Enum",
+    "ID": "c:@F@GPIO_WriteLow#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_HSI",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_HSI",
-        "location": {
-          "column": "3",
-          "line": "94",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_HSI",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_LSI",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_LSI",
-        "location": {
-          "column": "3",
-          "line": "95",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_LSI",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_HSE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_HSE",
-        "location": {
-          "column": "3",
-          "line": "96",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_HSE",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPU",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPU",
-        "location": {
-          "column": "3",
-          "line": "97",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPU",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPUDIV2",
-        "location": {
-          "column": "3",
-          "line": "98",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPUDIV2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPUDIV4",
-        "location": {
-          "column": "3",
-          "line": "99",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPUDIV4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV8",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPUDIV8",
-        "location": {
-          "column": "3",
-          "line": "100",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPUDIV8",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV16",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPUDIV16",
-        "location": {
-          "column": "3",
-          "line": "101",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPUDIV16",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV32",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPUDIV32",
-        "location": {
-          "column": "3",
-          "line": "102",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPUDIV32",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_CPUDIV64",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_CPUDIV64",
-        "location": {
-          "column": "3",
-          "line": "103",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_CPUDIV64",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_HSIRC",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_HSIRC",
-        "location": {
-          "column": "3",
-          "line": "104",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_HSIRC",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_MASTER",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_MASTER",
-        "location": {
-          "column": "3",
-          "line": "105",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_MASTER",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Output_TypeDef@CLK_OUTPUT_OTHERS",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_OUTPUT_OTHERS",
-        "location": {
-          "column": "3",
-          "line": "106",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_OUTPUT_OTHERS",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "display": "void GPIO_WriteLow(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
     "location": {
-      "column": "9",
-      "line": "93",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "column": "6",
+      "line": "167",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_WriteLow",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@EA@CLK_Peripheral_TypeDef",
-    "What": "Enum",
+    "ID": "c:@F@GPIO_WriteReverse#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_I2C",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_I2C",
-        "location": {
-          "column": "3",
-          "line": "119",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_I2C",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_SPI",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_SPI",
-        "location": {
-          "column": "3",
-          "line": "120",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_SPI",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_UART1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_UART1",
-        "location": {
-          "column": "3",
-          "line": "124",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_UART1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_UART2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_UART2",
-        "location": {
-          "column": "3",
-          "line": "126",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_UART2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_UART3",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_UART3",
-        "location": {
-          "column": "3",
-          "line": "127",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_UART3",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER6",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_TIMER6",
-        "location": {
-          "column": "3",
-          "line": "128",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_TIMER6",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_TIMER4",
-        "location": {
-          "column": "3",
-          "line": "129",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_TIMER4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER5",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_TIMER5",
-        "location": {
-          "column": "3",
-          "line": "130",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_TIMER5",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_TIMER2",
-        "location": {
-          "column": "3",
-          "line": "131",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_TIMER2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER3",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_TIMER3",
-        "location": {
-          "column": "3",
-          "line": "132",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_TIMER3",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_TIMER1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_TIMER1",
-        "location": {
-          "column": "3",
-          "line": "133",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_TIMER1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_AWU",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_AWU",
-        "location": {
-          "column": "3",
-          "line": "134",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_AWU",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_ADC",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_ADC",
-        "location": {
-          "column": "3",
-          "line": "135",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_ADC",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Peripheral_TypeDef@CLK_PERIPHERAL_CAN",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PERIPHERAL_CAN",
-        "location": {
-          "column": "3",
-          "line": "136",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PERIPHERAL_CAN",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "display": "void GPIO_WriteReverse(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
     "location": {
-      "column": "9",
-      "line": "118",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@CLK_Flag_TypeDef",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_LSIRDY",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_LSIRDY",
-        "location": {
-          "column": "3",
-          "line": "152",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_LSIRDY",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_HSIRDY",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_HSIRDY",
-        "location": {
-          "column": "3",
-          "line": "153",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_HSIRDY",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_HSERDY",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_HSERDY",
-        "location": {
-          "column": "3",
-          "line": "154",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_HSERDY",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_SWIF",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_SWIF",
-        "location": {
-          "column": "3",
-          "line": "155",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_SWIF",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_SWBSY",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_SWBSY",
-        "location": {
-          "column": "3",
-          "line": "156",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_SWBSY",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_CSSD",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_CSSD",
-        "location": {
-          "column": "3",
-          "line": "157",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_CSSD",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_AUX",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_AUX",
-        "location": {
-          "column": "3",
-          "line": "158",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_AUX",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_CCOBSY",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_CCOBSY",
-        "location": {
-          "column": "3",
-          "line": "159",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_CCOBSY",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Flag_TypeDef@CLK_FLAG_CCORDY",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_FLAG_CCORDY",
-        "location": {
-          "column": "3",
-          "line": "160",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_FLAG_CCORDY",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "151",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@CLK_IT_TypeDef",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_IT_TypeDef@CLK_IT_CSSD",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_IT_CSSD",
-        "location": {
-          "column": "3",
-          "line": "167",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_IT_CSSD",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_IT_TypeDef@CLK_IT_SWIF",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_IT_SWIF",
-        "location": {
-          "column": "3",
-          "line": "168",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_IT_SWIF",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "166",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@CLK_Prescaler_TypeDef",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_HSIDIV1",
-        "location": {
-          "column": "3",
-          "line": "181",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_HSIDIV1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_HSIDIV2",
-        "location": {
-          "column": "3",
-          "line": "182",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_HSIDIV2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_HSIDIV4",
-        "location": {
-          "column": "3",
-          "line": "183",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_HSIDIV4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_HSIDIV8",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_HSIDIV8",
-        "location": {
-          "column": "3",
-          "line": "184",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_HSIDIV8",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV1",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV1",
-        "location": {
-          "column": "3",
-          "line": "185",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV1",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV2",
-        "location": {
-          "column": "3",
-          "line": "186",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV4",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV4",
-        "location": {
-          "column": "3",
-          "line": "187",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV4",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV8",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV8",
-        "location": {
-          "column": "3",
-          "line": "188",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV8",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV16",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV16",
-        "location": {
-          "column": "3",
-          "line": "189",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV16",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV32",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV32",
-        "location": {
-          "column": "3",
-          "line": "190",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV32",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV64",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV64",
-        "location": {
-          "column": "3",
-          "line": "191",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV64",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_Prescaler_TypeDef@CLK_PRESCALER_CPUDIV128",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_PRESCALER_CPUDIV128",
-        "location": {
-          "column": "3",
-          "line": "192",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_PRESCALER_CPUDIV128",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
+      "column": "6",
       "line": "180",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_WriteReverse",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@EA@CLK_SWIMDivider_TypeDef",
-    "What": "Enum",
+    "ID": "c:@F@GPIO_ReadOutputData#*$@S@GPIO_struct#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@CLK_SWIMDivider_TypeDef@CLK_SWIMDIVIDER_2",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SWIMDIVIDER_2",
-        "location": {
-          "column": "3",
-          "line": "199",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SWIMDIVIDER_2",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@CLK_SWIMDivider_TypeDef@CLK_SWIMDIVIDER_OTHER",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "CLK_SWIMDIVIDER_OTHER",
-        "location": {
-          "column": "3",
-          "line": "200",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-        },
-        "name": "CLK_SWIMDIVIDER_OTHER",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
+    "display": "uint8_t GPIO_ReadOutputData(GPIO_TypeDef *)",
     "location": {
       "column": "9",
-      "line": "198",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "line": "191",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "",
-    "origin": "user_include",
+    "name": "GPIO_ReadOutputData",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:stm8s_clk.h@9098@macro@CLK_TIMEOUT",
-    "What": "MacroDef",
+    "ID": "c:@F@GPIO_ReadInputData#*$@S@GPIO_struct#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "CLK_TIMEOUT",
+    "display": "uint8_t GPIO_ReadInputData(GPIO_TypeDef *)",
     "location": {
       "column": "9",
-      "line": "212",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "line": "202",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "CLK_TIMEOUT",
-    "origin": "user_include",
+    "name": "GPIO_ReadInputData",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:stm8s_clk.h@9564@macro@IS_CLK_SWITCHMODE_OK",
-    "What": "MacroDef",
+    "ID": "c:@F@GPIO_ReadInputPin#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "IS_CLK_SWITCHMODE_OK",
+    "display": "BitStatus GPIO_ReadInputPin(GPIO_TypeDef *, GPIO_Pin_TypeDef)",
     "location": {
-      "column": "9",
-      "line": "229",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "column": "11",
+      "line": "213",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "IS_CLK_SWITCHMODE_OK",
-    "origin": "user_include",
+    "name": "GPIO_ReadInputPin",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:stm8s_clk.h@9775@macro@IS_CLK_CURRENTCLOCKSTATE_OK",
-    "What": "MacroDef",
+    "ID": "c:@F@GPIO_ExternalPullUpConfig#*$@S@GPIO_struct#$@EA@GPIO_Pin_TypeDef#$@EA@FunctionalState#",
+    "What": "Function",
     "defdec": "Def",
-    "display": "IS_CLK_CURRENTCLOCKSTATE_OK",
-    "location": {
-      "column": "9",
-      "line": "234",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_CURRENTCLOCKSTATE_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@10057@macro@IS_CLK_CSSCONFIG_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_CSSCONFIG_OK",
-    "location": {
-      "column": "9",
-      "line": "240",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_CSSCONFIG_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@10412@macro@IS_CLK_SOURCE_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_SOURCE_OK",
-    "location": {
-      "column": "9",
-      "line": "247",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_SOURCE_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@10727@macro@IS_CLK_HSITRIMVALUE_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_HSITRIMVALUE_OK",
-    "location": {
-      "column": "9",
-      "line": "254",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_HSITRIMVALUE_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@11234@macro@IS_CLK_OUTPUT_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_OUTPUT_OK",
-    "location": {
-      "column": "9",
-      "line": "266",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_OUTPUT_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@12263@macro@IS_CLK_PERIPHERAL_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_PERIPHERAL_OK",
-    "location": {
-      "column": "9",
-      "line": "283",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_PERIPHERAL_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@13072@macro@IS_CLK_FLAG_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_FLAG_OK",
-    "location": {
-      "column": "9",
-      "line": "301",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_FLAG_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@13744@macro@IS_CLK_IT_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_IT_OK",
-    "location": {
-      "column": "9",
-      "line": "314",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_IT_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@13934@macro@IS_CLK_HSIPRESCALER_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_HSIPRESCALER_OK",
-    "location": {
-      "column": "9",
-      "line": "319",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_HSIPRESCALER_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@14280@macro@IS_CLK_PRESCALER_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_PRESCALER_OK",
-    "location": {
-      "column": "9",
-      "line": "327",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_PRESCALER_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_clk.h@15405@macro@IS_CLK_SWIMDIVIDER_OK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_CLK_SWIMDIVIDER_OK",
-    "location": {
-      "column": "9",
-      "line": "343",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "IS_CLK_SWIMDIVIDER_OK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_DeInit#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_DeInit(void)",
+    "display": "void GPIO_ExternalPullUpConfig(GPIO_TypeDef *, GPIO_Pin_TypeDef, FunctionalState)",
     "location": {
       "column": "6",
-      "line": "352",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
+      "line": "225",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_gpio.c"
     },
-    "name": "CLK_DeInit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_HSECmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_HSECmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "353",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_HSECmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_HSICmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_HSICmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "354",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_HSICmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_LSICmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_LSICmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "355",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_LSICmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_CCOCmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_CCOCmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "356",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_CCOCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_ClockSwitchCmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_ClockSwitchCmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "357",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_ClockSwitchCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_FastHaltWakeUpCmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_FastHaltWakeUpCmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "358",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_FastHaltWakeUpCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_SlowActiveHaltWakeUpCmd#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_SlowActiveHaltWakeUpCmd(FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "359",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_SlowActiveHaltWakeUpCmd",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_PeripheralClockConfig#$@EA@CLK_Peripheral_TypeDef#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_PeripheralClockConfig(CLK_Peripheral_TypeDef, FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "360",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_PeripheralClockConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_ClockSwitchConfig#$@EA@CLK_SwitchMode_TypeDef#$@EA@CLK_Source_TypeDef#$@EA@FunctionalState#$@EA@CLK_CurrentClockState_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "ErrorStatus CLK_ClockSwitchConfig(CLK_SwitchMode_TypeDef, CLK_Source_TypeDef, FunctionalState, CLK_CurrentClockState_TypeDef)",
-    "location": {
-      "column": "13",
-      "line": "361",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_ClockSwitchConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_HSIPrescalerConfig#$@EA@CLK_Prescaler_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_HSIPrescalerConfig(CLK_Prescaler_TypeDef)",
-    "location": {
-      "column": "6",
-      "line": "362",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_HSIPrescalerConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_CCOConfig#$@EA@CLK_Output_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_CCOConfig(CLK_Output_TypeDef)",
-    "location": {
-      "column": "6",
-      "line": "363",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_CCOConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_ITConfig#$@EA@CLK_IT_TypeDef#$@EA@FunctionalState#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_ITConfig(CLK_IT_TypeDef, FunctionalState)",
-    "location": {
-      "column": "6",
-      "line": "364",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_ITConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_SYSCLKConfig#$@EA@CLK_Prescaler_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_SYSCLKConfig(CLK_Prescaler_TypeDef)",
-    "location": {
-      "column": "6",
-      "line": "365",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_SYSCLKConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_SWIMConfig#$@EA@CLK_SWIMDivider_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_SWIMConfig(CLK_SWIMDivider_TypeDef)",
-    "location": {
-      "column": "6",
-      "line": "366",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_SWIMConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_ClockSecuritySystemEnable#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_ClockSecuritySystemEnable(void)",
-    "location": {
-      "column": "6",
-      "line": "367",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_ClockSecuritySystemEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_SYSCLKEmergencyClear#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_SYSCLKEmergencyClear(void)",
-    "location": {
-      "column": "6",
-      "line": "368",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_SYSCLKEmergencyClear",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_AdjustHSICalibrationValue#$@EA@CLK_HSITrimValue_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_AdjustHSICalibrationValue(CLK_HSITrimValue_TypeDef)",
-    "location": {
-      "column": "6",
-      "line": "369",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_AdjustHSICalibrationValue",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_GetClockFreq#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t CLK_GetClockFreq(void)",
-    "location": {
-      "column": "10",
-      "line": "370",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_GetClockFreq",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_GetSYSCLKSource#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "CLK_Source_TypeDef CLK_GetSYSCLKSource(void)",
-    "location": {
-      "column": "20",
-      "line": "371",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_GetSYSCLKSource",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_GetFlagStatus#$@EA@CLK_Flag_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "FlagStatus CLK_GetFlagStatus(CLK_Flag_TypeDef)",
-    "location": {
-      "column": "12",
-      "line": "372",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_GetFlagStatus",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_GetITStatus#$@EA@CLK_IT_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "ITStatus CLK_GetITStatus(CLK_IT_TypeDef)",
-    "location": {
-      "column": "10",
-      "line": "373",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_GetITStatus",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@CLK_ClearITPendingBit#$@EA@CLK_IT_TypeDef#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void CLK_ClearITPendingBit(CLK_IT_TypeDef)",
-    "location": {
-      "column": "6",
-      "line": "374",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\inc\\stm8s_clk.h"
-    },
-    "name": "CLK_ClearITPendingBit",
-    "origin": "user_include",
+    "name": "GPIO_ExternalPullUpConfig",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -26504,7 +26504,7 @@
     "display": "void TRAP_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "6",
+      "line": "7",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TRAP_IRQHandler",
@@ -26518,7 +26518,7 @@
     "display": "void TLI_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "14",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TLI_IRQHandler",
@@ -26532,7 +26532,7 @@
     "display": "void AWU_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "23",
+      "line": "24",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "AWU_IRQHandler",
@@ -26546,7 +26546,7 @@
     "display": "void CLK_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "31",
+      "line": "32",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "CLK_IRQHandler",
@@ -26560,7 +26560,7 @@
     "display": "void EXTI_PORTA_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "39",
+      "line": "40",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTA_IRQHandler",
@@ -26574,7 +26574,7 @@
     "display": "void EXTI_PORTB_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "47",
+      "line": "48",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTB_IRQHandler",
@@ -26588,7 +26588,7 @@
     "display": "void EXTI_PORTC_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "55",
+      "line": "56",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTC_IRQHandler",
@@ -26602,7 +26602,7 @@
     "display": "void EXTI_PORTE_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "71",
+      "line": "72",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EXTI_PORTE_IRQHandler",
@@ -26616,7 +26616,7 @@
     "display": "void SPI_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "108",
+      "line": "109",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "SPI_IRQHandler",
@@ -26630,7 +26630,7 @@
     "display": "void TIM1_UPD_OVF_TRG_BRK_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "116",
+      "line": "117",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM1_UPD_OVF_TRG_BRK_IRQHandler",
@@ -26644,7 +26644,7 @@
     "display": "void TIM1_CAP_COM_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "124",
+      "line": "125",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM1_CAP_COM_IRQHandler",
@@ -26658,7 +26658,7 @@
     "display": "void TIM2_UPD_OVF_BRK_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "149",
+      "line": "150",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM2_UPD_OVF_BRK_IRQHandler",
@@ -26672,7 +26672,7 @@
     "display": "void TIM2_CAP_COM_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "160",
+      "line": "161",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM2_CAP_COM_IRQHandler",
@@ -26686,7 +26686,7 @@
     "display": "void I2C_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "228",
+      "line": "229",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "I2C_IRQHandler",
@@ -26700,7 +26700,7 @@
     "display": "void ADC1_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "281",
+      "line": "282",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "ADC1_IRQHandler",
@@ -26714,7 +26714,7 @@
     "display": "void TIM4_UPD_OVF_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "299",
+      "line": "300",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "TIM4_UPD_OVF_IRQHandler",
@@ -26728,11 +26728,193 @@
     "display": "void EEPROM_EEC_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "308",
+      "line": "311",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\lib\\SPL\\src\\stm8s_it.c"
     },
     "name": "EEPROM_EEC_IRQHandler",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1254@macro@__STM8S_CONF_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM8S_CONF_H",
+    "location": {
+      "column": "9",
+      "line": "30",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "__STM8S_CONF_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1398@macro@EXTI_PORTD_IRQ",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EXTI_PORTD_IRQ",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "EXTI_PORTD_IRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1466@macro@UART_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_PORT",
+    "location": {
+      "column": "9",
+      "line": "37",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "UART_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1491@macro@UART_TX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_TX",
+    "location": {
+      "column": "9",
+      "line": "38",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "UART_TX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1517@macro@UART_RX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_RX",
+    "location": {
+      "column": "9",
+      "line": "39",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "UART_RX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1543@macro@SWUART_TRANSMIT_USED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SWUART_TRANSMIT_USED",
+    "location": {
+      "column": "9",
+      "line": "40",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "SWUART_TRANSMIT_USED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@1573@macro@SWUART_RECEIVE_USED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SWUART_RECEIVE_USED",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "SWUART_RECEIVE_USED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@6108@macro@UART1_TX_IRQ",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART1_TX_IRQ",
+    "location": {
+      "column": "9",
+      "line": "149",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "UART1_TX_IRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@6145@macro@UART1_RX_IRQ",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART1_RX_IRQ",
+    "location": {
+      "column": "9",
+      "line": "150",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "UART1_RX_IRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@8024@macro@USE_FULL_ASSERT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "USE_FULL_ASSERT",
+    "location": {
+      "column": "9",
+      "line": "187",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "USE_FULL_ASSERT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm8s_conf.h@8492@macro@assert_param",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "assert_param",
+    "location": {
+      "column": "9",
+      "line": "200",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "assert_param",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed#*c#l#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "202",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "assert_failed",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed#*c#l#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "202",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+    },
+    "name": "assert_failed",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -27226,184 +27408,366 @@
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1254@macro@__STM8S_CONF_H",
+    "ID": "c:init.h@26@macro@_init_h_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "__STM8S_CONF_H",
+    "display": "_init_h_",
     "location": {
       "column": "9",
-      "line": "30",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "2",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "__STM8S_CONF_H",
+    "name": "_init_h_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1398@macro@EXTI_PORTD_IRQ",
+    "ID": "c:init.h@125@macro@F_CPU",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "EXTI_PORTD_IRQ",
+    "display": "F_CPU",
     "location": {
       "column": "9",
-      "line": "35",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "7",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "EXTI_PORTD_IRQ",
+    "name": "F_CPU",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1466@macro@UART_PORT",
+    "ID": "c:init.h@151@macro@BAUD_SW",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "UART_PORT",
+    "display": "BAUD_SW",
     "location": {
       "column": "9",
-      "line": "37",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "8",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "UART_PORT",
+    "name": "BAUD_SW",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1491@macro@UART_TX",
+    "ID": "c:init.h@174@macro@BAUD_HW",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "UART_TX",
+    "display": "BAUD_HW",
     "location": {
       "column": "9",
-      "line": "38",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "9",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "UART_TX",
+    "name": "BAUD_HW",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1517@macro@UART_RX",
+    "ID": "c:init.h@196@macro@LED_PORT",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "UART_RX",
+    "display": "LED_PORT",
     "location": {
       "column": "9",
-      "line": "39",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "10",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "UART_RX",
+    "name": "LED_PORT",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1543@macro@SWUART_TRANSMIT_USED",
+    "ID": "c:init.h@220@macro@LED_PIN",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "SWUART_TRANSMIT_USED",
+    "display": "LED_PIN",
     "location": {
       "column": "9",
-      "line": "40",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "11",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "SWUART_TRANSMIT_USED",
+    "name": "LED_PIN",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:stm8s_conf.h@1573@macro@SWUART_RECEIVE_USED",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SWUART_RECEIVE_USED",
-    "location": {
-      "column": "9",
-      "line": "41",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
-    },
-    "name": "SWUART_RECEIVE_USED",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_conf.h@6108@macro@UART1_TX_IRQ",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART1_TX_IRQ",
-    "location": {
-      "column": "9",
-      "line": "149",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
-    },
-    "name": "UART1_TX_IRQ",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_conf.h@6145@macro@UART1_RX_IRQ",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART1_RX_IRQ",
-    "location": {
-      "column": "9",
-      "line": "150",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
-    },
-    "name": "UART1_RX_IRQ",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_conf.h@8024@macro@USE_FULL_ASSERT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "USE_FULL_ASSERT",
-    "location": {
-      "column": "9",
-      "line": "187",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
-    },
-    "name": "USE_FULL_ASSERT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm8s_conf.h@8492@macro@assert_param",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "assert_param",
-    "location": {
-      "column": "9",
-      "line": "200",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
-    },
-    "name": "assert_param",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@assert_failed#*c#l#",
+    "ID": "c:@F@Clk_Config#",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "display": "void Clk_Config(void)",
     "location": {
       "column": "6",
-      "line": "202",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "13",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "assert_failed",
+    "name": "Clk_Config",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@assert_failed#*c#l#",
+    "ID": "c:@F@Clk_Config#",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void assert_failed(uint8_t *, uint32_t)",
+    "display": "void Clk_Config(void)",
     "location": {
       "column": "6",
-      "line": "202",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\stm8s_conf.h"
+      "line": "13",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
     },
-    "name": "assert_failed",
+    "name": "Clk_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_SW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_SW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_SW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_SW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_SW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_SW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_HW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_HW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_HW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART_HW_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART_HW_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "UART_HW_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim1_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim1_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim1_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim1_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim1_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim1_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim4_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim4_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim4_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim4_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Tim4_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "Tim4_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "GPIO_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Config#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "GPIO_Config",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetSynchMode#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetSynchMode(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetSynchMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetSynchMode#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetSynchMode(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetSynchMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetExtIRQ#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetExtIRQ(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetExtIRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SetExtIRQ#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetExtIRQ(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "SetExtIRQ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetIndicate#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GetIndicate(void)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "GetIndicate",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetIndicate#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GetIndicate(void)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "GetIndicate",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@BAUD_LIN",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "BAUD_LIN",
+    "location": {
+      "column": "17",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "BAUD_LIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@BAUD_LIN",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "BAUD_LIN",
+    "location": {
+      "column": "17",
+      "line": "23",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
+    },
+    "name": "BAUD_LIN",
     "origin": "user_include",
     "scope": null
   },
@@ -32800,13 +33164,27 @@
     "scope": null
   },
   {
+    "ID": "c:init.c@CounterIndicate",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "CounterIndicate",
+    "location": {
+      "column": "17",
+      "line": "3",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
+    },
+    "name": "CounterIndicate",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Clk_Config#",
     "What": "Function",
     "defdec": "Def",
     "display": "void Clk_Config(void)",
     "location": {
       "column": "6",
-      "line": "4",
+      "line": "5",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "Clk_Config",
@@ -32820,7 +33198,7 @@
     "display": "void UART_SW_Config(void)",
     "location": {
       "column": "6",
-      "line": "9",
+      "line": "10",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "UART_SW_Config",
@@ -32834,7 +33212,7 @@
     "display": "void UART_HW_Config(void)",
     "location": {
       "column": "6",
-      "line": "17",
+      "line": "18",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "UART_HW_Config",
@@ -32848,10 +33226,24 @@
     "display": "void Tim1_Config(void)",
     "location": {
       "column": "6",
-      "line": "34",
+      "line": "35",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "Tim1_Config",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Tim4_Config#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Tim4_Config(void)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
+    },
+    "name": "Tim4_Config",
     "origin": "project_file",
     "scope": null
   },
@@ -32862,7 +33254,7 @@
     "display": "void GPIO_Config(void)",
     "location": {
       "column": "6",
-      "line": "43",
+      "line": "51",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "GPIO_Config",
@@ -32876,7 +33268,7 @@
     "display": "void SetExtIRQ(void)",
     "location": {
       "column": "6",
-      "line": "51",
+      "line": "59",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "SetExtIRQ",
@@ -32890,10 +33282,24 @@
     "display": "void SetSynchMode(void)",
     "location": {
       "column": "6",
-      "line": "60",
+      "line": "68",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
     },
     "name": "SetSynchMode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetIndicate#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GetIndicate(void)",
+    "location": {
+      "column": "6",
+      "line": "76",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\init.c"
+    },
+    "name": "GetIndicate",
     "origin": "project_file",
     "scope": null
   },
@@ -34202,638 +34608,6 @@
       "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\stdlib.h"
     },
     "name": "div",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@F@SysInit#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SysInit(void)",
-    "location": {
-      "column": "13",
-      "line": "12",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SysInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@BAUD_LIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "BAUD_LIN",
-    "location": {
-      "column": "10",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "BAUD_LIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@sw_transmit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sw_transmit",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "sw_transmit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@sw_receive",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sw_receive",
-    "location": {
-      "column": "13",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "sw_receive",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SendLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SendLIN",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SendLIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@E@FSM_REC",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "FSM_REC",
-    "fields": [
-      {
-        "ID": "c:@E@FSM_REC@w_mode",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_mode",
-        "location": {
-          "column": "3",
-          "line": "20",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_mode",
-        "origin": "project_file",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@FSM_REC@w_pid",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_pid",
-        "location": {
-          "column": "3",
-          "line": "21",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_pid",
-        "origin": "project_file",
-        "scope": null
-      },
-      {
-        "ID": "c:@E@FSM_REC@w_data",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "w_data",
-        "location": {
-          "column": "3",
-          "line": "22",
-          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-        },
-        "name": "w_data",
-        "origin": "project_file",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "FSM_REC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@fsm_receive",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "fsm_receive",
-    "location": {
-      "column": "16",
-      "line": "24",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "fsm_receive",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@LIN_Send",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "LIN_Send",
-    "location": {
-      "column": "17",
-      "line": "25",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "LIN_Send",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void main(void)",
-    "location": {
-      "column": "6",
-      "line": "28",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@648@F@main#@CountDataLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "CountDataLIN",
-    "location": {
-      "column": "18",
-      "line": "34",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "CountDataLIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@841@F@main#@u8Data",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8Data",
-    "location": {
-      "column": "15",
-      "line": "40",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "u8Data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1126@F@main#@data",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "data",
-    "location": {
-      "column": "24",
-      "line": "50",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "data",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@2575@F@main#@u8DataReaded",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8DataReaded",
-    "location": {
-      "column": "19",
-      "line": "111",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "u8DataReaded",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@assert_failed#*c#l#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void assert_failed(u8 *, u32)",
-    "location": {
-      "column": "6",
-      "line": "159",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "assert_failed",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@F@SysInit#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SysInit(void)",
-    "location": {
-      "column": "13",
-      "line": "165",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "SysInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@ResetState#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void ResetState(void)",
-    "location": {
-      "column": "6",
-      "line": "176",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "ResetState",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@533@macro@__INTRINSIC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__INTRINSIC",
-    "location": {
-      "column": "11",
-      "line": "21",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__INTRINSIC",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1804@macro@__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
-    "location": {
-      "column": "11",
-      "line": "65",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1879@macro@_YCHECK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YCHECK",
-    "location": {
-      "column": "9",
-      "line": "69",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "_YCHECK",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2491@macro@__EFF_NS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NS",
-    "location": {
-      "column": "9",
-      "line": "84",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2583@macro@__EFF_NSNW1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NSNW1",
-    "location": {
-      "column": "9",
-      "line": "85",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NSNW1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2688@macro@__EFF_NE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NE",
-    "location": {
-      "column": "9",
-      "line": "86",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2767@macro@__EFF_NENR1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1",
-    "location": {
-      "column": "9",
-      "line": "87",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2858@macro@__EFF_NENR1R1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1R1",
-    "location": {
-      "column": "9",
-      "line": "88",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1R1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@2960@macro@__EFF_NENR2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR2",
-    "location": {
-      "column": "9",
-      "line": "89",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3051@macro@__EFF_NENR1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1NW2",
-    "location": {
-      "column": "9",
-      "line": "90",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3155@macro@__EFF_NENR1NW2R1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENR1NW2R1",
-    "location": {
-      "column": "9",
-      "line": "91",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENR1NW2R1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3272@macro@__EFF_NENW1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW1",
-    "location": {
-      "column": "9",
-      "line": "92",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3364@macro@__EFF_NENW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW2",
-    "location": {
-      "column": "9",
-      "line": "93",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3456@macro@__EFF_NENW2R1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW2R1",
-    "location": {
-      "column": "9",
-      "line": "94",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW2R1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3559@macro@__EFF_NENW1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NENW1NW2",
-    "location": {
-      "column": "9",
-      "line": "95",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NENW1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3653@macro@__EFF_NR1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NR1",
-    "location": {
-      "column": "9",
-      "line": "96",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NR1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3734@macro@__EFF_NR1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NR1NW2",
-    "location": {
-      "column": "9",
-      "line": "97",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NR1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3828@macro@__EFF_NR1NW3",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NR1NW3",
-    "location": {
-      "column": "9",
-      "line": "98",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NR1NW3",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@3922@macro@__EFF_NW1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW1",
-    "location": {
-      "column": "9",
-      "line": "99",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW1",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4004@macro@__EFF_NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW2",
-    "location": {
-      "column": "9",
-      "line": "100",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4086@macro@__EFF_NW1NR2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW1NR2",
-    "location": {
-      "column": "9",
-      "line": "101",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW1NR2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4180@macro@__EFF_NW1NW2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__EFF_NW1NW2",
-    "location": {
-      "column": "9",
-      "line": "102",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__EFF_NW1NW2",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4272@macro@__ATTRIBUTES",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES",
-    "location": {
-      "column": "9",
-      "line": "107",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4329@macro@__ATTRIBUTES_CAN_THROW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES_CAN_THROW",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES_CAN_THROW",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4376@macro@__ATTRIBUTES_NORETURN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES_NORETURN",
-    "location": {
-      "column": "9",
-      "line": "109",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES_NORETURN",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@4444@macro@__ATTRIBUTES_NORETURN_CAN_THROW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__ATTRIBUTES_NORETURN_CAN_THROW",
-    "location": {
-      "column": "9",
-      "line": "110",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
-    },
-    "name": "__ATTRIBUTES_NORETURN_CAN_THROW",
     "origin": "system_include",
     "scope": null
   },
@@ -37040,6 +36814,274 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@F@SysInit#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SysInit(void)",
+    "location": {
+      "column": "13",
+      "line": "12",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SysInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@BAUD_LIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "BAUD_LIN",
+    "location": {
+      "column": "10",
+      "line": "14",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "BAUD_LIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@sw_transmit",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_transmit",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_transmit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@sw_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sw_receive",
+    "location": {
+      "column": "13",
+      "line": "16",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "sw_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SendLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SendLIN",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SendLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@E@FSM_REC",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "FSM_REC",
+    "fields": [
+      {
+        "ID": "c:@E@FSM_REC@w_mode",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_mode",
+        "location": {
+          "column": "3",
+          "line": "20",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_mode",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_pid",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_pid",
+        "location": {
+          "column": "3",
+          "line": "21",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_pid",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@FSM_REC@w_data",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "w_data",
+        "location": {
+          "column": "3",
+          "line": "22",
+          "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+        },
+        "name": "w_data",
+        "origin": "project_file",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "FSM_REC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@fsm_receive",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "fsm_receive",
+    "location": {
+      "column": "16",
+      "line": "24",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "fsm_receive",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@LIN_Send",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "LIN_Send",
+    "location": {
+      "column": "17",
+      "line": "25",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "LIN_Send",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "28",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@648@F@main#@CountDataLIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "CountDataLIN",
+    "location": {
+      "column": "18",
+      "line": "34",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "CountDataLIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@841@F@main#@u8Data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8Data",
+    "location": {
+      "column": "15",
+      "line": "40",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8Data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1126@F@main#@data",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "data",
+    "location": {
+      "column": "24",
+      "line": "50",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@2614@F@main#@u8DataReaded",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8DataReaded",
+    "location": {
+      "column": "19",
+      "line": "112",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "u8DataReaded",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@assert_failed#*c#l#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void assert_failed(u8 *, u32)",
+    "location": {
+      "column": "6",
+      "line": "160",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "assert_failed",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@F@SysInit#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SysInit(void)",
+    "location": {
+      "column": "13",
+      "line": "166",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "SysInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@ResetState#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void ResetState(void)",
+    "location": {
+      "column": "6",
+      "line": "178",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "ResetState",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@GetPID#c#",
     "What": "Function",
     "defdec": "Def",
@@ -37250,590 +37292,450 @@
     "scope": null
   },
   {
-    "ID": "c:init.h@26@macro@_init_h_",
+    "ID": "c:xencoding_limits.h@130@macro@_XENCODING_LIMITS_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_init_h_",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "_init_h_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@125@macro@F_CPU",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "F_CPU",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "F_CPU",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@151@macro@BAUD_SW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BAUD_SW",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "BAUD_SW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@174@macro@BAUD_HW",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BAUD_HW",
-    "location": {
-      "column": "9",
-      "line": "9",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "BAUD_HW",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@196@macro@LED_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_PORT",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "LED_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:init.h@220@macro@LED_PIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_PIN",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "LED_PIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Clk_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Clk_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Clk_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Clk_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Clk_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Clk_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_SW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_SW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_SW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_SW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_SW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_SW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_HW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_HW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_HW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART_HW_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART_HW_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "UART_HW_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Tim1_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Tim1_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Tim1_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Tim1_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Tim1_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Tim1_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Tim4_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Tim4_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "Tim4_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "GPIO_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Config#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Config(void)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "GPIO_Config",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetSynchMode#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetSynchMode(void)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetSynchMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetSynchMode#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetSynchMode(void)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetSynchMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetExtIRQ#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetExtIRQ(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetExtIRQ",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SetExtIRQ#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetExtIRQ(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "SetExtIRQ",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@BAUD_LIN",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "BAUD_LIN",
-    "location": {
-      "column": "17",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "BAUD_LIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@BAUD_LIN",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "BAUD_LIN",
-    "location": {
-      "column": "17",
-      "line": "22",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\inc\\init.h"
-    },
-    "name": "BAUD_LIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_THREADS_H",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_THREADS_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5237@macro@_DLIB_COMPILER_TLS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_COMPILER_TLS",
-    "location": {
-      "column": "9",
-      "line": "117",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_COMPILER_TLS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5267@macro@_DLIB_TLS_QUAL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_TLS_QUAL",
-    "location": {
-      "column": "9",
-      "line": "118",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_TLS_QUAL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5366@macro@_DLIB_MULTI_THREAD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_MULTI_THREAD",
-    "location": {
-      "column": "11",
-      "line": "124",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_MULTI_THREAD",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5398@macro@_DLIB_GLOBAL_VARIABLES",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_GLOBAL_VARIABLES",
-    "location": {
-      "column": "11",
-      "line": "125",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_GLOBAL_VARIABLES",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@5434@macro@_DLIB_FILE_OP_LOCKS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_FILE_OP_LOCKS",
-    "location": {
-      "column": "11",
-      "line": "126",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_DLIB_FILE_OP_LOCKS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@T@__iar_Rmtx",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "void *",
-    "location": {
-      "column": "17",
-      "line": "298",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "__iar_Rmtx",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12644@macro@_MULTI_THREAD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_MULTI_THREAD",
-    "location": {
-      "column": "9",
-      "line": "351",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_MULTI_THREAD",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12686@macro@_GLOBAL_LOCALE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_GLOBAL_LOCALE",
-    "location": {
-      "column": "9",
-      "line": "352",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_GLOBAL_LOCALE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12733@macro@_FILE_OP_LOCKS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_FILE_OP_LOCKS",
-    "location": {
-      "column": "9",
-      "line": "353",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_FILE_OP_LOCKS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12779@macro@_COMPILER_TLS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_COMPILER_TLS",
-    "location": {
-      "column": "9",
-      "line": "355",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_COMPILER_TLS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Threads.h@12821@macro@_TLS_QUAL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_TLS_QUAL",
-    "location": {
-      "column": "9",
-      "line": "356",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
-    },
-    "name": "_TLS_QUAL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
+    "display": "_XENCODING_LIMITS_H",
     "location": {
       "column": "9",
       "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "_YSIZET_H",
+    "name": "_XENCODING_LIMITS_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@333@macro@_SIZE_T",
+    "ID": "c:xencoding_limits.h@329@macro@_EncodingSb_LenMax",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@352@macro@_SIZET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZET",
-    "location": {
-      "column": "11",
-      "line": "18",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZET",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "19",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "16",
-      "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
+    "display": "_EncodingSb_LenMax",
     "location": {
       "column": "9",
-      "line": "23",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "line": "15",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "__DATA_PTR_MEM_HELPER1__",
+    "name": "_EncodingSb_LenMax",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
+    "ID": "c:xencoding_limits.h@461@macro@_EncodingUtf8_LenMax",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "unsigned int",
+    "display": "_EncodingUtf8_LenMax",
     "location": {
-      "column": "1",
-      "line": "25",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+      "column": "11",
+      "line": "20",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
     },
-    "name": "__data_size_t",
+    "name": "_EncodingUtf8_LenMax",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1097@macro@_ENCODING_WITH_USED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_WITH_USED",
+    "location": {
+      "column": "13",
+      "line": "47",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_WITH_USED",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1161@macro@_ENCODING_LEN_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_LEN_MAX",
+    "location": {
+      "column": "11",
+      "line": "51",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_LEN_MAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:xencoding_limits.h@1218@macro@_ENCODING_CUR_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_ENCODING_CUR_MAX",
+    "location": {
+      "column": "11",
+      "line": "52",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
+    },
+    "name": "_ENCODING_CUR_MAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@533@macro@__INTRINSIC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__INTRINSIC",
+    "location": {
+      "column": "11",
+      "line": "21",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__INTRINSIC",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@1804@macro@__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
+    "location": {
+      "column": "11",
+      "line": "65",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__STM8ABI_PORTABILITY_INTERNAL_LEVEL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@1879@macro@_YCHECK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YCHECK",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "_YCHECK",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2491@macro@__EFF_NS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NS",
+    "location": {
+      "column": "9",
+      "line": "84",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2583@macro@__EFF_NSNW1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NSNW1",
+    "location": {
+      "column": "9",
+      "line": "85",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NSNW1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2688@macro@__EFF_NE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NE",
+    "location": {
+      "column": "9",
+      "line": "86",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2767@macro@__EFF_NENR1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1",
+    "location": {
+      "column": "9",
+      "line": "87",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2858@macro@__EFF_NENR1R1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1R1",
+    "location": {
+      "column": "9",
+      "line": "88",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1R1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@2960@macro@__EFF_NENR2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR2",
+    "location": {
+      "column": "9",
+      "line": "89",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3051@macro@__EFF_NENR1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1NW2",
+    "location": {
+      "column": "9",
+      "line": "90",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3155@macro@__EFF_NENR1NW2R1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENR1NW2R1",
+    "location": {
+      "column": "9",
+      "line": "91",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENR1NW2R1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3272@macro@__EFF_NENW1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW1",
+    "location": {
+      "column": "9",
+      "line": "92",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3364@macro@__EFF_NENW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW2",
+    "location": {
+      "column": "9",
+      "line": "93",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3456@macro@__EFF_NENW2R1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW2R1",
+    "location": {
+      "column": "9",
+      "line": "94",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW2R1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3559@macro@__EFF_NENW1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NENW1NW2",
+    "location": {
+      "column": "9",
+      "line": "95",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NENW1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3653@macro@__EFF_NR1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NR1",
+    "location": {
+      "column": "9",
+      "line": "96",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NR1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3734@macro@__EFF_NR1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NR1NW2",
+    "location": {
+      "column": "9",
+      "line": "97",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NR1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3828@macro@__EFF_NR1NW3",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NR1NW3",
+    "location": {
+      "column": "9",
+      "line": "98",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NR1NW3",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@3922@macro@__EFF_NW1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW1",
+    "location": {
+      "column": "9",
+      "line": "99",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW1",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4004@macro@__EFF_NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW2",
+    "location": {
+      "column": "9",
+      "line": "100",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4086@macro@__EFF_NW1NR2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW1NR2",
+    "location": {
+      "column": "9",
+      "line": "101",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW1NR2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4180@macro@__EFF_NW1NW2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__EFF_NW1NW2",
+    "location": {
+      "column": "9",
+      "line": "102",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__EFF_NW1NW2",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4272@macro@__ATTRIBUTES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES",
+    "location": {
+      "column": "9",
+      "line": "107",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4329@macro@__ATTRIBUTES_CAN_THROW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES_CAN_THROW",
+    "location": {
+      "column": "9",
+      "line": "108",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES_CAN_THROW",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4376@macro@__ATTRIBUTES_NORETURN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES_NORETURN",
+    "location": {
+      "column": "9",
+      "line": "109",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES_NORETURN",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@4444@macro@__ATTRIBUTES_NORETURN_CAN_THROW",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__ATTRIBUTES_NORETURN_CAN_THROW",
+    "location": {
+      "column": "9",
+      "line": "110",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ycheck.h"
+    },
+    "name": "__ATTRIBUTES_NORETURN_CAN_THROW",
     "origin": "system_include",
     "scope": null
   },
@@ -38216,100 +38118,268 @@
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@130@macro@_XENCODING_LIMITS_H",
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_XENCODING_LIMITS_H",
+    "display": "_YSIZET_H",
     "location": {
       "column": "9",
       "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
     },
-    "name": "_XENCODING_LIMITS_H",
+    "name": "_YSIZET_H",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@329@macro@_EncodingSb_LenMax",
+    "ID": "c:ysizet.h@333@macro@_SIZE_T",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_EncodingSb_LenMax",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_EncodingSb_LenMax",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@461@macro@_EncodingUtf8_LenMax",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_EncodingUtf8_LenMax",
+    "display": "_SIZE_T",
     "location": {
       "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@352@macro@_SIZET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZET",
+    "location": {
+      "column": "11",
+      "line": "18",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZET",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@370@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "19",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "16",
       "line": "20",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
     },
-    "name": "_EncodingUtf8_LenMax",
+    "name": "size_t",
     "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:xencoding_limits.h@1097@macro@_ENCODING_WITH_USED",
+    "ID": "c:ysizet.h@475@macro@__DATA_PTR_MEM_HELPER1__",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "_ENCODING_WITH_USED",
-    "location": {
-      "column": "13",
-      "line": "47",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_WITH_USED",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@1161@macro@_ENCODING_LEN_MAX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_ENCODING_LEN_MAX",
-    "location": {
-      "column": "11",
-      "line": "51",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_LEN_MAX",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:xencoding_limits.h@1218@macro@_ENCODING_CUR_MAX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_ENCODING_CUR_MAX",
-    "location": {
-      "column": "11",
-      "line": "52",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\xencoding_limits.h"
-    },
-    "name": "_ENCODING_CUR_MAX",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:dlstm8smn.h@140@macro@_DLIB_CONFIG_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_CONFIG_H",
+    "display": "__DATA_PTR_MEM_HELPER1__",
     "location": {
       "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\lib\\dlstm8smn.h"
+      "line": "23",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
     },
-    "name": "_DLIB_CONFIG_H",
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "25",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@442@macro@_DLIB_THREADS_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_THREADS_H",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_DLIB_THREADS_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@5237@macro@_DLIB_COMPILER_TLS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_COMPILER_TLS",
+    "location": {
+      "column": "9",
+      "line": "117",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_DLIB_COMPILER_TLS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@5267@macro@_DLIB_TLS_QUAL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_TLS_QUAL",
+    "location": {
+      "column": "9",
+      "line": "118",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_DLIB_TLS_QUAL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@5366@macro@_DLIB_MULTI_THREAD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_MULTI_THREAD",
+    "location": {
+      "column": "11",
+      "line": "124",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_DLIB_MULTI_THREAD",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@5398@macro@_DLIB_GLOBAL_VARIABLES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_GLOBAL_VARIABLES",
+    "location": {
+      "column": "11",
+      "line": "125",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_DLIB_GLOBAL_VARIABLES",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@5434@macro@_DLIB_FILE_OP_LOCKS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_FILE_OP_LOCKS",
+    "location": {
+      "column": "11",
+      "line": "126",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_DLIB_FILE_OP_LOCKS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@T@__iar_Rmtx",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "void *",
+    "location": {
+      "column": "17",
+      "line": "298",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "__iar_Rmtx",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12644@macro@_MULTI_THREAD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MULTI_THREAD",
+    "location": {
+      "column": "9",
+      "line": "351",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_MULTI_THREAD",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12686@macro@_GLOBAL_LOCALE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_GLOBAL_LOCALE",
+    "location": {
+      "column": "9",
+      "line": "352",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_GLOBAL_LOCALE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12733@macro@_FILE_OP_LOCKS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_FILE_OP_LOCKS",
+    "location": {
+      "column": "9",
+      "line": "353",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_FILE_OP_LOCKS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12779@macro@_COMPILER_TLS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_COMPILER_TLS",
+    "location": {
+      "column": "9",
+      "line": "355",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_COMPILER_TLS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Threads.h@12821@macro@_TLS_QUAL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_TLS_QUAL",
+    "location": {
+      "column": "9",
+      "line": "356",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\DLib_Threads.h"
+    },
+    "name": "_TLS_QUAL",
     "origin": "system_include",
     "scope": null
   },
@@ -38436,6 +38506,20 @@
       "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\c\\stdbool.h"
     },
     "name": "__bool_true_false_are_defined",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:dlstm8smn.h@140@macro@_DLIB_CONFIG_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_CONFIG_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\lib\\dlstm8smn.h"
+    },
+    "name": "_DLIB_CONFIG_H",
     "origin": "system_include",
     "scope": null
   },

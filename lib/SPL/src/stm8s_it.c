@@ -1,6 +1,7 @@
 #include "stm8s_conf.h"
 #include "stm8s_it.h"
 #include "softuart.h"
+#include "init.h"
 #ifndef TRAP_IRQ
 //TRAP Interrupt routine
 INTERRUPT_HANDLER_TRAP(TRAP_IRQHandler)
@@ -298,7 +299,9 @@ INTERRUPT_HANDLER(TIM6_UPD_OVF_TRG_IRQHandler, 23)
 //Timer4 Update/Overflow Interrupt routine.
 INTERRUPT_HANDLER(TIM4_UPD_OVF_IRQHandler, 23)
 {
-	while (1){};
+	TIM4->SR1&=~TIM4_SR1_UIF;
+	GetIndicate();
+	//while (1){};
 }
 #endif
 #endif /* (STM8S903) || (STM8AF622x)*/
