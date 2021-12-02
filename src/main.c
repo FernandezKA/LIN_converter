@@ -52,14 +52,13 @@ void main(void)
         if (data == 0x00)
         { //Slave mode
           LIN_Send.Mode = SLAVE;
-          LIN_Send.CRC = 0xFF;
           fsm_receive = w_pid;
         }
         else if (data == 0x55)
         { //Master mode
           LIN_Send.Mode = MASTER;
           fsm_receive = w_pid;
-          LIN_Send.CRC = 0xFF;
+          
         }
         
         else if (data == 0xFF){
@@ -80,7 +79,7 @@ void main(void)
 
       case w_pid:
         LIN_Send.PID = Pull(&sw_receive);
-        LIN_Send.CRC^=LIN_Send.PID;
+        LIN_Send.CRC = 0xFF;
         if (LIN_Send.PID < 0x1FU)
         {
           LIN_Send.SIZE = bytes_2;
@@ -107,16 +106,20 @@ void main(void)
         break;
 
       case w_data:
-        if (CountDataLIN < LIN_Send.SIZE)
+        if (CountDataLIN < LIN_Send.SIZE - 1)
         {
-          LIN_Send.Data[CountDataLIN++] = Pull(&sw_receive);
-          LIN_Send.CRC^= LIN_Send.Data[CountDataLIN];
+          uint8_t u8DataReaded = Pull(&sw_receive);
+          LIN_Send.CRC^= u8DataReaded;
+          LIN_Send.Data[CountDataLIN++] = u8DataReaded;
+         
         }
-        else if (CountDataLIN == LIN_Send.SIZE) //It's CRC field
+        else if (CountDataLIN == LIN_Send.SIZE - 1) //It's CRC field
         {
           //Receive CRC and send packet
+          LIN_Send.Data[CountDataLIN] = Pull(&sw_receive);
+          LIN_Send.CRC^= LIN_Send.Data[CountDataLIN];
           CountDataLIN = 0x00U;
-          uint8_t u8CRCReceived = Pull(&sw_receive);
+          //uint8_t u8CRCReceived = Pull(&sw_receive);
           fsm_receive = w_mode;
           if (LIN_Send.Mode == SLAVE)
           {
