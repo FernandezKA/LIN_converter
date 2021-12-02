@@ -24,7 +24,19 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
       uint16_t u16TempTime = 0x0000;
       u16TempTime = (TIM1->CNTRH) << 8;
       u16TempTime |= TIM1->CNTRL;
-      if (u16TempTime > 1200 && u16TempTime < 1450)
+      uint16_t LowTime = 1200;
+      uint16_t HighTime = 1450;
+      //Check break length
+      if(BAUD_LIN == 9600){
+        LowTime = 1200;
+        HighTime = 1450;
+      }
+      else{
+        LowTime = 600;
+        HighTime = 725;
+      }
+      //Detect break
+      if (u16TempTime > LowTime && u16TempTime < HighTime)
       {
         currentHeader = wait_synch;
         SetSynchMode();

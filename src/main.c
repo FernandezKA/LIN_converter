@@ -11,7 +11,7 @@
 //Function declaration
 static void SysInit(void);
 //User variables
-uint16_t BAUD_LIN = 9600;
+uint16_t BAUD_LIN = 19200;
 FIFO sw_transmit;
 static FIFO sw_receive;
 bool SendLIN = false;
@@ -58,6 +58,15 @@ void main(void)
         { //Master mode
           LIN_Send.Mode = MASTER;
           fsm_receive = w_pid;
+        }
+        else if (data == 0xFF){
+          if(BAUD_LIN == 9600){
+            BAUD_LIN = 19200;
+          }
+          else{
+            BAUD_LIN = 9600;
+          }
+          SysInit();
         }
         else
         { //Mistake
