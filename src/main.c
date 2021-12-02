@@ -15,6 +15,9 @@ uint16_t BAUD_LIN = 19200;
 FIFO sw_transmit;
 static FIFO sw_receive;
 bool SendLIN = false;
+static uint8_t P1;
+static uint8_t P0;
+static uint8_t parity;
 enum FSM_REC
 {
   w_mode,
@@ -78,7 +81,11 @@ void main(void)
         break;
 
       case w_pid:
-        LIN_Send.PID = Pull(&sw_receive);
+        LIN_Send.PID = Pull(&sw_receive)& 0x3F;
+        P0 = ((LIN_Send.PID & (1<<0)) ^ (LIN_Send.PID & (1<<1) >> 1) ^ (LIN_Send.PID & (1<<2) >> 2) ^ (LIN_Send.PID & (1<<4) >> 4)) << 7;
+        P1 = ((((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1<<3) >> 3) ^ (LIN_Send.PID & (1<<4) >> 4) ^ (LIN_Send.PID & (1<<5) >> 5))<<6);
+        parity = P0 | P1;
+        //LIN_Send.PID |= P0;
         LIN_Send.CRC = 0xFF;
         //LIN_Send.CRC^=LIN_Send.PID;
         if (LIN_Send.PID < 0x1FU)
@@ -103,6 +110,7 @@ void main(void)
           } */
           break;
         }
+        LIN_Send.PID |= parity;
         fsm_receive = w_data;
         break;
 
