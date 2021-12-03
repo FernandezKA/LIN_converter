@@ -69,6 +69,14 @@ void main(void)
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           SysInit();
         }
+        else if(data == 0x10){
+          if(LIN_ver == LIN_2_1){
+            LIN_ver = LIN_1_3;
+          }
+          else{
+            LIN_ver = LIN_2_1;
+          }
+        }
         else
         { //Mistake
           fsm_receive = w_mode;

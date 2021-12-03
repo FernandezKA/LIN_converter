@@ -40764,13 +40764,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3142@F@main#@u8DataReaded",
+    "ID": "c:main.c@3327@F@main#@u8DataReaded",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8DataReaded",
     "location": {
       "column": "19",
-      "line": "119",
+      "line": "127",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "u8DataReaded",
@@ -40784,7 +40784,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "169",
+      "line": "177",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -40798,7 +40798,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "175",
+      "line": "183",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -40812,7 +40812,7 @@
     "display": "void ResetState(void)",
     "location": {
       "column": "6",
-      "line": "187",
+      "line": "195",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "ResetState",
@@ -40826,7 +40826,7 @@
     "display": "void BAUD_Restore(uint16_t *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "199",
+      "line": "207",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "BAUD_Restore",
@@ -40834,13 +40834,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5370@F@BAUD_Restore#*s#l#@ReadedBAUD",
+    "ID": "c:main.c@5555@F@BAUD_Restore#*s#l#@ReadedBAUD",
     "What": "Variable",
     "defdec": "Def",
     "display": "ReadedBAUD",
     "location": {
       "column": "12",
-      "line": "200",
+      "line": "208",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "ReadedBAUD",
