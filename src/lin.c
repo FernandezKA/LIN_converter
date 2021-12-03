@@ -3,15 +3,26 @@
 #include "lin.h"
 #include "uart.h"
 #include "init.h"
-//User function declaration
+/******************************************************************************/
+//User variables
+uint16_t u16BreakLength;
+LIN_HEADER currentHeader;
+struct LIN_Header header;
+struct LIN_Response response;
+enum LIN_Size Lin_size = bytes_2;
+uint8_t countReceived = 0x00;
+enum LIN_VER LIN_ver = LIN_2_1;
+/******************************************************************************/
+/******************************************************************************/
+//User function definitions
+/******************************************************************************/
 //This function receive PID frame
 uint8_t GetPID(uint8_t u8PIDReceive)
 {
   uint8_t u8PID = u8PIDReceive & 0x3F;
-  //TODO: Add parity check
   return u8PID;
 }
-
+/******************************************************************************/
 //This is IRQ handler for detecting break on the LIN mode
 #ifdef EXTI_PORTD_IRQ
 //External Interrupt PORTD Interrupt routine.
@@ -49,6 +60,7 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
       TIM1->CNTRL = 0x00;
     }
 }
+/******************************************************************************/
 //This function send LIN response
 void send_response(struct LIN_SEND* lin, bool isMaster){
   if(isMaster){
@@ -77,14 +89,11 @@ void send_response(struct LIN_SEND* lin, bool isMaster){
   UART1->DR = lin->CRC;
   }
 }
-
-
-//User variables
-uint16_t u16BreakLength;
-LIN_HEADER currentHeader;
-struct LIN_Header header;
-struct LIN_Response response;
-enum LIN_Size Lin_size = bytes_2;
-uint8_t countReceived = 0x00;
-
+/******************************************************************************/
+void UpdateBAUD_EEPROM(uint16_t BAUD_VAL, uint32_t address){
+  FLASH_Unlock(FLASH_MEMTYPE_DATA);
+  FLASH_ProgramByte(address, (uint8_t) ((BAUD_VAL >> 8)&0xFF));//Write MSB
+  FLASH_ProgramByte(address + 1, (uint8_t) (BAUD_VAL & 0xFF));//Write LSB
+  FLASH_Lock(FLASH_MEMTYPE_DATA);
+}
 #endif

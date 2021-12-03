@@ -1,15 +1,8 @@
-#include "stm8s_conf.h"
-#include "stm8s_itc.h"
-//User includes
 #include "init.h"
-#include "lin.h"
-#include "uart.h"
-#include "fifo.h"
-//Includes for SPL library
-#include "stm8s_tim2.h"
-#include "stm8s_gpio.h"
+
 //Function declaration
 static void SysInit(void);
+static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address);
 //User variables
 uint16_t BAUD_LIN = 19200;
 FIFO sw_transmit;
@@ -18,6 +11,7 @@ bool SendLIN = false;
 static uint8_t P1;
 static uint8_t P0;
 static uint8_t parity;
+uint32_t BAUD_ADDR = 0x4000;//This add for BAUD_LIN value
 enum FSM_REC
 {
   w_mode,
@@ -31,6 +25,7 @@ struct LIN_SEND LIN_Send;
 void main(void)
 {
   SysInit();
+  BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
@@ -71,6 +66,7 @@ void main(void)
           else{
             BAUD_LIN = 9600;
           }
+          UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           SysInit();
         }
         else
@@ -81,13 +77,20 @@ void main(void)
         break;
 
       case w_pid:
-        LIN_Send.PID = Pull(&sw_receive)& 0x3F;
+        LIN_Send.PID = GetPID(Pull(&sw_receive));
+        //LIN_Send.PID = Pull(&sw_receive)& 0x3F;
         P0 = ((LIN_Send.PID & (1<<0)) ^ (LIN_Send.PID & (1<<1) >> 1) ^ (LIN_Send.PID & (1<<2) >> 2) ^ (LIN_Send.PID & (1<<4) >> 4)) << 7;
         P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1<<3) >> 3) ^ (LIN_Send.PID & (1<<4) >> 4) ^ (LIN_Send.PID & (1<<5) >> 5))<<6);
         parity = P0 | P1;
-        //LIN_Send.PID |= P0;
+        //Calculate CRC
         LIN_Send.CRC = 0xFF;
-        //LIN_Send.CRC^=LIN_Send.PID;
+        if(LIN_ver == LIN_1_3){
+          asm("nop");
+        }
+        else if(LIN_ver == LIN_2_1){
+          CRC8(&LIN_Send.CRC, LIN_Send.PID, false);  
+        }
+        //Define size of packet
         if (LIN_Send.PID < 0x1FU)
         {
           LIN_Send.SIZE = bytes_2;
@@ -104,10 +107,6 @@ void main(void)
         {
           fsm_receive = w_mode;
           ResetState();
-/*           while (!sw_receive.isEmpty)
-          { //Clear all of data, because it's mistake
-            Pull(&sw_receive);
-          } */
           break;
         }
         LIN_Send.PID |= parity;
@@ -195,4 +194,18 @@ void ResetState(void){
   LIN_Send.PID = 0x00;
   LIN_Send.SIZE = bytes_2;
   LIN_Send.Mode = UNDEF;
+}
+//This function read BAUD value
+static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address){
+  uint16_t ReadedBAUD = 0x0000;
+  ReadedBAUD = FLASH_ReadByte(address + 1); //Read LSB
+  ReadedBAUD |= (FLASH_ReadByte(address)<<8);//Read MSB
+  if(ReadedBAUD != 9600UL || ReadedBAUD != 19200UL){
+    ReadedBAUD = 19200;
+    UpdateBAUD_EEPROM(ReadedBAUD, address);
+    *BAUD_VAR = ReadedBAUD;
+  }
+  else{
+    *BAUD_VAR = ReadedBAUD;
+  }
 }

@@ -1797,9 +1797,6 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\src\stm8s_flash.c</name>
-                    <excluded>
-                        <configuration>Debug</configuration>
-                    </excluded>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\lib\SPL\src\stm8s_gpio.c</name>
