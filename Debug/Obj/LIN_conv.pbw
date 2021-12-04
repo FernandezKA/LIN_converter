@@ -40510,13 +40510,27 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@BAUD_TEST",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "BAUD_TEST",
+    "location": {
+      "column": "17",
+      "line": "6",
+      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
+    },
+    "name": "BAUD_TEST",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@BAUD_LIN",
     "What": "Variable",
     "defdec": "Def",
     "display": "BAUD_LIN",
     "location": {
       "column": "10",
-      "line": "7",
+      "line": "8",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "BAUD_LIN",
@@ -40530,7 +40544,7 @@
     "display": "sw_transmit",
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "9",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "sw_transmit",
@@ -40544,7 +40558,7 @@
     "display": "sw_receive",
     "location": {
       "column": "13",
-      "line": "9",
+      "line": "10",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "sw_receive",
@@ -40558,7 +40572,7 @@
     "display": "SendLIN",
     "location": {
       "column": "6",
-      "line": "10",
+      "line": "11",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SendLIN",
@@ -40572,7 +40586,7 @@
     "display": "P1",
     "location": {
       "column": "16",
-      "line": "11",
+      "line": "12",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "P1",
@@ -40586,7 +40600,7 @@
     "display": "P0",
     "location": {
       "column": "16",
-      "line": "12",
+      "line": "13",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "P0",
@@ -40600,7 +40614,7 @@
     "display": "parity",
     "location": {
       "column": "16",
-      "line": "13",
+      "line": "14",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "parity",
@@ -40614,7 +40628,7 @@
     "display": "BAUD_ADDR",
     "location": {
       "column": "10",
-      "line": "14",
+      "line": "15",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "BAUD_ADDR",
@@ -40634,7 +40648,7 @@
         "display": "w_mode",
         "location": {
           "column": "3",
-          "line": "17",
+          "line": "18",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
         },
         "name": "w_mode",
@@ -40648,7 +40662,7 @@
         "display": "w_pid",
         "location": {
           "column": "3",
-          "line": "18",
+          "line": "19",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
         },
         "name": "w_pid",
@@ -40662,7 +40676,7 @@
         "display": "w_data",
         "location": {
           "column": "3",
-          "line": "19",
+          "line": "20",
           "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
         },
         "name": "w_data",
@@ -40672,7 +40686,7 @@
     ],
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "FSM_REC",
@@ -40686,7 +40700,7 @@
     "display": "fsm_receive",
     "location": {
       "column": "16",
-      "line": "21",
+      "line": "22",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "fsm_receive",
@@ -40700,7 +40714,7 @@
     "display": "LIN_Send",
     "location": {
       "column": "17",
-      "line": "22",
+      "line": "23",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "LIN_Send",
@@ -40714,7 +40728,7 @@
     "display": "void main(void)",
     "location": {
       "column": "6",
-      "line": "25",
+      "line": "26",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "main",
@@ -40722,13 +40736,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@677@F@main#@CountDataLIN",
+    "ID": "c:main.c@701@F@main#@CountDataLIN",
     "What": "Variable",
     "defdec": "Def",
     "display": "CountDataLIN",
     "location": {
       "column": "18",
-      "line": "32",
+      "line": "33",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "CountDataLIN",
@@ -40736,13 +40750,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@870@F@main#@u8Data",
+    "ID": "c:main.c@894@F@main#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "15",
-      "line": "38",
+      "line": "39",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "u8Data",
@@ -40750,13 +40764,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1155@F@main#@data",
+    "ID": "c:main.c@1179@F@main#@data",
     "What": "Variable",
     "defdec": "Def",
     "display": "data",
     "location": {
       "column": "24",
-      "line": "48",
+      "line": "49",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "data",
@@ -40764,13 +40778,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3327@F@main#@u8DataReaded",
+    "ID": "c:main.c@3351@F@main#@u8DataReaded",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8DataReaded",
     "location": {
       "column": "19",
-      "line": "127",
+      "line": "128",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "u8DataReaded",
@@ -40784,7 +40798,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "177",
+      "line": "178",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -40798,7 +40812,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "183",
+      "line": "184",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -40812,7 +40826,7 @@
     "display": "void ResetState(void)",
     "location": {
       "column": "6",
-      "line": "195",
+      "line": "196",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "ResetState",
@@ -40826,24 +40840,10 @@
     "display": "void BAUD_Restore(uint16_t *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "207",
-      "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
-    },
-    "name": "BAUD_Restore",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@5555@F@BAUD_Restore#*s#l#@ReadedBAUD",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "ReadedBAUD",
-    "location": {
-      "column": "12",
       "line": "208",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
-    "name": "ReadedBAUD",
+    "name": "BAUD_Restore",
     "origin": "project_file",
     "scope": null
   },

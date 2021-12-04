@@ -3,15 +3,16 @@
 //Function declaration
 static void SysInit(void);
 static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address);
+static uint16_t BAUD_TEST;
 //User variables
-uint16_t BAUD_LIN = 19200;
+uint16_t BAUD_LIN;
 FIFO sw_transmit;
 static FIFO sw_receive;
 bool SendLIN = false;
 static uint8_t P1;
 static uint8_t P0;
 static uint8_t parity;
-uint32_t BAUD_ADDR = 0x4000;//This add for BAUD_LIN value
+uint32_t BAUD_ADDR = 0x00004000;//This add for BAUD_LIN value
 enum FSM_REC
 {
   w_mode,
@@ -205,15 +206,18 @@ void ResetState(void){
 }
 //This function read BAUD value
 static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address){
-  uint16_t ReadedBAUD = 0x0000;
-  ReadedBAUD = FLASH_ReadByte(address + 1); //Read LSB
-  ReadedBAUD |= (FLASH_ReadByte(address)<<8);//Read MSB
-  if(ReadedBAUD != 9600UL || ReadedBAUD != 19200UL){
-    ReadedBAUD = 19200;
-    UpdateBAUD_EEPROM(ReadedBAUD, address);
-    *BAUD_VAR = ReadedBAUD;
+  *BAUD_VAR = (FLASH_ReadByte(address)<<8);//Read MSB
+  *BAUD_VAR |= FLASH_ReadByte(address + 1); //Read LSB
+  BAUD_LIN = *BAUD_VAR;
+  BAUD_TEST = *BAUD_VAR;
+  if(*BAUD_VAR == 9600){
+    asm("nop");
+  }
+  else if(*BAUD_VAR == 19200){
+    asm("nop");
   }
   else{
-    *BAUD_VAR = ReadedBAUD;
+    *BAUD_VAR = 19200;
+    UpdateBAUD_EEPROM(BAUD_LIN, address);
   }
 }

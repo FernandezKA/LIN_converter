@@ -92,6 +92,8 @@ void send_response(struct LIN_SEND* lin, bool isMaster){
 /******************************************************************************/
 void UpdateBAUD_EEPROM(uint16_t BAUD_VAL, uint32_t address){
   FLASH_Unlock(FLASH_MEMTYPE_DATA);
+  FLASH_EraseByte(address);
+  FLASH_EraseByte(address+1);
   FLASH_ProgramByte(address, (uint8_t) ((BAUD_VAL >> 8)&0xFF));//Write MSB
   FLASH_ProgramByte(address + 1, (uint8_t) (BAUD_VAL & 0xFF));//Write LSB
   FLASH_Lock(FLASH_MEMTYPE_DATA);
