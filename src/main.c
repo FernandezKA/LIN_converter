@@ -3,7 +3,8 @@
 //Function declaration
 static void SysInit(void);
 static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address);
-static uint16_t BAUD_TEST;
+static void MODE_Restore(enum LIN_VER* lin, uint32_t address);
+static void MODE_Update(enum LIN_VER* lin, uint32_t address);
 //User variables
 uint16_t BAUD_LIN;
 FIFO sw_transmit;
@@ -13,6 +14,7 @@ static uint8_t P1;
 static uint8_t P0;
 static uint8_t parity;
 uint32_t BAUD_ADDR = 0x00004000;//This add for BAUD_LIN value
+uint32_t MODE_ADDR = 0x00004010;//Save mode of work device
 enum FSM_REC
 {
   w_mode,
@@ -27,6 +29,7 @@ void main(void)
 {
   SysInit();
   BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
+  MODE_Restore(&LIN_ver, MODE_ADDR);
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
@@ -77,6 +80,7 @@ void main(void)
           else{
             LIN_ver = LIN_2_1;
           }
+          MODE_Update(&LIN_ver, MODE_ADDR);
         }
         else
         { //Mistake
@@ -209,7 +213,6 @@ static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address){
   *BAUD_VAR = (FLASH_ReadByte(address)<<8);//Read MSB
   *BAUD_VAR |= FLASH_ReadByte(address + 1); //Read LSB
   BAUD_LIN = *BAUD_VAR;
-  BAUD_TEST = *BAUD_VAR;
   if(*BAUD_VAR == 9600){
     asm("nop");
   }
@@ -220,4 +223,16 @@ static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address){
     *BAUD_VAR = 19200;
     UpdateBAUD_EEPROM(BAUD_LIN, address);
   }
+}
+//This function read mode_work value
+static void MODE_Restore(enum LIN_VER* lin, uint32_t address){
+  uint8_t value = FLASH_ReadByte(address);
+  *lin = (LIN_VER) value;
+}
+//This function update LIN_Mode value
+static void MODE_Update(enum LIN_VER* lin, uint32_t address){
+  uint8_t writeVal = (uint8_t) *lin;
+  FLASH_Unlock(FLASH_MEMTYPE_DATA);
+  FLASH_ProgramByte(address, writeVal);
+  FLASH_Lock(FLASH_MEMTYPE_DATA);
 }
