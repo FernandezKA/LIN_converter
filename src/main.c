@@ -68,9 +68,11 @@ void main(void)
         else if (data == 0xFF){
           if(BAUD_LIN == 9600){
             BAUD_LIN = 19200;
+            print("19200\n\r", 7);
           }
           else{
             BAUD_LIN = 9600;
+            print("9600\n\r", 6);
           }
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           SysInit();
@@ -78,9 +80,11 @@ void main(void)
         else if(data == 0x10){
           if(LIN_ver == LIN_2_1){
             LIN_ver = LIN_1_3;
+            print("LIN_1_3\n\r", 9);
           }
           else{
             LIN_ver = LIN_2_1;
+            print("LIN_2_1\n\r", 9);
           }
           MODE_Update(&LIN_ver, MODE_ADDR);
         }
