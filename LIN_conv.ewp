@@ -610,7 +610,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</state>
+                    <state>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1648,6 +1648,9 @@
             <name>$PROJ_DIR$\inc\fifo.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\inc\help.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\init.h</name>
         </file>
         <file>
@@ -1904,6 +1907,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\src\fifo.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\help.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\init.c</name>

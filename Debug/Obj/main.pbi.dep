@@ -1,4 +1,5 @@
-main.pbi: C:\dev\MCU\STM8\LIN_Converter\inc\softuart.h \
+main.pbi: C:\dev\MCU\STM8\LIN_Converter\inc\help.h \
+  C:\dev\MCU\STM8\LIN_Converter\inc\softuart.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdbool.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \

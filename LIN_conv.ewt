@@ -2162,6 +2162,9 @@
             <name>$PROJ_DIR$\inc\fifo.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\inc\help.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\inc\init.h</name>
         </file>
         <file>
@@ -2355,6 +2358,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\src\fifo.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\help.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\init.c</name>

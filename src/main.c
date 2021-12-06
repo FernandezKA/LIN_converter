@@ -1,4 +1,5 @@
 #include "init.h"
+#include "help.h"
 
 //Function declaration
 static void SysInit(void);
@@ -30,6 +31,7 @@ void main(void)
   SysInit();
   BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
   MODE_Restore(&LIN_ver, MODE_ADDR);
+  PrintHelp();
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
