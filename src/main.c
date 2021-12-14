@@ -137,7 +137,6 @@ void main(void)
         {
           uint8_t u8DataReaded = Pull(&sw_receive);
           CRC8(&LIN_Send.CRC, u8DataReaded, false); 
-          //LIN_Send.CRC^= u8DataReaded;
           LIN_Send.Data[CountDataLIN++] = u8DataReaded;
          
         }
@@ -146,9 +145,7 @@ void main(void)
           //Receive CRC and send packet
           LIN_Send.Data[CountDataLIN] = Pull(&sw_receive);
           CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true); 
-          //LIN_Send.CRC^= LIN_Send.Data[CountDataLIN];
           CountDataLIN = 0x00U;
-          //uint8_t u8CRCReceived = Pull(&sw_receive);
           fsm_receive = w_mode;
           if (LIN_Send.Mode == SLAVE)
           {
