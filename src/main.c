@@ -65,7 +65,7 @@ void main(void)
           
         }
         
-        else if (data == 0xFF){
+        else if (data == 0x20){
           if(BAUD_LIN == 9600){
             BAUD_LIN = 19200;
             print("19200\n\r", 7);

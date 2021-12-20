@@ -39866,13 +39866,13 @@
     "scope": null
   },
   {
-    "ID": "c:help.c@69@F@PrintHelp#@BAUD_MSG",
+    "ID": "c:help.c@98@F@PrintHelp#@BAUD_MSG",
     "What": "Variable",
     "defdec": "Def",
     "display": "BAUD_MSG",
     "location": {
       "column": "8",
-      "line": "5",
+      "line": "6",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\help.c"
     },
     "name": "BAUD_MSG",
@@ -39880,13 +39880,13 @@
     "scope": null
   },
   {
-    "ID": "c:help.c@169@F@PrintHelp#@MODE_MSG",
+    "ID": "c:help.c@198@F@PrintHelp#@MODE_MSG",
     "What": "Variable",
     "defdec": "Def",
     "display": "MODE_MSG",
     "location": {
       "column": "8",
-      "line": "6",
+      "line": "7",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\help.c"
     },
     "name": "MODE_MSG",
@@ -39894,13 +39894,13 @@
     "scope": null
   },
   {
-    "ID": "c:help.c@285@F@PrintHelp#@MASTER_MODE",
+    "ID": "c:help.c@314@F@PrintHelp#@MASTER_MODE",
     "What": "Variable",
     "defdec": "Def",
     "display": "MASTER_MODE",
     "location": {
       "column": "8",
-      "line": "7",
+      "line": "8",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\help.c"
     },
     "name": "MASTER_MODE",
@@ -39908,13 +39908,13 @@
     "scope": null
   },
   {
-    "ID": "c:help.c@388@F@PrintHelp#@SLAVE_MODE",
+    "ID": "c:help.c@417@F@PrintHelp#@SLAVE_MODE",
     "What": "Variable",
     "defdec": "Def",
     "display": "SLAVE_MODE",
     "location": {
       "column": "8",
-      "line": "8",
+      "line": "9",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\help.c"
     },
     "name": "SLAVE_MODE",
@@ -39928,7 +39928,7 @@
     "display": "void print(char *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "14",
+      "line": "16",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\help.c"
     },
     "name": "print",
@@ -39936,13 +39936,13 @@
     "scope": null
   },
   {
-    "ID": "c:help.c@634@F@print#*C#c#@i",
+    "ID": "c:help.c@717@F@print#*C#c#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "15",
+      "line": "17",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\help.c"
     },
     "name": "i",
