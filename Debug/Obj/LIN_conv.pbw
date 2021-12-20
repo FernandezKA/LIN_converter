@@ -40680,13 +40680,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3775@F@main#@u8DataReaded",
+    "ID": "c:main.c@4148@F@main#@u8DataReaded",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8DataReaded",
     "location": {
       "column": "19",
-      "line": "138",
+      "line": "152",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "u8DataReaded",
@@ -40700,7 +40700,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "185",
+      "line": "199",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -40714,7 +40714,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "191",
+      "line": "205",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -40728,7 +40728,7 @@
     "display": "void ResetState(void)",
     "location": {
       "column": "6",
-      "line": "203",
+      "line": "217",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "ResetState",
@@ -40742,7 +40742,7 @@
     "display": "void BAUD_Restore(uint16_t *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "215",
+      "line": "229",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "BAUD_Restore",
@@ -40756,7 +40756,7 @@
     "display": "void MODE_Restore(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "231",
+      "line": "245",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "MODE_Restore",
@@ -40764,13 +40764,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6272@F@MODE_Restore#*$@E@LIN_VER#l#@value",
+    "ID": "c:main.c@6645@F@MODE_Restore#*$@E@LIN_VER#l#@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "232",
+      "line": "246",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "value",
@@ -40784,7 +40784,7 @@
     "display": "void MODE_Update(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "236",
+      "line": "250",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "MODE_Update",
@@ -40792,13 +40792,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6448@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
+    "ID": "c:main.c@6821@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
     "What": "Variable",
     "defdec": "Def",
     "display": "writeVal",
     "location": {
       "column": "11",
-      "line": "237",
+      "line": "251",
       "path": "C:\\dev\\MCU\\STM8\\LIN_Converter\\src\\main.c"
     },
     "name": "writeVal",

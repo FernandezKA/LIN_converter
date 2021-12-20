@@ -64,7 +64,17 @@ void main(void)
           fsm_receive = w_pid;
           
         }
-        
+        else if(data == 0x10){
+          if(LIN_ver == LIN_2_1){
+            LIN_ver = LIN_1_3;
+            print("LIN_1_3\n\r", 9);
+          }
+          else{
+            LIN_ver = LIN_2_1;
+            print("LIN_2_1\n\r", 9);
+          }
+          MODE_Update(&LIN_ver, MODE_ADDR);
+        }
         else if (data == 0x20){
           if(BAUD_LIN == 9600){
             BAUD_LIN = 19200;
@@ -77,16 +87,20 @@ void main(void)
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           SysInit();
         }
-        else if(data == 0x10){
-          if(LIN_ver == LIN_2_1){
-            LIN_ver = LIN_1_3;
-            print("LIN_1_3\n\r", 9);
+        else if(data == 0x30){
+          if (BAUD_LIN == 9600){
+              print("BAUD 9600\n\r", 11);
           }
           else{
-            LIN_ver = LIN_2_1;
-            print("LIN_2_1\n\r", 9);
+            print("BAUD 19200\n\r", 12);
           }
-          MODE_Update(&LIN_ver, MODE_ADDR);
+          
+          if(LIN_ver == LIN_1_3){
+            print("LIN ver. 1.3\n\r", 14);
+          }
+          else{
+            print("LIN ver. 2.1\n\r", 14);
+          }
         }
         else
         { //Mistake
