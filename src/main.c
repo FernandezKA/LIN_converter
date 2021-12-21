@@ -1,12 +1,12 @@
 #include "init.h"
 #include "help.h"
 
-//Function declaration
+// Function declaration
 static void SysInit(void);
-static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address);
-static void MODE_Restore(enum LIN_VER* lin, uint32_t address);
-static void MODE_Update(enum LIN_VER* lin, uint32_t address);
-//User variables
+static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address);
+static void MODE_Restore(enum LIN_VER *lin, uint32_t address);
+static void MODE_Update(enum LIN_VER *lin, uint32_t address);
+// User variables
 uint16_t BAUD_LIN;
 FIFO sw_transmit;
 static FIFO sw_receive;
@@ -14,8 +14,8 @@ bool SendLIN = false;
 static uint8_t P1;
 static uint8_t P0;
 static uint8_t parity;
-uint32_t BAUD_ADDR = 0x00004000;//This add for BAUD_LIN value
-uint32_t MODE_ADDR = 0x00004010;//Save mode of work device
+uint32_t BAUD_ADDR = 0x00004000; // This add for BAUD_LIN value
+uint32_t MODE_ADDR = 0x00004010; // Save mode of work device
 enum FSM_REC
 {
   w_mode,
@@ -25,7 +25,7 @@ enum FSM_REC
 static FSM_REC fsm_receive = w_mode;
 struct LIN_SEND LIN_Send;
 
-//Main function
+// Main function
 void main(void)
 {
   SysInit();
@@ -40,70 +40,76 @@ void main(void)
   for (;;)
   {
     if (test_status(receive_buffer_full) == receive_buffer_full)
-    { //FIFO buffer for RS232, load data from UART
+    { // FIFO buffer for RS232, load data from UART
       uint8_t u8Data;
       uart_read(&u8Data);
       Push(&sw_receive, u8Data);
     }
     /***********************************************************/
     if (!sw_receive.isEmpty)
-    { //Parse data from RS232 to LIN
+    { // Parse data from RS232 to LIN
       switch (fsm_receive)
       {
       case w_mode:
         static uint8_t data = 0xFF;
         data = Pull(&sw_receive);
         if (data == 0x00)
-        { //Slave mode
+        { // Slave mode
           LIN_Send.Mode = SLAVE;
           fsm_receive = w_pid;
         }
         else if (data == 0x55)
-        { //Master mode
+        { // Master mode
           LIN_Send.Mode = MASTER;
           fsm_receive = w_pid;
-          
         }
-        else if(data == 0x10){
-          if(LIN_ver == LIN_2_1){
-            LIN_ver = LIN_1_3;
-            print("LIN_1_3\n\r", 9);
-          }
-          else{
-            LIN_ver = LIN_2_1;
-            print("LIN_2_1\n\r", 9);
-          }
+        else if (data == 0x10)
+        {
+          LIN_ver = LIN_1_3;
+          print("LIN_1_3\n\r", 9);
           MODE_Update(&LIN_ver, MODE_ADDR);
         }
-        else if (data == 0x20){
-          if(BAUD_LIN == 9600){
-            BAUD_LIN = 19200;
-            print("19200\n\r", 7);
-          }
-          else{
-            BAUD_LIN = 9600;
-            print("9600\n\r", 6);
-          }
-          UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
-          SysInit();
+        else if (data == 0x15)
+        {
+          LIN_ver = LIN_2_1;
+          print("LIN_2_1\n\r", 9);
+          MODE_Update(&LIN_ver, MODE_ADDR);
         }
-        else if(data == 0x30){
-          if (BAUD_LIN == 9600){
-              print("BAUD 9600\n\r", 11);
+        else if (data == 0x20)
+        {
+          BAUD_LIN = 9600;
+          print("9600\n\r", 6);
+          UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+        }
+        else if (data == 0x25)
+        {
+          BAUD_LIN = 9600;
+          print("19200\n\r", 7);
+          UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+        }
+        else if (data == 0x30)
+        {
+          if (BAUD_LIN == 9600)
+          {
+            print("BAUD 9600\n\r", 11);
           }
-          else{
+          else
+          {
             print("BAUD 19200\n\r", 12);
           }
-          
-          if(LIN_ver == LIN_1_3){
+
+          if (LIN_ver == LIN_1_3)
+          {
             print("LIN ver. 1.3\n\r", 14);
           }
-          else{
+          else
+          {
             print("LIN ver. 2.1\n\r", 14);
           }
+          SysInit();
         }
         else
-        { //Mistake
+        { // Mistake
           fsm_receive = w_mode;
           ResetState();
         }
@@ -111,19 +117,21 @@ void main(void)
 
       case w_pid:
         LIN_Send.PID = GetPID(Pull(&sw_receive));
-        //LIN_Send.PID = Pull(&sw_receive)& 0x3F;
-        P0 = ((LIN_Send.PID & (1<<0)) ^ (LIN_Send.PID & (1<<1) >> 1) ^ (LIN_Send.PID & (1<<2) >> 2) ^ (LIN_Send.PID & (1<<4) >> 4)) << 7;
-        P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1<<3) >> 3) ^ (LIN_Send.PID & (1<<4) >> 4) ^ (LIN_Send.PID & (1<<5) >> 5))<<6);
+        // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
+        P0 = ((LIN_Send.PID & (1 << 0)) ^ (LIN_Send.PID & (1 << 1) >> 1) ^ (LIN_Send.PID & (1 << 2) >> 2) ^ (LIN_Send.PID & (1 << 4) >> 4)) << 7;
+        P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1 << 3) >> 3) ^ (LIN_Send.PID & (1 << 4) >> 4) ^ (LIN_Send.PID & (1 << 5) >> 5)) << 6);
         parity = P0 | P1;
-        //Calculate CRC
+        // Calculate CRC
         LIN_Send.CRC = 0xFF;
-        if(LIN_ver == LIN_1_3){
+        if (LIN_ver == LIN_1_3)
+        {
           asm("nop");
         }
-        else if(LIN_ver == LIN_2_1){
-          CRC8(&LIN_Send.CRC, LIN_Send.PID, false);  
+        else if (LIN_ver == LIN_2_1)
+        {
+          CRC8(&LIN_Send.CRC, LIN_Send.PID, false);
         }
-        //Define size of packet
+        // Define size of packet
         if (LIN_Send.PID < 0x1FU)
         {
           LIN_Send.SIZE = bytes_2;
@@ -150,15 +158,14 @@ void main(void)
         if (CountDataLIN < LIN_Send.SIZE - 1)
         {
           uint8_t u8DataReaded = Pull(&sw_receive);
-          CRC8(&LIN_Send.CRC, u8DataReaded, false); 
+          CRC8(&LIN_Send.CRC, u8DataReaded, false);
           LIN_Send.Data[CountDataLIN++] = u8DataReaded;
-         
         }
-        else if (CountDataLIN == LIN_Send.SIZE - 1) //It's CRC field
+        else if (CountDataLIN == LIN_Send.SIZE - 1) // It's CRC field
         {
-          //Receive CRC and send packet
+          // Receive CRC and send packet
           LIN_Send.Data[CountDataLIN] = Pull(&sw_receive);
-          CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true); 
+          CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
           CountDataLIN = 0x00U;
           fsm_receive = w_mode;
           if (LIN_Send.Mode == SLAVE)
@@ -167,7 +174,7 @@ void main(void)
             while (SendLIN)
             {
               asm("nop");
-            } //Wait while not handled request
+            } // Wait while not handled request
             ResetState();
           }
           else if (LIN_Send.Mode == MASTER)
@@ -176,8 +183,8 @@ void main(void)
             ResetState();
           }
           while (!sw_receive.isEmpty)
-          { //Clear all of data, because it's mistake
-            //Pull(&sw_receive);
+          { // Clear all of data, because it's mistake
+            // Pull(&sw_receive);
             ResetState();
           }
         }
@@ -185,7 +192,7 @@ void main(void)
       }
     }
     /***********************************************************/
-    if (!sw_transmit.isEmpty) //Lin packet recognized, reflect from RS232
+    if (!sw_transmit.isEmpty) // Lin packet recognized, reflect from RS232
     {
       if (test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
       {
@@ -201,7 +208,7 @@ void assert_failed(u8 *file, u32 line)
   return;
 }
 #endif
-//This function combined all of init function
+// This function combined all of init function
 static void SysInit(void)
 {
   Clk_Config();
@@ -213,10 +220,12 @@ static void SysInit(void)
   SetExtIRQ();
   asm("rim");
 }
-//This function reset configuration
-void ResetState(void){
-  //Clear ring buffer
-  while(!sw_receive.isEmpty){
+// This function reset configuration
+void ResetState(void)
+{
+  // Clear ring buffer
+  while (!sw_receive.isEmpty)
+  {
     Pull(&sw_receive);
   }
   fsm_receive = w_mode;
@@ -225,30 +234,36 @@ void ResetState(void){
   LIN_Send.SIZE = bytes_2;
   LIN_Send.Mode = UNDEF;
 }
-//This function read BAUD value
-static void BAUD_Restore(uint16_t* BAUD_VAR, uint32_t address){
-  *BAUD_VAR = (FLASH_ReadByte(address)<<8);//Read MSB
-  *BAUD_VAR |= FLASH_ReadByte(address + 1); //Read LSB
+// This function read BAUD value
+static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address)
+{
+  *BAUD_VAR = (FLASH_ReadByte(address) << 8); // Read MSB
+  *BAUD_VAR |= FLASH_ReadByte(address + 1);   // Read LSB
   BAUD_LIN = *BAUD_VAR;
-  if(*BAUD_VAR == 9600){
+  if (*BAUD_VAR == 9600)
+  {
     asm("nop");
   }
-  else if(*BAUD_VAR == 19200){
+  else if (*BAUD_VAR == 19200)
+  {
     asm("nop");
   }
-  else{
+  else
+  {
     *BAUD_VAR = 19200;
     UpdateBAUD_EEPROM(BAUD_LIN, address);
   }
 }
-//This function read mode_work value
-static void MODE_Restore(enum LIN_VER* lin, uint32_t address){
+// This function read mode_work value
+static void MODE_Restore(enum LIN_VER *lin, uint32_t address)
+{
   uint8_t value = FLASH_ReadByte(address);
-  *lin = (LIN_VER) value;
+  *lin = (LIN_VER)value;
 }
-//This function update LIN_Mode value
-static void MODE_Update(enum LIN_VER* lin, uint32_t address){
-  uint8_t writeVal = (uint8_t) *lin;
+// This function update LIN_Mode value
+static void MODE_Update(enum LIN_VER *lin, uint32_t address)
+{
+  uint8_t writeVal = (uint8_t)*lin;
   FLASH_Unlock(FLASH_MEMTYPE_DATA);
   FLASH_ProgramByte(address, writeVal);
   FLASH_Lock(FLASH_MEMTYPE_DATA);
