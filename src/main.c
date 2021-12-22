@@ -83,7 +83,7 @@ void main(void)
         }
         else if (data == 0x25)
         {
-          BAUD_LIN = 9600;
+          BAUD_LIN = 19200;
           print("19200\n\r", 7);
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
         }
