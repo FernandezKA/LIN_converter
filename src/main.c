@@ -1,6 +1,6 @@
 #include "init.h"
 #include "help.h"
-
+#include "communication.h"
 // Function declaration
 static void SysInit(void);
 static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address);
@@ -78,13 +78,13 @@ void main(void)
         else if (data == 0x20)
         {
           BAUD_LIN = 9600;
-          print("9600\n\r", 6);
+          print("9600\n", 5);
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
         }
         else if (data == 0x25)
         {
           BAUD_LIN = 19200;
-          print("19200\n\r", 7);
+          print("19200\n", 6);
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
         }
         else if (data == 0x30)
@@ -116,76 +116,93 @@ void main(void)
         break;
 
       case w_pid:
-        LIN_Send.PID = GetPID(Pull(&sw_receive));
-        // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
-        P0 = ((LIN_Send.PID & (1 << 0)) ^ (LIN_Send.PID & (1 << 1) >> 1) ^ (LIN_Send.PID & (1 << 2) >> 2) ^ (LIN_Send.PID & (1 << 4) >> 4)) << 7;
-        P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1 << 3) >> 3) ^ (LIN_Send.PID & (1 << 4) >> 4) ^ (LIN_Send.PID & (1 << 5) >> 5)) << 6);
-        parity = P0 | P1;
-        // Calculate CRC
-        LIN_Send.CRC = 0xFF;
-        if (LIN_ver == LIN_1_3)
+        //static uint8_t hexPidPart =  Pull(&sw_receive);
+        GetDigit(Pull(&sw_receive));
+        if (ValueReceived == value_incompleted)
         {
-          asm("nop");
+          fsm_receive = w_pid;
         }
-        else if (LIN_ver == LIN_2_1)
+        else if (ValueReceived == value_completed)
         {
-          CRC8(&LIN_Send.CRC, LIN_Send.PID, false);
+          LIN_Send.PID = GetPID(resValue);
+          // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
+          P0 = ((LIN_Send.PID & (1 << 0)) ^ (LIN_Send.PID & (1 << 1) >> 1) ^ (LIN_Send.PID & (1 << 2) >> 2) ^ (LIN_Send.PID & (1 << 4) >> 4)) << 7;
+          P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1 << 3) >> 3) ^ (LIN_Send.PID & (1 << 4) >> 4) ^ (LIN_Send.PID & (1 << 5) >> 5)) << 6);
+          parity = P0 | P1;
+          // Calculate CRC
+          LIN_Send.CRC = 0xFF;
+          if (LIN_ver == LIN_1_3)
+          {
+            asm("nop");
+          }
+          else if (LIN_ver == LIN_2_1)
+          {
+            CRC8(&LIN_Send.CRC, LIN_Send.PID, false);
+          }
+          // Define size of packet
+          if (LIN_Send.PID < 0x1FU)
+          {
+            LIN_Send.SIZE = bytes_2;
+          }
+          else if (LIN_Send.PID < 0x2FU)
+          {
+            LIN_Send.SIZE = bytes_4;
+          }
+          else if (LIN_Send.PID < 0x3FU)
+          {
+            LIN_Send.SIZE = bytes_8;
+          }
+          else
+          {
+            fsm_receive = w_mode;
+            ResetState();
+            break;
+          }
+          LIN_Send.PID |= parity;
+          fsm_receive = w_data;
         }
-        // Define size of packet
-        if (LIN_Send.PID < 0x1FU)
-        {
-          LIN_Send.SIZE = bytes_2;
-        }
-        else if (LIN_Send.PID < 0x2FU)
-        {
-          LIN_Send.SIZE = bytes_4;
-        }
-        else if (LIN_Send.PID < 0x3FU)
-        {
-          LIN_Send.SIZE = bytes_8;
-        }
-        else
-        {
-          fsm_receive = w_mode;
-          ResetState();
-          break;
-        }
-        LIN_Send.PID |= parity;
-        fsm_receive = w_data;
         break;
-
       case w_data:
-        if (CountDataLIN < LIN_Send.SIZE - 1)
+        //static uint8_t hexDataPart = Pull(&sw_receive);
+        GetDigit(Pull(&sw_receive));
+        if (ValueReceived == value_incompleted)
         {
-          uint8_t u8DataReaded = Pull(&sw_receive);
-          CRC8(&LIN_Send.CRC, u8DataReaded, false);
-          LIN_Send.Data[CountDataLIN++] = u8DataReaded;
+          fsm_receive = w_data;
         }
-        else if (CountDataLIN == LIN_Send.SIZE - 1) // It's CRC field
+        else if (ValueReceived == value_completed)
         {
-          // Receive CRC and send packet
-          LIN_Send.Data[CountDataLIN] = Pull(&sw_receive);
-          CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
-          CountDataLIN = 0x00U;
-          fsm_receive = w_mode;
-          if (LIN_Send.Mode == SLAVE)
+          if (CountDataLIN < LIN_Send.SIZE - 1)
           {
-            SendLIN = true;
-            while (SendLIN)
+            uint8_t u8DataReaded = resValue;
+            CRC8(&LIN_Send.CRC, u8DataReaded, false);
+            LIN_Send.Data[CountDataLIN++] = u8DataReaded;
+          }
+          else if (CountDataLIN == LIN_Send.SIZE - 1) // It's CRC field
+          {
+            // Receive CRC and send packet
+            LIN_Send.Data[CountDataLIN] = resValue;
+            CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
+            CountDataLIN = 0x00U;
+             fsm_receive = w_mode;
+            if (LIN_Send.Mode == SLAVE)
             {
-              asm("nop");
-            } // Wait while not handled request
-            ResetState();
-          }
-          else if (LIN_Send.Mode == MASTER)
-          {
-            send_response(&LIN_Send, true);
-            ResetState();
-          }
-          while (!sw_receive.isEmpty)
-          { // Clear all of data, because it's mistake
-            // Pull(&sw_receive);
-            ResetState();
+              SendLIN = true;
+              while (SendLIN)
+              {
+                asm("nop");
+              } // Wait while not handled request
+              ResetState();
+            }
+            else if (LIN_Send.Mode == MASTER)
+            {
+              send_response(&LIN_Send, true);
+              ResetState();
+            }
+            while (!sw_receive.isEmpty)
+            { // Clear all of data, because it's mistake
+              // Pull(&sw_receive);
+              ResetState();
+            }
           }
         }
         break;

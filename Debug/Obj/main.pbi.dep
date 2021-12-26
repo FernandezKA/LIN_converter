@@ -1,5 +1,6 @@
-main.pbi: C:\dev\MCU\STM8\LIN_Converter\inc\help.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\softuart.h \
+main.pbi: C:\dev\STM8\LIN_converter\inc\communication.h \
+  C:\dev\STM8\LIN_converter\inc\help.h \
+  C:\dev\STM8\LIN_converter\inc\softuart.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdbool.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
@@ -9,17 +10,17 @@ main.pbi: C:\dev\MCU\STM8\LIN_Converter\inc\help.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Product.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Defaults.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\uart.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\fifo.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\lin.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_tim2.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_flash.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_itc.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_uart1.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_gpio.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_clk.h \
+  C:\dev\STM8\LIN_converter\inc\uart.h \
+  C:\dev\STM8\LIN_converter\inc\fifo.h \
+  C:\dev\STM8\LIN_converter\inc\lin.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_tim2.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_flash.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_itc.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_uart1.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_gpio.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_clk.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\stm8s_conf.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\init.h \
-  C:\dev\MCU\STM8\LIN_Converter\src\main.c
+  C:\dev\STM8\LIN_converter\inc\stm8s_conf.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s.h \
+  C:\dev\STM8\LIN_converter\inc\init.h \
+  C:\dev\STM8\LIN_converter\src\main.c

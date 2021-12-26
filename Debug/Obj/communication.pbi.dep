@@ -1,14 +1,11 @@
-communication.pbi: C:\dev\MCU\STM8\LIN_Converter\src\communication.c \
-  C:\dev\MCU\STM8\LIN_Converter\inc\communication.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc/lin.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc/stm8s_conf.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\stm8s_conf.h \
+communication.pbi: C:\dev\STM8\LIN_converter\inc\softuart.h \
+  C:\dev\STM8\LIN_converter\inc\fifo.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_uart1.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_gpio.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_clk.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_clk.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc/stm8s.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_gpio.h \
-  C:\dev\MCU\STM8\LIN_Converter\lib\SPL\inc\stm8s_uart1.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc/fifo.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\fifo.h \
-  C:\dev\MCU\STM8\LIN_Converter\inc\softuart.h
+  C:\dev\STM8\LIN_converter\inc\stm8s_conf.h \
+  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s.h \
+  C:\dev\STM8\LIN_converter\inc\lin.h \
+  C:\dev\STM8\LIN_converter\inc\communication.h \
+  C:\dev\STM8\LIN_converter\src\communication.c
