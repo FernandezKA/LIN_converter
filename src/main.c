@@ -117,7 +117,7 @@ void main(void)
 
       case w_pid:
         //static uint8_t hexPidPart =  Pull(&sw_receive);
-        GetDigit(Pull(&sw_receive));
+        GetHex(Pull(&sw_receive));
         if (ValueReceived == value_incompleted)
         {
           fsm_receive = w_pid;
@@ -164,7 +164,7 @@ void main(void)
         break;
       case w_data:
         //static uint8_t hexDataPart = Pull(&sw_receive);
-        GetDigit(Pull(&sw_receive));
+        GetHex(Pull(&sw_receive));
         if (ValueReceived == value_incompleted)
         {
           fsm_receive = w_data;
@@ -213,7 +213,7 @@ void main(void)
     {
       if (test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
       {
-        uart_send(Pull(&sw_transmit));
+        LinPrint(Pull(&sw_transmit));
       }
     }
   }

@@ -8,10 +8,12 @@ enum PartDigit{
 };
 
 //User defines
+//For RS232 - LIN parser
 extern enum PartDigit ValueReceived;
 extern uint8_t resValue;
-//User variables
-enum PartDigit GetDigit(char digit);
+enum PartDigit GetHex(char digit);
+void GetASCII(uint8_t value, uint8_t* s1, uint8_t* s2);
+void LinPrint(uint8_t val);
 //User functions
 void Reflect_LIN(LIN_Header header, LIN_Response response);
 #endif

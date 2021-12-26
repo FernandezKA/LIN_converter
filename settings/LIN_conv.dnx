@@ -104,8 +104,7 @@
         <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\communication.c}.9.1" 0 0 0 0 "" 0 ""</Bp1>
         <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.127.9" 1 0 0 0 "" 0 ""</Bp2>
         <Bp3>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.88.7" 1 0 0 0 "" 0 ""</Bp3>
-        <Bp4>_ "STD_CODE" "{$PROJ_DIR$\src\main.c}.186.14" 1 0 0 0 "" 0 ""</Bp4>
-        <Count>5</Count>
+        <Count>4</Count>
     </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
