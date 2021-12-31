@@ -78,24 +78,24 @@ void main(void)
         else if (data == 0x20)
         {
           BAUD_LIN = 9600;
-          print("9600\n", 5);
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+          print("Baud 9600\n\r", 11);
         }
         else if (data == 0x25)
         {
           BAUD_LIN = 19200;
-          print("19200\n", 6);
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+          print("Baud 19200\n\r", 12);
         }
         else if (data == 0x30)
         {
           if (BAUD_LIN == 9600)
           {
-            print("BAUD 9600\n\r", 11);
+            print("Baud 9600\n\r", 11);
           }
           else
           {
-            print("BAUD 19200\n\r", 12);
+            print("Baud 19200\n\r", 12);
           }
 
           if (LIN_ver == LIN_1_3)

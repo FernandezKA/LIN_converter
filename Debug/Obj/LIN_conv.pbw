@@ -41004,7 +41004,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4992@F@main#@u8DataReaded",
+    "ID": "c:main.c@5008@F@main#@u8DataReaded",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8DataReaded",
@@ -41088,7 +41088,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@7572@F@MODE_Restore#*$@E@LIN_VER#l#@value",
+    "ID": "c:main.c@7588@F@MODE_Restore#*$@E@LIN_VER#l#@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
@@ -41116,7 +41116,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@7750@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
+    "ID": "c:main.c@7766@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
     "What": "Variable",
     "defdec": "Def",
     "display": "writeVal",
