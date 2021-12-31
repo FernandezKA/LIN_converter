@@ -108,6 +108,9 @@ void main(void)
           }
           SysInit();
         }
+        else if(data == 0x35){
+          print("Lin dev\n\r", 9);
+        }
         else
         { // Mistake
           fsm_receive = w_mode;
