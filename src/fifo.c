@@ -1,7 +1,5 @@
 //Includes
 #include "fifo.h"
-//User variable declarations
-//User function definitions
 //This function get data from fifo
 uint8_t Pull(FIFO *fifo)
 {
