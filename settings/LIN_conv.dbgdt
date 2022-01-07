@@ -802,7 +802,7 @@
                     <item>resValue</item>
                     <item>digit</item>
                     <item>pText</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

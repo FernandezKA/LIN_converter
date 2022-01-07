@@ -3,6 +3,7 @@
 #include "lin.h"
 #include "uart.h"
 #include "init.h"
+#define EXTI_PORTD_IRQ
 /******************************************************************************/
 //User variables
 uint16_t u16BreakLength;
@@ -37,7 +38,7 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler, 6)
       uint16_t HighTime = 1450;
       //Check break length
       if(BAUD_LIN == 9600){
-        LowTime = 1200;
+        LowTime = 1100;
         HighTime = 1450;
       }
       else{
