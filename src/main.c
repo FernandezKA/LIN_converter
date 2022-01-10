@@ -79,12 +79,14 @@ void main(void)
         {
           BAUD_LIN = 9600;
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+          UART_HW_Config();
           print("Baud 9600\n\r", 11);
         }
         else if (data == 0x25)
         {
           BAUD_LIN = 19200;
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+          UART_HW_Config();
           print("Baud 19200\n\r", 12);
         }
         else if (data == 0x30)
@@ -273,6 +275,7 @@ static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address)
     *BAUD_VAR = 19200;
     UpdateBAUD_EEPROM(BAUD_LIN, address);
   }
+  UART_HW_Config();
 }
 // This function read mode_work value
 static void MODE_Restore(enum LIN_VER *lin, uint32_t address)

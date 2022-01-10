@@ -148,6 +148,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
     }
     else if (countReceived == header.size)
     {
+      asm("nop");
       if (response.CRC == UART_DR)
       { //Packed received witout mistakes
         currentHeader = wait_break;

@@ -41018,13 +41018,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5008@F@main#@u8DataReaded",
+    "ID": "c:main.c@5066@F@main#@u8DataReaded",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8DataReaded",
     "location": {
       "column": "21",
-      "line": "179",
+      "line": "181",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "u8DataReaded",
@@ -41038,7 +41038,7 @@
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "226",
+      "line": "228",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -41052,7 +41052,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "232",
+      "line": "234",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -41066,7 +41066,7 @@
     "display": "void ResetState(void)",
     "location": {
       "column": "6",
-      "line": "244",
+      "line": "246",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "ResetState",
@@ -41080,7 +41080,7 @@
     "display": "void BAUD_Restore(uint16_t *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "258",
+      "line": "260",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "BAUD_Restore",
@@ -41094,7 +41094,7 @@
     "display": "void MODE_Restore(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "278",
+      "line": "281",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "MODE_Restore",
@@ -41102,13 +41102,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@7588@F@MODE_Restore#*$@E@LIN_VER#l#@value",
+    "ID": "c:main.c@7667@F@MODE_Restore#*$@E@LIN_VER#l#@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "280",
+      "line": "283",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "value",
@@ -41122,7 +41122,7 @@
     "display": "void MODE_Update(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "284",
+      "line": "287",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "MODE_Update",
@@ -41130,13 +41130,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@7766@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
+    "ID": "c:main.c@7845@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
     "What": "Variable",
     "defdec": "Def",
     "display": "writeVal",
     "location": {
       "column": "11",
-      "line": "286",
+      "line": "289",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\main.c"
     },
     "name": "writeVal",
@@ -41592,7 +41592,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1604@F@UART_RX_IRQ#c#@u8SynchField",
+    "ID": "c:uart.c@1677@F@UART_RX_IRQ#c#@u8SynchField",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8SynchField",
@@ -41606,7 +41606,7 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@1637@F@UART_RX_IRQ#c#@u8PIDField",
+    "ID": "c:uart.c@1711@F@UART_RX_IRQ#c#@u8PIDField",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8PIDField",
@@ -41626,7 +41626,7 @@
     "display": "void UART1_TX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "173",
+      "line": "174",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\uart.c"
     },
     "name": "UART1_TX_IRQHandler",
@@ -41640,7 +41640,7 @@
     "display": "void UART1_RX_IRQHandler(void)",
     "location": {
       "column": "1",
-      "line": "179",
+      "line": "180",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\uart.c"
     },
     "name": "UART1_RX_IRQHandler",
@@ -41648,13 +41648,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@3760@F@UART1_RX_IRQHandler#@u8Data",
+    "ID": "c:uart.c@3959@F@UART1_RX_IRQHandler#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
     "location": {
       "column": "11",
-      "line": "181",
+      "line": "182",
       "path": "C:\\dev\\STM8\\LIN_converter\\src\\uart.c"
     },
     "name": "u8Data",
