@@ -87,4 +87,6 @@ void LinPrint(uint8_t val){
   uart_send(firstDigit);
   while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
   uart_send(secondDigit);
+  while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
+  uart_send(' ');
 }
