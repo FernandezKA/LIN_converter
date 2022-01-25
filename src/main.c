@@ -32,6 +32,23 @@ void main(void)
   BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
   MODE_Restore(&LIN_ver, MODE_ADDR);
   PrintHelp();
+  if (BAUD_LIN == 9600)
+  {
+    print("Baud 9600\r\n", 11);
+  }
+  else
+  {
+    print("Baud 19200\r\n", 12);
+  }
+
+  if (LIN_ver == LIN_1_3)
+  {
+    print("LIN ver. 1.3\r\n", 14);
+  }
+  else
+  {
+    print("LIN ver. 2.1\r\n", 14);
+  }
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
