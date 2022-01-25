@@ -1,20 +1,20 @@
-help.pbi: C:\dev\STM8\LIN_converter\src\help.c \
-  C:\dev\STM8\LIN_converter\inc\help.h \
-  C:\dev\STM8\LIN_converter\inc/init.h \
-  C:\dev\STM8\LIN_converter\inc/stm8s_conf.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s.h \
-  C:\dev\STM8\LIN_converter\inc\stm8s_conf.h \
+help.pbi: C:\PRJ\LIN_adapter\LIN_converter\src\help.c \
+  C:\PRJ\LIN_adapter\LIN_converter\inc\help.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc/init.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc/stm8s_conf.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc\stm8s_conf.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_clk.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc/stm8s.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_gpio.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_uart1.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_itc.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_flash.h \
-  C:\dev\STM8\LIN_converter\lib\SPL\inc\stm8s_tim2.h \
-  C:\dev\STM8\LIN_converter\inc/lin.h \
-  C:\dev\STM8\LIN_converter\inc/fifo.h \
-  C:\dev\STM8\LIN_converter\inc/uart.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s_clk.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc/stm8s.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s_gpio.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s_uart1.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s_itc.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s_flash.h \
+  C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc\stm8s_tim2.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc/lin.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc/fifo.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc/uart.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\yvals.h \
@@ -25,5 +25,5 @@ help.pbi: C:\dev\STM8\LIN_converter\src\help.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdbool.h \
-  C:\dev\STM8\LIN_converter\inc/softuart.h \
-  C:\dev\STM8\LIN_converter\inc\softuart.h
+  C:\PRJ\LIN_adapter\LIN_converter\inc/softuart.h \
+  C:\PRJ\LIN_adapter\LIN_converter\inc\softuart.h

@@ -1,18 +1,18 @@
-"C:\dev\STM8\LIN_converter\src\lin.c"
+"C:\PRJ\LIN_adapter\LIN_converter\src\lin.c"
 -std=c++98
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\dev\STM8\LIN_converter\Debug\Obj\lin.pbi.dep
+C:\PRJ\LIN_adapter\LIN_converter\Debug\Obj\lin.pbi.dep
 -o
 lin.pbi
 -I
-C:\dev\STM8\LIN_converter\src
+C:\PRJ\LIN_adapter\LIN_converter\src
 -I
-C:\dev\STM8\LIN_converter\inc
+C:\PRJ\LIN_adapter\LIN_converter\inc
 -I
-C:\dev\STM8\LIN_converter\lib\SPL\inc
+C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc
 -I
@@ -20,9 +20,9 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc\c
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc\ecpp
 -I
-C:\dev\STM8\LIN_converter\inc
+C:\PRJ\LIN_adapter\LIN_converter\inc
 -I
-C:\dev\STM8\LIN_converter\lib\SPL\inc
+C:\PRJ\LIN_adapter\LIN_converter\lib\SPL\inc
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
