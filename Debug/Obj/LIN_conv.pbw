@@ -40036,34 +40036,6 @@
     "scope": null
   },
   {
-    "ID": "c:communication.c@1878@F@LinPrint#c#@firstDigit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "firstDigit",
-    "location": {
-      "column": "11",
-      "line": "84",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "firstDigit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:communication.c@1878@F@LinPrint#c#@secondDigit",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "secondDigit",
-    "location": {
-      "column": "23",
-      "line": "84",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "secondDigit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@Pull#*$@S@FIFO_STR#",
     "What": "Function",
     "defdec": "Def",
