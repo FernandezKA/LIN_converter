@@ -66,13 +66,13 @@ void main(void)
         else if (data == 0x10)
         {
           LIN_ver = LIN_1_3;
-          print("LIN_1_3\n\r", 9);
+          print("LIN_1_3\r\n", 9);
           MODE_Update(&LIN_ver, MODE_ADDR);
         }
         else if (data == 0x15)
         {
           LIN_ver = LIN_2_1;
-          print("LIN_2_1\n\r", 9);
+          print("LIN_2_1\r\n", 9);
           MODE_Update(&LIN_ver, MODE_ADDR);
         }
         else if (data == 0x20)
@@ -80,43 +80,44 @@ void main(void)
           BAUD_LIN = 9600;
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           UART_HW_Config();
-          print("Baud 9600\n\r", 11);
+          print("Baud 9600\r\n", 11);
         }
         else if (data == 0x25)
         {
           BAUD_LIN = 19200;
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           UART_HW_Config();
-          print("Baud 19200\n\r", 12);
+          print("Baud 19200\r\n", 12);
         }
         else if (data == 0x30)
         {
           if (BAUD_LIN == 9600)
           {
-            print("Baud 9600\n\r", 11);
+            print("Baud 9600\r\n", 11);
           }
           else
           {
-            print("Baud 19200\n\r", 12);
+            print("Baud 19200\r\n", 12);
           }
 
           if (LIN_ver == LIN_1_3)
           {
-            print("LIN ver. 1.3\n\r", 14);
+            print("LIN ver. 1.3\r\n", 14);
           }
           else
           {
-            print("LIN ver. 2.1\n\r", 14);
+            print("LIN ver. 2.1\r\n", 14);
           }
           SysInit();
         }
-        else if(data == 0x35){
-          asm("nop");//Only for debug
-          print("Lin dev\n\r", 9);
+        else if (data == 0x35)
+        {
+          print("Lin dev\r\n", 9);
         }
         else
         { // Mistake
           fsm_receive = w_mode;
+          print("Recieve error\r\n", 15);
           ResetState();
         }
         break;
@@ -137,6 +138,7 @@ void main(void)
           parity = P0 | P1;
           // Calculate CRC
           LIN_Send.CRC = 0xFF;
+          //If defined standart CRC sum calculate, we don't added to the CRC PID
           if (LIN_ver == LIN_1_3)
           {
             asm("nop");
@@ -189,7 +191,7 @@ void main(void)
             LIN_Send.Data[CountDataLIN] = resValue;
             CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
             CountDataLIN = 0x00U;
-             fsm_receive = w_mode;
+            fsm_receive = w_mode;
             if (LIN_Send.Mode == SLAVE)
             {
               SendLIN = true;

@@ -142,32 +142,20 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
     break;
 
   case wait_data:
-    if (countReceived < header.size)
-    {
-      response.CRC ^= UART_DR;
-      response.data[countReceived++] = UART_DR;
-    }
+        if (countReceived < header.size)
+        {
+    //      response.CRC ^= UART_DR;
+          response.data[countReceived++] = UART_DR;
+        }
     else if (countReceived == header.size)
     {
-      asm("nop");
-      if (response.CRC == UART_DR)
-      { //Packed received witout mistakes
-        currentHeader = wait_break;
-        asm("sim");
-        Reflect_LIN(header, response);
-        asm("rim");
-        SetExtIRQ();
-      }
-      else
-      { //CRC received ant matched is not equal
-        //At now CRC working only without ovf sum register
-        asm("sim");
-        print("CRC isn't equal\r\n", 17); 
-        Reflect_LIN(header, response);
-        asm("rim");
-        currentHeader = wait_break;
-        SetExtIRQ();
-      }
+      //TODO: we calculate CRC into the PC
+      currentHeader = wait_break;
+      response.CRC = UART_DR;
+      asm("sim");
+      Reflect_LIN(header, response);
+      asm("rim");
+      SetExtIRQ();
     }
     break;
 
