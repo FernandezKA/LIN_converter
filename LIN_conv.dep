@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>597178667</fileChecksum>
+    <fileChecksum>2784249946</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -895,7 +895,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 83 97 108 84 86 106 170 1 188 187 192 47 42 60 39 61 3 102 91 87 95 101 79 92 82</file>
+                    <file> 83 97 108 84 86 106 170 1 188 187 192 47 42 60 39 61 3 102 91 87 95 101 79 92 82 85</file>
                 </tool>
             </inputs>
         </file>

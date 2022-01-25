@@ -111,6 +111,7 @@ void main(void)
           SysInit();
         }
         else if(data == 0x35){
+          asm("nop");//Only for debug
           print("Lin dev\n\r", 9);
         }
         else

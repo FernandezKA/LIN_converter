@@ -2,6 +2,7 @@
 #include "init.h"
 #include "lin.h"
 #include "communication.h"
+#include "help.h"
 //Function declaration
 inline static void UART_RX_IRQ(uint8_t UART_DR);
 inline static void UART_TX_IRQ(void);
@@ -159,6 +160,11 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       }
       else
       { //CRC received ant matched is not equal
+        //At now CRC working only without ovf sum register
+        asm("sim");
+        print("CRC isn't equal\r\n", 17); 
+        Reflect_LIN(header, response);
+        asm("rim");
         currentHeader = wait_break;
         SetExtIRQ();
       }
