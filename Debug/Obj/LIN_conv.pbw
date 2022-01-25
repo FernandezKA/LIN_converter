@@ -39670,6 +39670,146 @@
     "scope": null
   },
   {
+    "ID": "c:@isSecondDigit",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "isSecondDigit",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "isSecondDigit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@resValue",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "resValue",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "resValue",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@ValueReceived",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "ValueReceived",
+    "location": {
+      "column": "16",
+      "line": "7",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "ValueReceived",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Reflect_LIN#$@S@LIN_Header#$@S@LIN_Response#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Reflect_LIN(LIN_Header, LIN_Response)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "Reflect_LIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:communication.c@349@F@Reflect_LIN#$@S@LIN_Header#$@S@LIN_Response#@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "12",
+      "line": "13",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetHex#C#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "enum PartDigit GetHex(char)",
+    "location": {
+      "column": "16",
+      "line": "20",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "GetHex",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GetASCII#c#*c#S0_#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void GetASCII(uint8_t, uint8_t *, uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "66",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "GetASCII",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:communication.c@1528@F@GetASCII#c#*c#S0_#@firstDigit",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "firstDigit",
+    "location": {
+      "column": "11",
+      "line": "67",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "firstDigit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:communication.c@1564@F@GetASCII#c#*c#S0_#@secondDigit",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "secondDigit",
+    "location": {
+      "column": "11",
+      "line": "68",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "secondDigit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LinPrint#c#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LinPrint(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "83",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
+    },
+    "name": "LinPrint",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:communication.h@35@macro@_communication_h_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -39893,146 +40033,6 @@
     },
     "name": "Reflect_LIN",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@isSecondDigit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "isSecondDigit",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "isSecondDigit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@resValue",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "resValue",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "resValue",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@ValueReceived",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "ValueReceived",
-    "location": {
-      "column": "16",
-      "line": "7",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "ValueReceived",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Reflect_LIN#$@S@LIN_Header#$@S@LIN_Response#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Reflect_LIN(LIN_Header, LIN_Response)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "Reflect_LIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:communication.c@347@F@Reflect_LIN#$@S@LIN_Header#$@S@LIN_Response#@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "12",
-      "line": "13",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GetHex#C#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "enum PartDigit GetHex(char)",
-    "location": {
-      "column": "16",
-      "line": "20",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "GetHex",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GetASCII#c#*c#S0_#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void GetASCII(uint8_t, uint8_t *, uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "66",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "GetASCII",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:communication.c@1526@F@GetASCII#c#*c#S0_#@firstDigit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "firstDigit",
-    "location": {
-      "column": "11",
-      "line": "67",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "firstDigit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:communication.c@1562@F@GetASCII#c#*c#S0_#@secondDigit",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "secondDigit",
-    "location": {
-      "column": "11",
-      "line": "68",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "secondDigit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@LinPrint#c#",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void LinPrint(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "83",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\communication.c"
-    },
-    "name": "LinPrint",
-    "origin": "project_file",
     "scope": null
   },
   {
