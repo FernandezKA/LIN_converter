@@ -81,12 +81,12 @@ void GetASCII(uint8_t value, uint8_t* s1, uint8_t* s2){
 }
 //Send LIN recognized packet
 void LinPrint(uint8_t val){
-  //uint8_t firstDigit, secondDigit;
-  //GetASCII(val, &firstDigit, &secondDigit);
-  //while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
-  uart_send(val);
-  //while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
-  //uart_send(' ');
-  //while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
-  //uart_send(' ');
+  uint8_t firstDigit, secondDigit;
+  GetASCII(val, &firstDigit, &secondDigit);
+  while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
+  uart_send(firstDigit);
+  while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
+  uart_send(secondDigit);
+  while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
+  uart_send(' ');
 }

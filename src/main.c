@@ -154,7 +154,7 @@ void main(void)
           P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1 << 3) >> 3) ^ (LIN_Send.PID & (1 << 4) >> 4) ^ (LIN_Send.PID & (1 << 5) >> 5)) << 6);
           parity = P0 | P1;
           // Calculate CRC
-          LIN_Send.CRC = 0xFF;
+          LIN_Send.CRC = 0x00;
           //If defined standart CRC sum calculate, we don't added to the CRC PID
           if (LIN_ver == LIN_1_3)
           {
@@ -162,7 +162,7 @@ void main(void)
           }
           else if (LIN_ver == LIN_2_1)
           {
-            CRC8(&LIN_Send.CRC, LIN_Send.PID, false);
+            CRC8(&LIN_Send.CRC, (LIN_Send.PID&0x3F), false);
           }
           // Define size of packet
           if (LIN_Send.PID < 0x1FU)

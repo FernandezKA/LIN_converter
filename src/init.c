@@ -95,15 +95,23 @@ void GetIndicate(void){
 //This function calcuate CRC
 void CRC8(uint8_t *CRC, uint8_t data,bool isEnd)
 {
- //uint16_t sum = *CRC + data;
- //if(sum >= 0xFF){
- //  sum += 1;
- //}
- //*CRC = sum & 0xFF; 
  if(!isEnd){
-   *CRC ^= 0xFF; 
+   if(*CRC + data > 0xFF){
+     ++(*CRC);
+     *CRC += data;
+   }
+   else{
+     *CRC += data;
+   }
  }
  else{
+      if(*CRC + data > 0xFF){
+     ++(*CRC);
+     *CRC += data;
+   }
+   else{
+     *CRC += data;
+   }
    *CRC^=0xFF;
  }
 }
