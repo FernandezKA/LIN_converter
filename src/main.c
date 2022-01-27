@@ -34,20 +34,20 @@ void main(void)
   PrintHelp();
   if (BAUD_LIN == 9600)
   {
-    print("Baud 9600\r\n", 11);
+    print("iBaud 9600\r\n", 12);
   }
   else
   {
-    print("Baud 19200\r\n", 12);
+    print("iBaud 19200\r\n", 12);
   }
 
   if (LIN_ver == LIN_1_3)
   {
-    print("LIN ver. 1.3\r\n", 14);
+    print("iLIN ver. 1.3\r\n", 15);
   }
   else
   {
-    print("LIN ver. 2.1\r\n", 14);
+    print("iLIN ver. 2.1\r\n", 15);
   }
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
@@ -83,47 +83,47 @@ void main(void)
         else if (data == 0x10)
         {
           LIN_ver = LIN_1_3;
-          print("LIN_1_3\r\n", 9);
           MODE_Update(&LIN_ver, MODE_ADDR);
+          print("iLin 1.3\r\n", 10);
         }
         else if (data == 0x15)
         {
           LIN_ver = LIN_2_1;
-          print("LIN_2_1\r\n", 9);
           MODE_Update(&LIN_ver, MODE_ADDR);
+          print("iLin 2.1\r\n", 10);
         }
         else if (data == 0x20)
         {
           BAUD_LIN = 9600;
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           UART_HW_Config();
-          print("Baud 9600\r\n", 11);
+          print("iBaud 9600\r\n", 12);
         }
         else if (data == 0x25)
         {
           BAUD_LIN = 19200;
           UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
           UART_HW_Config();
-          print("Baud 19200\r\n", 12);
+          print("iBaud 19200\r\n", 13);
         }
         else if (data == 0x30)
         {
           if (BAUD_LIN == 9600)
           {
-            print("Baud 9600\r\n", 11);
+            print("iBaud 9600\r\n", 12);
           }
           else
           {
-            print("Baud 19200\r\n", 12);
+            print("iBaud 19200\r\n", 13);
           }
 
           if (LIN_ver == LIN_1_3)
           {
-            print("LIN ver. 1.3\r\n", 14);
+            print("LIN ver. 1.3\r\n", 15);
           }
           else
           {
-            print("LIN ver. 2.1\r\n", 14);
+            print("LIN ver. 2.1\r\n", 15);
           }
           SysInit();
         }
@@ -134,7 +134,7 @@ void main(void)
         else
         { // Mistake
           fsm_receive = w_mode;
-          print("Recieve error\r\n", 15);
+          print("iRecieve error\r\n", 15);
           ResetState();
         }
         break;
