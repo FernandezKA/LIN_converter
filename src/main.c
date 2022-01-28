@@ -278,6 +278,7 @@ void main(void)
             else if (LIN_Send.Mode == SLAVE_ZD)
             {
               asm("nop"); //For debug
+              SendSlave_ZD(&LIN_Send);
               //TODO Send packet
               ResetState();
             }
@@ -334,7 +335,7 @@ void ResetState(void)
     Pull(&sw_receive);
   }
   fsm_receive = w_mode;
-  LIN_Send.CRC = 0xFF;
+  LIN_Send.CRC = 0x00;
   LIN_Send.PID = 0x00;
   LIN_Send.SIZE = bytes_2;
   LIN_Send.Mode = UNDEF;
@@ -370,5 +371,19 @@ static void MODE_Update(enum LIN_VER *lin, uint32_t address)
 
 //This is a send packet function at slave mode without delay
 inline void SendSlave_ZD(LIN_SEND* SendedPckt){
-  
+  asm("sim");
+    for(uint8_t i = 0; i < SendedPckt ->SIZE; ++i){
+      while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+      if(i < SendedPckt ->SIZE - 1){
+        UART1->DR = SendedPckt->Data[i];
+        CRC8(&(SendedPckt -> CRC), (SendedPckt->Data[i]),false);
+      }
+      else{
+        UART1->DR = SendedPckt->Data[i];
+        CRC8(&(SendedPckt -> CRC), (SendedPckt->Data[i]), true);
+      }
+    }
+    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+    UART1->DR = SendedPckt->CRC;
+    asm("rim");
 }
