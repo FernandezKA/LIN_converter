@@ -2,7 +2,7 @@
 #include "help.h"
 #include "communication.h"
 
-#define DEBUG
+//#define DEBUG
 // Function declaration
 static void SysInit(void);
 static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address);
