@@ -13,6 +13,7 @@ extern enum LIN_VER LIN_ver;
 enum LIN_MODE{
   MASTER,
   SLAVE, 
+  SLAVE_ZD, //Send packet with zeros delay
   UNDEF
 };
 

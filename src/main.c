@@ -1,11 +1,14 @@
 #include "init.h"
 #include "help.h"
 #include "communication.h"
+
+#define DEBUG
 // Function declaration
 static void SysInit(void);
 static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address);
 static void MODE_Restore(enum LIN_VER *lin, uint32_t address);
 static void MODE_Update(enum LIN_VER *lin, uint32_t address);
+inline void SendSlave_ZD(LIN_SEND* SendedPckt);
 // User variables
 uint16_t BAUD_LIN;
 FIFO sw_transmit;
@@ -20,6 +23,7 @@ enum FSM_REC
 {
   w_mode,
   w_pid,
+  w_size_zd,
   w_data
 };
 static FSM_REC fsm_receive = w_mode;
@@ -32,30 +36,34 @@ void main(void)
   BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
   MODE_Restore(&LIN_ver, MODE_ADDR);
   PrintHelp();
-  if (BAUD_LIN == 9600)
-  {
-    print("iBaud 9600\r\n", 12);
-  }
-  else
-  {
-    print("iBaud 19200\r\n", 12);
-  }
+  //  if (BAUD_LIN == 9600)
+  //  {
+  //    print("iBaud 9600\r\n", 12);
+  //  }
+  //  else
+  //  {
+  //    print("iBaud 19200\r\n", 12);
+  //  }
+  //
+  //  if (LIN_ver == LIN_1_3)
+  //  {
+  //    print("iLIN ver. 1.3\r\n", 15);
+  //  }
+  //  else
+  //  {
+  //    print("iLIN ver. 2.1\r\n", 15);
+  //  }
 
-  if (LIN_ver == LIN_1_3)
-  {
-    print("iLIN ver. 1.3\r\n", 15);
-  }
-  else
-  {
-    print("iLIN ver. 2.1\r\n", 15);
-  }
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
   static uint8_t CountDataLIN = 0x00;
+  bool commandRecieved = false;
   asm("rim");
+  //Infinite loop
   for (;;)
   {
+    //RS232 -> LIN
     if (test_status(receive_buffer_full) == receive_buffer_full)
     { // FIFO buffer for RS232, load data from UART
       uint8_t u8Data;
@@ -63,6 +71,8 @@ void main(void)
       Push(&sw_receive, u8Data);
     }
     /***********************************************************/
+    //Parse RS232 data
+
     if (!sw_receive.isEmpty)
     { // Parse data from RS232 to LIN
       switch (fsm_receive)
@@ -70,73 +80,95 @@ void main(void)
       case w_mode:
         static uint8_t data = 0xFF;
         data = Pull(&sw_receive);
-        if (data == 0x00)
-        { // Slave mode
-          LIN_Send.Mode = SLAVE;
-          fsm_receive = w_pid;
-        }
-        else if (data == 0x55)
-        { // Master mode
-          LIN_Send.Mode = MASTER;
-          fsm_receive = w_pid;
-        }
-        else if (data == 0x10)
+        //TODO parse c -> command
+        if (data == 0x0C && !commandRecieved)
         {
-          LIN_ver = LIN_1_3;
-          MODE_Update(&LIN_ver, MODE_ADDR);
-          print("iLin 1.3\r\n", 10);
+#ifdef DEBUG
+          print("It's a command\n\r", 16);
+#endif
+          commandRecieved = true;
+          break;
         }
-        else if (data == 0x15)
+        if (commandRecieved)
         {
-          LIN_ver = LIN_2_1;
-          MODE_Update(&LIN_ver, MODE_ADDR);
-          print("iLin 2.1\r\n", 10);
-        }
-        else if (data == 0x20)
-        {
-          BAUD_LIN = 9600;
-          UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
-          UART_HW_Config();
-          print("iBaud 9600\r\n", 12);
-        }
-        else if (data == 0x25)
-        {
-          BAUD_LIN = 19200;
-          UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
-          UART_HW_Config();
-          print("iBaud 19200\r\n", 13);
-        }
-        else if (data == 0x30)
-        {
-          if (BAUD_LIN == 9600)
+          if (data == 0x00)
+          { // Slave mode
+            LIN_Send.Mode = SLAVE;
+            fsm_receive = w_pid;
+          }
+          else if (data == 0x10)
           {
+#ifdef DEBUG
+            print("Slave zd\n\r", 10);
+#endif
+            print("Enter size of data\n\r", 20);
+            LIN_Send.Mode = SLAVE_ZD;
+            fsm_receive = w_size_zd;
+          }
+          else if (data == 0x55)
+          { // Master mode
+            LIN_Send.Mode = MASTER;
+            fsm_receive = w_pid;
+          }
+          else if (data == 0x11)
+          {
+            LIN_ver = LIN_1_3;
+            MODE_Update(&LIN_ver, MODE_ADDR);
+            print("iLin 1.3\r\n", 10);
+          }
+          else if (data == 0x15)
+          {
+            LIN_ver = LIN_2_1;
+            MODE_Update(&LIN_ver, MODE_ADDR);
+            print("iLin 2.1\r\n", 10);
+          }
+          else if (data == 0x20)
+          {
+            BAUD_LIN = 9600;
+            UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+            UART_HW_Config();
             print("iBaud 9600\r\n", 12);
           }
-          else
+          else if (data == 0x25)
           {
+            BAUD_LIN = 19200;
+            UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
+            UART_HW_Config();
             print("iBaud 19200\r\n", 13);
           }
-
-          if (LIN_ver == LIN_1_3)
+          else if (data == 0x30)
           {
-            print("LIN ver. 1.3\r\n", 15);
+            if (BAUD_LIN == 9600)
+            {
+              print("iBaud 9600\r\n", 12);
+            }
+            else
+            {
+              print("iBaud 19200\r\n", 13);
+            }
+
+            if (LIN_ver == LIN_1_3)
+            {
+              print("LIN ver. 1.3\r\n", 15);
+            }
+            else
+            {
+              print("LIN ver. 2.1\r\n", 15);
+            }
+            SysInit();
+          }
+          else if (data == 0x35)
+          {
+            print("Lin dev\r\n", 9);
           }
           else
-          {
-            print("LIN ver. 2.1\r\n", 15);
+          { // Mistake
+            fsm_receive = w_mode;
+            print("iRecieve error\r\n", 15);
+            ResetState();
           }
-          SysInit();
         }
-        else if (data == 0x35)
-        {
-          print("Lin dev\r\n", 9);
-        }
-        else
-        { // Mistake
-          fsm_receive = w_mode;
-          print("iRecieve error\r\n", 15);
-          ResetState();
-        }
+        commandRecieved = false;
         break;
 
       case w_pid:
@@ -162,7 +194,7 @@ void main(void)
           }
           else if (LIN_ver == LIN_2_1)
           {
-            CRC8(&LIN_Send.CRC, (LIN_Send.PID&0x3F), false);
+            CRC8(&LIN_Send.CRC, (LIN_Send.PID & 0x3F), false);
           }
           // Define size of packet
           if (LIN_Send.PID < 0x1FU)
@@ -187,6 +219,31 @@ void main(void)
           fsm_receive = w_data;
         }
         break;
+
+      case w_size_zd:
+        data = Pull(&sw_receive);
+        switch (data)
+        {
+        case 2:
+          LIN_Send.SIZE = bytes_2;
+          fsm_receive = w_data;
+          break;
+        case 4:
+          LIN_Send.SIZE = bytes_4;
+          fsm_receive = w_data;
+          break;
+        case 8:
+          LIN_Send.SIZE = bytes_8;
+          fsm_receive = w_data;
+          break;
+        default:
+          //TODO: Add mistake message
+          print("Invalid value\n\r", 15);
+          asm("nop");
+          break;
+        }
+        break;
+
       case w_data:
         //static uint8_t hexDataPart = Pull(&sw_receive);
         GetHex(Pull(&sw_receive));
@@ -216,6 +273,12 @@ void main(void)
               {
                 asm("nop");
               } // Wait while not handled request
+              ResetState();
+            }
+            else if (LIN_Send.Mode == SLAVE_ZD)
+            {
+              asm("nop"); //For debug
+              //TODO Send packet
               ResetState();
             }
             else if (LIN_Send.Mode == MASTER)
@@ -282,15 +345,8 @@ static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address)
   *BAUD_VAR = (FLASH_ReadByte(address) << 8); // Read MSB
   *BAUD_VAR |= FLASH_ReadByte(address + 1);   // Read LSB
   BAUD_LIN = *BAUD_VAR;
-  if (*BAUD_VAR == 9600)
-  {
-    asm("nop");
-  }
-  else if (*BAUD_VAR == 19200)
-  {
-    asm("nop");
-  }
-  else
+  //Upd baud value
+  if (*BAUD_VAR != 9600 && *BAUD_VAR != 19200)
   {
     *BAUD_VAR = 19200;
     UpdateBAUD_EEPROM(BAUD_LIN, address);
@@ -310,4 +366,9 @@ static void MODE_Update(enum LIN_VER *lin, uint32_t address)
   FLASH_Unlock(FLASH_MEMTYPE_DATA);
   FLASH_ProgramByte(address, writeVal);
   FLASH_Lock(FLASH_MEMTYPE_DATA);
+}
+
+//This is a send packet function at slave mode without delay
+inline void SendSlave_ZD(LIN_SEND* SendedPckt){
+  
 }
