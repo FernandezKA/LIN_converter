@@ -246,13 +246,14 @@ void main(void)
 
       case w_data:
         //static uint8_t hexDataPart = Pull(&sw_receive);
-        GetHex(Pull(&sw_receive));
-        if (ValueReceived == value_incompleted)
-        {
-          fsm_receive = w_data;
-        }
-        else if (ValueReceived == value_completed)
-        {
+        //GetHex(Pull(&sw_receive));
+        uint8_t u8DataReaded = Pull(&sw_receive);
+//        if (ValueReceived == value_incompleted)
+//        {
+//          fsm_receive = w_data;
+//        }
+//        else if (ValueReceived == value_completed)
+//        {
           if (CountDataLIN < LIN_Send.SIZE - 1)
           {
             uint8_t u8DataReaded = resValue;
@@ -293,7 +294,6 @@ void main(void)
               ResetState();
             }
           }
-        }
         break;
       }
     }
@@ -371,6 +371,7 @@ static void MODE_Update(enum LIN_VER *lin, uint32_t address)
 
 //This is a send packet function at slave mode without delay
 inline void SendSlave_ZD(LIN_SEND* SendedPckt){
+  print("SM", 2);
   asm("sim");
     for(uint8_t i = 0; i < SendedPckt ->SIZE; ++i){
       while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}

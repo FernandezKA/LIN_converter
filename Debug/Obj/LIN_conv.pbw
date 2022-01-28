@@ -41018,13 +41018,27 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6987@F@main#@u8DataReaded",
+    "ID": "c:main.c@6756@F@main#@u8DataReaded",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "u8DataReaded",
+    "location": {
+      "column": "17",
+      "line": "250",
+      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
+    },
+    "name": "u8DataReaded",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@7052@F@main#@u8DataReaded",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8DataReaded",
     "location": {
       "column": "21",
-      "line": "258",
+      "line": "259",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "u8DataReaded",
@@ -41102,7 +41116,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9756@F@MODE_Restore#*$@E@LIN_VER#l#@value",
+    "ID": "c:main.c@9810@F@MODE_Restore#*$@E@LIN_VER#l#@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
@@ -41130,7 +41144,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9934@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
+    "ID": "c:main.c@9988@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
     "What": "Variable",
     "defdec": "Def",
     "display": "writeVal",
@@ -41158,13 +41172,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10221@F@SendSlave_ZD#*$@S@LIN_SEND#@i",
+    "ID": "c:main.c@10294@F@SendSlave_ZD#*$@S@LIN_SEND#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "375",
+      "line": "376",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "i",
