@@ -272,15 +272,15 @@ if (BAUD_LIN == 9600)
             }
             else if (LIN_Send.Mode == SLAVE_ZD)
             {
-              asm("nop"); //For debug
-              print("iSended slave_wd packet\r\n",25); 
+              //asm("nop"); //For debug
+              //print("iSended slave_wd packet\r\n",25); 
               SendSlave_ZD(&LIN_Send);
               //TODO Send packet
               ResetState();
             }
             else if (LIN_Send.Mode == MASTER)
             {
-              print("iSended master packet\r\n",23); 
+              //print("iSended master packet\r\n",23); 
               send_response(&LIN_Send, true);
               ResetState();
             }
@@ -369,6 +369,7 @@ static void MODE_Update(enum LIN_VER *lin, uint32_t address)
 inline void SendSlave_ZD(LIN_SEND* SendedPckt){
   //print("SM", 2);
   asm("sim");
+  SendedPckt->CRC = 0x00;
     for(uint8_t i = 0; i < SendedPckt ->SIZE; ++i){
       while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
       if(i < SendedPckt ->SIZE - 1){
