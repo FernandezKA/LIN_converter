@@ -84,7 +84,7 @@ void main(void)
         if (data == 0x0C && !commandRecieved)
         {
 #ifdef DEBUG
-          print("It's a command\n\r", 16);
+          print("Command mode\n\r", 14);
 #endif
           commandRecieved = true;
           break;
@@ -173,14 +173,15 @@ void main(void)
 
       case w_pid:
         //static uint8_t hexPidPart =  Pull(&sw_receive);
-        GetHex(Pull(&sw_receive));
-        if (ValueReceived == value_incompleted)
-        {
-          fsm_receive = w_pid;
-        }
-        else if (ValueReceived == value_completed)
-        {
-          LIN_Send.PID = GetPID(resValue);
+        data = Pull(&sw_receive);
+        //GetHex(Pull(&sw_receive));
+//        if (ValueReceived == value_incompleted)
+//        {
+//          fsm_receive = w_pid;
+//        }
+//        else if (ValueReceived == value_completed)
+//        {
+          LIN_Send.PID = GetPID(data);
           // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
           P0 = ((LIN_Send.PID & (1 << 0)) ^ (LIN_Send.PID & (1 << 1) >> 1) ^ (LIN_Send.PID & (1 << 2) >> 2) ^ (LIN_Send.PID & (1 << 4) >> 4)) << 7;
           P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1 << 3) >> 3) ^ (LIN_Send.PID & (1 << 4) >> 4) ^ (LIN_Send.PID & (1 << 5) >> 5)) << 6);
@@ -217,7 +218,6 @@ void main(void)
           }
           LIN_Send.PID |= parity;
           fsm_receive = w_data;
-        }
         break;
 
       case w_size_zd:
@@ -248,15 +248,8 @@ void main(void)
         //static uint8_t hexDataPart = Pull(&sw_receive);
         //GetHex(Pull(&sw_receive));
         uint8_t u8DataReaded = Pull(&sw_receive);
-//        if (ValueReceived == value_incompleted)
-//        {
-//          fsm_receive = w_data;
-//        }
-//        else if (ValueReceived == value_completed)
-//        {
           if (CountDataLIN < LIN_Send.SIZE - 1)
           {
-            //uint8_t u8DataReaded = resValue;
             CRC8(&LIN_Send.CRC, u8DataReaded, false);
             LIN_Send.Data[CountDataLIN++] = u8DataReaded;
           }
@@ -272,6 +265,7 @@ void main(void)
               SendLIN = true;
               while (SendLIN)
               {
+                print("Wait pid\n\r", 10);
                 asm("nop");
               } // Wait while not handled request
               ResetState();
@@ -279,7 +273,7 @@ void main(void)
             else if (LIN_Send.Mode == SLAVE_ZD)
             {
               asm("nop"); //For debug
-              print("Sended slave packet\r\n",21); 
+              print("Sended slave_wd packet\r\n",24); 
               SendSlave_ZD(&LIN_Send);
               //TODO Send packet
               ResetState();
