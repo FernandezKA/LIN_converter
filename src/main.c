@@ -84,7 +84,7 @@ void main(void)
         if (data == 0x0C && !commandRecieved)
         {
 #ifdef DEBUG
-          print("Command mode\n\r", 14);
+          print("iCommand mode\n\r", 15);
 #endif
           commandRecieved = true;
           break;
@@ -99,9 +99,9 @@ void main(void)
           else if (data == 0x10)
           {
 #ifdef DEBUG
-            print("Slave zd\n\r", 10);
+            //print("Slave zd\n\r", 10);
 #endif
-            print("Enter size of data\n\r", 20);
+            //print("Enter size of data\n\r", 20);
             LIN_Send.Mode = SLAVE_ZD;
             fsm_receive = w_size_zd;
           }
@@ -114,13 +114,13 @@ void main(void)
           {
             LIN_ver = LIN_1_3;
             MODE_Update(&LIN_ver, MODE_ADDR);
-            print("Classic CRC\r\n", 13);
+            print("iClassic CRC\r\n", 14);
           }
           else if (data == 0x15)
           {
             LIN_ver = LIN_2_1;
             MODE_Update(&LIN_ver, MODE_ADDR);
-            print("Enhanced CRC\r\n", 14);
+            print("iEnhanced CRC\r\n", 15);
           }
           else if (data == 0x20)
           {
@@ -149,17 +149,17 @@ void main(void)
 
             if (LIN_ver == LIN_1_3)
             {
-              print("LIN ver. 1.3\r\n", 15);
+              print("iClassic CRC\r\n", 15);
             }
             else
             {
-              print("LIN ver. 2.1\r\n", 15);
+              print("iEnhanced CRC\r\n", 16);
             }
             SysInit();
           }
           else if (data == 0x35)
           {
-            print("Lin dev\r\n", 9);
+            print("iLin dev\r\n", 10);
           }
           else
           { // Mistake
@@ -238,7 +238,7 @@ void main(void)
           break;
         default:
           //TODO: Add mistake message
-          print("Invalid value\n\r", 15);
+          print("iInvalid value\r\n", 16);
           asm("nop");
           break;
         }
@@ -265,7 +265,7 @@ void main(void)
               SendLIN = true;
               while (SendLIN)
               {
-                print("Wait pid\n\r", 10);
+                print("iWait pid\r\n", 11);
                 asm("nop");
               } // Wait while not handled request
               ResetState();
@@ -273,14 +273,14 @@ void main(void)
             else if (LIN_Send.Mode == SLAVE_ZD)
             {
               asm("nop"); //For debug
-              print("Sended slave_wd packet\r\n",24); 
+              print("iSended slave_wd packet\r\n",25); 
               SendSlave_ZD(&LIN_Send);
               //TODO Send packet
               ResetState();
             }
             else if (LIN_Send.Mode == MASTER)
             {
-              print("Sended master packet\r\n",22); 
+              print("iSended master packet\r\n",23); 
               send_response(&LIN_Send, true);
               ResetState();
             }
