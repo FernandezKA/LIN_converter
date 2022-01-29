@@ -89,6 +89,9 @@ if (BAUD_LIN == 9600)
           commandRecieved = true;
           break;
         }
+        else if(data != 0x0C&&!commandRecieved){
+          print("iNot valid command\r\n", 20);
+        }
         if (commandRecieved)
         {
           if (data == 0x00)
@@ -164,7 +167,7 @@ if (BAUD_LIN == 9600)
           else
           { // Mistake
             fsm_receive = w_mode;
-            print("iRecieve error\r\n", 15);
+            print("iNot valid command\r\n", 20);
             ResetState();
           }
         }
@@ -183,9 +186,14 @@ if (BAUD_LIN == 9600)
 //        {
           LIN_Send.PID = GetPID(data);
           // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
-          P0 = ((LIN_Send.PID & (1 << 0)) ^ (LIN_Send.PID & (1 << 1) >> 1) ^ (LIN_Send.PID & (1 << 2) >> 2) ^ (LIN_Send.PID & (1 << 4) >> 4)) << 7;
-          P1 = (!(((LIN_Send.PID & 0x02) >> 1) ^ (LIN_Send.PID & (1 << 3) >> 3) ^ (LIN_Send.PID & (1 << 4) >> 4) ^ (LIN_Send.PID & (1 << 5) >> 5)) << 6);
+          //LIN_Send.PID ^= LIN_Send.PID >> 4;
+          P0 = (LIN_Send.PID & (1<<0))^((LIN_Send.PID & (1<<1))>>1)^((LIN_Send.PID & (1<<2))>>2)^((LIN_Send.PID & (1<<4))>>4);
+          P1 = (!(((LIN_Send.PID & (1<<1))>>1))^((LIN_Send.PID & (1<<3))>>3)^((LIN_Send.PID & (1<<4))>>4)^((LIN_Send.PID & (1<<5))>>5));
+          P0 = P0 << 6;
+          P1 = P1 << 7;
+          //P1 = (!(((& (0x10)  & 0x02) >> 1) ^ (LIN_Send.PID & (0x08) >> 3) ^ (LIN_Send.PID & (0x10) >> 4) ^ (LIN_Send.PID & (0x20) >> 5)) << 6);
           parity = P0 | P1;
+          //LIN_Send.PID|=parity;
           // Calculate CRC
           LIN_Send.CRC = 0x00;
           //If defined standart CRC sum calculate, we don't added to the CRC PID
@@ -239,7 +247,7 @@ if (BAUD_LIN == 9600)
         default:
           //TODO: Add mistake message
           print("iInvalid value\r\n", 16);
-          asm("nop");
+          ResetState();
           break;
         }
         break;
