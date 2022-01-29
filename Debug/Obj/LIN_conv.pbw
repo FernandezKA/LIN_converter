@@ -41018,27 +41018,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@7054@F@main#@u8DataReaded",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8DataReaded",
-    "location": {
-      "column": "21",
-      "line": "259",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
-    },
-    "name": "u8DataReaded",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@assert_failed#*c#l#",
     "What": "Function",
     "defdec": "Def",
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "312",
+      "line": "314",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -41052,7 +41038,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "318",
+      "line": "320",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -41066,7 +41052,7 @@
     "display": "void ResetState(void)",
     "location": {
       "column": "6",
-      "line": "330",
+      "line": "332",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "ResetState",
@@ -41080,7 +41066,7 @@
     "display": "void BAUD_Restore(uint16_t *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "344",
+      "line": "346",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "BAUD_Restore",
@@ -41094,7 +41080,7 @@
     "display": "void MODE_Restore(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "358",
+      "line": "360",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "MODE_Restore",
@@ -41102,13 +41088,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9812@F@MODE_Restore#*$@E@LIN_VER#l#@value",
+    "ID": "c:main.c@9924@F@MODE_Restore#*$@E@LIN_VER#l#@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "360",
+      "line": "362",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "value",
@@ -41122,7 +41108,7 @@
     "display": "void MODE_Update(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "364",
+      "line": "366",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "MODE_Update",
@@ -41130,13 +41116,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@9990@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
+    "ID": "c:main.c@10102@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
     "What": "Variable",
     "defdec": "Def",
     "display": "writeVal",
     "location": {
       "column": "11",
-      "line": "366",
+      "line": "368",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "writeVal",
@@ -41150,7 +41136,7 @@
     "display": "void SendSlave_ZD(LIN_SEND *)",
     "location": {
       "column": "13",
-      "line": "373",
+      "line": "375",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "SendSlave_ZD",
@@ -41158,13 +41144,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10296@F@SendSlave_ZD#*$@S@LIN_SEND#@i",
+    "ID": "c:main.c@10408@F@SendSlave_ZD#*$@S@LIN_SEND#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "376",
+      "line": "378",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "i",

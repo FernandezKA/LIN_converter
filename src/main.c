@@ -256,14 +256,14 @@ void main(void)
 //        {
           if (CountDataLIN < LIN_Send.SIZE - 1)
           {
-            uint8_t u8DataReaded = resValue;
+            //uint8_t u8DataReaded = resValue;
             CRC8(&LIN_Send.CRC, u8DataReaded, false);
             LIN_Send.Data[CountDataLIN++] = u8DataReaded;
           }
           else if (CountDataLIN == LIN_Send.SIZE - 1) // It's CRC field
           {
             // Receive CRC and send packet
-            LIN_Send.Data[CountDataLIN] = resValue;
+            LIN_Send.Data[CountDataLIN] = u8DataReaded;
             CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
             CountDataLIN = 0x00U;
             fsm_receive = w_mode;
@@ -279,18 +279,20 @@ void main(void)
             else if (LIN_Send.Mode == SLAVE_ZD)
             {
               asm("nop"); //For debug
+              print("Sended slave packet\r\n",21); 
               SendSlave_ZD(&LIN_Send);
               //TODO Send packet
               ResetState();
             }
             else if (LIN_Send.Mode == MASTER)
             {
+              print("Sended master packet\r\n",22); 
               send_response(&LIN_Send, true);
               ResetState();
             }
             while (!sw_receive.isEmpty)
             { // Clear all of data, because it's mistake
-              // Pull(&sw_receive);
+              //Pull(&sw_receive);
               ResetState();
             }
           }
