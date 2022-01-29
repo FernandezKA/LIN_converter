@@ -7,7 +7,7 @@ void PrintHelp(void){
   //char MODE_MSG[22] = {'0','x','1','0','-','s','e','l','e','c','t','_','l','i','n','_','m','o','d','e','\n','\r'};
   //char MASTER_MODE[18] = {'0','x','5','5','-','m','a','s','t','e','r','_','m','o','d','e','\n','\r'};
   //char SLAVE_MODE[17] = {'0','x','0','0','-','s','l','a','v','e','_','m','o','d','e','\n','\r'};
-  print("LIN_adapter, ver.1.0. 2022-01-28\n\r", 34);
+  print("LIN_adapter, ver.1.0. 2022-01-29\r\n", 34);
   //print(MODE_MSG, 22);
   //print(BAUD_MSG, 18);
   //print(MASTER_MODE, 18);

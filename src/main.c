@@ -36,23 +36,23 @@ void main(void)
   BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
   MODE_Restore(&LIN_ver, MODE_ADDR);
   PrintHelp();
-  //  if (BAUD_LIN == 9600)
-  //  {
-  //    print("iBaud 9600\r\n", 12);
-  //  }
-  //  else
-  //  {
-  //    print("iBaud 19200\r\n", 12);
-  //  }
-  //
-  //  if (LIN_ver == LIN_1_3)
-  //  {
-  //    print("iLIN ver. 1.3\r\n", 15);
-  //  }
-  //  else
-  //  {
-  //    print("iLIN ver. 2.1\r\n", 15);
-  //  }
+if (BAUD_LIN == 9600)
+            {
+              print("iBaud 9600\r\n", 12);
+            }
+            else
+            {
+              print("iBaud 19200\r\n", 13);
+            }
+
+            if (LIN_ver == LIN_1_3)
+            {
+              print("iClassic CRC\r\n", 15);
+            }
+            else
+            {
+              print("iEnhanced CRC\r\n", 16);
+            }
 
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
@@ -367,7 +367,7 @@ static void MODE_Update(enum LIN_VER *lin, uint32_t address)
 
 //This is a send packet function at slave mode without delay
 inline void SendSlave_ZD(LIN_SEND* SendedPckt){
-  print("SM", 2);
+  //print("SM", 2);
   asm("sim");
     for(uint8_t i = 0; i < SendedPckt ->SIZE; ++i){
       while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}

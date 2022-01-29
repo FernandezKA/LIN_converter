@@ -15,6 +15,8 @@ void Reflect_LIN(LIN_Header header, LIN_Response response)
     Push(&sw_transmit, response.data[i]);
   }
   Push(&sw_transmit, response.CRC);
+  Push(&sw_transmit, '\r');
+  Push(&sw_transmit, '\n');
 }
 //Convers two ASCII symbols to hex value (unsigned)
 enum PartDigit GetHex(char digit)
