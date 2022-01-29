@@ -114,13 +114,13 @@ void main(void)
           {
             LIN_ver = LIN_1_3;
             MODE_Update(&LIN_ver, MODE_ADDR);
-            print("iLin 1.3\r\n", 10);
+            print("Classic CRC\r\n", 13);
           }
           else if (data == 0x15)
           {
             LIN_ver = LIN_2_1;
             MODE_Update(&LIN_ver, MODE_ADDR);
-            print("iLin 2.1\r\n", 10);
+            print("Enhanced CRC\r\n", 14);
           }
           else if (data == 0x20)
           {
