@@ -78,6 +78,7 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
   {
   case wait_break: //It's mistake cases
     //UART1->CR2 &= ~UART1_CR2_RIEN;
+    asm("nop");
     return;
     break;
 
@@ -183,6 +184,7 @@ INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
   uint8_t u8Data = UART1->DR;
   UART_RX_IRQ(u8Data);
 }
+//This function return sum for CRC
 static inline void GetSum(uint8_t* cSum, uint8_t* nData){
   if(*cSum + *nData > 0xFF){
     ++cSum;
@@ -194,7 +196,7 @@ static inline void GetSum(uint8_t* cSum, uint8_t* nData){
 }
 //This function calculate CRC
 uint8_t GetCRC(LIN_Header* header, LIN_Response* response){
-uint8_t sum;
+uint8_t sum = 0x00;
 if(LIN_ver == LIN_2_1){
 GetSum(&sum, &header ->pid);
 }
@@ -213,6 +215,6 @@ else if(header -> size == bytes_8){
     GetSum(&sum, &response -> data[i]);    
   }  
 }
-return sum ^ 0xFF;
+return sum^0xFF;
 }
 

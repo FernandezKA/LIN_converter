@@ -15,7 +15,7 @@ void Reflect_LIN(LIN_Header header, LIN_Response response, bool isCorrect)
     Push(&sw_transmit, response.data[i]);
   }
   if(!isCorrect){
-    Push(&sw_transmit, '#');
+    //Push(&sw_transmit, '#');
   }
   Push(&sw_transmit, response.CRC);
   Push(&sw_transmit, '\r');

@@ -8,11 +8,12 @@ static void SysInit(void);
 static void BAUD_Restore(uint16_t *BAUD_VAR, uint32_t address);
 static void MODE_Restore(enum LIN_VER *lin, uint32_t address);
 static void MODE_Update(enum LIN_VER *lin, uint32_t address);
-inline void SendSlave_ZD(LIN_SEND* SendedPckt);
+//inline void SendSlave_ZD(LIN_SEND* SendedPckt);
 // User variables
 uint16_t BAUD_LIN;
 FIFO sw_transmit;
 static FIFO sw_receive;
+//UART1->CR2&=~UART1_CR2_TEN;
 bool SendLIN = false;
 //static uint8_t P1;
 //static uint8_t P0;
@@ -36,20 +37,21 @@ void main(void)
   BAUD_Restore(&BAUD_LIN, BAUD_ADDR);
   MODE_Restore(&LIN_ver, MODE_ADDR);
   PrintHelp();
-if (BAUD_LIN == 9600)
+  UART1->CR2&=~UART1_CR2_TEN;
+  if (BAUD_LIN == 9600)
             {
               print("Baud 9600\r\n", 11);
             }
-            else
+  else
             {
               print("Baud 19200\r\n", 12);
             }
 
-            if (LIN_ver == LIN_1_3)
+  if (LIN_ver == LIN_1_3)
             {
               print("Classic CRC\r\n", 14);
             }
-            else
+  else
             {
               print("Enhanced CRC\r\n", 15);
             }

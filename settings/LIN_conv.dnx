@@ -16,7 +16,7 @@
         <ShowSource>1</ShowSource>
     </Trace1>
     <DebugChecksum>
-        <Checksum>827308411</Checksum>
+        <Checksum>2910640874</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -76,6 +76,9 @@
         <FreqHi>0</FreqHi>
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
+    <BreakpointUsageDialog>
+        <Placement>_ 461 227 906 510</Placement>
+    </BreakpointUsageDialog>
     <struct_types>
         <Fmt0>struct LIN_SEND-CRC	4	0</Fmt0>
         <Fmt1>struct LIN_SEND-PID	4	0</Fmt1>
@@ -100,7 +103,10 @@
         <ShowTimeLog>1</ShowTimeLog>
     </DataSample>
     <Breakpoints>
-        <Count>0</Count>
+        <Bp0>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.155.22" 1 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.218.1" 1 0 0 0 "" 0 ""</Bp1>
+        <Bp2>_ "STD_CODE" "{$PROJ_DIR$\src\uart.c}.200.1" 1 0 0 0 "" 0 ""</Bp2>
+        <Count>3</Count>
     </Breakpoints>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
@@ -116,7 +122,7 @@
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
     <DebuggerSettings>
-        <DisableInterruptsWhenStepping>0</DisableInterruptsWhenStepping>
+        <DisableInterruptsWhenStepping>1</DisableInterruptsWhenStepping>
         <LeaveTargetRunning>0</LeaveTargetRunning>
     </DebuggerSettings>
 </settings>
