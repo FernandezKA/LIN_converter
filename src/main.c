@@ -113,7 +113,7 @@ if (BAUD_LIN == 9600)
 //            LIN_Send.Mode = MASTER;
 //            fsm_receive = w_pid;
 //          }
-          if (data == 0x11)
+          if (data == 0x10)
           {
             LIN_ver = LIN_1_3;
             MODE_Update(&LIN_ver, MODE_ADDR);
@@ -316,7 +316,7 @@ void assert_failed(u8 *file, u32 line)
   return;
 }
 #endif
-// This function combined all of init function
+// This function combine all of init function
 static void SysInit(void)
 {
   Clk_Config();
@@ -371,23 +371,23 @@ static void MODE_Update(enum LIN_VER *lin, uint32_t address)
   FLASH_Lock(FLASH_MEMTYPE_DATA);
 }
 
-//This is a send packet function at slave mode without delay
-inline void SendSlave_ZD(LIN_SEND* SendedPckt){
-  //print("SM", 2);
-  asm("sim");
-  SendedPckt->CRC = 0x00;
-    for(uint8_t i = 0; i < SendedPckt ->SIZE; ++i){
-      while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
-      if(i < SendedPckt ->SIZE - 1){
-        UART1->DR = SendedPckt->Data[i];
-        CRC8(&(SendedPckt -> CRC), (SendedPckt->Data[i]),false);
-      }
-      else{
-        UART1->DR = SendedPckt->Data[i];
-        CRC8(&(SendedPckt -> CRC), (SendedPckt->Data[i]), true);
-      }
-    }
-    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
-    UART1->DR = SendedPckt->CRC;
-    asm("rim");
-}
+////This is a send packet function at slave mode without delay
+//inline void SendSlave_ZD(LIN_SEND* SendedPckt){
+//  //print("SM", 2);
+//  asm("sim");
+//  SendedPckt->CRC = 0x00;
+//    for(uint8_t i = 0; i < SendedPckt ->SIZE; ++i){
+//      while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+//      if(i < SendedPckt ->SIZE - 1){
+//        UART1->DR = SendedPckt->Data[i];
+//        CRC8(&(SendedPckt -> CRC), (SendedPckt->Data[i]),false);
+//      }
+//      else{
+//        UART1->DR = SendedPckt->Data[i];
+//        CRC8(&(SendedPckt -> CRC), (SendedPckt->Data[i]), true);
+//      }
+//    }
+//    while((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE) {asm("nop");}
+//    UART1->DR = SendedPckt->CRC;
+//    asm("rim");
+//}

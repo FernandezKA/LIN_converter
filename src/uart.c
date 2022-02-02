@@ -6,14 +6,14 @@
 //Function declaration
 inline static void UART_RX_IRQ(uint8_t UART_DR);
 inline static void UART_TX_IRQ(void);
-static inline void UART_Send(uint8_t data)
-{
-  while ((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE)
-  {
-    asm("nop");
-  }
-  UART1->DR = data;
-}
+//static inline void UART_Send(uint8_t data)
+//{
+//  while ((UART1->SR & UART1_SR_TXE) != UART1_SR_TXE)
+//  {
+//    asm("nop");
+//  }
+//  UART1->DR = data;
+//}
 //Variables
 uint8_t u8RxCnt, u8TxCnt;
 uint8_t u8RxSize, u8TxSize;
@@ -121,23 +121,23 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
       Lin_size = bytes_8;
     }
     header.size = Lin_size;
-    if (SendLIN)
-    { //If we send packet from RS232 -> LIN into the slave mode
-      if (GetPID(LIN_Send.PID) == GetPID(header.pid))
-      {
-        send_response(&LIN_Send, false);
-        SendLIN = false;
-        ResetState();
-        break;
-      }
-      else
-      {
-        asm("nop"); //Other PID received
-      }
-    }
+//    if (SendLIN)
+//    { //If we send packet from RS232 -> LIN into the slave mode
+//      if (GetPID(LIN_Send.PID) == GetPID(header.pid))
+//      {
+//        send_response(&LIN_Send, false);
+//        SendLIN = false;
+//        ResetState();
+//        break;
+//      }
+//      else
+//      {
+//        asm("nop"); //Other PID received
+//      }
+//    }
     currentHeader = wait_data;
     countReceived = 0x00U;
-    response.CRC = 0xFFU;
+    response.CRC = 0x00U;
     //Without parity check!!
     break;
 
@@ -151,10 +151,17 @@ inline static void UART_RX_IRQ(uint8_t UART_DR)
     {
       //TODO: we calculate CRC into the PC
       currentHeader = wait_break;
-      response.CRC = UART_DR;
-      asm("sim");
-      Reflect_LIN(header, response);
-      asm("rim");
+      response.CRC = GetCRC(&header, &response);
+      if(UART_DR == response.CRC){
+        asm("sim");
+        Reflect_LIN(header, response, true);
+        asm("rim");
+      }
+      else{
+        asm("sim");
+        Reflect_LIN(header, response, false);
+        asm("rim");
+      }
       SetExtIRQ();
     }
     break;
@@ -176,3 +183,34 @@ INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
   uint8_t u8Data = UART1->DR;
   UART_RX_IRQ(u8Data);
 }
+static inline void GetSum(uint8_t* cSum, uint8_t* nData){
+  if(*cSum + *nData > 0xFF){
+    ++cSum;
+    *cSum += *nData; 
+  }
+  else{
+    *cSum += *nData; 
+  }
+}
+//This function calculate CRC
+uint8_t GetCRC(LIN_Header* header, LIN_Response* response){
+uint8_t sum;
+GetSum(&sum, &header ->pid);
+if(header ->size == bytes_2){
+  for(uint8_t i = 0; i < 2; ++i){
+    GetSum(&sum, &response -> data[i]);
+  }
+}
+else if(header -> size == bytes_4){
+  for(uint8_t i = 0; i < 4; ++i){
+    GetSum(&sum, &response -> data[i]);    
+  } 
+}
+else if(header -> size == bytes_8){
+  for(uint8_t i = 0; i < 8; ++i){
+    GetSum(&sum, &response -> data[i]);    
+  }  
+}
+return sum ^ 0xFF;
+}
+

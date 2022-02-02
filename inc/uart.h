@@ -22,5 +22,5 @@ extern uint8_t u8RxData[RxBufSize];
 extern uint8_t u8RxCnt, u8TxCnt;
 extern uint8_t u8RxSize, u8TxSize;
 extern bool bTransmitted, bReceived;
-
+uint8_t GetCRC(LIN_Header* header, LIN_Response* response);
 #endif

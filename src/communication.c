@@ -6,13 +6,16 @@ bool isSecondDigit = false;
 uint8_t resValue = 0x00;
 enum PartDigit ValueReceived = value_completed;
 //Send LIN packet into RS232
-void Reflect_LIN(LIN_Header header, LIN_Response response)
+void Reflect_LIN(LIN_Header header, LIN_Response response, bool isCorrect)
 {
   Push(&sw_transmit, header.pid);
   //Push(&sw_transmit, header.size);
   for (int i = 0; i < header.size; ++i)
   {
     Push(&sw_transmit, response.data[i]);
+  }
+  if(!isCorrect){
+    Push(&sw_transmit, '#');
   }
   Push(&sw_transmit, response.CRC);
   Push(&sw_transmit, '\r');
