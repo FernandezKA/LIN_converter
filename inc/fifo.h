@@ -17,4 +17,5 @@ typedef struct FIFO_STR FIFO;
 //Function declaration
 uint8_t Pull(FIFO *fifo);
 void Push(FIFO *fifo, uint8_t data);
+uint8_t GetSize(FIFO* fifo);
 #endif

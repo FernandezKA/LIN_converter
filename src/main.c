@@ -20,6 +20,8 @@ bool SendLIN = false;
 //static uint8_t parity;
 uint32_t BAUD_ADDR = 0x00004000; // This add for BAUD_LIN value
 uint32_t MODE_ADDR = 0x00004010; // Save mode of work device
+bool isCompleted = false;
+bool isValidCRC = false;
 enum FSM_REC
 {
   w_mode,
@@ -302,13 +304,13 @@ void main(void)
 //      }
 //    }
     /***********************************************************/
-    if (!sw_transmit.isEmpty) // Lin packet recognized, reflect from RS232
-    {
-      if (test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
-      {
-        LinPrint(Pull(&sw_transmit));
-      }
-    }
+//    if (!sw_transmit.isEmpty) // Lin packet recognized, reflect from RS232
+//    {
+//      if (test_status(transmit_data_reg_empty) == transmit_data_reg_empty)
+//      {
+//        LinPrint(Pull(&sw_transmit));
+//      }
+//    }
   }
 }
 

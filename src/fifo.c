@@ -25,3 +25,12 @@ void Push(FIFO *fifo, uint8_t data)
     fifo->isEmpty = false;
   }
 }
+
+uint8_t GetSize(FIFO* fifo){
+  if(fifo->u8Head > fifo->u8Tail){
+    return fifo->u8Head - fifo->u8Tail;
+  }
+  else{
+    return 0;
+  }
+}

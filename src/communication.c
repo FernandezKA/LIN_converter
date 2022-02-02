@@ -1,6 +1,12 @@
 #include "communication.h"
 #include "fifo.h"
 #include "softuart.h"
+#include "init.h"
+
+void uartSend(uint8_t data){
+  while(test_status(transmit_data_reg_empty) != transmit_data_reg_empty){asm("nop");}
+  uart_send(data);
+}
 
 bool isSecondDigit = false;
 uint8_t resValue = 0x00;
@@ -8,18 +14,21 @@ enum PartDigit ValueReceived = value_completed;
 //Send LIN packet into RS232
 void Reflect_LIN(LIN_Header header, LIN_Response response, bool isCorrect)
 {
-  Push(&sw_transmit, header.pid);
+  asm("rim");
+  LinPrint(header.pid);
   //Push(&sw_transmit, header.size);
   for (int i = 0; i < header.size; ++i)
   {
-    Push(&sw_transmit, response.data[i]);
+    LinPrint(response.data[i]);
   }
   if(!isCorrect){
-    //Push(&sw_transmit, '#');
+    uartSend('#');
+    uartSend(' ');
   }
-  Push(&sw_transmit, response.CRC);
-  Push(&sw_transmit, '\r');
-  Push(&sw_transmit, '\n');
+  LinPrint(response.CRC);
+  uartSend('\n');
+  uartSend('\r');
+  asm("sim");
 }
 //Convers two ASCII symbols to hex value (unsigned)
 enum PartDigit GetHex(char digit)

@@ -215,6 +215,6 @@ else if(header -> size == bytes_8){
     GetSum(&sum, &response -> data[i]);    
   }  
 }
-return sum^0xFF;
+return sum ^ 0xFF;
 }
 

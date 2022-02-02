@@ -15,5 +15,5 @@ enum PartDigit GetHex(char digit);
 void GetASCII(uint8_t value, uint8_t* s1, uint8_t* s2);
 void LinPrint(uint8_t val);
 //User functions
-void Reflect_LIN(LIN_Header header, LIN_Response response, bool isCorrect);
+void Reflect_LIN(LIN_Header header, LIN_Response response, bool isValid);
 #endif
