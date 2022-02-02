@@ -195,7 +195,9 @@ static inline void GetSum(uint8_t* cSum, uint8_t* nData){
 //This function calculate CRC
 uint8_t GetCRC(LIN_Header* header, LIN_Response* response){
 uint8_t sum;
+if(LIN_ver == LIN_2_1){
 GetSum(&sum, &header ->pid);
+}
 if(header ->size == bytes_2){
   for(uint8_t i = 0; i < 2; ++i){
     GetSum(&sum, &response -> data[i]);

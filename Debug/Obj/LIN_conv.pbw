@@ -41634,13 +41634,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@4459@F@GetCRC#*$@S@LIN_Header#*$@S@LIN_Response#@i",
+    "ID": "c:uart.c@4487@F@GetCRC#*$@S@LIN_Header#*$@S@LIN_Response#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "200",
+      "line": "202",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\uart.c"
     },
     "name": "i",
@@ -41648,13 +41648,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@4580@F@GetCRC#*$@S@LIN_Header#*$@S@LIN_Response#@i",
+    "ID": "c:uart.c@4608@F@GetCRC#*$@S@LIN_Header#*$@S@LIN_Response#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "205",
+      "line": "207",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\uart.c"
     },
     "name": "i",
@@ -41662,13 +41662,13 @@
     "scope": null
   },
   {
-    "ID": "c:uart.c@4706@F@GetCRC#*$@S@LIN_Header#*$@S@LIN_Response#@i",
+    "ID": "c:uart.c@4734@F@GetCRC#*$@S@LIN_Header#*$@S@LIN_Response#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "210",
+      "line": "212",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\uart.c"
     },
     "name": "i",
