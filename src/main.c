@@ -14,9 +14,9 @@ uint16_t BAUD_LIN;
 FIFO sw_transmit;
 static FIFO sw_receive;
 bool SendLIN = false;
-static uint8_t P1;
-static uint8_t P0;
-static uint8_t parity;
+//static uint8_t P1;
+//static uint8_t P0;
+//static uint8_t parity;
 uint32_t BAUD_ADDR = 0x00004000; // This add for BAUD_LIN value
 uint32_t MODE_ADDR = 0x00004010; // Save mode of work device
 enum FSM_REC
@@ -38,26 +38,26 @@ void main(void)
   PrintHelp();
 if (BAUD_LIN == 9600)
             {
-              print("iBaud 9600\r\n", 12);
+              print("Baud 9600\r\n", 11);
             }
             else
             {
-              print("iBaud 19200\r\n", 13);
+              print("Baud 19200\r\n", 12);
             }
 
             if (LIN_ver == LIN_1_3)
             {
-              print("iClassic CRC\r\n", 15);
+              print("Classic CRC\r\n", 14);
             }
             else
             {
-              print("iEnhanced CRC\r\n", 16);
+              print("Enhanced CRC\r\n", 15);
             }
 
   currentHeader = wait_break;
   sw_transmit.isEmpty = true;
   sw_receive.isEmpty = true;
-  static uint8_t CountDataLIN = 0x00;
+//  static uint8_t CountDataLIN = 0x00;
   bool commandRecieved = false;
   asm("rim");
   //Infinite loop
@@ -84,223 +84,221 @@ if (BAUD_LIN == 9600)
         if (data == 0x0C && !commandRecieved)
         {
 #ifdef DEBUG
-          print("iCommand mode\n\r", 15);
+          print("Command mode\n\r", 14);
 #endif
           commandRecieved = true;
           break;
         }
         else if(data != 0x0C&&!commandRecieved){
-          print("iNot valid command\r\n", 20);
+          print("Not valid command\r\n", 19);
         }
         if (commandRecieved)
         {
-          if (data == 0x00)
-          { // Slave mode
-            LIN_Send.Mode = SLAVE;
-            fsm_receive = w_pid;
-          }
-          else if (data == 0x10)
-          {
-#ifdef DEBUG
-            //print("Slave zd\n\r", 10);
-#endif
-            //print("Enter size of data\n\r", 20);
-            LIN_Send.Mode = SLAVE_ZD;
-            fsm_receive = w_size_zd;
-          }
-          else if (data == 0x55)
-          { // Master mode
-            LIN_Send.Mode = MASTER;
-            fsm_receive = w_pid;
-          }
-          else if (data == 0x11)
+//          if (data == 0x00)
+//          { // Slave mode
+//            LIN_Send.Mode = SLAVE;
+//            fsm_receive = w_pid;
+//          }
+//          else if (data == 0x10)
+//          {
+//#ifdef DEBUG
+//            //print("Slave zd\n\r", 10);
+//#endif
+//            //print("Enter size of data\n\r", 20);
+//            LIN_Send.Mode = SLAVE_ZD;
+//            fsm_receive = w_size_zd;
+//          }
+//          else if (data == 0x55)
+//          { // Master mode
+//            LIN_Send.Mode = MASTER;
+//            fsm_receive = w_pid;
+//          }
+          if (data == 0x11)
           {
             LIN_ver = LIN_1_3;
             MODE_Update(&LIN_ver, MODE_ADDR);
-            print("iClassic CRC\r\n", 14);
+            print("Classic CRC\r\n", 13);
           }
           else if (data == 0x15)
           {
             LIN_ver = LIN_2_1;
             MODE_Update(&LIN_ver, MODE_ADDR);
-            print("iEnhanced CRC\r\n", 15);
+            print("Enhanced CRC\r\n", 14);
           }
           else if (data == 0x20)
           {
             BAUD_LIN = 9600;
             UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
             UART_HW_Config();
-            print("iBaud 9600\r\n", 12);
+            print("Baud 9600\r\n", 11);
           }
           else if (data == 0x25)
           {
             BAUD_LIN = 19200;
             UpdateBAUD_EEPROM(BAUD_LIN, BAUD_ADDR);
             UART_HW_Config();
-            print("iBaud 19200\r\n", 13);
+            print("Baud 19200\r\n", 12);
           }
           else if (data == 0x30)
           {
             if (BAUD_LIN == 9600)
             {
-              print("iBaud 9600\r\n", 12);
+              print("Baud 9600\r\n", 11);
             }
             else
             {
-              print("iBaud 19200\r\n", 13);
+              print("Baud 19200\r\n", 12);
             }
 
             if (LIN_ver == LIN_1_3)
             {
-              print("iClassic CRC\r\n", 15);
+              print("Classic CRC\r\n", 14);
             }
             else
             {
-              print("iEnhanced CRC\r\n", 16);
+              print("Enhanced CRC\r\n", 15);
             }
             SysInit();
-          }
-          else if (data == 0x35)
-          {
-            print("iLin dev\r\n", 10);
           }
           else
           { // Mistake
             fsm_receive = w_mode;
-            print("iNot valid command\r\n", 20);
+            print("Not valid command\r\n", 19);
             ResetState();
           }
         }
         commandRecieved = false;
         break;
-
-      case w_pid:
-        //static uint8_t hexPidPart =  Pull(&sw_receive);
-        data = Pull(&sw_receive);
-        //GetHex(Pull(&sw_receive));
-//        if (ValueReceived == value_incompleted)
-//        {
-//          fsm_receive = w_pid;
-//        }
-//        else if (ValueReceived == value_completed)
-//        {
-          LIN_Send.PID = GetPID(data);
-          // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
-          //LIN_Send.PID ^= LIN_Send.PID >> 4;
-          P0 = (LIN_Send.PID & (1<<0))^((LIN_Send.PID & (1<<1))>>1)^((LIN_Send.PID & (1<<2))>>2)^((LIN_Send.PID & (1<<4))>>4);
-          P1 = (!(((LIN_Send.PID & (1<<1))>>1))^((LIN_Send.PID & (1<<3))>>3)^((LIN_Send.PID & (1<<4))>>4)^((LIN_Send.PID & (1<<5))>>5));
-          P0 = P0 << 6;
-          P1 = P1 << 7;
-          //P1 = (!(((& (0x10)  & 0x02) >> 1) ^ (LIN_Send.PID & (0x08) >> 3) ^ (LIN_Send.PID & (0x10) >> 4) ^ (LIN_Send.PID & (0x20) >> 5)) << 6);
-          parity = P0 | P1;
-          //LIN_Send.PID|=parity;
-          // Calculate CRC
-          LIN_Send.CRC = 0x00;
-          //If defined standart CRC sum calculate, we don't added to the CRC PID
-          if (LIN_ver == LIN_1_3)
-          {
-            asm("nop");
-          }
-          else if (LIN_ver == LIN_2_1)
-          {
-            CRC8(&LIN_Send.CRC, (LIN_Send.PID & 0x3F), false);
-          }
-          // Define size of packet
-          if (LIN_Send.PID < 0x1FU)
-          {
-            LIN_Send.SIZE = bytes_2;
-          }
-          else if (LIN_Send.PID < 0x2FU)
-          {
-            LIN_Send.SIZE = bytes_4;
-          }
-          else if (LIN_Send.PID < 0x3FU)
-          {
-            LIN_Send.SIZE = bytes_8;
-          }
-          else
-          {
-            fsm_receive = w_mode;
-            ResetState();
-            break;
-          }
-          LIN_Send.PID |= parity;
-          fsm_receive = w_data;
-        break;
-
-      case w_size_zd:
-        data = Pull(&sw_receive);
-        switch (data)
-        {
-        case 2:
-          LIN_Send.SIZE = bytes_2;
-          fsm_receive = w_data;
-          break;
-        case 4:
-          LIN_Send.SIZE = bytes_4;
-          fsm_receive = w_data;
-          break;
-        case 8:
-          LIN_Send.SIZE = bytes_8;
-          fsm_receive = w_data;
-          break;
-        default:
-          //TODO: Add mistake message
-          print("iInvalid value\r\n", 16);
-          ResetState();
-          break;
-        }
-        break;
-
-      case w_data:
-        //static uint8_t hexDataPart = Pull(&sw_receive);
-        //GetHex(Pull(&sw_receive));
-        uint8_t u8DataReaded = Pull(&sw_receive);
-          if (CountDataLIN < LIN_Send.SIZE - 1)
-          {
-            CRC8(&LIN_Send.CRC, u8DataReaded, false);
-            LIN_Send.Data[CountDataLIN++] = u8DataReaded;
-          }
-          else if (CountDataLIN == LIN_Send.SIZE - 1) // It's CRC field
-          {
-            // Receive CRC and send packet
-            LIN_Send.Data[CountDataLIN] = u8DataReaded;
-            CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
-            CountDataLIN = 0x00U;
-            fsm_receive = w_mode;
-            if (LIN_Send.Mode == SLAVE)
-            {
-              SendLIN = true;
-              while (SendLIN)
-              {
-                print("iWait pid\r\n", 11);
-                asm("nop");
-              } // Wait while not handled request
-              ResetState();
-            }
-            else if (LIN_Send.Mode == SLAVE_ZD)
-            {
-              //asm("nop"); //For debug
-              //print("iSended slave_wd packet\r\n",25); 
-              SendSlave_ZD(&LIN_Send);
-              //TODO Send packet
-              ResetState();
-            }
-            else if (LIN_Send.Mode == MASTER)
-            {
-              //print("iSended master packet\r\n",23); 
-              send_response(&LIN_Send, true);
-              ResetState();
-            }
-            while (!sw_receive.isEmpty)
-            { // Clear all of data, because it's mistake
-              //Pull(&sw_receive);
-              ResetState();
-            }
-          }
-        break;
       }
     }
+
+//      case w_pid:
+//        //static uint8_t hexPidPart =  Pull(&sw_receive);
+//        data = Pull(&sw_receive);
+//        //GetHex(Pull(&sw_receive));
+////        if (ValueReceived == value_incompleted)
+////        {
+////          fsm_receive = w_pid;
+////        }
+////        else if (ValueReceived == value_completed)
+////        {
+//          LIN_Send.PID = GetPID(data);
+//          // LIN_Send.PID = Pull(&sw_receive)& 0x3F;
+//          //LIN_Send.PID ^= LIN_Send.PID >> 4;
+//          P0 = (LIN_Send.PID & (1<<0))^((LIN_Send.PID & (1<<1))>>1)^((LIN_Send.PID & (1<<2))>>2)^((LIN_Send.PID & (1<<4))>>4);
+//          P1 = (!(((LIN_Send.PID & (1<<1))>>1))^((LIN_Send.PID & (1<<3))>>3)^((LIN_Send.PID & (1<<4))>>4)^((LIN_Send.PID & (1<<5))>>5));
+//          P0 = P0 << 6;
+//          P1 = P1 << 7;
+//          //P1 = (!(((& (0x10)  & 0x02) >> 1) ^ (LIN_Send.PID & (0x08) >> 3) ^ (LIN_Send.PID & (0x10) >> 4) ^ (LIN_Send.PID & (0x20) >> 5)) << 6);
+//          parity = P0 | P1;
+//          //LIN_Send.PID|=parity;
+//          // Calculate CRC
+//          LIN_Send.CRC = 0x00;
+//          //If defined standart CRC sum calculate, we don't added to the CRC PID
+//          if (LIN_ver == LIN_1_3)
+//          {
+//            asm("nop");
+//          }
+//          else if (LIN_ver == LIN_2_1)
+//          {
+//            CRC8(&LIN_Send.CRC, (LIN_Send.PID & 0x3F), false);
+//          }
+//          // Define size of packet
+//          if (LIN_Send.PID < 0x1FU)
+//          {
+//            LIN_Send.SIZE = bytes_2;
+//          }
+//          else if (LIN_Send.PID < 0x2FU)
+//          {
+//            LIN_Send.SIZE = bytes_4;
+//          }
+//          else if (LIN_Send.PID < 0x3FU)
+//          {
+//            LIN_Send.SIZE = bytes_8;
+//          }
+//          else
+//          {
+//            fsm_receive = w_mode;
+//            ResetState();
+//            break;
+//          }
+//          LIN_Send.PID |= parity;
+//          fsm_receive = w_data;
+//        break;
+//
+//      case w_size_zd:
+//        data = Pull(&sw_receive);
+//        switch (data)
+//        {
+//        case 2:
+//          LIN_Send.SIZE = bytes_2;
+//          fsm_receive = w_data;
+//          break;
+//        case 4:
+//          LIN_Send.SIZE = bytes_4;
+//          fsm_receive = w_data;
+//          break;
+//        case 8:
+//          LIN_Send.SIZE = bytes_8;
+//          fsm_receive = w_data;
+//          break;
+//        default:
+//          //TODO: Add mistake message
+//          print("iInvalid value\r\n", 16);
+//          ResetState();
+//          break;
+//        }
+//        break;
+//
+//      case w_data:
+//        //static uint8_t hexDataPart = Pull(&sw_receive);
+//        //GetHex(Pull(&sw_receive));
+//        uint8_t u8DataReaded = Pull(&sw_receive);
+//          if (CountDataLIN < LIN_Send.SIZE - 1)
+//          {
+//            CRC8(&LIN_Send.CRC, u8DataReaded, false);
+//            LIN_Send.Data[CountDataLIN++] = u8DataReaded;
+//          }
+//          else if (CountDataLIN == LIN_Send.SIZE - 1) // It's CRC field
+//          {
+//            // Receive CRC and send packet
+//            LIN_Send.Data[CountDataLIN] = u8DataReaded;
+//            CRC8(&LIN_Send.CRC, LIN_Send.Data[CountDataLIN], true);
+//            CountDataLIN = 0x00U;
+//            fsm_receive = w_mode;
+//            if (LIN_Send.Mode == SLAVE)
+//            {
+//              SendLIN = true;
+////              while (SendLIN)
+////              {
+////                print("iWait pid\r\n", 11);
+////                asm("nop");
+////              } // Wait while not handled request
+//              ResetState();
+//            }
+//            else if (LIN_Send.Mode == SLAVE_ZD)
+//            {
+//              //asm("nop"); //For debug
+//              //print("iSended slave_wd packet\r\n",25); 
+////              SendSlave_ZD(&LIN_Send);
+//              //TODO Send packet
+//              ResetState();
+//            }
+//            else if (LIN_Send.Mode == MASTER)
+//            {
+//              //print("iSended master packet\r\n",23); 
+////              send_response(&LIN_Send, true);
+//              ResetState();
+//            }
+//            while (!sw_receive.isEmpty)
+//            { // Clear all of data, because it's mistake
+//              //Pull(&sw_receive);
+//              ResetState();
+//            }
+//          }
+//        break;
+//      }
+//    }
     /***********************************************************/
     if (!sw_transmit.isEmpty) // Lin packet recognized, reflect from RS232
     {

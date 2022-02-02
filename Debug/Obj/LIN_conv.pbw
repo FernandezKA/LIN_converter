@@ -40210,7 +40210,7 @@
     "display": "void print(char *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "8",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\help.c"
     },
     "name": "print",
@@ -40218,13 +40218,13 @@
     "scope": null
   },
   {
-    "ID": "c:help.c@733@F@print#*C#c#@i",
+    "ID": "c:help.c@244@F@print#*C#c#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "15",
-      "line": "17",
+      "line": "9",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\help.c"
     },
     "name": "i",
@@ -40764,48 +40764,6 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@P1",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "P1",
-    "location": {
-      "column": "16",
-      "line": "17",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
-    },
-    "name": "P1",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@P0",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "P0",
-    "location": {
-      "column": "16",
-      "line": "18",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
-    },
-    "name": "P0",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@parity",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "parity",
-    "location": {
-      "column": "16",
-      "line": "19",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
-    },
-    "name": "parity",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@BAUD_ADDR",
     "What": "Variable",
     "defdec": "Def",
@@ -40948,21 +40906,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1450@F@main#@CountDataLIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "CountDataLIN",
-    "location": {
-      "column": "18",
-      "line": "60",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
-    },
-    "name": "CountDataLIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@1489@F@main#@commandRecieved",
+    "ID": "c:main.c@1493@F@main#@commandRecieved",
     "What": "Variable",
     "defdec": "Def",
     "display": "commandRecieved",
@@ -40976,7 +40920,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1716@F@main#@u8Data",
+    "ID": "c:main.c@1720@F@main#@u8Data",
     "What": "Variable",
     "defdec": "Def",
     "display": "u8Data",
@@ -40990,7 +40934,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2028@F@main#@data",
+    "ID": "c:main.c@2032@F@main#@data",
     "What": "Variable",
     "defdec": "Def",
     "display": "data",
@@ -41004,27 +40948,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@7245@F@main#@u8DataReaded",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "u8DataReaded",
-    "location": {
-      "column": "17",
-      "line": "258",
-      "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
-    },
-    "name": "u8DataReaded",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@assert_failed#*c#l#",
     "What": "Function",
     "defdec": "Def",
     "display": "void assert_failed(u8 *, u32)",
     "location": {
       "column": "6",
-      "line": "316",
+      "line": "314",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "assert_failed",
@@ -41038,7 +40968,7 @@
     "display": "void SysInit(void)",
     "location": {
       "column": "13",
-      "line": "322",
+      "line": "320",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "SysInit",
@@ -41052,7 +40982,7 @@
     "display": "void ResetState(void)",
     "location": {
       "column": "6",
-      "line": "334",
+      "line": "332",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "ResetState",
@@ -41066,7 +40996,7 @@
     "display": "void BAUD_Restore(uint16_t *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "348",
+      "line": "346",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "BAUD_Restore",
@@ -41080,7 +41010,7 @@
     "display": "void MODE_Restore(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "362",
+      "line": "360",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "MODE_Restore",
@@ -41088,13 +41018,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10240@F@MODE_Restore#*$@E@LIN_VER#l#@value",
+    "ID": "c:main.c@10450@F@MODE_Restore#*$@E@LIN_VER#l#@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "364",
+      "line": "362",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "value",
@@ -41108,7 +41038,7 @@
     "display": "void MODE_Update(enum LIN_VER *, uint32_t)",
     "location": {
       "column": "13",
-      "line": "368",
+      "line": "366",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "MODE_Update",
@@ -41116,13 +41046,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10418@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
+    "ID": "c:main.c@10628@F@MODE_Update#*$@E@LIN_VER#l#@writeVal",
     "What": "Variable",
     "defdec": "Def",
     "display": "writeVal",
     "location": {
       "column": "11",
-      "line": "370",
+      "line": "368",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "writeVal",
@@ -41136,7 +41066,7 @@
     "display": "void SendSlave_ZD(LIN_SEND *)",
     "location": {
       "column": "13",
-      "line": "377",
+      "line": "375",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "SendSlave_ZD",
@@ -41144,13 +41074,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@10753@F@SendSlave_ZD#*$@S@LIN_SEND#@i",
+    "ID": "c:main.c@10963@F@SendSlave_ZD#*$@S@LIN_SEND#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "17",
-      "line": "381",
+      "line": "379",
       "path": "C:\\PRJ\\LIN_adapter\\LIN_converter\\src\\main.c"
     },
     "name": "i",
